@@ -1,12 +1,39 @@
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 import pybullet as p
 
-from pickup_controller import PickupController, propose_grasps
+from pickup_controller import (PickupController, propose_grasps,
+                               propose_radial_rim_grasps)
 
 
 class GraspTests(unittest.TestCase):
+    def test_failed_approaches_have_a_selected_mode_or_undecided(self):
+        from pick_nav_reach_env import PickNavReachEnv
+
+        env = PickNavReachEnv(seed=42, object_idx=9, gui=False, safe_forces=True)
+        controller = None
+        try:
+            obs = env.obs
+            for _ in range(80):
+                obs, _ = env.step(obs["qpos"])
+            controller = PickupController(env)
+            with patch.object(controller, "_solve", return_value=None):
+                early = controller.run(obs)
+            self.assertEqual(early["approach"], "undecided")
+            self.assertEqual(early["approaches_considered"], [])
+
+            with (patch.object(controller, "plan_side", return_value=None),
+                  patch.object(controller, "plan", return_value=None)):
+                no_plan = controller.run(obs)
+            self.assertEqual(no_plan["approach"], "undecided")
+            self.assertEqual(no_plan["approaches_considered"], ["side", "top-down"])
+        finally:
+            if controller is not None:
+                controller.close()
+            p.disconnect(env.pb_physics_client)
+
     def test_same_seed_repeats_object_samples(self):
         from pick_nav_reach_env import PickNavReachEnv
 
@@ -54,6 +81,29 @@ class GraspTests(unittest.TestCase):
             rotation = np.array(p.getMatrixFromQuaternion(quaternion)).reshape(3, 3)
             np.testing.assert_allclose(rotation[:, 0], [0, 0, -1], atol=1e-6)
             np.testing.assert_allclose(rotation[:, 1], finger, atol=1e-6)
+
+    def test_side_tool_closes_along_tilted_contacts(self):
+        for finger in (np.array([0.6, 0.8, 0.]),
+                       np.array([-0.5, 0.5, np.sqrt(0.5)])):
+            quaternion = PickupController._side_orientation(finger)
+            rotation = np.array(p.getMatrixFromQuaternion(quaternion)).reshape(3, 3)
+            self.assertAlmostEqual(abs(np.dot(rotation[:, 1], finger)), 1.0, places=5)
+            self.assertAlmostEqual(rotation[2, 0], 0.0, places=5)
+
+    def test_bowl_has_local_rim_pairs(self):
+        from pick_nav_reach_env import PickNavReachEnv
+
+        env = PickNavReachEnv(seed=42, object_idx=9, gui=False)
+        try:
+            obs = env.obs
+            for _ in range(80):
+                obs, _ = env.step(obs["qpos"])
+            candidates = propose_radial_rim_grasps(obs)
+            self.assertTrue(candidates)
+            self.assertGreater(np.linalg.norm(candidates[0].center[:2] -
+                                              obs["object_pos"][:2]), 0.05)
+        finally:
+            p.disconnect(env.pb_physics_client)
 
     def test_opposing_faces(self):
         y = np.linspace(-0.02, 0.02, 32)

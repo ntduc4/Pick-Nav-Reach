@@ -141,6 +141,19 @@ shows all 1024 sampled points in blue and every 50th outward normal in red.
 The snapshot stays still while you move the camera; Ctrl+C closes the window.
 Pass `--no-normals` to show points only.
 
+To measure pickup over all 15 objects and five reproducible seeds in separate
+headless scenes, run `python benchmark_pickup.py --json-out pickup_results.json`.
+The benchmark uses separate processes, defaulting to half the machine's logical
+CPU count; use `--workers 2` to limit memory use or `--workers 1` for sequential
+execution. Use `--seeds 42 43` and `--objects 4 5 6` for a smaller subset. The script
+prints per-object rates and failure counts and optionally saves every trial.
+Every JSON trial has `approach` (`top-down`, `side`, or `undecided` if no plan
+was accepted) and `approaches_considered` in evaluation order, including
+trials stopped before planning.
+`env_steps` counts `env.step` calls; `physics_ticks` counts PyBullet substeps
+(which vary because the controller slows down near the grasp). These are
+pickup trials only, **not** full navigation trials or hidden course seeds.
+
 The probe lets the object settle for 80 `env.step` calls (400 physics substeps).
 Each action is an **absolute**, ordered 15-joint position target, not a velocity
 or a relative displacement. The observation has `qpos`, `qvel` (15,);
@@ -152,14 +165,18 @@ or a relative displacement. The observation has `qpos`, `qvel` (15,);
 height in the seed-42 banana trial was approximately 0.645 m.
 
 `pickup_controller.py` proposes opposing horizontal contacts with surface
-normals, width and height filtering, deduplication and scoring. The ordinary
+normals, width and height filtering, deduplication and scoring. It also tries
+side/angled approaches, and a separate near-rim proposal search when ordinary
+opposing pairs are absent. The ordinary
 proposal limit is 8.5 cm; for a wide observed footprint, proposals up to
 10 cm are considered and the fingers open to their 5 cm-per-side limit. It first raises
 the arm **outside the table footprint**, then moves the virtual base toward the
-table with the hand already above it. Top-down arm-only damped-Jacobian IK
-(including the torso) generates an overhead hover and four downward waypoints
-before closing and lifting. Joint segments are checked against the table in
-PyBullet before execution. During the last two descent waypoints, closing,
+table with the hand already above it. Arm-only damped-Jacobian IK (including
+the torso) builds approach, contact, and lift waypoints. Top-down approaches
+remain the default for smaller objects; side approaches are tried first for
+wide objects and as fallback when no top-down plan exists. Joint segments are
+checked against the table, and side paths also check palm-object clearance in
+a separate PyBullet client. During the last approach waypoints, closing,
 and lifting, the fingers may come within 2 mm of the table while the wrist,
 palm, and other links retain 1 cm clearance. These near-grasp movements check
 every physics tick; actual table contact or unstable joint motion stops the
@@ -167,7 +184,8 @@ trial. The optional
 `safe_forces` mode also increases torso lifting force, reduces base/finger
 controller gains, and lowers excessive URDF finger damping (100 to 0.5) and
 roll damping (5 to 0.5) to avoid violent joint instability during arm motion.
-Finger closing force is 20 N. For objects taller than 7 cm (estimated from the
+The trial uses 20 N closing force and rubber-like finger friction. For objects
+taller than 7 cm (estimated from the
 point cloud), the controller pinches the upper sidewalls to avoid driving the
 palm into the top. If a safe route cannot be found or the
 motors do not track it, the trial reports failure rather than continuing below
@@ -179,12 +197,15 @@ make grasp input repeatable for a given seed and object index.
 The pickup report measures object displacement after a 50-step hold rather
 than treating reaching a target joint pose as success. This is a **prototype**:
 there is no general-purpose collision-aware arm planner or A* navigation. In
-local headless trials at seed 42, objects 4, 5 (banana), and 6 lifted about
-0.15 m, 0.18 m, and 0.20 m and held for 50 steps. These trials are not evidence
-of reliable performance across the five-object rubric. Object 1 (sugar box)
-gets opposing proposals with the wider search but is not lifted: its roughly
-9.9 cm observed narrow side nearly fills the gripper, and its collision shape
-is wider than the approximately 10.3 cm maximum inner jaw gap. The GUI demo still defaults to
+the headless benchmark on all 15 objects with seeds 42-46, 60/75 trials lifted
+(80%) and 13/15 objects had at least one successful seed. The bowl and plate
+were 0/5: the current rim/side approaches did not retain them. All measured
+successful lifts still used the top-down approach, so the added side and rim
+planning paths should be considered experimental rather than a demonstrated
+improvement on those two objects. These local results do not establish success
+on unseen objects or maze navigation. Successful episodes used 4530-4725
+physics ticks including settling and hold, beyond the course's 3000-tick
+pickup target. The GUI demo still defaults to
 its original control behaviour; the trial opts into limited motor forces.
 
 Known environment issues: `reset()` places the object at z=5 rather than

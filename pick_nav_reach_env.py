@@ -53,6 +53,10 @@ class PickNavReachEnv:
             # reduce it for the same numerical-stability reason.
             for joint in [self.joint_indices[i] for i in (8, 10, 12, 13, 14)]:
                 p.changeDynamics(self.robot_id, joint, jointDamping=0.5)
+            for joint in self.joint_indices[-2:]:
+                # Represent rubber finger pads instead of the default low-
+                # friction collision material, without changing the object.
+                p.changeDynamics(self.robot_id, joint, lateralFriction=2.0)
 
         # get initial observation
         self.obs = self._get_obs()
