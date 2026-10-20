@@ -2,8 +2,8 @@ import time
 import pybullet as p
 import pybullet_data
 import numpy as np
-import random 
-import trimesh 
+import random
+import trimesh
 import tempfile
 from pathlib import Path
 from maze_utils import generate_maze_map, add_left_room_to_maze, create_maze_urdf
@@ -11,9 +11,10 @@ from copy import deepcopy
 from keyboard_control import KeyBoardController
 from utils import closest_joint_values
 
+
 class PickNavReachEnv:
 
-    def __init__(self, 
+    def __init__(self,
                  seed=0,
                  object_idx=5,
                  gui=True,
@@ -26,7 +27,7 @@ class PickNavReachEnv:
         self.verbose = verbose
         self.safe_forces = safe_forces
         self.pb_physics_client = p.connect(p.GUI if gui else p.DIRECT)
-        p.setAdditionalSearchPath(pybullet_data.getDataPath()) 
+        p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0,0,-9.8)
 
         p.configureDebugVisualizer(lightPosition=[0, 0, 10])
@@ -36,7 +37,7 @@ class PickNavReachEnv:
 
         self.seed = seed
         self.object_idx = object_idx
-        
+
         self.action_scale = 0.05
         self.max_force = 2000000
         self.substeps = 5
@@ -52,17 +53,16 @@ class PickNavReachEnv:
             # reduce it for the same numerical-stability reason.
             for joint in [self.joint_indices[i] for i in (8, 10, 12, 13, 14)]:
                 p.changeDynamics(self.robot_id, joint, jointDamping=0.5)
-        
+
         # get initial observation
         self.obs = self._get_obs()
-        
+
         self.step_count = 0
-        
 
     def set_seed(self, seed):
         np.random.seed(seed)
         random.seed(seed)
-    
+
     def _load_scene(self):
         self._load_agent()
         self._load_object_table()
@@ -105,11 +105,11 @@ class PickNavReachEnv:
         self.joint_upper = np.array(uppers, dtype=np.float32)
         self.joint_ranges = np.array(ranges, dtype=np.float32)
         self.rest_poses = np.zeros_like(self.joint_lower, dtype=np.float32)
-        
+
         # self.joint_lower[self.joint_upper==-1] = -np.inf
         # self.joint_upper[self.joint_upper==-1] = np.inf
         # self.joint_ranges[self.joint_upper==np.inf] = np.inf
-        
+
         # print("Controllable joints:", len(self.joint_indices))
         # print("Joint Indices:", self.joint_indices)
         # print("Joint Lower:", self.joint_lower)
@@ -124,13 +124,13 @@ class PickNavReachEnv:
         self._set_qpos(self.init_qpos)
 
     def _load_object_table(self):
-        p.setAdditionalSearchPath(pybullet_data.getDataPath()) 
-        p.loadURDF("table/table.urdf", baseOrientation=p.getQuaternionFromEuler([0,0,np.pi/2]), useFixedBase=1)
+        p.setAdditionalSearchPath(pybullet_data.getDataPath())
+        p.loadURDF("table/table.urdf", baseOrientation=p.getQuaternionFromEuler([0,0,np.pi / 2]), useFixedBase=1)
 
         # hyperparameters
         ycb_object_dir_path = "./assets/ycb_objects/"
         ycb_objects_paths = sorted(list(Path(ycb_object_dir_path).glob("*")))
-        assert 0 <= self.object_idx and self.object_idx < len(ycb_objects_paths), f"object_idx should be in [0, {len(ycb_objects_paths)-1}]"
+        assert 0 <= self.object_idx and self.object_idx < len(ycb_objects_paths), f"object_idx should be in [0, {len(ycb_objects_paths) - 1}]"
         object_urdf_path = (ycb_objects_paths[self.object_idx] / "coacd_decomposed_object_one_link.urdf").absolute()
         object_mesh_path = (ycb_objects_paths[self.object_idx] / "textured.obj").absolute()
         self.object_id = p.loadURDF(str(object_urdf_path), basePosition=[0, 0, 1.0], useFixedBase=0)
@@ -141,7 +141,7 @@ class PickNavReachEnv:
             self.object_canonical_mesh, 1024, seed=self.seed)
         self.object_canonical_pc = object_canonical_pc.astype(np.float32)  # (1024, 3)
         self.object_canonical_normals = self.object_canonical_mesh.face_normals[face_indices].astype(np.float32)  # (1024, 3), outward normals
-    
+
     def _load_object_goal(self, ):
         self.goal_pos = np.array([self.maze_out_pos_x, self.maze_out_pos_y, 0.9])
         radius = 0.05
@@ -171,11 +171,11 @@ class PickNavReachEnv:
         grid_xy = 1.0
         grid_z = 2.0
         # need to randomize
-        random_row_in = np.random.randint(1, n_rows-1)
-        random_row_out = np.random.randint(1, n_rows-1) 
+        random_row_in = np.random.randint(1, n_rows - 1)
+        random_row_out = np.random.randint(1, n_rows - 1)
         in_pos = (random_row_in, 0)
-        out_pos = (random_row_out, n_cols-1)
-        
+        out_pos = (random_row_out, n_cols - 1)
+
         self.maze_out_pos_x = n_cols * grid_xy - grid_xy / 2 + maze_offset
         self.maze_out_pos_y = n_rows / 2 * grid_xy - out_pos[0] * grid_xy - grid_xy / 2
 
@@ -195,17 +195,17 @@ class PickNavReachEnv:
         self._maze_dir = tempfile.TemporaryDirectory(prefix="pnr-maze-")
         maze_path = str(Path(self._maze_dir.name) / "maze.urdf")
         self.cube_positions = create_maze_urdf(
-            maze, 
+            maze,
             urdf_path=maze_path,
             grid_xy=grid_xy, grid_z=grid_z,
-            maze_center_x=(n_cols-room_width)/2*grid_xy + maze_offset, 
-            maze_center_y=0.0, 
+            maze_center_x=(n_cols - room_width) / 2 * grid_xy + maze_offset,
+            maze_center_y=0.0,
             maze_center_z=0.0,
             box_color=(0.95, 0.95, 0.98, 1.0),
         )
 
         p.loadURDF(maze_path, useFixedBase=1, flags=p.URDF_MERGE_FIXED_LINKS)
-        
+
     def visualize_pc_and_normals(self, object_pc, object_normals, visualize_normals=False):
         # remove old debug items
         if self.debug_point_id is not None:
@@ -225,7 +225,7 @@ class PickNavReachEnv:
         # add normals, this may slow down the simulation
         if visualize_normals:
             normal_scale = 0.02
-            for i in range(0, object_pc.shape[0], 50):  # e.g. subsample
+            for i in range(0, object_pc.shape[0], 10):  # e.g. subsample
                 start = object_pc[i]
                 end = object_pc[i] + normal_scale * object_normals[i]
                 lid = p.addUserDebugLine(start, end, [1, 0, 0], 1.5, 0)
@@ -279,14 +279,14 @@ class PickNavReachEnv:
             print("target: ", target)
 
         # Position control for all controllable joints
-        position_gains = [0.3, 0.3, 0.3,  # base movement: xy trans and z rot 
-                           0.3, # torso lift 
-                           0.3, 0.3, # head pan & tilt
-                           0.3, 0.3, # shoulder pan & lift
-                           0.3, 0.3, 0.3, 0.3, 0.3, # arm 
-                           0.03, 0.03] # gripper
+        position_gains = [0.3, 0.3, 0.3,  # base movement: xy trans and z rot
+                          0.3,  # torso lift
+                          0.3, 0.3,  # head pan & tilt
+                          0.3, 0.3,  # shoulder pan & lift
+                          0.3, 0.3, 0.3, 0.3, 0.3,  # arm
+                          0.03, 0.03]  # gripper
         # position_gains = np.array([0.3] * len(self.joint_indices))
-        velocity_gains = np.zeros_like(position_gains) #np.sqrt(np.array(position_gains))
+        velocity_gains = np.zeros_like(position_gains)  # np.sqrt(np.array(position_gains))
         forces = ([min(200.0, max(10.0, p.getJointInfo(self.robot_id, j)[10]))
                    for j in self.joint_indices] if self.safe_forces else
                   [self.max_force] * len(self.joint_indices))
@@ -315,21 +315,21 @@ class PickNavReachEnv:
         for _ in range(self.substeps):
             p.stepSimulation()
             if self.gui:
-                time.sleep(1./240.)
+                time.sleep(1. / 240.)
 
         obs = self._get_obs()
 
         info = self.evaluate()
 
         return obs, info
-    
+
     def reset(self):
         """Reset the simulation and reload world/robot. Returns initial observation."""
         self._set_qpos(self.init_qpos)
         p.resetBasePositionAndOrientation(self.object_id, [0, 0, 5.0], [0, 0, 0, 1])
 
         return self._get_obs()
-    
+
     def evaluate(self):
         """
         Evaluate distance between the object position and the goal position.
@@ -342,22 +342,22 @@ class PickNavReachEnv:
             "dist_to_goal": dist_to_goal,
             "success": success,
         }
-    
+
     def _get_object_obs(self):
         object_pos, object_xyzw = p.getBasePositionAndOrientation(self.object_id)
-        object_rot = np.array(p.getMatrixFromQuaternion(object_xyzw)).reshape(3, 3) 
+        object_rot = np.array(p.getMatrixFromQuaternion(object_xyzw)).reshape(3, 3)
         object_pc = (self.object_canonical_pc @ object_rot.T) + np.array(object_pos, dtype=np.float32).reshape(1, 3)  # (1024, 3)
         object_normals = (self.object_canonical_normals @ object_rot.T)  # (1024, 3), outward normals
         return {
             "object_pc": object_pc,
             "object_normals": object_normals,
         }
-    
+
     def _get_maze_obs(self):
         pass
-    
+
     def _get_obs(self):
-        qpos, qvel, object_pos, object_xyzw = self._get_state() # （15，）（15,）（3,）（4，）
+        qpos, qvel, object_pos, object_xyzw = self._get_state()  # （15，）（15,）（3,）（4，）
         object_obs = self._get_object_obs()
 
         # self.visualize_pc_and_normals(object_pc, object_normals, visualize_normals=False)
@@ -376,7 +376,7 @@ class PickNavReachEnv:
         agent_states = p.getJointStates(self.robot_id, self.joint_indices)
         qpos = np.array([s[0] for s in agent_states], dtype=np.float32)
         qvel = np.array([s[1] for s in agent_states], dtype=np.float32)
-        
+
         object_pos, object_xyzw = p.getBasePositionAndOrientation(self.object_id, self.pb_physics_client)
         return qpos, qvel, np.array(object_pos), np.array(object_xyzw)
 
@@ -412,9 +412,9 @@ if __name__ == "__main__":
     env = PickNavReachEnv(seed=42)
     env.reset()
     print(f"Action size: {env.action_size}, Obs size: {env.obs_size}")
-    
+
     keyboard_controller = KeyBoardController(env)
-    
+
     # for i in range (10000):
     import time
     while True:

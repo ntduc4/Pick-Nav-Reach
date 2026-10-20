@@ -135,6 +135,12 @@ trial. `--gui` shows the same trial and leaves the final scene open without
 advancing physics; press Ctrl+C in the terminal to close it. Run unit tests with
 `python -m unittest -v test_pickup`. Install the dependencies listed above first.
 
+To inspect the settled object without running a pickup, use
+`python view_pointcloud.py --object-idx 4 --seed 42`. This separate GUI viewer
+shows all 1024 sampled points in blue and every 50th outward normal in red.
+The snapshot stays still while you move the camera; Ctrl+C closes the window.
+Pass `--no-normals` to show points only.
+
 The probe lets the object settle for 80 `env.step` calls (400 physics substeps).
 Each action is an **absolute**, ordered 15-joint position target, not a velocity
 or a relative displacement. The observation has `qpos`, `qvel` (15,);
