@@ -130,3 +130,6 @@ tmp/
 outputs/
 
 tests/results/
+
+*.pdf
+*.png

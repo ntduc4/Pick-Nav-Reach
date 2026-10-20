@@ -1,9 +1,10 @@
-from time import time
+import time
 import pybullet as p
 import pybullet_data
 import numpy as np
 import random 
 import trimesh 
+import tempfile
 from pathlib import Path
 from maze_utils import generate_maze_map, add_left_room_to_maze, create_maze_urdf
 from copy import deepcopy
@@ -15,10 +16,16 @@ class PickNavReachEnv:
     def __init__(self, 
                  seed=0,
                  object_idx=5,
+                 gui=True,
+                 verbose=False,
+                 safe_forces=False,
                  ):
         self.set_seed(seed)
 
-        self.pb_physics_client = p.connect(p.GUI)
+        self.gui = gui
+        self.verbose = verbose
+        self.safe_forces = safe_forces
+        self.pb_physics_client = p.connect(p.GUI if gui else p.DIRECT)
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) 
         p.setGravity(0,0,-9.8)
 
@@ -36,6 +43,15 @@ class PickNavReachEnv:
         self.debug_point_id = None
         self.debug_line_ids = []
         self._load_scene()
+        if self.safe_forces:
+            # The Fetch URDF specifies damping=100 for the lightweight
+            # prismatic fingers. In Bullet this makes their velocities diverge
+            # (and kicks the whole arm) while the wrist moves. Keep damping
+            # finite without changing the original teleoperation mode.
+            # The lightweight continuous roll links also specify damping=5;
+            # reduce it for the same numerical-stability reason.
+            for joint in [self.joint_indices[i] for i in (8, 10, 12, 13, 14)]:
+                p.changeDynamics(self.robot_id, joint, jointDamping=0.5)
         
         # get initial observation
         self.obs = self._get_obs()
@@ -119,7 +135,10 @@ class PickNavReachEnv:
         object_mesh_path = (ycb_objects_paths[self.object_idx] / "textured.obj").absolute()
         self.object_id = p.loadURDF(str(object_urdf_path), basePosition=[0, 0, 1.0], useFixedBase=0)
         self.object_canonical_mesh = trimesh.load(str(object_mesh_path))
-        object_canonical_pc, face_indices = trimesh.sample.sample_surface(self.object_canonical_mesh, 1024)
+        # Trimesh uses OS entropy when seed is omitted; NumPy's global seed
+        # alone does not make these grasp observations repeatable.
+        object_canonical_pc, face_indices = trimesh.sample.sample_surface(
+            self.object_canonical_mesh, 1024, seed=self.seed)
         self.object_canonical_pc = object_canonical_pc.astype(np.float32)  # (1024, 3)
         self.object_canonical_normals = self.object_canonical_mesh.face_normals[face_indices].astype(np.float32)  # (1024, 3), outward normals
     
@@ -172,9 +191,12 @@ class PickNavReachEnv:
 
         maze = add_left_room_to_maze(maze, room_width=room_width)
 
+        # Generating a maze must not overwrite the tracked example asset.
+        self._maze_dir = tempfile.TemporaryDirectory(prefix="pnr-maze-")
+        maze_path = str(Path(self._maze_dir.name) / "maze.urdf")
         self.cube_positions = create_maze_urdf(
             maze, 
-            urdf_path="./assets/maze.urdf",
+            urdf_path=maze_path,
             grid_xy=grid_xy, grid_z=grid_z,
             maze_center_x=(n_cols-room_width)/2*grid_xy + maze_offset, 
             maze_center_y=0.0, 
@@ -182,7 +204,7 @@ class PickNavReachEnv:
             box_color=(0.95, 0.95, 0.98, 1.0),
         )
 
-        p.loadURDF("./assets/maze.urdf", useFixedBase=1, flags=p.URDF_MERGE_FIXED_LINKS)
+        p.loadURDF(maze_path, useFixedBase=1, flags=p.URDF_MERGE_FIXED_LINKS)
         
     def visualize_pc_and_normals(self, object_pc, object_normals, visualize_normals=False):
         # remove old debug items
@@ -241,9 +263,11 @@ class PickNavReachEnv:
 
         # action = np.clip(action, -1.0, 1.0)
         qpos, _, _, _ = self._get_state()
-        print(f"===========================Step {self.step_count}===========================")
+        if self.verbose:
+            print(f"===========================Step {self.step_count}===========================")
         self.step_count += 1
-        print("current qpos: ", qpos)
+        if self.verbose:
+            print("current qpos: ", qpos)
         # target = qpos + self.action_scale * action
         # target = np.clip(target, self.joint_lower, self.joint_upper)
         # print("wrap_mask: ", (self.joint_upper == 314))
@@ -251,7 +275,8 @@ class PickNavReachEnv:
         target = closest_joint_values(action, qpos, wrap_mask=(self.joint_upper == 314))
         # print("target before clip: ", target)
         target = np.clip(target, self.joint_lower, self.joint_upper)
-        print("target: ", target)
+        if self.verbose:
+            print("target: ", target)
 
         # Position control for all controllable joints
         position_gains = [0.3, 0.3, 0.3,  # base movement: xy trans and z rot 
@@ -262,6 +287,18 @@ class PickNavReachEnv:
                            0.03, 0.03] # gripper
         # position_gains = np.array([0.3] * len(self.joint_indices))
         velocity_gains = np.zeros_like(position_gains) #np.sqrt(np.array(position_gains))
+        forces = ([min(200.0, max(10.0, p.getJointInfo(self.robot_id, j)[10]))
+                   for j in self.joint_indices] if self.safe_forces else
+                  [self.max_force] * len(self.joint_indices))
+        if self.safe_forces:
+            # The lift supports the weight of the upper body, not just the arm.
+            forces[3] = 1500.0
+            position_gains[:3] = [0.12, 0.12, 0.12]
+            # Small finger forces avoid blasting a finger through the tabletop
+            # when closing on a thin object. 20 N is still below their 60 N
+            # rated effort and provides a useful normal force for a pinch.
+            forces[-2:] = [20.0, 20.0]
+            position_gains[-2:] = [0.08, 0.08]
         p.setJointMotorControlArray(
             bodyUniqueId=self.robot_id,
             jointIndices=self.joint_indices,
@@ -269,7 +306,7 @@ class PickNavReachEnv:
             # controlMode=p.PD_CONTROL,
             targetPositions=target.tolist(),
             # targetVelocities=[0.0] * len(self.joint_indices),
-            forces=[self.max_force] * len(self.joint_indices),
+            forces=forces,
             # positionGains=[0.3] * len(self.joint_indices),
             positionGains=position_gains,
             # velocityGains=velocity_gains,
@@ -277,7 +314,8 @@ class PickNavReachEnv:
 
         for _ in range(self.substeps):
             p.stepSimulation()
-            time.sleep(1./240.)
+            if self.gui:
+                time.sleep(1./240.)
 
         obs = self._get_obs()
 
@@ -387,5 +425,3 @@ if __name__ == "__main__":
             print(f"{k}: {v}")
         # p.stepSimulation()
         # time.sleep(1./240.)
-
-
