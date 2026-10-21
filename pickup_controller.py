@@ -123,7 +123,7 @@ def propose_radial_rim_grasps(obs, max_candidates=20):
     alignment = np.sum(normals[:, :2] * radial, axis=1)
     high = points[:, 2] > float(np.max(points[:, 2])) - 0.032
     inner = np.flatnonzero((radii > 0.6 * maximum) & (radii < 0.88 * maximum) &
-                          (alignment < -0.4) & high)
+                           (alignment < -0.4) & high)
     outer = np.flatnonzero((radii > 0.8 * maximum) & (alignment > 0.4) & high)
     candidates = []
     for i in inner:
@@ -298,10 +298,22 @@ class PickupController:
                                          env.joint_lower[moving], env.joint_upper[moving])
         return None
 
-    def plan(self, obs):
+    def plan(self, obs, candidates=None, rim_mode=False):
         reference = np.asarray(obs["qpos"], dtype=float)
-        for grasp in propose_grasps(obs):
+        candidates = propose_grasps(obs) if candidates is None else candidates
+        default_opening = self.opening
+        for grasp in candidates:
+            self.opening = default_opening
+            if rim_mode:
+                # Start just outside the narrow rim; closing through the
+                # bowl's whole diameter would push it across the tabletop.
+                self.opening = min(default_opening,
+                                   max(0.012, (grasp.width - 0.0028) / 2 + 0.004))
             finger = grasp.closing_axis.copy()
+            if rim_mode:
+                # Opposing rim normals are strongly slanted; align the jaw
+                # with the local radial direction, not their noisy tangent.
+                finger[:2] = grasp.center[:2] - obs["object_pos"][:2]
             finger[2] = 0
             finger /= np.linalg.norm(finger)
             # Local +X is the gripper approach axis and +Y is the closing
@@ -398,6 +410,13 @@ class PickupController:
                         # Fingers extend in front of the tool origin; avoid
                         # driving the whole pad into a narrow rim wall.
                         contact -= 0.015 * approach
+                    footprint = np.ptp(obs["object_pc"], axis=0)
+                    if (min(footprint[:2]) > 0.09 and
+                            max(footprint[:2]) / min(footprint[:2]) < 1.25 and
+                            footprint[2] > 0.11):
+                        # For a cylinder, pinch its near flank rather than
+                        # trying to put the palm through the full diameter.
+                        contact -= 0.025 * approach
                 pre = contact - (0.07 if vertical else 0.14) * approach
                 pre[2] += 0.025
                 via = contact - (0.035 if vertical else 0.06) * approach
@@ -406,23 +425,23 @@ class PickupController:
                 raised[2] = max(hand[2], float(np.max(obs["object_pc"][:, 2])) + 0.16)
                 q_rotate = self._solve(hand, orientation, reference)
                 if q_rotate is None or not self._segment_free(reference, q_rotate,
-                                                                check_object=True):
+                                                              check_object=True):
                     continue
                 q_raised = self._solve(raised, orientation, q_rotate)
                 if q_raised is None or not self._segment_free(q_rotate, q_raised,
-                                                               check_object=True):
+                                                              check_object=True):
                     continue
                 q_pre = self._solve(pre, orientation, q_raised)
                 if q_pre is None or not self._segment_free(q_raised, q_pre,
-                                                            check_object=True):
+                                                           check_object=True):
                     continue
                 q_via = self._solve(via, orientation, q_pre)
                 if q_via is None or not self._segment_free(q_pre, q_via,
-                                                            check_object=True):
+                                                           check_object=True):
                     continue
                 q_contact = self._solve(contact, orientation, q_via)
                 if q_contact is None or not self._segment_free(q_via, q_contact,
-                                                                check_object=True):
+                                                               check_object=True):
                     continue
                 lift = contact + np.array([0, 0, 0.18])
                 q_lift = self._solve(lift, orientation, q_contact)
@@ -489,11 +508,22 @@ class PickupController:
                         "approaches_considered": approaches_considered}
             obs = self.move(base_target, 160)
             xy_extent = np.ptp(obs["object_pc"], axis=0)[:2]
+            height = np.ptp(obs["object_pc"], axis=0)[2]
+            bowl_like = (min(xy_extent) > 0.13 and
+                         max(xy_extent) / min(xy_extent) < 1.2 and
+                         0.04 < height < 0.10)
             prefer_side = ((max(xy_extent) > 0.115 and min(xy_extent) > 0.085) or
                            (min(xy_extent) > 0.09 and
-                            np.ptp(obs["object_pc"], axis=0)[2] > 0.11))
-            planners = (("side", self.plan_side), ("top-down", self.plan)) if prefer_side else (
-                ("top-down", self.plan), ("side", self.plan_side))
+                            height > 0.11))
+            if bowl_like:
+                rim_candidates = propose_radial_rim_grasps(obs)
+                planners = (("top-down", lambda current: self.plan(
+                    current, candidates=rim_candidates, rim_mode=True)),
+                    ("side", self.plan_side))
+            elif prefer_side:
+                planners = (("side", self.plan_side), ("top-down", self.plan))
+            else:
+                planners = (("top-down", self.plan), ("side", self.plan_side))
             plan = None
             for mode, planner in planners:
                 approaches_considered.append(mode)

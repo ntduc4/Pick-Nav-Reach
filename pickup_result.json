@@ -7,25 +7,24 @@
     46
   ],
   "total_trials": 75,
-  "successes": 60,
-  "success_rate": 0.8,
+  "successes": 63,
+  "success_rate": 0.84,
   "objects_with_success": 13,
   "objects_tested": 15,
   "errors": 0,
   "failures": {
-    "robot failed to track safe waypoint": 4,
     "unstable joint motion; stopped before arm can tumble": 1,
+    "robot failed to track safe waypoint": 1,
     "object not lifted": 10
   },
   "objects": [
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
-      "successes": 1,
+      "successes": 4,
       "trials": 5,
-      "success_rate": 0.2,
+      "success_rate": 0.8,
       "failures": {
-        "robot failed to track safe waypoint": 3,
         "unstable joint motion; stopped before arm can tumble": 1
       }
     },
@@ -157,9 +156,9 @@
     },
     {
       "seed": 43,
-      "successes": 12,
+      "successes": 13,
       "trials": 15,
-      "success_rate": 0.8
+      "success_rate": 0.8666666666666667
     },
     {
       "seed": 44,
@@ -169,15 +168,15 @@
     },
     {
       "seed": 45,
-      "successes": 12,
+      "successes": 13,
       "trials": 15,
-      "success_rate": 0.8
+      "success_rate": 0.8666666666666667
     },
     {
       "seed": 46,
-      "successes": 12,
+      "successes": 13,
       "trials": 15,
-      "success_rate": 0.8
+      "success_rate": 0.8666666666666667
     }
   ],
   "trials": [
@@ -186,39 +185,40 @@
       "object": "002_master_chef_can",
       "seed": 42,
       "grasp_proposals": 30,
-      "approach": "top-down",
+      "approach": "side",
       "approaches_considered": [
-        "side",
-        "top-down"
+        "side"
       ],
       "picked": true,
-      "lift_m": 0.16059510611050953,
-      "grasp_width_m": 0.09982827728202064,
+      "lift_m": 0.1790914630333067,
+      "grasp_width_m": 0.09742156091198426,
       "hold_steps": 50,
-      "sim_steps": 1936,
+      "sim_steps": 2036,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 6.98
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 6.29
     },
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
       "seed": 43,
       "grasp_proposals": 30,
-      "approach": "top-down",
+      "approach": "side",
       "approaches_considered": [
-        "side",
-        "top-down"
+        "side"
       ],
-      "picked": false,
-      "sim_steps": 1536,
-      "reason": "robot failed to track safe waypoint",
-      "status": "failed",
-      "env_steps": 1536,
-      "physics_ticks": 4080,
-      "elapsed_s": 6.97
+      "picked": true,
+      "lift_m": 0.1808693854416954,
+      "grasp_width_m": 0.09957621152757833,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 3.95
     },
     {
       "object_idx": 0,
@@ -236,43 +236,47 @@
       "status": "failed",
       "env_steps": 1502,
       "physics_ticks": 4046,
-      "elapsed_s": 6.86
+      "elapsed_s": 6.78
     },
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
       "seed": 45,
       "grasp_proposals": 30,
-      "approach": "top-down",
+      "approach": "side",
       "approaches_considered": [
-        "side",
-        "top-down"
+        "side"
       ],
-      "picked": false,
-      "sim_steps": 1536,
-      "reason": "robot failed to track safe waypoint",
-      "status": "failed",
-      "env_steps": 1536,
-      "physics_ticks": 4080,
-      "elapsed_s": 6.84
+      "picked": true,
+      "lift_m": 0.17948348009064696,
+      "grasp_width_m": 0.09977250416610028,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 3.62
     },
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
       "seed": 46,
       "grasp_proposals": 30,
-      "approach": "top-down",
+      "approach": "side",
       "approaches_considered": [
-        "side",
-        "top-down"
+        "side"
       ],
-      "picked": false,
-      "sim_steps": 1536,
-      "reason": "robot failed to track safe waypoint",
-      "status": "failed",
-      "env_steps": 1536,
-      "physics_ticks": 4080,
-      "elapsed_s": 7.02
+      "picked": true,
+      "lift_m": 0.18074409951607928,
+      "grasp_width_m": 0.09975065917715,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 4.98
     },
     {
       "object_idx": 1,
@@ -293,7 +297,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 5.38
+      "elapsed_s": 5.29
     },
     {
       "object_idx": 1,
@@ -314,7 +318,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 5.53
+      "elapsed_s": 5.43
     },
     {
       "object_idx": 1,
@@ -335,7 +339,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.93
+      "elapsed_s": 4.92
     },
     {
       "object_idx": 1,
@@ -356,7 +360,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 5.3
+      "elapsed_s": 5.35
     },
     {
       "object_idx": 1,
@@ -377,7 +381,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 5.82
+      "elapsed_s": 5.67
     },
     {
       "object_idx": 2,
@@ -397,7 +401,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.74
+      "elapsed_s": 3.55
     },
     {
       "object_idx": 2,
@@ -417,7 +421,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.69
+      "elapsed_s": 3.47
     },
     {
       "object_idx": 2,
@@ -437,7 +441,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 1.99
+      "elapsed_s": 2.29
     },
     {
       "object_idx": 2,
@@ -457,7 +461,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 1.96
+      "elapsed_s": 2.01
     },
     {
       "object_idx": 2,
@@ -477,7 +481,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.31
+      "elapsed_s": 1.98
     },
     {
       "object_idx": 3,
@@ -498,7 +502,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.33
+      "elapsed_s": 4.24
     },
     {
       "object_idx": 3,
@@ -519,7 +523,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 3.7
+      "elapsed_s": 3.71
     },
     {
       "object_idx": 3,
@@ -536,7 +540,7 @@
       "status": "failed",
       "env_steps": 1106,
       "physics_ticks": 2930,
-      "elapsed_s": 3.32
+      "elapsed_s": 3.3
     },
     {
       "object_idx": 3,
@@ -578,7 +582,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 3.9
+      "elapsed_s": 4.04
     },
     {
       "object_idx": 4,
@@ -598,7 +602,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.08
+      "elapsed_s": 2.21
     },
     {
       "object_idx": 4,
@@ -618,7 +622,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.13
+      "elapsed_s": 2.17
     },
     {
       "object_idx": 4,
@@ -638,7 +642,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.19
+      "elapsed_s": 2.23
     },
     {
       "object_idx": 4,
@@ -658,7 +662,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.21
+      "elapsed_s": 2.13
     },
     {
       "object_idx": 4,
@@ -678,7 +682,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.26
+      "elapsed_s": 2.17
     },
     {
       "object_idx": 5,
@@ -698,7 +702,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.16
+      "elapsed_s": 2.15
     },
     {
       "object_idx": 5,
@@ -718,7 +722,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.17
+      "elapsed_s": 2.18
     },
     {
       "object_idx": 5,
@@ -738,7 +742,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.08
+      "elapsed_s": 2.17
     },
     {
       "object_idx": 5,
@@ -758,7 +762,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.33
+      "elapsed_s": 2.39
     },
     {
       "object_idx": 5,
@@ -778,7 +782,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.46
+      "elapsed_s": 2.37
     },
     {
       "object_idx": 6,
@@ -798,7 +802,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 2.59
+      "elapsed_s": 2.34
     },
     {
       "object_idx": 6,
@@ -818,7 +822,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 2.63
+      "elapsed_s": 2.41
     },
     {
       "object_idx": 6,
@@ -838,7 +842,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 2.58
+      "elapsed_s": 2.31
     },
     {
       "object_idx": 6,
@@ -858,7 +862,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 2.53
+      "elapsed_s": 2.29
     },
     {
       "object_idx": 6,
@@ -878,7 +882,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 2.64
+      "elapsed_s": 2.44
     },
     {
       "object_idx": 7,
@@ -898,7 +902,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.62
+      "elapsed_s": 3.48
     },
     {
       "object_idx": 7,
@@ -918,7 +922,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.78
+      "elapsed_s": 3.4
     },
     {
       "object_idx": 7,
@@ -938,7 +942,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.67
+      "elapsed_s": 3.45
     },
     {
       "object_idx": 7,
@@ -958,7 +962,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.64
+      "elapsed_s": 3.41
     },
     {
       "object_idx": 7,
@@ -978,7 +982,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.45
+      "elapsed_s": 3.49
     },
     {
       "object_idx": 8,
@@ -999,7 +1003,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.77
+      "elapsed_s": 4.88
     },
     {
       "object_idx": 8,
@@ -1020,7 +1024,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.05
+      "elapsed_s": 4.15
     },
     {
       "object_idx": 8,
@@ -1041,7 +1045,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 3.7
+      "elapsed_s": 3.77
     },
     {
       "object_idx": 8,
@@ -1083,66 +1087,66 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.1
+      "elapsed_s": 4.0
     },
     {
       "object_idx": 9,
       "object": "024_bowl",
       "seed": 42,
       "grasp_proposals": 0,
-      "approach": "side",
+      "approach": "top-down",
       "approaches_considered": [
-        "side"
+        "top-down"
       ],
       "picked": false,
-      "lift_m": 1.5854786286073619e-06,
+      "lift_m": -8.910101044057317e-05,
       "grasp_width_m": 0.011623475226676477,
       "hold_steps": 50,
-      "sim_steps": 2036,
+      "sim_steps": 1936,
       "reason": "object not lifted",
       "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.19
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.18
     },
     {
       "object_idx": 9,
       "object": "024_bowl",
       "seed": 43,
       "grasp_proposals": 0,
-      "approach": "side",
+      "approach": "top-down",
       "approaches_considered": [
-        "side"
+        "top-down"
       ],
       "picked": false,
-      "lift_m": -0.006323273321404477,
-      "grasp_width_m": 0.014821601697584716,
+      "lift_m": -0.0005148682426080464,
+      "grasp_width_m": 0.016565725372837625,
       "hold_steps": 50,
-      "sim_steps": 2036,
+      "sim_steps": 1936,
       "reason": "object not lifted",
       "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.64
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.18
     },
     {
       "object_idx": 9,
       "object": "024_bowl",
       "seed": 44,
       "grasp_proposals": 0,
-      "approach": "side",
+      "approach": "top-down",
       "approaches_considered": [
-        "side"
+        "top-down"
       ],
       "picked": false,
-      "lift_m": -0.022788302099448265,
+      "lift_m": -0.0004419626429783552,
       "grasp_width_m": 0.009122746695936764,
       "hold_steps": 50,
-      "sim_steps": 2036,
+      "sim_steps": 1936,
       "reason": "object not lifted",
       "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
+      "env_steps": 1936,
+      "physics_ticks": 4680,
       "elapsed_s": 2.07
     },
     {
@@ -1150,40 +1154,40 @@
       "object": "024_bowl",
       "seed": 45,
       "grasp_proposals": 0,
-      "approach": "side",
+      "approach": "top-down",
       "approaches_considered": [
-        "side"
+        "top-down"
       ],
       "picked": false,
-      "lift_m": -0.0040895406837738735,
+      "lift_m": -0.000313287537415885,
       "grasp_width_m": 0.00844180765176585,
       "hold_steps": 50,
-      "sim_steps": 2036,
+      "sim_steps": 1936,
       "reason": "object not lifted",
       "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.06
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.11
     },
     {
       "object_idx": 9,
       "object": "024_bowl",
       "seed": 46,
       "grasp_proposals": 0,
-      "approach": "side",
+      "approach": "top-down",
       "approaches_considered": [
-        "side"
+        "top-down"
       ],
       "picked": false,
-      "lift_m": -0.016574083150859176,
+      "lift_m": -0.0003866906215660437,
       "grasp_width_m": 0.009350971044903214,
       "hold_steps": 50,
-      "sim_steps": 2036,
+      "sim_steps": 1936,
       "reason": "object not lifted",
       "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.14
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.09
     },
     {
       "object_idx": 10,
@@ -1203,7 +1207,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.34
+      "elapsed_s": 2.33
     },
     {
       "object_idx": 10,
@@ -1223,7 +1227,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.28
+      "elapsed_s": 2.35
     },
     {
       "object_idx": 10,
@@ -1243,7 +1247,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.35
+      "elapsed_s": 2.4
     },
     {
       "object_idx": 10,
@@ -1263,7 +1267,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.33
+      "elapsed_s": 2.36
     },
     {
       "object_idx": 10,
@@ -1283,7 +1287,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.48
+      "elapsed_s": 2.32
     },
     {
       "object_idx": 11,
@@ -1303,7 +1307,7 @@
       "status": "failed",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 2.45
+      "elapsed_s": 2.23
     },
     {
       "object_idx": 11,
@@ -1323,7 +1327,7 @@
       "status": "failed",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 2.24
+      "elapsed_s": 2.2
     },
     {
       "object_idx": 11,
@@ -1343,7 +1347,7 @@
       "status": "failed",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 2.25
+      "elapsed_s": 2.23
     },
     {
       "object_idx": 11,
@@ -1363,7 +1367,7 @@
       "status": "failed",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 2.28
+      "elapsed_s": 2.27
     },
     {
       "object_idx": 11,
@@ -1383,7 +1387,7 @@
       "status": "failed",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 2.3
+      "elapsed_s": 2.23
     },
     {
       "object_idx": 12,
@@ -1403,7 +1407,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 2.17
+      "elapsed_s": 2.11
     },
     {
       "object_idx": 12,
@@ -1423,7 +1427,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 2.21
+      "elapsed_s": 2.2
     },
     {
       "object_idx": 12,
@@ -1443,7 +1447,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 2.09
+      "elapsed_s": 2.07
     },
     {
       "object_idx": 12,
@@ -1463,7 +1467,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 2.09
+      "elapsed_s": 2.04
     },
     {
       "object_idx": 12,
@@ -1483,7 +1487,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 1.87
+      "elapsed_s": 1.83
     },
     {
       "object_idx": 13,
@@ -1504,7 +1508,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.84
+      "elapsed_s": 3.94
     },
     {
       "object_idx": 13,
@@ -1525,7 +1529,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 4.06
+      "elapsed_s": 4.1
     },
     {
       "object_idx": 13,
@@ -1546,7 +1550,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 4.16
+      "elapsed_s": 4.12
     },
     {
       "object_idx": 13,
@@ -1567,7 +1571,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.93
+      "elapsed_s": 3.9
     },
     {
       "object_idx": 13,
@@ -1588,7 +1592,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.82
+      "elapsed_s": 3.83
     },
     {
       "object_idx": 14,
@@ -1608,7 +1612,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.66
+      "elapsed_s": 2.68
     },
     {
       "object_idx": 14,
@@ -1628,7 +1632,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.66
+      "elapsed_s": 2.63
     },
     {
       "object_idx": 14,
@@ -1648,7 +1652,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.59
+      "elapsed_s": 2.64
     },
     {
       "object_idx": 14,
@@ -1668,7 +1672,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.65
+      "elapsed_s": 2.49
     },
     {
       "object_idx": 14,
@@ -1688,7 +1692,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.71
+      "elapsed_s": 2.5
     }
   ]
 }

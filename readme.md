@@ -174,7 +174,10 @@ the arm **outside the table footprint**, then moves the virtual base toward the
 table with the hand already above it. Arm-only damped-Jacobian IK (including
 the torso) builds approach, contact, and lift waypoints. Top-down approaches
 remain the default for smaller objects; side approaches are tried first for
-wide objects and as fallback when no top-down plan exists. Joint segments are
+wide/tall objects. For cylinders, side plans stop at the near flank so the
+palm does not intersect the full diameter. Wide, shallow bowl-shaped objects
+instead try an overhead pinch across the local inner/outer rim walls before
+side approaches, avoiding a tangent approach through the bowl. Joint segments are
 checked against the table, and side paths also check palm-object clearance in
 a separate PyBullet client. During the last approach waypoints, closing,
 and lifting, the fingers may come within 2 mm of the table while the wrist,
@@ -197,12 +200,12 @@ make grasp input repeatable for a given seed and object index.
 The pickup report measures object displacement after a 50-step hold rather
 than treating reaching a target joint pose as success. This is a **prototype**:
 there is no general-purpose collision-aware arm planner or A* navigation. In
-the headless benchmark on all 15 objects with seeds 42-46, 60/75 trials lifted
-(80%) and 13/15 objects had at least one successful seed. The bowl and plate
-were 0/5: the current rim/side approaches did not retain them. All measured
-successful lifts still used the top-down approach, so the added side and rim
-planning paths should be considered experimental rather than a demonstrated
-improvement on those two objects. These local results do not establish success
+the benchmark **before the latest grasp-priority changes** (seeds 42-46),
+60/75 trials lifted (80%) and 13/15 objects had at least one successful seed;
+the bowl and plate were 0/5. In targeted seed-42 checks after the priority
+change, the Master Chef can was lifted with a side grasp while the bowl was
+approached from above but not retained during lift. The entire 75-trial matrix
+has not been rerun for these latest changes. These local results do not establish success
 on unseen objects or maze navigation. Successful episodes used 4530-4725
 physics ticks including settling and hold, beyond the course's 3000-tick
 pickup target. The GUI demo still defaults to

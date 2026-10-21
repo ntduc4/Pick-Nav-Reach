@@ -9,6 +9,43 @@ from pickup_controller import (PickupController, propose_grasps,
 
 
 class GraspTests(unittest.TestCase):
+    def test_cylindrical_can_selects_reachable_side_pinch(self):
+        from pick_nav_reach_env import PickNavReachEnv
+
+        env = PickNavReachEnv(seed=42, object_idx=0, gui=False, safe_forces=True)
+        controller = None
+        try:
+            obs = env.obs
+            for _ in range(80):
+                obs, _ = env.step(obs["qpos"])
+            controller = PickupController(env)
+            result = controller.run(obs)
+            self.assertEqual(result["approach"], "side")
+            self.assertEqual(result["approaches_considered"], ["side"])
+            self.assertTrue(result["picked"], result)
+        finally:
+            if controller is not None:
+                controller.close()
+            p.disconnect(env.pb_physics_client)
+
+    def test_bowl_prefers_overhead_rim_orientation(self):
+        from pick_nav_reach_env import PickNavReachEnv
+
+        env = PickNavReachEnv(seed=42, object_idx=9, gui=False, safe_forces=True)
+        controller = None
+        try:
+            obs = env.obs
+            for _ in range(80):
+                obs, _ = env.step(obs["qpos"])
+            controller = PickupController(env)
+            result = controller.run(obs)
+            self.assertEqual(result["approach"], "top-down")
+            self.assertEqual(result["approaches_considered"], ["top-down"])
+        finally:
+            if controller is not None:
+                controller.close()
+            p.disconnect(env.pb_physics_client)
+
     def test_failed_approaches_have_a_selected_mode_or_undecided(self):
         from pick_nav_reach_env import PickNavReachEnv
 
@@ -28,7 +65,7 @@ class GraspTests(unittest.TestCase):
                   patch.object(controller, "plan", return_value=None)):
                 no_plan = controller.run(obs)
             self.assertEqual(no_plan["approach"], "undecided")
-            self.assertEqual(no_plan["approaches_considered"], ["side", "top-down"])
+            self.assertEqual(no_plan["approaches_considered"], ["top-down", "side"])
         finally:
             if controller is not None:
                 controller.close()
