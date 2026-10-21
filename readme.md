@@ -177,7 +177,10 @@ remain the default for smaller objects; side approaches are tried first for
 wide/tall objects. For cylinders, side plans stop at the near flank so the
 palm does not intersect the full diameter. Wide, shallow bowl-shaped objects
 instead try an overhead pinch across the local inner/outer rim walls before
-side approaches, avoiding a tangent approach through the bowl. Joint segments are
+side approaches, preferring rim pairs with support on both walls and closing
+only to the estimated rim width. Flat plates need a lower jaw beneath an edge;
+when the plate rests flush on the table the planner now rejects infeasible
+tilted side poses rather than pushing down on its top. Joint segments are
 checked against the table, and side paths also check palm-object clearance in
 a separate PyBullet client. During the last approach waypoints, closing,
 and lifting, the fingers may come within 2 mm of the table while the wrist,
@@ -204,7 +207,8 @@ the benchmark **before the latest grasp-priority changes** (seeds 42-46),
 60/75 trials lifted (80%) and 13/15 objects had at least one successful seed;
 the bowl and plate were 0/5. In targeted seed-42 checks after the priority
 change, the Master Chef can was lifted with a side grasp while the bowl was
-approached from above but not retained during lift. The entire 75-trial matrix
+approached from above but not retained during lift; the plate has no safe
+direct edge grasp. The entire 75-trial matrix
 has not been rerun for these latest changes. These local results do not establish success
 on unseen objects or maze navigation. Successful episodes used 4530-4725
 physics ticks including settling and hold, beyond the course's 3000-tick

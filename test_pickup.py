@@ -46,6 +46,28 @@ class GraspTests(unittest.TestCase):
                 controller.close()
             p.disconnect(env.pb_physics_client)
 
+    def test_flat_plate_does_not_attempt_tilted_side_push(self):
+        from pick_nav_reach_env import PickNavReachEnv
+
+        env = PickNavReachEnv(seed=42, object_idx=11, gui=False, safe_forces=True)
+        controller = None
+        try:
+            obs = env.obs
+            for _ in range(80):
+                obs, _ = env.step(obs["qpos"])
+            controller = PickupController(env)
+            result = controller.run(obs)
+            self.assertFalse(result["picked"])
+            self.assertEqual(result["approach"], "undecided")
+            self.assertEqual(result["reason"], "no collision-free grasp approach")
+            self.assertEqual(result["approaches_considered"], ["side", "top-down"])
+            hand = p.getLinkState(env.robot_id, controller.hand)[4]
+            self.assertGreater(hand[2], np.max(obs["object_pc"][:, 2]) + 0.10)
+        finally:
+            if controller is not None:
+                controller.close()
+            p.disconnect(env.pb_physics_client)
+
     def test_failed_approaches_have_a_selected_mode_or_undecided(self):
         from pick_nav_reach_env import PickNavReachEnv
 

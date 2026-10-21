@@ -1,114 +1,119 @@
 {
   "seeds": [
-    42,
-    43,
-    44,
-    45,
-    46
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69
   ],
-  "total_trials": 75,
-  "successes": 63,
+  "total_trials": 150,
+  "successes": 126,
   "success_rate": 0.84,
   "objects_with_success": 13,
   "objects_tested": 15,
   "errors": 0,
   "failures": {
-    "unstable joint motion; stopped before arm can tumble": 1,
-    "robot failed to track safe waypoint": 1,
-    "object not lifted": 10
+    "arm too close to table; stopped before collision": 2,
+    "object not lifted": 12,
+    "no collision-free grasp approach": 10
   },
   "objects": [
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
-      "successes": 4,
-      "trials": 5,
-      "success_rate": 0.8,
+      "successes": 9,
+      "trials": 10,
+      "success_rate": 0.9,
       "failures": {
-        "unstable joint motion; stopped before arm can tumble": 1
+        "arm too close to table; stopped before collision": 1
       }
     },
     {
       "object_idx": 1,
       "object": "004_sugar_box",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
     {
       "object_idx": 2,
       "object": "005_tomato_soup_can",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
     {
       "object_idx": 3,
       "object": "006_mustard_bottle",
-      "successes": 4,
-      "trials": 5,
-      "success_rate": 0.8,
-      "failures": {
-        "robot failed to track safe waypoint": 1
-      }
+      "successes": 10,
+      "trials": 10,
+      "success_rate": 1.0,
+      "failures": {}
     },
     {
       "object_idx": 4,
       "object": "010_potted_meat_can",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
     {
       "object_idx": 5,
       "object": "011_banana",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
     {
       "object_idx": 6,
       "object": "012_strawberry",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
     {
       "object_idx": 7,
       "object": "013_apple",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
     {
       "object_idx": 8,
       "object": "021_bleach_cleanser",
-      "successes": 5,
-      "trials": 5,
-      "success_rate": 1.0,
-      "failures": {}
+      "successes": 9,
+      "trials": 10,
+      "success_rate": 0.9,
+      "failures": {
+        "arm too close to table; stopped before collision": 1
+      }
     },
     {
       "object_idx": 9,
       "object": "024_bowl",
       "successes": 0,
-      "trials": 5,
+      "trials": 10,
       "success_rate": 0.0,
       "failures": {
-        "object not lifted": 5
+        "object not lifted": 10
       }
     },
     {
       "object_idx": 10,
       "object": "025_mug",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
@@ -116,64 +121,96 @@
       "object_idx": 11,
       "object": "029_plate",
       "successes": 0,
-      "trials": 5,
+      "trials": 10,
       "success_rate": 0.0,
       "failures": {
-        "object not lifted": 5
+        "no collision-free grasp approach": 10
       }
     },
     {
       "object_idx": 12,
       "object": "040_large_marker",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     },
     {
       "object_idx": 13,
       "object": "048_hammer",
-      "successes": 5,
-      "trials": 5,
-      "success_rate": 1.0,
-      "failures": {}
+      "successes": 8,
+      "trials": 10,
+      "success_rate": 0.8,
+      "failures": {
+        "object not lifted": 2
+      }
     },
     {
       "object_idx": 14,
       "object": "061_foam_brick",
-      "successes": 5,
-      "trials": 5,
+      "successes": 10,
+      "trials": 10,
       "success_rate": 1.0,
       "failures": {}
     }
   ],
   "by_seed": [
     {
-      "seed": 42,
+      "seed": 60,
       "successes": 13,
       "trials": 15,
       "success_rate": 0.8666666666666667
     },
     {
-      "seed": 43,
+      "seed": 61,
       "successes": 13,
       "trials": 15,
       "success_rate": 0.8666666666666667
     },
     {
-      "seed": 44,
-      "successes": 11,
+      "seed": 62,
+      "successes": 12,
       "trials": 15,
-      "success_rate": 0.7333333333333333
+      "success_rate": 0.8
     },
     {
-      "seed": 45,
+      "seed": 63,
       "successes": 13,
       "trials": 15,
       "success_rate": 0.8666666666666667
     },
     {
-      "seed": 46,
+      "seed": 64,
+      "successes": 12,
+      "trials": 15,
+      "success_rate": 0.8
+    },
+    {
+      "seed": 65,
+      "successes": 12,
+      "trials": 15,
+      "success_rate": 0.8
+    },
+    {
+      "seed": 66,
+      "successes": 13,
+      "trials": 15,
+      "success_rate": 0.8666666666666667
+    },
+    {
+      "seed": 67,
+      "successes": 13,
+      "trials": 15,
+      "success_rate": 0.8666666666666667
+    },
+    {
+      "seed": 68,
+      "successes": 12,
+      "trials": 15,
+      "success_rate": 0.8
+    },
+    {
+      "seed": 69,
       "successes": 13,
       "trials": 15,
       "success_rate": 0.8666666666666667
@@ -183,189 +220,204 @@
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
-      "seed": 42,
+      "seed": 60,
       "grasp_proposals": 30,
       "approach": "side",
       "approaches_considered": [
         "side"
       ],
       "picked": true,
-      "lift_m": 0.1790914630333067,
-      "grasp_width_m": 0.09742156091198426,
+      "lift_m": 0.1801572864584845,
+      "grasp_width_m": 0.09999731797929885,
       "hold_steps": 50,
       "sim_steps": 2036,
       "reason": "held above table",
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 6.29
+      "elapsed_s": 5.38
     },
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
-      "seed": 43,
+      "seed": 61,
       "grasp_proposals": 30,
       "approach": "side",
       "approaches_considered": [
         "side"
       ],
       "picked": true,
-      "lift_m": 0.1808693854416954,
-      "grasp_width_m": 0.09957621152757833,
+      "lift_m": 0.18052843289837195,
+      "grasp_width_m": 0.0994309878737806,
       "hold_steps": 50,
       "sim_steps": 2036,
       "reason": "held above table",
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 3.95
+      "elapsed_s": 6.17
     },
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
-      "seed": 44,
+      "seed": 62,
       "grasp_proposals": 30,
-      "approach": "top-down",
+      "approach": "side",
       "approaches_considered": [
-        "side",
-        "top-down"
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.17949250826724372,
+      "grasp_width_m": 0.09955096967709032,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 7.58
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 63,
+      "grasp_proposals": 30,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.17885655387138688,
+      "grasp_width_m": 0.09973958756228855,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 4.3
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 64,
+      "grasp_proposals": 30,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.1802894738381815,
+      "grasp_width_m": 0.09953599445486493,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 4.41
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 65,
+      "grasp_proposals": 30,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.17985646658184717,
+      "grasp_width_m": 0.09992954845727008,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 7.28
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 66,
+      "grasp_proposals": 30,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.18034095847027753,
+      "grasp_width_m": 0.09928100424820938,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 6.54
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 67,
+      "grasp_proposals": 30,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.17959046092894582,
+      "grasp_width_m": 0.09961842764017077,
+      "hold_steps": 50,
+      "sim_steps": 2036,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2036,
+      "physics_ticks": 4180,
+      "elapsed_s": 8.32
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 68,
+      "grasp_proposals": 30,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
       ],
       "picked": false,
-      "sim_steps": 1502,
-      "reason": "unstable joint motion; stopped before arm can tumble",
+      "sim_steps": 1137,
+      "reason": "arm too close to table; stopped before collision",
       "status": "failed",
-      "env_steps": 1502,
-      "physics_ticks": 4046,
-      "elapsed_s": 6.78
+      "env_steps": 1137,
+      "physics_ticks": 3081,
+      "elapsed_s": 4.87
     },
     {
       "object_idx": 0,
       "object": "002_master_chef_can",
-      "seed": 45,
+      "seed": 69,
       "grasp_proposals": 30,
       "approach": "side",
       "approaches_considered": [
         "side"
       ],
       "picked": true,
-      "lift_m": 0.17948348009064696,
-      "grasp_width_m": 0.09977250416610028,
+      "lift_m": 0.17960999623740848,
+      "grasp_width_m": 0.09958069376747285,
       "hold_steps": 50,
       "sim_steps": 2036,
       "reason": "held above table",
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 3.62
-    },
-    {
-      "object_idx": 0,
-      "object": "002_master_chef_can",
-      "seed": 46,
-      "grasp_proposals": 30,
-      "approach": "side",
-      "approaches_considered": [
-        "side"
-      ],
-      "picked": true,
-      "lift_m": 0.18074409951607928,
-      "grasp_width_m": 0.09975065917715,
-      "hold_steps": 50,
-      "sim_steps": 2036,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 4.98
+      "elapsed_s": 6.11
     },
     {
       "object_idx": 1,
       "object": "004_sugar_box",
-      "seed": 42,
-      "grasp_proposals": 17,
-      "approach": "top-down",
-      "approaches_considered": [
-        "side",
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1822581715635465,
-      "grasp_width_m": 0.09118557207894894,
-      "hold_steps": 50,
-      "sim_steps": 1906,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1906,
-      "physics_ticks": 4530,
-      "elapsed_s": 5.29
-    },
-    {
-      "object_idx": 1,
-      "object": "004_sugar_box",
-      "seed": 43,
-      "grasp_proposals": 17,
-      "approach": "top-down",
-      "approaches_considered": [
-        "side",
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.18973354357226213,
-      "grasp_width_m": 0.09011340502974864,
-      "hold_steps": 50,
-      "sim_steps": 1906,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1906,
-      "physics_ticks": 4530,
-      "elapsed_s": 5.43
-    },
-    {
-      "object_idx": 1,
-      "object": "004_sugar_box",
-      "seed": 44,
-      "grasp_proposals": 13,
-      "approach": "top-down",
-      "approaches_considered": [
-        "side",
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20171077958688421,
-      "grasp_width_m": 0.09074984101502731,
-      "hold_steps": 50,
-      "sim_steps": 1906,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1906,
-      "physics_ticks": 4530,
-      "elapsed_s": 4.92
-    },
-    {
-      "object_idx": 1,
-      "object": "004_sugar_box",
-      "seed": 45,
-      "grasp_proposals": 16,
-      "approach": "top-down",
-      "approaches_considered": [
-        "side",
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.2001463445721724,
-      "grasp_width_m": 0.08997250462350237,
-      "hold_steps": 50,
-      "sim_steps": 1906,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1906,
-      "physics_ticks": 4530,
-      "elapsed_s": 5.35
-    },
-    {
-      "object_idx": 1,
-      "object": "004_sugar_box",
-      "seed": 46,
+      "seed": 60,
       "grasp_proposals": 20,
       "approach": "top-down",
       "approaches_considered": [
@@ -373,120 +425,41 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.18580317995759743,
-      "grasp_width_m": 0.09019537398147014,
+      "lift_m": 0.19557928979098638,
+      "grasp_width_m": 0.09059149368788812,
       "hold_steps": 50,
       "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 5.67
+      "elapsed_s": 10.23
     },
     {
-      "object_idx": 2,
-      "object": "005_tomato_soup_can",
-      "seed": 42,
-      "grasp_proposals": 30,
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 61,
+      "grasp_proposals": 16,
       "approach": "top-down",
       "approaches_considered": [
+        "side",
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.16929641476794777,
-      "grasp_width_m": 0.06695538394593838,
+      "lift_m": 0.19049717393340226,
+      "grasp_width_m": 0.08957920908836145,
       "hold_steps": 50,
-      "sim_steps": 1936,
+      "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.55
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 6.72
     },
     {
-      "object_idx": 2,
-      "object": "005_tomato_soup_can",
-      "seed": 43,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.16676748568857658,
-      "grasp_width_m": 0.06490722042723691,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.47
-    },
-    {
-      "object_idx": 2,
-      "object": "005_tomato_soup_can",
-      "seed": 44,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.16820374408785987,
-      "grasp_width_m": 0.06688512565097582,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.29
-    },
-    {
-      "object_idx": 2,
-      "object": "005_tomato_soup_can",
-      "seed": 45,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.16316785979666926,
-      "grasp_width_m": 0.06582815465749486,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.01
-    },
-    {
-      "object_idx": 2,
-      "object": "005_tomato_soup_can",
-      "seed": 46,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.16868282650580313,
-      "grasp_width_m": 0.06687634921672224,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 1.98
-    },
-    {
-      "object_idx": 3,
-      "object": "006_mustard_bottle",
-      "seed": 42,
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 62,
       "grasp_proposals": 17,
       "approach": "top-down",
       "approaches_considered": [
@@ -494,20 +467,20 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.1890072008524707,
-      "grasp_width_m": 0.08020646662213536,
+      "lift_m": 0.2030384920362367,
+      "grasp_width_m": 0.09009992366503021,
       "hold_steps": 50,
       "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.24
+      "elapsed_s": 10.49
     },
     {
-      "object_idx": 3,
-      "object": "006_mustard_bottle",
-      "seed": 43,
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 63,
       "grasp_proposals": 15,
       "approach": "top-down",
       "approaches_considered": [
@@ -515,37 +488,388 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.1947696067908632,
-      "grasp_width_m": 0.08038858541321699,
+      "lift_m": 0.19747513320010424,
+      "grasp_width_m": 0.09043024621748524,
       "hold_steps": 50,
       "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 3.71
+      "elapsed_s": 7.16
     },
     {
-      "object_idx": 3,
-      "object": "006_mustard_bottle",
-      "seed": 44,
-      "grasp_proposals": 14,
-      "approach": "side",
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 64,
+      "grasp_proposals": 17,
+      "approach": "top-down",
       "approaches_considered": [
-        "side"
+        "side",
+        "top-down"
       ],
-      "picked": false,
-      "sim_steps": 1106,
-      "reason": "robot failed to track safe waypoint",
-      "status": "failed",
-      "env_steps": 1106,
-      "physics_ticks": 2930,
-      "elapsed_s": 3.3
+      "picked": true,
+      "lift_m": 0.20106072187213875,
+      "grasp_width_m": 0.0900761556910469,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 9.79
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 65,
+      "grasp_proposals": 17,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.2033814914251355,
+      "grasp_width_m": 0.09078926761767704,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 9.21
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 66,
+      "grasp_proposals": 17,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20203525731989758,
+      "grasp_width_m": 0.09014879319802353,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 9.76
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 67,
+      "grasp_proposals": 16,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19434021212108255,
+      "grasp_width_m": 0.09011437859717494,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 9.29
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 68,
+      "grasp_proposals": 16,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20281687119135805,
+      "grasp_width_m": 0.09081991897786877,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 9.65
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 69,
+      "grasp_proposals": 17,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.2017059202577517,
+      "grasp_width_m": 0.09033204485803757,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 9.87
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 60,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16938615240226695,
+      "grasp_width_m": 0.0666461841954479,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.51
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 61,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1647769951572733,
+      "grasp_width_m": 0.06683680968357686,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.57
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 62,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16859634782544108,
+      "grasp_width_m": 0.06685340521496004,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.81
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 63,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16605939960174787,
+      "grasp_width_m": 0.06682539501740338,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.85
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 64,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16214087745955275,
+      "grasp_width_m": 0.0658018889133027,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.86
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 65,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16227146388608837,
+      "grasp_width_m": 0.06553681795625088,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.06
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 66,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16859858133364714,
+      "grasp_width_m": 0.06565191564974278,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.98
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 67,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16749884681795324,
+      "grasp_width_m": 0.0664607480800398,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.28
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 68,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1682798759329589,
+      "grasp_width_m": 0.06577445597315786,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.56
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 69,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1625034285186444,
+      "grasp_width_m": 0.06552219381157683,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.53
     },
     {
       "object_idx": 3,
       "object": "006_mustard_bottle",
-      "seed": 45,
+      "seed": 60,
+      "grasp_proposals": 13,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1832118645739863,
+      "grasp_width_m": 0.07927760258158822,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 4.07
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 61,
+      "grasp_proposals": 15,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20589944536317561,
+      "grasp_width_m": 0.08127412155423078,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.08
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 62,
       "grasp_proposals": 12,
       "approach": "top-down",
       "approaches_considered": [
@@ -553,462 +877,83 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.19938666601453836,
-      "grasp_width_m": 0.08081123998170388,
+      "lift_m": 0.1990543592652685,
+      "grasp_width_m": 0.07816831364748454,
       "hold_steps": 50,
       "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 3.73
+      "elapsed_s": 7.34
     },
     {
       "object_idx": 3,
       "object": "006_mustard_bottle",
-      "seed": 46,
-      "grasp_proposals": 14,
-      "approach": "top-down",
-      "approaches_considered": [
-        "side",
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.19370933072761742,
-      "grasp_width_m": 0.08024635847488988,
-      "hold_steps": 50,
-      "sim_steps": 1906,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1906,
-      "physics_ticks": 4530,
-      "elapsed_s": 4.04
-    },
-    {
-      "object_idx": 4,
-      "object": "010_potted_meat_can",
-      "seed": 42,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1613502939986744,
-      "grasp_width_m": 0.050175229979441925,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.21
-    },
-    {
-      "object_idx": 4,
-      "object": "010_potted_meat_can",
-      "seed": 43,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1705299942554489,
-      "grasp_width_m": 0.05001350189148523,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.17
-    },
-    {
-      "object_idx": 4,
-      "object": "010_potted_meat_can",
-      "seed": 44,
-      "grasp_proposals": 29,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1644131071828826,
-      "grasp_width_m": 0.05007234207040232,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.23
-    },
-    {
-      "object_idx": 4,
-      "object": "010_potted_meat_can",
-      "seed": 45,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1711039030598107,
-      "grasp_width_m": 0.05054309731379885,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.13
-    },
-    {
-      "object_idx": 4,
-      "object": "010_potted_meat_can",
-      "seed": 46,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.15952225555941746,
-      "grasp_width_m": 0.05013255310784426,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.17
-    },
-    {
-      "object_idx": 5,
-      "object": "011_banana",
-      "seed": 42,
-      "grasp_proposals": 17,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20482498584905795,
-      "grasp_width_m": 0.036751645043198534,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.15
-    },
-    {
-      "object_idx": 5,
-      "object": "011_banana",
-      "seed": 43,
-      "grasp_proposals": 19,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20159035746112886,
-      "grasp_width_m": 0.03732993387304668,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.18
-    },
-    {
-      "object_idx": 5,
-      "object": "011_banana",
-      "seed": 44,
-      "grasp_proposals": 17,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20422298682411288,
-      "grasp_width_m": 0.03699206937904513,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.17
-    },
-    {
-      "object_idx": 5,
-      "object": "011_banana",
-      "seed": 45,
-      "grasp_proposals": 18,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.19650588096956179,
-      "grasp_width_m": 0.03732052268840007,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.39
-    },
-    {
-      "object_idx": 5,
-      "object": "011_banana",
-      "seed": 46,
-      "grasp_proposals": 17,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.19481793185107554,
-      "grasp_width_m": 0.036702681658426696,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.37
-    },
-    {
-      "object_idx": 6,
-      "object": "012_strawberry",
-      "seed": 42,
-      "grasp_proposals": 8,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20618029455447073,
-      "grasp_width_m": 0.045191088885656844,
-      "hold_steps": 50,
-      "sim_steps": 1907,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1907,
-      "physics_ticks": 4535,
-      "elapsed_s": 2.34
-    },
-    {
-      "object_idx": 6,
-      "object": "012_strawberry",
-      "seed": 43,
+      "seed": 63,
       "grasp_proposals": 13,
       "approach": "top-down",
       "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20177618990278345,
-      "grasp_width_m": 0.04477096743882394,
-      "hold_steps": 50,
-      "sim_steps": 1907,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1907,
-      "physics_ticks": 4535,
-      "elapsed_s": 2.41
-    },
-    {
-      "object_idx": 6,
-      "object": "012_strawberry",
-      "seed": 44,
-      "grasp_proposals": 10,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.21478594185083932,
-      "grasp_width_m": 0.042866998679685596,
-      "hold_steps": 50,
-      "sim_steps": 1907,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1907,
-      "physics_ticks": 4535,
-      "elapsed_s": 2.31
-    },
-    {
-      "object_idx": 6,
-      "object": "012_strawberry",
-      "seed": 45,
-      "grasp_proposals": 9,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.2035264901608993,
-      "grasp_width_m": 0.0440212450471313,
-      "hold_steps": 50,
-      "sim_steps": 1907,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1907,
-      "physics_ticks": 4535,
-      "elapsed_s": 2.29
-    },
-    {
-      "object_idx": 6,
-      "object": "012_strawberry",
-      "seed": 46,
-      "grasp_proposals": 11,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20429444323225565,
-      "grasp_width_m": 0.04504999311361668,
-      "hold_steps": 50,
-      "sim_steps": 1907,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1907,
-      "physics_ticks": 4535,
-      "elapsed_s": 2.44
-    },
-    {
-      "object_idx": 7,
-      "object": "013_apple",
-      "seed": 42,
-      "grasp_proposals": 23,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.17099693389884518,
-      "grasp_width_m": 0.07624365936403024,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.48
-    },
-    {
-      "object_idx": 7,
-      "object": "013_apple",
-      "seed": 43,
-      "grasp_proposals": 27,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1770335972185645,
-      "grasp_width_m": 0.07564897696162741,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.4
-    },
-    {
-      "object_idx": 7,
-      "object": "013_apple",
-      "seed": 44,
-      "grasp_proposals": 28,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.17684442759822816,
-      "grasp_width_m": 0.07497350500874062,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.45
-    },
-    {
-      "object_idx": 7,
-      "object": "013_apple",
-      "seed": 45,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1704675660266174,
-      "grasp_width_m": 0.07566818118499204,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.41
-    },
-    {
-      "object_idx": 7,
-      "object": "013_apple",
-      "seed": 46,
-      "grasp_proposals": 29,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1706830214248396,
-      "grasp_width_m": 0.07557847797587719,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.49
-    },
-    {
-      "object_idx": 8,
-      "object": "021_bleach_cleanser",
-      "seed": 42,
-      "grasp_proposals": 21,
-      "approach": "top-down",
-      "approaches_considered": [
         "side",
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.19168823148394365,
-      "grasp_width_m": 0.09292706180814342,
+      "lift_m": 0.19076786880835594,
+      "grasp_width_m": 0.08234873084887247,
       "hold_steps": 50,
       "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.88
+      "elapsed_s": 7.26
     },
     {
-      "object_idx": 8,
-      "object": "021_bleach_cleanser",
-      "seed": 43,
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 64,
+      "grasp_proposals": 13,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19737959559080165,
+      "grasp_width_m": 0.07903353832887315,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.21
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 65,
+      "grasp_proposals": 12,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19271263394017302,
+      "grasp_width_m": 0.07980887790665167,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 4.16
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 66,
       "grasp_proposals": 15,
       "approach": "top-down",
       "approaches_considered": [
@@ -1016,20 +961,62 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.1936276226658441,
-      "grasp_width_m": 0.09298677396377047,
+      "lift_m": 0.1873508923504259,
+      "grasp_width_m": 0.07969993975705802,
       "hold_steps": 50,
       "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 4.15
+      "elapsed_s": 7.2
     },
     {
-      "object_idx": 8,
-      "object": "021_bleach_cleanser",
-      "seed": 44,
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 67,
+      "grasp_proposals": 9,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20534753416718,
+      "grasp_width_m": 0.07869897722371741,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 6.89
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 68,
+      "grasp_proposals": 15,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18732432390095988,
+      "grasp_width_m": 0.07950668808692907,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 4.79
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 69,
       "grasp_proposals": 17,
       "approach": "top-down",
       "approaches_considered": [
@@ -1037,210 +1024,228 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.17346366705726024,
-      "grasp_width_m": 0.09087893668351725,
+      "lift_m": 0.19306373403724408,
+      "grasp_width_m": 0.07948824062428528,
       "hold_steps": 50,
       "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
+      "elapsed_s": 8.84
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 60,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16675617402848752,
+      "grasp_width_m": 0.050166562826605046,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.77
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 61,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16711329847455159,
+      "grasp_width_m": 0.05031391342812894,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
       "elapsed_s": 3.77
     },
     {
-      "object_idx": 8,
-      "object": "021_bleach_cleanser",
-      "seed": 45,
-      "grasp_proposals": 18,
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 62,
+      "grasp_proposals": 27,
       "approach": "top-down",
       "approaches_considered": [
-        "side",
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.18487892731664024,
-      "grasp_width_m": 0.09216904518589003,
+      "lift_m": 0.16504191918594946,
+      "grasp_width_m": 0.05036531293176314,
       "hold_steps": 50,
-      "sim_steps": 1906,
+      "sim_steps": 1936,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1906,
-      "physics_ticks": 4530,
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.99
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 63,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.15946756583332844,
+      "grasp_width_m": 0.05005591606729608,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
       "elapsed_s": 3.94
     },
     {
-      "object_idx": 8,
-      "object": "021_bleach_cleanser",
-      "seed": 46,
-      "grasp_proposals": 17,
-      "approach": "top-down",
-      "approaches_considered": [
-        "side",
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1834182655541602,
-      "grasp_width_m": 0.09118901037801255,
-      "hold_steps": 50,
-      "sim_steps": 1906,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1906,
-      "physics_ticks": 4530,
-      "elapsed_s": 4.0
-    },
-    {
-      "object_idx": 9,
-      "object": "024_bowl",
-      "seed": 42,
-      "grasp_proposals": 0,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": false,
-      "lift_m": -8.910101044057317e-05,
-      "grasp_width_m": 0.011623475226676477,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.18
-    },
-    {
-      "object_idx": 9,
-      "object": "024_bowl",
-      "seed": 43,
-      "grasp_proposals": 0,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": false,
-      "lift_m": -0.0005148682426080464,
-      "grasp_width_m": 0.016565725372837625,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.18
-    },
-    {
-      "object_idx": 9,
-      "object": "024_bowl",
-      "seed": 44,
-      "grasp_proposals": 0,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": false,
-      "lift_m": -0.0004419626429783552,
-      "grasp_width_m": 0.009122746695936764,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.07
-    },
-    {
-      "object_idx": 9,
-      "object": "024_bowl",
-      "seed": 45,
-      "grasp_proposals": 0,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": false,
-      "lift_m": -0.000313287537415885,
-      "grasp_width_m": 0.00844180765176585,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.11
-    },
-    {
-      "object_idx": 9,
-      "object": "024_bowl",
-      "seed": 46,
-      "grasp_proposals": 0,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": false,
-      "lift_m": -0.0003866906215660437,
-      "grasp_width_m": 0.009350971044903214,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.09
-    },
-    {
-      "object_idx": 10,
-      "object": "025_mug",
-      "seed": 42,
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 64,
       "grasp_proposals": 30,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.17548294761885264,
-      "grasp_width_m": 0.08147625999676282,
+      "lift_m": 0.17092465007107138,
+      "grasp_width_m": 0.050509556778551803,
       "hold_steps": 50,
       "sim_steps": 1936,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.33
+      "elapsed_s": 3.88
     },
     {
-      "object_idx": 10,
-      "object": "025_mug",
-      "seed": 43,
-      "grasp_proposals": 30,
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 65,
+      "grasp_proposals": 29,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.16786214592202753,
-      "grasp_width_m": 0.08131247190173178,
+      "lift_m": 0.16717371018574734,
+      "grasp_width_m": 0.0501050766905836,
       "hold_steps": 50,
       "sim_steps": 1936,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 2.35
+      "elapsed_s": 3.87
     },
     {
-      "object_idx": 10,
-      "object": "025_mug",
-      "seed": 44,
-      "grasp_proposals": 30,
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 66,
+      "grasp_proposals": 27,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.17279524001686664,
-      "grasp_width_m": 0.08167085651648613,
+      "lift_m": 0.16256189482502537,
+      "grasp_width_m": 0.0504817945102249,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.77
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 67,
+      "grasp_proposals": 28,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17027177270754412,
+      "grasp_width_m": 0.04997619359630378,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.72
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 68,
+      "grasp_proposals": 27,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16584601124837595,
+      "grasp_width_m": 0.05041723022758108,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.76
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 69,
+      "grasp_proposals": 25,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.15971825302333698,
+      "grasp_width_m": 0.05046293285164239,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.73
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 60,
+      "grasp_proposals": 20,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20813618908982678,
+      "grasp_width_m": 0.03747805582401752,
       "hold_steps": 50,
       "sim_steps": 1936,
       "reason": "held above table",
@@ -1250,249 +1255,670 @@
       "elapsed_s": 2.4
     },
     {
-      "object_idx": 10,
-      "object": "025_mug",
-      "seed": 45,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.16747374571010032,
-      "grasp_width_m": 0.08138543201929635,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.36
-    },
-    {
-      "object_idx": 10,
-      "object": "025_mug",
-      "seed": 46,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.16822912444311833,
-      "grasp_width_m": 0.08142840375355409,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.32
-    },
-    {
-      "object_idx": 11,
-      "object": "029_plate",
-      "seed": 42,
-      "grasp_proposals": 0,
-      "approach": "side",
-      "approaches_considered": [
-        "side"
-      ],
-      "picked": false,
-      "lift_m": -0.014662348064530706,
-      "grasp_width_m": 0.03811568633485758,
-      "hold_steps": 50,
-      "sim_steps": 2036,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.23
-    },
-    {
-      "object_idx": 11,
-      "object": "029_plate",
-      "seed": 43,
-      "grasp_proposals": 0,
-      "approach": "side",
-      "approaches_considered": [
-        "side"
-      ],
-      "picked": false,
-      "lift_m": -0.008091956690387092,
-      "grasp_width_m": 0.0395741157911664,
-      "hold_steps": 50,
-      "sim_steps": 2036,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.2
-    },
-    {
-      "object_idx": 11,
-      "object": "029_plate",
-      "seed": 44,
-      "grasp_proposals": 0,
-      "approach": "side",
-      "approaches_considered": [
-        "side"
-      ],
-      "picked": false,
-      "lift_m": -0.0056411243141414324,
-      "grasp_width_m": 0.040848028536693136,
-      "hold_steps": 50,
-      "sim_steps": 2036,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.23
-    },
-    {
-      "object_idx": 11,
-      "object": "029_plate",
-      "seed": 45,
-      "grasp_proposals": 0,
-      "approach": "side",
-      "approaches_considered": [
-        "side"
-      ],
-      "picked": false,
-      "lift_m": -0.006538758540507894,
-      "grasp_width_m": 0.04155489772525388,
-      "hold_steps": 50,
-      "sim_steps": 2036,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.27
-    },
-    {
-      "object_idx": 11,
-      "object": "029_plate",
-      "seed": 46,
-      "grasp_proposals": 0,
-      "approach": "side",
-      "approaches_considered": [
-        "side"
-      ],
-      "picked": false,
-      "lift_m": -0.012269268471049366,
-      "grasp_width_m": 0.03936818328295602,
-      "hold_steps": 50,
-      "sim_steps": 2036,
-      "reason": "object not lifted",
-      "status": "failed",
-      "env_steps": 2036,
-      "physics_ticks": 4180,
-      "elapsed_s": 2.23
-    },
-    {
-      "object_idx": 12,
-      "object": "040_large_marker",
-      "seed": 42,
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 61,
       "grasp_proposals": 12,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.17712490658377245,
-      "grasp_width_m": 0.018484327020120726,
+      "lift_m": 0.21060685423578052,
+      "grasp_width_m": 0.03691199527066685,
       "hold_steps": 50,
-      "sim_steps": 1945,
+      "sim_steps": 1936,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1945,
-      "physics_ticks": 4725,
-      "elapsed_s": 2.11
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.47
     },
     {
-      "object_idx": 12,
-      "object": "040_large_marker",
-      "seed": 43,
-      "grasp_proposals": 9,
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 62,
+      "grasp_proposals": 17,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.1848662512273368,
-      "grasp_width_m": 0.018000331936376048,
+      "lift_m": 0.1940439894092746,
+      "grasp_width_m": 0.036582137794910236,
       "hold_steps": 50,
-      "sim_steps": 1945,
+      "sim_steps": 1936,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1945,
-      "physics_ticks": 4725,
-      "elapsed_s": 2.2
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.4
     },
     {
-      "object_idx": 12,
-      "object": "040_large_marker",
-      "seed": 44,
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 63,
+      "grasp_proposals": 14,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.2068524876336646,
+      "grasp_width_m": 0.0368706600532427,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.31
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 64,
+      "grasp_proposals": 20,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19582034074010646,
+      "grasp_width_m": 0.03726829994375682,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.28
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 65,
+      "grasp_proposals": 16,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1998603655975275,
+      "grasp_width_m": 0.03730489713356506,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.49
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 66,
+      "grasp_proposals": 16,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19460546642760734,
+      "grasp_width_m": 0.03729570993533804,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.55
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 67,
+      "grasp_proposals": 16,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.2077030679449866,
+      "grasp_width_m": 0.03688682143991011,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.44
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 68,
       "grasp_proposals": 10,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.18246299707010882,
-      "grasp_width_m": 0.018276213427119728,
+      "lift_m": 0.19257071470061038,
+      "grasp_width_m": 0.037190789128279444,
       "hold_steps": 50,
-      "sim_steps": 1945,
+      "sim_steps": 1936,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1945,
-      "physics_ticks": 4725,
-      "elapsed_s": 2.07
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.42
     },
     {
-      "object_idx": 12,
-      "object": "040_large_marker",
-      "seed": 45,
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 69,
+      "grasp_proposals": 16,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18958763416735913,
+      "grasp_width_m": 0.03716001342192265,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.15
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 60,
+      "grasp_proposals": 10,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.21367527316014756,
+      "grasp_width_m": 0.04351804438631939,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 4.11
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 61,
       "grasp_proposals": 11,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.18846212192422618,
-      "grasp_width_m": 0.018840742563328728,
+      "lift_m": 0.20492341216734966,
+      "grasp_width_m": 0.04515164549028357,
       "hold_steps": 50,
-      "sim_steps": 1945,
+      "sim_steps": 1907,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1945,
-      "physics_ticks": 4725,
-      "elapsed_s": 2.04
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 3.1
     },
     {
-      "object_idx": 12,
-      "object": "040_large_marker",
-      "seed": 46,
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 62,
       "grasp_proposals": 11,
       "approach": "top-down",
       "approaches_considered": [
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.19480815487813108,
-      "grasp_width_m": 0.01834794661282246,
+      "lift_m": 0.2025674495179608,
+      "grasp_width_m": 0.04417117115778956,
       "hold_steps": 50,
-      "sim_steps": 1945,
+      "sim_steps": 1907,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1945,
-      "physics_ticks": 4725,
-      "elapsed_s": 1.83
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 4.84
     },
     {
-      "object_idx": 13,
-      "object": "048_hammer",
-      "seed": 42,
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 63,
+      "grasp_proposals": 11,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20424066396165586,
+      "grasp_width_m": 0.04519666808867429,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 3.92
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 64,
+      "grasp_proposals": 9,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1996435585817874,
+      "grasp_width_m": 0.043919725593574946,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 4.63
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 65,
+      "grasp_proposals": 12,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20502558639227464,
+      "grasp_width_m": 0.04549495531472736,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 2.77
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 66,
+      "grasp_proposals": 12,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20258659547181446,
+      "grasp_width_m": 0.044089978001325386,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 4.45
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 67,
+      "grasp_proposals": 11,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20621773839532265,
+      "grasp_width_m": 0.043838829903950605,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 4.57
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 68,
+      "grasp_proposals": 9,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20251572840707543,
+      "grasp_width_m": 0.04588016913235102,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 2.63
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 69,
+      "grasp_proposals": 14,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.21014677493403278,
+      "grasp_width_m": 0.0447483728283725,
+      "hold_steps": 50,
+      "sim_steps": 1907,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1907,
+      "physics_ticks": 4535,
+      "elapsed_s": 3.79
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 60,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1708125853897552,
+      "grasp_width_m": 0.07456223968670139,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.01
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 61,
+      "grasp_proposals": 24,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17135182304282126,
+      "grasp_width_m": 0.07461009312183553,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 6.37
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 62,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18169510602306382,
+      "grasp_width_m": 0.07413691325242101,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.37
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 63,
+      "grasp_proposals": 28,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17054838183683885,
+      "grasp_width_m": 0.07584905796465492,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.71
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 64,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.180192754822879,
+      "grasp_width_m": 0.0766702576372011,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.46
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 65,
+      "grasp_proposals": 29,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1819003997771751,
+      "grasp_width_m": 0.0766251283238075,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 6.61
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 66,
+      "grasp_proposals": 29,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18282652952486778,
+      "grasp_width_m": 0.07564640597664934,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 6.79
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 67,
+      "grasp_proposals": 28,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1826233376358528,
+      "grasp_width_m": 0.07439637851683112,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 7.07
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 68,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18282734888006658,
+      "grasp_width_m": 0.07591249972636598,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.77
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 69,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17403169662808948,
+      "grasp_width_m": 0.07456452659311316,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.41
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 60,
+      "grasp_proposals": 12,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17922279310580758,
+      "grasp_width_m": 0.09381779834261973,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.49
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 61,
+      "grasp_proposals": 15,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1897378117508154,
+      "grasp_width_m": 0.09170987565991646,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.29
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 62,
+      "grasp_proposals": 17,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "sim_steps": 1110,
+      "reason": "arm too close to table; stopped before collision",
+      "status": "failed",
+      "env_steps": 1110,
+      "physics_ticks": 3534,
+      "elapsed_s": 7.7
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 63,
+      "grasp_proposals": 15,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18541991726222518,
+      "grasp_width_m": 0.09298724163568577,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 8.25
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 64,
       "grasp_proposals": 18,
       "approach": "top-down",
       "approaches_considered": [
@@ -1500,41 +1926,62 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.19578134954779092,
-      "grasp_width_m": 0.03222268387457791,
+      "lift_m": 0.17712787387501516,
+      "grasp_width_m": 0.09379465592453724,
       "hold_steps": 50,
-      "sim_steps": 1936,
+      "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 3.94
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.44
     },
     {
-      "object_idx": 13,
-      "object": "048_hammer",
-      "seed": 43,
-      "grasp_proposals": 19,
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 65,
+      "grasp_proposals": 9,
       "approach": "top-down",
       "approaches_considered": [
         "side",
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.20053540874236908,
-      "grasp_width_m": 0.03003427434347102,
+      "lift_m": 0.1593434565338666,
+      "grasp_width_m": 0.09251509743747544,
       "hold_steps": 50,
-      "sim_steps": 1936,
+      "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 4.1
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 6.12
     },
     {
-      "object_idx": 13,
-      "object": "048_hammer",
-      "seed": 44,
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 66,
+      "grasp_proposals": 15,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18728427794590385,
+      "grasp_width_m": 0.09356478904240227,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.65
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 67,
       "grasp_proposals": 20,
       "approach": "top-down",
       "approaches_considered": [
@@ -1542,41 +1989,978 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.19761300897744827,
-      "grasp_width_m": 0.02863254794224476,
+      "lift_m": 0.1723594043543374,
+      "grasp_width_m": 0.0924676812871664,
       "hold_steps": 50,
-      "sim_steps": 1936,
+      "sim_steps": 1906,
       "reason": "held above table",
       "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 4.12
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.53
     },
     {
-      "object_idx": 13,
-      "object": "048_hammer",
-      "seed": 45,
-      "grasp_proposals": 19,
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 68,
+      "grasp_proposals": 18,
       "approach": "top-down",
       "approaches_considered": [
         "side",
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.2025714862937822,
-      "grasp_width_m": 0.03018965192600188,
+      "lift_m": 0.17786429037539386,
+      "grasp_width_m": 0.09306058417967697,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 7.91
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 69,
+      "grasp_proposals": 12,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1863040679802166,
+      "grasp_width_m": 0.09275474766660165,
+      "hold_steps": 50,
+      "sim_steps": 1906,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1906,
+      "physics_ticks": 4530,
+      "elapsed_s": 5.0
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 60,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": 0.00035042309512545167,
+      "grasp_width_m": 0.009167304350068317,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.5
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 61,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.004998215599790856,
+      "grasp_width_m": 0.01127395453274335,
+      "hold_steps": 50,
+      "sim_steps": 1938,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1938,
+      "physics_ticks": 4682,
+      "elapsed_s": 3.03
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 62,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -3.27436099452072e-05,
+      "grasp_width_m": 0.008226551797981476,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.6
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 63,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.007489727011096403,
+      "grasp_width_m": 0.014409999611804206,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.27
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 64,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.0005325110304261749,
+      "grasp_width_m": 0.008340331917808428,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.34
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 65,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.0023117553828259085,
+      "grasp_width_m": 0.009718466669550998,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.43
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 66,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": 0.0006108068376247111,
+      "grasp_width_m": 0.008748782584316274,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.42
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 67,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.003461609376473551,
+      "grasp_width_m": 0.010633943391463086,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.34
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 68,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.00523773206001743,
+      "grasp_width_m": 0.00999777807080243,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.64
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 69,
+      "grasp_proposals": 0,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": 0.00028622597736693844,
+      "grasp_width_m": 0.008834570269526306,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.38
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 60,
+      "grasp_proposals": 28,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16706136659463078,
+      "grasp_width_m": 0.08117172019403222,
       "hold_steps": 50,
       "sim_steps": 1936,
       "reason": "held above table",
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 3.9
+      "elapsed_s": 2.75
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 61,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16798358843367223,
+      "grasp_width_m": 0.08114309164175859,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.29
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 62,
+      "grasp_proposals": 29,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1731754259743814,
+      "grasp_width_m": 0.08121063337967717,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.29
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 63,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17518610622727626,
+      "grasp_width_m": 0.08102863242877645,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.13
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 64,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.15267083383911384,
+      "grasp_width_m": 0.08139278435277077,
+      "hold_steps": 50,
+      "sim_steps": 2136,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2136,
+      "physics_ticks": 4880,
+      "elapsed_s": 5.16
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 65,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1666156951810035,
+      "grasp_width_m": 0.0811087367486886,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 2.98
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 66,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1689514442270208,
+      "grasp_width_m": 0.08158781629172293,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.31
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 67,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.16722777996116045,
+      "grasp_width_m": 0.08138783919067204,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.11
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 68,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17369252596412088,
+      "grasp_width_m": 0.08164805839293124,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.01
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 69,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1743588946988034,
+      "grasp_width_m": 0.0809662271858616,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.24
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 60,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.3
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 61,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.64
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 62,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.6
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 63,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 4.9
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 64,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.2
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 65,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.13
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 66,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.33
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 67,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.43
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 68,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 3.55
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 69,
+      "grasp_proposals": 0,
+      "approach": "undecided",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "reason": "no collision-free grasp approach",
+      "status": "failed",
+      "env_steps": 386,
+      "physics_ticks": 1930,
+      "elapsed_s": 5.16
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 60,
+      "grasp_proposals": 13,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.17331081430815398,
+      "grasp_width_m": 0.018081424904714562,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 3.25
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 61,
+      "grasp_proposals": 11,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18824169245021727,
+      "grasp_width_m": 0.018235627635160935,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 3.0
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 62,
+      "grasp_proposals": 10,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20399352887837718,
+      "grasp_width_m": 0.01846151188003784,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 2.28
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 63,
+      "grasp_proposals": 9,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1777547087147563,
+      "grasp_width_m": 0.018768176449525192,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 2.22
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 64,
+      "grasp_proposals": 12,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1756613950957011,
+      "grasp_width_m": 0.018092875442687232,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 2.15
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 65,
+      "grasp_proposals": 10,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18998622705733514,
+      "grasp_width_m": 0.018135552965778963,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 3.11
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 66,
+      "grasp_proposals": 8,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18808548046540674,
+      "grasp_width_m": 0.01814752488990285,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 3.33
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 67,
+      "grasp_proposals": 11,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18641161962711128,
+      "grasp_width_m": 0.01817288390710863,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 3.35
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 68,
+      "grasp_proposals": 10,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1788605229457717,
+      "grasp_width_m": 0.01802969419891312,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 3.18
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 69,
+      "grasp_proposals": 11,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19317691044587226,
+      "grasp_width_m": 0.018010786158030735,
+      "hold_steps": 50,
+      "sim_steps": 1945,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1945,
+      "physics_ticks": 4725,
+      "elapsed_s": 3.18
     },
     {
       "object_idx": 13,
       "object": "048_hammer",
-      "seed": 46,
+      "seed": 60,
+      "grasp_proposals": 23,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19742241674763805,
+      "grasp_width_m": 0.03037976905460936,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.34
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 61,
+      "grasp_proposals": 23,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.18732073955625894,
+      "grasp_width_m": 0.028757418455999374,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.68
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 62,
+      "grasp_proposals": 15,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1845284832870353,
+      "grasp_width_m": 0.028863824559964793,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.41
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 63,
+      "grasp_proposals": 15,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.17231014791742438,
+      "grasp_width_m": 0.07929215865927114,
+      "hold_steps": 50,
+      "sim_steps": 2153,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2153,
+      "physics_ticks": 4297,
+      "elapsed_s": 5.14
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 64,
+      "grasp_proposals": 21,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.00023234548396633414,
+      "grasp_width_m": 0.029299932775557664,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.11
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 65,
+      "grasp_proposals": 24,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": false,
+      "lift_m": -0.0003398574188948622,
+      "grasp_width_m": 0.030049619091343377,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "object not lifted",
+      "status": "failed",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 6.76
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 66,
+      "grasp_proposals": 16,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1678189355428179,
+      "grasp_width_m": 0.027986622132215526,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.99
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 67,
       "grasp_proposals": 17,
       "approach": "top-down",
       "approaches_considered": [
@@ -1584,8 +2968,249 @@
         "top-down"
       ],
       "picked": true,
-      "lift_m": 0.16653854183544103,
-      "grasp_width_m": 0.02919628982196112,
+      "lift_m": 0.20476192958142103,
+      "grasp_width_m": 0.029072765915133646,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 5.91
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 68,
+      "grasp_proposals": 21,
+      "approach": "side",
+      "approaches_considered": [
+        "side"
+      ],
+      "picked": true,
+      "lift_m": 0.18226997494559394,
+      "grasp_width_m": 0.08053531124104059,
+      "hold_steps": 50,
+      "sim_steps": 2226,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 2226,
+      "physics_ticks": 4370,
+      "elapsed_s": 5.76
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 69,
+      "grasp_proposals": 20,
+      "approach": "top-down",
+      "approaches_considered": [
+        "side",
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1867574206308491,
+      "grasp_width_m": 0.031302074195060106,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 6.21
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 60,
+      "grasp_proposals": 28,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20079980037527112,
+      "grasp_width_m": 0.05011399588978536,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.46
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 61,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.2110400820655287,
+      "grasp_width_m": 0.07488129694951236,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.5
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 62,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.20035575320718846,
+      "grasp_width_m": 0.0746931558764964,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.52
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 63,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1986632127872856,
+      "grasp_width_m": 0.0749888747510436,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.46
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 64,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19235327811866998,
+      "grasp_width_m": 0.07495336326029764,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.19
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 65,
+      "grasp_proposals": 27,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1987602422891489,
+      "grasp_width_m": 0.07515703560592445,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.32
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 66,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1990723578191913,
+      "grasp_width_m": 0.050674958721133055,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.11
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 67,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.2043225662631677,
+      "grasp_width_m": 0.05015318088997287,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.51
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 68,
+      "grasp_proposals": 30,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.19800469083153516,
+      "grasp_width_m": 0.07490730080016372,
+      "hold_steps": 50,
+      "sim_steps": 1936,
+      "reason": "held above table",
+      "status": "success",
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 3.92
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 69,
+      "grasp_proposals": 29,
+      "approach": "top-down",
+      "approaches_considered": [
+        "top-down"
+      ],
+      "picked": true,
+      "lift_m": 0.1916271831958768,
+      "grasp_width_m": 0.05083721648741829,
       "hold_steps": 50,
       "sim_steps": 1936,
       "reason": "held above table",
@@ -1593,106 +3218,6 @@
       "env_steps": 1936,
       "physics_ticks": 4680,
       "elapsed_s": 3.83
-    },
-    {
-      "object_idx": 14,
-      "object": "061_foam_brick",
-      "seed": 42,
-      "grasp_proposals": 28,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.21054222875093875,
-      "grasp_width_m": 0.0750172082312092,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.68
-    },
-    {
-      "object_idx": 14,
-      "object": "061_foam_brick",
-      "seed": 43,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.17851024880065958,
-      "grasp_width_m": 0.051128049316120555,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.63
-    },
-    {
-      "object_idx": 14,
-      "object": "061_foam_brick",
-      "seed": 44,
-      "grasp_proposals": 29,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.20665494427632947,
-      "grasp_width_m": 0.07497024219534766,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.64
-    },
-    {
-      "object_idx": 14,
-      "object": "061_foam_brick",
-      "seed": 45,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.19451564278404254,
-      "grasp_width_m": 0.050963500471663606,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.49
-    },
-    {
-      "object_idx": 14,
-      "object": "061_foam_brick",
-      "seed": 46,
-      "grasp_proposals": 30,
-      "approach": "top-down",
-      "approaches_considered": [
-        "top-down"
-      ],
-      "picked": true,
-      "lift_m": 0.1979983468610954,
-      "grasp_width_m": 0.05103810778462015,
-      "hold_steps": 50,
-      "sim_steps": 1936,
-      "reason": "held above table",
-      "status": "success",
-      "env_steps": 1936,
-      "physics_ticks": 4680,
-      "elapsed_s": 2.5
     }
   ]
 }

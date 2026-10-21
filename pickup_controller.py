@@ -139,8 +139,24 @@ def propose_radial_rim_grasps(obs, max_candidates=20):
                 (dot_inner > 0.35) & (dot_outer > 0.35))
         for k in np.flatnonzero(good):
             midpoint = (points[i] + points[outer[k]]) / 2
-            # Favor the rim nearer the robot and away from the broad center.
-            score = midpoint[2] - 0.5 * abs(midpoint[1] - center[1]) - 0.2 * midpoint[0]
+            direction = midpoint[:2] - center[:2]
+            direction /= np.linalg.norm(direction)
+            tangent = np.array([-direction[1], direction[0]])
+            along = np.abs((points[:, :2] - midpoint[:2]) @ tangent)
+            radial_distance = relative @ direction
+            midpoint_radius = np.linalg.norm(midpoint[:2] - center[:2])
+            near = (along < 0.012) & (np.abs(points[:, 2] - midpoint[2]) < 0.025)
+            inner_support = np.count_nonzero(
+                near & (np.abs(radial_distance - (midpoint_radius - width[k] / 2)) < 0.009) &
+                (alignment < -0.25))
+            outer_support = np.count_nonzero(
+                near & (np.abs(radial_distance - (midpoint_radius + width[k] / 2)) < 0.009) &
+                (alignment > 0.25))
+            if min(inner_support, outer_support) < 3:
+                continue
+            # Reward contact patches on BOTH walls, not a single corner point.
+            score = (midpoint[2] - 0.2 * midpoint[0] +
+                     0.012 * min(inner_support, outer_support))
             candidates.append(Grasp(midpoint, axis[k], float(width[k]), float(score)))
     candidates.sort(key=lambda grasp: grasp.score, reverse=True)
     distinct = []
@@ -270,7 +286,7 @@ class PickupController:
                 hand[2] < self.table_top + 0.014):
             raise RuntimeError("gripper went below safe tabletop height")
 
-    def _solve(self, position, rotation, reference):
+    def _solve(self, position, rotation, reference, position_tolerance=0.015):
         env = self.env
         moving = np.array([3, 6, 7, 8, 9, 10, 11, 12])
         desired = np.array(p.getMatrixFromQuaternion(rotation)).reshape(3, 3)
@@ -286,7 +302,8 @@ class PickupController:
                 current = np.array(p.getMatrixFromQuaternion(state[5])).reshape(3, 3)
                 error = np.r_[position - np.asarray(state[4]),
                               0.5 * sum(np.cross(current[:, i], desired[:, i]) for i in range(3))]
-                if np.linalg.norm(error[:3]) < 0.015 and np.linalg.norm(error[3:]) < 0.15:
+                if (np.linalg.norm(error[:3]) < position_tolerance and
+                        np.linalg.norm(error[3:]) < 0.15):
                     return target
                 linear, angular = p.calculateJacobian(
                     self.plan_robot, self.hand, [0, 0, 0], target.tolist(),
@@ -349,10 +366,11 @@ class PickupController:
             # Follow the same downward-facing orientation all the way down.
             # Break the descent into short, independently checked segments.
             waypoints = [q_hover]
-            for z in np.linspace(hover[2], contact[2], 5)[1:]:
+            for step, z in enumerate(np.linspace(hover[2], contact[2], 5)[1:]):
                 position = contact.copy()
                 position[2] = z
-                q = self._solve(position, orientation, waypoints[-1])
+                q = self._solve(position, orientation, waypoints[-1],
+                                position_tolerance=0.005 if rim_mode and step == 3 else 0.015)
                 if q is None or not self._segment_free(waypoints[-1], q):
                     break
                 waypoints.append(q)
@@ -372,7 +390,14 @@ class PickupController:
         hand = np.asarray(p.getLinkState(self.env.robot_id, self.hand)[4])
         candidates = propose_grasps(obs)
         rim_search = not candidates
-        if rim_search:
+        extent = np.ptp(obs["object_pc"], axis=0)
+        flat_wide = min(extent[:2]) > 0.18 and extent[2] < 0.035
+        if flat_wide:
+            # The plate needs one finger above and one below its edge. Do not
+            # execute tilted, nearly-horizontal pairs that simply push it.
+            candidates = propose_rim_grasps(obs)
+            rim_search = True
+        elif rim_search:
             candidates = (propose_radial_rim_grasps(obs) + propose_rim_grasps(obs) +
                           propose_grasps(obs, relaxed=True))
         default_opening = self.opening
@@ -518,7 +543,7 @@ class PickupController:
             if bowl_like:
                 rim_candidates = propose_radial_rim_grasps(obs)
                 planners = (("top-down", lambda current: self.plan(
-                    current, candidates=rim_candidates, rim_mode=True)),
+                        current, candidates=rim_candidates, rim_mode=True)),
                     ("side", self.plan_side))
             elif prefer_side:
                 planners = (("side", self.plan_side), ("top-down", self.plan))
@@ -542,9 +567,14 @@ class PickupController:
                 obs = self.move(q, 50, near_grasp=final_descent,
                                 approaching_object=final_descent)
             closed = waypoints[-1].copy()
-            closed[13:] = self.closed
+            if bowl_like and selected_approach == "top-down":
+                # Match the rim wall's actual thickness; forcing a 12 mm wall
+                # into a 3 mm fully-shut gap pushes the bowl out of the grasp.
+                closed[13:] = max(0.0, (grasp.width - 0.0028 - 0.003) / 2)
+            else:
+                closed[13:] = self.closed
             obs = self.move(closed, 60, near_grasp=True)
-            lift[13:] = self.closed
+            lift[13:] = closed[13:]
             initial_height = float(obs["object_pos"][2])
             held = self.move(lift, 90, near_grasp=True)
             for _ in range(50):
