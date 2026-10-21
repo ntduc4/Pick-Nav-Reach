@@ -114,6 +114,8 @@ def summarize(trials, seeds):
                         "failures": dict(Counter(t["reason"] for t in group
                                                  if not t["picked"]))})
     successes = sum(t["picked"] for t in trials)
+    lift_steps = [t.get("lift_steps") for t in trials if t["picked"] and t.get("lift_steps") is not None]
+    lift_steps_median = float(sorted(lift_steps)[len(lift_steps) // 2]) if lift_steps else None
     seed_rates = []
     for seed in seeds:
         group = by_seed[seed]
@@ -126,7 +128,8 @@ def summarize(trials, seeds):
             "objects_tested": len(objects),
             "errors": sum(t["status"] == "error" for t in trials),
             "failures": dict(Counter(t["reason"] for t in trials if not t["picked"])),
-            "objects": objects, "by_seed": seed_rates, "trials": trials}
+            "objects": objects, "by_seed": seed_rates, "trials": trials,
+            "lift_steps_median": lift_steps_median}
 
 
 def run_trials(tasks, workers, quiet):
@@ -186,6 +189,10 @@ def main():
               f"{item['success_rate']:.1%}")
     print(f"Overall: {report['successes']}/{report['total_trials']} "
           f"({report['success_rate']:.1%}); errors: {report['errors']}")
+    if report["lift_steps_median"] is not None:
+        print(f"Median env steps from controller start to +10cm lift "
+              f"(over successes): {report['lift_steps_median']:.0f} "
+              f"(criterion: within 3000 sim steps)")
     print(f"Objects with at least one successful seed: "
           f"{report['objects_with_success']}/{report['objects_tested']}")
     print("Failure reasons:")

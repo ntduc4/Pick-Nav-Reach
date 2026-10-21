@@ -62,6 +62,7 @@ class PickNavReachEnv:
         self.obs = self._get_obs()
 
         self.step_count = 0
+        self.physics_ticks = 0
 
     def set_seed(self, seed):
         np.random.seed(seed)
@@ -318,6 +319,7 @@ class PickNavReachEnv:
 
         for _ in range(self.substeps):
             p.stepSimulation()
+            self.physics_ticks += 1
             if self.gui:
                 time.sleep(1. / 240.)
 

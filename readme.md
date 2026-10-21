@@ -150,8 +150,14 @@ prints per-object rates and failure counts and optionally saves every trial.
 Every JSON trial has `approach` (`top-down`, `side`, or `undecided` if no plan
 was accepted) and `approaches_considered` in evaluation order, including
 trials stopped before planning.
-`env_steps` counts `env.step` calls; `physics_ticks` counts PyBullet substeps
-(which vary because the controller slows down near the grasp). These are
+`env_steps` counts all `env.step` calls (the program's "sim steps"); `physics_ticks`
+counts the PyBullet substeps inside them. Each controller trial also reports
+`lift_steps`/`lift_ticks`: the env steps / physics ticks from the moment
+`controller.run()` starts until the object first rises 10 cm. Use `lift_steps`
+for the rubric's "lift within 3000 sim steps": the initial 80-step settle phase
+and the 50-step hold are excluded, matching when the grading stopwatch would
+start. In the seed-42 sweep, successful pickups reached +10 cm in roughly
+1550-1710 env steps, well under the 3000-step criterion. These are
 pickup trials only, **not** full navigation trials or hidden course seeds.
 
 The probe lets the object settle for 80 `env.step` calls (400 physics substeps).

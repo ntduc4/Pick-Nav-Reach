@@ -474,7 +474,8 @@ class PickupController:
                     return grasp, ([q_rotate, q_raised, q_pre, q_via, q_contact], q_lift)
         return None
 
-    def move(self, target, steps=100, near_grasp=False, approaching_object=False):
+    def move(self, target, steps=100, near_grasp=False, approaching_object=False,
+             on_step=None):
         """Interpolate joint targets; abort if the actual robot strikes the table."""
         start = self.env.agent_qpos
         obs = None
@@ -488,6 +489,8 @@ class PickupController:
                 for _ in range(repeats):
                     obs, _ = self.env.step(action)
                     self._check_actual_clearance(near_grasp, approaching_object)
+                    if on_step is not None:
+                        on_step(obs)
             # Give motors time to catch up before closing or lifting.
             tolerance = 0.01 if near_grasp else 0.035
             for _ in range(80 * repeats):
@@ -496,6 +499,8 @@ class PickupController:
                     break
                 obs, _ = self.env.step(target)
                 self._check_actual_clearance(near_grasp, approaching_object)
+                if on_step is not None:
+                    on_step(obs)
             if (np.max(np.abs(obs["qpos"][:13] - target[:13])) >= tolerance or
                     np.max(np.abs(obs["qvel"][:3])) >= 0.25):
                 raise RuntimeError("robot failed to track safe waypoint")
@@ -507,6 +512,18 @@ class PickupController:
         """Return pickup diagnostics; never claim success without measured lift/hold."""
         selected_approach = "undecided"
         approaches_considered = []
+        initial_height = float(obs["object_pos"][2])
+        run_start_ticks = self.env.physics_ticks
+        run_start_steps = self.env.step_count
+        lift_tick = None
+        lift_step = None
+
+        def track_lift(current_obs):
+            nonlocal lift_tick, lift_step
+            if lift_tick is None and current_obs["object_pos"][2] - initial_height >= 0.10:
+                lift_tick = self.env.physics_ticks
+                lift_step = self.env.step_count
+
         try:
             # Open wider only when the observed object footprint requires it.
             # The Fetch's prismatic finger stops are at 0.05 m per finger.
@@ -576,17 +593,24 @@ class PickupController:
             obs = self.move(closed, 60, near_grasp=True)
             lift[13:] = closed[13:]
             initial_height = float(obs["object_pos"][2])
-            held = self.move(lift, 90, near_grasp=True)
+            held = self.move(lift, 90, near_grasp=True, on_step=track_lift)
             for _ in range(50):
                 held, _ = self.env.step(lift)
+                track_lift(held)
             height = float(held["object_pos"][2] - initial_height)
             return {"picked": height >= 0.10, "lift_m": height,
                     "grasp_width_m": grasp.width, "hold_steps": 50,
                     "approach": selected_approach,
                     "approaches_considered": approaches_considered,
                     "sim_steps": self.env.step_count,
+                    "lift_tick": lift_tick,
+                    "lift_ticks": (lift_tick - run_start_ticks) if lift_tick is not None else None,
+                    "lift_steps": (lift_step - run_start_steps) if lift_step is not None else None,
                     "reason": "held above table" if height >= 0.10 else "object not lifted"}
         except RuntimeError as exc:
             return {"picked": False, "sim_steps": self.env.step_count,
                     "reason": str(exc), "approach": selected_approach,
-                    "approaches_considered": approaches_considered}
+                    "approaches_considered": approaches_considered,
+                    "lift_tick": lift_tick,
+                    "lift_ticks": (lift_tick - run_start_ticks) if lift_tick is not None else None,
+                    "lift_steps": (lift_step - run_start_steps) if lift_step is not None else None}
