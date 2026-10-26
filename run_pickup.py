@@ -17,7 +17,11 @@ def main():
     parser.add_argument("--object-idx", type=int, default=5)
     parser.add_argument("--pick", action="store_true", help="attempt a grasp and lift")
     parser.add_argument("--gui", action="store_true")
+    parser.add_argument("--pause-before-pick", action="store_true",
+                        help="wait for Enter in the terminal before starting a GUI pickup")
     args = parser.parse_args()
+    if args.pause_before_pick and not (args.gui and args.pick):
+        parser.error("--pause-before-pick requires both --gui and --pick")
     env = PickNavReachEnv(seed=args.seed, object_idx=args.object_idx,
                           gui=args.gui, safe_forces=args.pick)
     try:
@@ -32,6 +36,10 @@ def main():
                           "grasp_proposals": len(propose_grasps(obs)),
                           "distance_to_goal_m": float(info["dist_to_goal"])}, indent=2))
         if args.pick:
+            if args.pause_before_pick:
+                print("Scene settled; arrange the PyBullet camera and start OBS recording. "
+                      "Press Enter here to begin pickup (Ctrl+C to cancel).", flush=True)
+                input()
             controller = PickupController(env)
             try:
                 print(json.dumps(controller.run(obs), indent=2))

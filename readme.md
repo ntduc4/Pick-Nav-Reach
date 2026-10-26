@@ -135,6 +135,13 @@ trial. `--gui` shows the same trial and leaves the final scene open without
 advancing physics; press Ctrl+C in the terminal to close it. Run unit tests with
 `python -m unittest -v test_pickup`. Install the dependencies listed above first.
 
+For an OBS pickup demo, run
+`python run_pickup.py --gui --pick --pause-before-pick --object-idx 5 --seed 42`.
+After the 80-step settle phase the scene pauses without advancing physics:
+position the PyBullet camera, start recording in OBS, then press Enter **in the
+terminal** to start the pickup controller. The final scene stays open until
+Ctrl+C. The pause is opt-in and requires both `--gui` and `--pick`.
+
 To inspect the settled object without running a pickup, use
 `python view_pointcloud.py --object-idx 4 --seed 42`. This separate GUI viewer
 shows all 1024 sampled points in blue and every 50th outward normal in red.
