@@ -129,6 +129,45 @@ For each trial, award the following (sum; then average across trials):
 
 ## Week 8 / Weeks 9-10 prototype
 
+### Bowl rim fix and experimental plate side pickup
+
+The bowl's narrow rim now uses a segmented, straight Cartesian lift with the
+measured tool orientation held fixed. The former single joint-space lift could
+peel the rim out of the fingers even after both pads had made contact.
+
+On the same 150 trials as `pickup_result.json` (all 15 objects, seeds 60--69),
+the updated automatic controller achieved **135/150** versus **126/150**:
+the bowl improved from **0/10 to 9/10**, with **no lost baseline successes**
+and no benchmark errors. Detailed new results are in `pickup_rim_regression.json`.
+The default automatic plate planner still rejects the flush-table grasp.
+
+Force the successful experimental strategies explicitly:
+
+```bash
+# Bowl: force local rim candidates approached from above.
+python run_pickup.py --pick --object-idx 9 --seed 42 --grasp-mode rim
+
+# Plate: slide toward the table edge, then pinch the exposed lip from the side.
+python run_pickup.py --pick --object-idx 11 --seed 42 --grasp-mode side
+```
+
+Add `--gui --pause-before-pick` to record either trial. The plate strategy is
+opt-in: it uses physical joint-controlled pushing, a fresh observation after
+the slide, thin upper/lower lip candidates, and an inward-facing approach.
+It does not teleport or attach the object. All table-clearance guards remain
+active. Its extended IK search is isolated from the default planner.
+
+The plate lifted and held on seeds **42 and 45**, but only **2/5** trials across
+seeds 42--46 succeeded. Seed 43 lifted less than 10 cm after holding; seeds 44
+and 46 did not find a safe side approach after the slide. Seed 42 lifted about
+17.8 cm and held for 50 steps, but required about **10,722 controller steps**:
+this is a feasibility prototype, **not a 3000-step-budget solution**.
+
+Run `python -m unittest -v test_experimental_pickup` for physics regression
+checks of bowl/plate lift, an additional 50-step hold, no robot--table contact,
+and thin-lip candidate generation. Further work is needed on plate slide
+feedback, faster execution, and reliable grasp selection across seeds.
+
 Run `python run_pickup.py` for a headless, scripted scene-observation probe, or
 `python run_pickup.py --pick --object-idx 5 --seed 42` for a bounded pickup
 trial. `--gui` shows the same trial and leaves the final scene open without

@@ -17,6 +17,8 @@ def main():
     parser.add_argument("--object-idx", type=int, default=5)
     parser.add_argument("--pick", action="store_true", help="attempt a grasp and lift")
     parser.add_argument("--gui", action="store_true")
+    parser.add_argument("--grasp-mode", choices=("auto", "rim", "side"), default="auto",
+                        help="force rim-only or side-only experiments; side stages flat plates at the table edge")
     parser.add_argument("--pause-before-pick", action="store_true",
                         help="wait for Enter in the terminal before starting a GUI pickup")
     args = parser.parse_args()
@@ -40,7 +42,11 @@ def main():
                 print("Scene settled; arrange the PyBullet camera and start OBS recording. "
                       "Press Enter here to begin pickup (Ctrl+C to cancel).", flush=True)
                 input()
-            controller = PickupController(env)
+            controller_type = PickupController
+            if args.grasp_mode != "auto":
+                from experimental_pickup import RimPickupController, SidePickupController
+                controller_type = RimPickupController if args.grasp_mode == "rim" else SidePickupController
+            controller = controller_type(env)
             try:
                 print(json.dumps(controller.run(obs), indent=2))
             finally:

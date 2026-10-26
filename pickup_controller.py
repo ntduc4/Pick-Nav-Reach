@@ -184,6 +184,8 @@ class PickupController:
         # Keep the fingers just inside their 0.05 m upper limits.
         self.opening = 0.04
         self.closed = 0.0
+        self.cartesian_lift = False
+        self.forced_approach = None
         self.fingers = {names["r_gripper_finger_link"], names["l_gripper_finger_link"]}
 
         # Never reset the joints of the rendered, actively simulated robot to
@@ -286,15 +288,17 @@ class PickupController:
                 hand[2] < self.table_top + 0.014):
             raise RuntimeError("gripper went below safe tabletop height")
 
-    def _solve(self, position, rotation, reference, position_tolerance=0.015):
+    def _solve(self, position, rotation, reference, position_tolerance=0.015,
+               iterations=90, damping=0.02, prefer_reference=False):
         env = self.env
         moving = np.array([3, 6, 7, 8, 9, 10, 11, 12])
         desired = np.array(p.getMatrixFromQuaternion(rotation)).reshape(3, 3)
-        for elbow in (0.0, -0.8, 0.8):
+        elbows = (float(reference[9]), 0.0, -0.8, 0.8) if prefer_reference else (0.0, -0.8, 0.8)
+        for elbow in elbows:
             target = reference.copy()
             target[9] = np.clip(elbow, env.joint_lower[9], env.joint_upper[9])
             target[13:] = self.opening
-            for _ in range(90):
+            for _ in range(iterations):
                 self._set_plan_qpos(target)
                 state = p.getLinkState(self.plan_robot, self.hand,
                                        computeForwardKinematics=True,
@@ -310,7 +314,7 @@ class PickupController:
                     [0.0] * len(target), [0.0] * len(target),
                     physicsClientId=self.plan_client)
                 jac = np.vstack((linear, angular))[:, moving]
-                delta = jac.T @ np.linalg.solve(jac @ jac.T + 0.02 * np.eye(6), error)
+                delta = jac.T @ np.linalg.solve(jac @ jac.T + damping * np.eye(6), error)
                 target[moving] = np.clip(target[moving] + np.clip(delta, -0.14, 0.14),
                                          env.joint_lower[moving], env.joint_upper[moving])
         return None
@@ -475,7 +479,7 @@ class PickupController:
         return None
 
     def move(self, target, steps=100, near_grasp=False, approaching_object=False,
-             on_step=None):
+             on_step=None, tracking_tolerance=None):
         """Interpolate joint targets; abort if the actual robot strikes the table."""
         start = self.env.agent_qpos
         obs = None
@@ -493,6 +497,8 @@ class PickupController:
                         on_step(obs)
             # Give motors time to catch up before closing or lifting.
             tolerance = 0.01 if near_grasp else 0.035
+            if tracking_tolerance is not None:
+                tolerance = tracking_tolerance
             for _ in range(80 * repeats):
                 if (np.max(np.abs(obs["qpos"][:13] - target[:13])) < tolerance and
                         np.max(np.abs(obs["qvel"][:3])) < 0.25):
@@ -566,6 +572,9 @@ class PickupController:
                 planners = (("side", self.plan_side), ("top-down", self.plan))
             else:
                 planners = (("top-down", self.plan), ("side", self.plan_side))
+            if self.forced_approach is not None:
+                planners = tuple((mode, planner) for mode, planner in planners
+                                 if mode == self.forced_approach)
             plan = None
             for mode, planner in planners:
                 approaches_considered.append(mode)
@@ -584,7 +593,7 @@ class PickupController:
                 obs = self.move(q, 50, near_grasp=final_descent,
                                 approaching_object=final_descent)
             closed = waypoints[-1].copy()
-            if bowl_like and selected_approach == "top-down":
+            if self.cartesian_lift or (bowl_like and selected_approach == "top-down"):
                 # Match the rim wall's actual thickness; forcing a 12 mm wall
                 # into a 3 mm fully-shut gap pushes the bowl out of the grasp.
                 closed[13:] = max(0.0, (grasp.width - 0.0028 - 0.003) / 2)
@@ -593,7 +602,27 @@ class PickupController:
             obs = self.move(closed, 60, near_grasp=True)
             lift[13:] = closed[13:]
             initial_height = float(obs["object_pos"][2])
-            held = self.move(lift, 90, near_grasp=True, on_step=track_lift)
+            if bowl_like and selected_approach == "top-down":
+                # Joint interpolation to a distant IK solution sweeps the
+                # wrist sideways and peels a narrow rim out of the fingers.
+                # Keep the measured tool orientation and lift straight up.
+                state = p.getLinkState(self.env.robot_id, self.hand,
+                                       physicsClientId=self.env.pb_physics_client)
+                start = np.asarray(state[4])
+                reference = obs["qpos"].astype(float)
+                for dz in np.linspace(0.01, 0.20, 20):
+                    target = self._solve(start + [0, 0, dz], state[5], reference,
+                                         position_tolerance=0.002)
+                    if target is None:
+                        raise RuntimeError("no Cartesian rim lift IK")
+                    target[13:] = closed[13:]
+                    if not self._segment_free(reference, target):
+                        raise RuntimeError("Cartesian rim lift blocked by table")
+                    held = self.move(target, 8, near_grasp=True, on_step=track_lift)
+                    reference = held["qpos"].astype(float)
+                lift = target
+            else:
+                held = self.move(lift, 90, near_grasp=True, on_step=track_lift)
             for _ in range(50):
                 held, _ = self.env.step(lift)
                 track_lift(held)
