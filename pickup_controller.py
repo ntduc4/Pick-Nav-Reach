@@ -185,6 +185,8 @@ class PickupController:
         self.opening = 0.04
         self.closed = 0.0
         self.cartesian_lift = False
+        self.match_grasp_width = False
+        self.hold_target = None
         self.forced_approach = None
         self.fingers = {names["r_gripper_finger_link"], names["l_gripper_finger_link"]}
 
@@ -516,6 +518,18 @@ class PickupController:
 
     def run(self, obs):
         """Return pickup diagnostics; never claim success without measured lift/hold."""
+        # Use the staged planner only for observed flat, wide geometry. Its
+        # extended IK must be active from the initial raised-arm motion to
+        # preserve a consistent branch throughout the subsequent edge slide.
+        extent = np.ptp(obs["object_pc"], axis=0)
+        if (type(self) is PickupController and self.forced_approach is None and
+                min(extent[:2]) > 0.18 and extent[2] < 0.035):
+            from experimental_pickup import AutomaticPlateController
+            controller = AutomaticPlateController(self.env)
+            try:
+                return controller.run(obs)
+            finally:
+                controller.close()
         selected_approach = "undecided"
         approaches_considered = []
         initial_height = float(obs["object_pos"][2])
@@ -582,6 +596,11 @@ class PickupController:
                 if plan is not None:
                     selected_approach = mode
                     break
+            if plan is None and hasattr(self, "plan_fallback"):
+                approaches_considered.append("edge-slide")
+                plan = self.plan_fallback(obs)
+                if plan is not None:
+                    selected_approach = "side"
             if plan is None:
                 return {"picked": False, "reason": "no collision-free grasp approach",
                         "approach": selected_approach,
@@ -593,7 +612,7 @@ class PickupController:
                 obs = self.move(q, 50, near_grasp=final_descent,
                                 approaching_object=final_descent)
             closed = waypoints[-1].copy()
-            if self.cartesian_lift or (bowl_like and selected_approach == "top-down"):
+            if self.match_grasp_width or (bowl_like and selected_approach == "top-down"):
                 # Match the rim wall's actual thickness; forcing a 12 mm wall
                 # into a 3 mm fully-shut gap pushes the bowl out of the grasp.
                 closed[13:] = max(0.0, (grasp.width - 0.0028 - 0.003) / 2)
@@ -602,7 +621,7 @@ class PickupController:
             obs = self.move(closed, 60, near_grasp=True)
             lift[13:] = closed[13:]
             initial_height = float(obs["object_pos"][2])
-            if bowl_like and selected_approach == "top-down":
+            if self.cartesian_lift or (bowl_like and selected_approach == "top-down"):
                 # Joint interpolation to a distant IK solution sweeps the
                 # wrist sideways and peels a narrow rim out of the fingers.
                 # Keep the measured tool orientation and lift straight up.
@@ -623,6 +642,7 @@ class PickupController:
                 lift = target
             else:
                 held = self.move(lift, 90, near_grasp=True, on_step=track_lift)
+            self.hold_target = lift.copy()
             for _ in range(50):
                 held, _ = self.env.step(lift)
                 track_lift(held)

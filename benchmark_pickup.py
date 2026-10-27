@@ -46,7 +46,7 @@ def quiet_physics():
                 os.close(original)
 
 
-def run_trial(object_idx, seed, quiet=True):
+def run_trial(object_idx, seed, quiet=True, grasp_mode="auto"):
     """Use a fresh world; reset() does not restore the initial table scene."""
     env = controller = None
     physics_ticks = 0
@@ -74,7 +74,14 @@ def run_trial(object_idx, seed, quiet=True):
         for _ in range(80):
             obs, _ = env.step(obs["qpos"])
         record["grasp_proposals"] = len(propose_grasps(obs))
-        controller = PickupController(env)
+        controller_type = PickupController
+        if grasp_mode != "auto":
+            from experimental_pickup import RimPickupController, SidePickupController
+            if grasp_mode not in ("rim", "side"):
+                raise ValueError(f"unknown grasp mode: {grasp_mode}")
+            controller_type = RimPickupController if grasp_mode == "rim" else SidePickupController
+        record["grasp_mode"] = grasp_mode
+        controller = controller_type(env)
         result = controller.run(obs)
         record.update(result)
         record["picked"] = bool(result["picked"])
@@ -132,16 +139,16 @@ def summarize(trials, seeds):
             "lift_steps_median": lift_steps_median}
 
 
-def run_trials(tasks, workers, quiet):
+def run_trials(tasks, workers, quiet, grasp_mode="auto"):
     """Yield ordered trial results; PyBullet worlds must stay in separate processes."""
     if workers == 1:
         for idx, seed in tasks:
-            yield run_trial(idx, seed, quiet=quiet)
+            yield run_trial(idx, seed, quiet=quiet, grasp_mode=grasp_mode)
     else:
         with ProcessPoolExecutor(max_workers=min(workers, len(tasks)),
                                  mp_context=get_context("spawn")) as pool:
             yield from pool.map(run_trial, (idx for idx, _ in tasks),
-                                (seed for _, seed in tasks), repeat(quiet))
+                                (seed for _, seed in tasks), repeat(quiet), repeat(grasp_mode))
 
 
 def main():
@@ -151,6 +158,8 @@ def main():
     parser.add_argument("--objects", nargs="+", type=int,
                         help="object indices (default: all provided objects)")
     parser.add_argument("--json-out", type=Path, help="write full report to this path")
+    parser.add_argument("--grasp-mode", choices=("auto", "rim", "side"), default="auto",
+                        help="controller strategy (side enables the experimental plate edge slide)")
     parser.add_argument("--show-engine-logs", action="store_true")
     parser.add_argument("--workers", type=int, default=default_workers(),
                         help=f"parallel processes (default: {default_workers()}, half of logical CPUs)")
@@ -171,7 +180,8 @@ def main():
     trials = []
     print(f"Running {len(tasks)} trials with {min(args.workers, len(tasks))} worker(s).",
           flush=True)
-    for trial in run_trials(tasks, args.workers, quiet=not args.show_engine_logs):
+    for trial in run_trials(tasks, args.workers, quiet=not args.show_engine_logs,
+                            grasp_mode=args.grasp_mode):
         trials.append(trial)
         print(f"[{len(trials)}/{len(tasks)}] "
               f"{trial['object']} seed={trial['seed']}: {trial['status']} "

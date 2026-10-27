@@ -139,7 +139,14 @@ On the same 150 trials as `pickup_result.json` (all 15 objects, seeds 60--69),
 the updated automatic controller achieved **135/150** versus **126/150**:
 the bowl improved from **0/10 to 9/10**, with **no lost baseline successes**
 and no benchmark errors. Detailed new results are in `pickup_rim_regression.json`.
-The default automatic plate planner still rejects the flush-table grasp.
+Automatic mode tries direct side and top-down plans first, then falls back to
+the edge-slide strategy for an observed flat, wide object if both plans fail.
+No object index or explicit grasp-mode flag is needed to select this fallback.
+The automatic fallback was checked on seeds 42--46 (plate **5/5**) and the
+full 150-trial seeds 60--69 sweep (**142/150**, zero benchmark errors, no
+lost successes relative to the bowl-fixed controller). See
+`pickup_auto_regression.json`; these pickup counts do not imply that the slow
+plate strategy meets the 3000-step timing criterion.
 
 Force the successful experimental strategies explicitly:
 
@@ -151,22 +158,37 @@ python run_pickup.py --pick --object-idx 9 --seed 42 --grasp-mode rim
 python run_pickup.py --pick --object-idx 11 --seed 42 --grasp-mode side
 ```
 
-Add `--gui --pause-before-pick` to record either trial. The plate strategy is
-opt-in: it uses physical joint-controlled pushing, a fresh observation after
+Add `--gui --pause-before-pick` to record either trial. Omit `--grasp-mode` for
+automatic selection. The plate strategy uses physical joint-controlled pushing, a fresh observation after
 the slide, thin upper/lower lip candidates, and an inward-facing approach.
 It does not teleport or attach the object. All table-clearance guards remain
 active. Its extended IK search is isolated from the default planner.
 
-The plate lifted and held on seeds **42 and 45**, but only **2/5** trials across
-seeds 42--46 succeeded. Seed 43 lifted less than 10 cm after holding; seeds 44
-and 46 did not find a safe side approach after the slide. Seed 42 lifted about
-17.8 cm and held for 50 steps, but required about **10,722 controller steps**:
-this is a feasibility prototype, **not a 3000-step-budget solution**.
+The updated plate strategy lifted and held on **5/5 seeds 42--46** (previously
+2/5), plus **7/10 seeds 60--69**, for **12/15** tested trials. It rounds up the
+observed footprint to a centimetre envelope before pushing, so small sampling
+differences do not change first contact. The side approach scales its motion
+duration to the joint displacement instead of spending 50 interpolation steps
+on every short segment. After staging, the 0.015-radian joint tracking tolerance
+is supplemented by an **8 mm tool-position error guard**; the collision and
+instability guards still run as before.
+
+Successful lifts now take about **5848--6070 controller steps**, down from
+roughly 10,700--10,900. This is still **not a 3000-step-budget solution**.
+Seeds 60, 65 and 69 still fail retention/lift-height checks. Full trial results
+are recorded in `pickup_plate_regression.json`. Reproduce the sweep with:
+
+```bash
+python benchmark_pickup.py --objects 11 --grasp-mode side \
+  --seeds 42 43 44 45 46 60 61 62 63 64 65 66 67 68 69 \
+  --workers 5 --json-out pickup_plate_regression.json
+```
 
 Run `python -m unittest -v test_experimental_pickup` for physics regression
-checks of bowl/plate lift, an additional 50-step hold, no robot--table contact,
-and thin-lip candidate generation. Further work is needed on plate slide
-feedback, faster execution, and reliable grasp selection across seeds.
+checks of bowl/plate lift (including previously failing plate seeds 43 and 44),
+an additional 50-step hold with the commanded squeeze maintained, no
+robot--table contact, and thin-lip candidate generation. Further work is needed
+on faster execution and reliable grasp selection across seeds.
 
 Run `python run_pickup.py` for a headless, scripted scene-observation probe, or
 `python run_pickup.py --pick --object-idx 5 --seed 42` for a bounded pickup

@@ -2,7 +2,8 @@
 
 The edge-slide strategy uses robot joint commands only. It neither resets the
 object pose nor attaches it to the hand. It currently exceeds the 3000-step
-pickup budget and is intentionally opt-in via run_pickup.py --grasp-mode side.
+pickup budget. Automatic mode uses it after direct plans fail for a flat,
+wide object; --grasp-mode side forces it for isolated experiments.
 """
 
 import numpy as np
@@ -94,9 +95,26 @@ class SidePickupController(PickupController):
         return None
 
     def move(self, target, steps=100, **kwargs):
+        if self.stage_end_pos is not None and steps == 50:
+            # These are centimetre-spaced Cartesian approach segments, not
+            # independent full-arm motions requiring 50 interpolation steps.
+            steps = min(steps, max(8, int(np.ceil(
+                np.max(np.abs(target[:13] - self.env.agent_qpos[:13])) / 0.01))))
         if abs(target[0] - self.env.agent_qpos[0]) > 0.05:
             steps = max(160, steps)
-        return super().move(target, steps, **kwargs)
+        if self.stage_end_pos is not None and kwargs.get("near_grasp"):
+            kwargs.setdefault("tracking_tolerance", 0.015)
+        obs = super().move(target, steps, **kwargs)
+        if self.stage_end_pos is not None and kwargs.get("near_grasp"):
+            self._set_plan_qpos(target)
+            desired = p.getLinkState(self.plan_robot, self.hand,
+                                     computeForwardKinematics=True,
+                                     physicsClientId=self.plan_client)
+            actual = p.getLinkState(self.env.robot_id, self.hand,
+                                    physicsClientId=self.env.pb_physics_client)
+            if np.linalg.norm(np.asarray(desired[4]) - actual[4]) > 0.008:
+                raise RuntimeError("side-grasp tool failed to track within 8 mm")
+        return obs
 
     def _slide_to_edge(self, obs):
         self.stage_start_pos = obs["object_pos"].tolist()
@@ -104,7 +122,11 @@ class SidePickupController(PickupController):
         orientation = p.getQuaternionFromEuler([0, np.pi / 2, 0])
         hand = np.array(p.getLinkState(self.env.robot_id, self.hand,
                                       physicsClientId=self.env.pb_physics_client)[4])
-        x = float(np.max(obs["object_pc"][:, 0])) + 0.005
+        # Start outside the observed footprint with a conservative centimetre
+        # envelope, rather than letting individual sampled vertices set a
+        # subtly different first contact in every seed.
+        x = float(obs["object_pos"][0] + np.ceil(
+            (np.max(obs["object_pc"][:, 0]) - obs["object_pos"][0]) / 0.01) * 0.01 + 0.005)
         y = float(obs["object_pos"][1])
         z = self.table_top + 0.044
         self.opening = 0.0
@@ -153,7 +175,7 @@ class SidePickupController(PickupController):
         if not (min(extent[:2]) > 0.18 and extent[2] < 0.035):
             return super().plan_side(obs)
         self.staged = True
-        self.cartesian_lift = True
+        self.match_grasp_width = True
         obs = self._slide_to_edge(obs)
         p.resetBasePositionAndOrientation(self.plan_object, obs["object_pos"],
                                           obs["object_xyzw"], physicsClientId=self.plan_client)
@@ -207,3 +229,22 @@ class SidePickupController(PickupController):
         result["stage_start_pos"] = self.stage_start_pos
         result["stage_end_pos"] = self.stage_end_pos
         return result
+
+
+class AutomaticPlateController(SidePickupController):
+    """Try direct side/top-down plans before physically exposing an edge."""
+
+    def __init__(self, env):
+        super().__init__(env)
+        self.forced_approach = None
+
+    def plan(self, obs, candidates=None, rim_mode=False):
+        return PickupController.plan(self, obs, candidates, rim_mode)
+
+    def plan_side(self, obs):
+        return PickupController.plan_side(self, obs)
+
+    def plan_fallback(self, obs):
+        # Failed direct searches may have changed the trial jaw aperture.
+        self.opening = 0.05
+        return SidePickupController.plan_side(self, obs)

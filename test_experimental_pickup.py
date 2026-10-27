@@ -24,7 +24,9 @@ class ExperimentalPickupTests(unittest.TestCase):
             self.assertEqual(result["hold_steps"], 50)
             self.assertGreaterEqual(env.obs["object_pos"][2] - initial_z, 0.10)
             # Keep holding well beyond the controller's own 50-step check.
-            target = env.agent_qpos.copy()
+            # Preserve the commanded squeeze; holding measured joint positions
+            # instead removes the pad preload and changes the grasp itself.
+            target = controller.hold_target.copy()
             for _ in range(50):
                 held, _ = env.step(target)
                 self.assertFalse(p.getContactPoints(env.robot_id, controller.table))
@@ -42,10 +44,13 @@ class ExperimentalPickupTests(unittest.TestCase):
         self.assertLess(result["lift_steps"], 3000)
 
     def test_forced_plate_side_lifts_after_edge_slide(self):
-        result = self.trial(11, SidePickupController)
-        self.assertEqual(result["approaches_considered"], ["side"])
-        self.assertTrue(result["edge_slide"])
-        self.assertLess(result["stage_end_pos"][0], result["stage_start_pos"][0] - 0.3)
+        for seed in (42, 43, 44):
+            with self.subTest(seed=seed):
+                result = self.trial(11, SidePickupController, seed=seed)
+                self.assertEqual(result["approaches_considered"], ["side"])
+                self.assertTrue(result["edge_slide"])
+                self.assertLess(result["stage_end_pos"][0], result["stage_start_pos"][0] - 0.3)
+                self.assertLess(result["lift_steps"], 6500)
 
     def test_thin_plate_lip_candidates_are_not_filtered_out(self):
         env = PickNavReachEnv(seed=42, object_idx=11, gui=False, safe_forces=True)
