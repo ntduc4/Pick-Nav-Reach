@@ -238,7 +238,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 8.1
+      "elapsed_s": 5.6
     },
     {
       "object_idx": 0,
@@ -262,7 +262,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 7.02
+      "elapsed_s": 6.06
     },
     {
       "object_idx": 0,
@@ -286,7 +286,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 10.36
+      "elapsed_s": 7.0
     },
     {
       "object_idx": 0,
@@ -310,7 +310,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 11.15
+      "elapsed_s": 4.88
     },
     {
       "object_idx": 0,
@@ -334,7 +334,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 11.92
+      "elapsed_s": 6.1
     },
     {
       "object_idx": 0,
@@ -358,7 +358,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 11.52
+      "elapsed_s": 7.42
     },
     {
       "object_idx": 0,
@@ -382,7 +382,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 9.27
+      "elapsed_s": 5.48
     },
     {
       "object_idx": 0,
@@ -406,7 +406,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 13.34
+      "elapsed_s": 8.38
     },
     {
       "object_idx": 0,
@@ -427,7 +427,7 @@
       "status": "failed",
       "env_steps": 1137,
       "physics_ticks": 3081,
-      "elapsed_s": 5.77
+      "elapsed_s": 5.12
     },
     {
       "object_idx": 0,
@@ -451,7 +451,7 @@
       "status": "success",
       "env_steps": 2036,
       "physics_ticks": 4180,
-      "elapsed_s": 9.79
+      "elapsed_s": 6.48
     },
     {
       "object_idx": 1,
@@ -476,7 +476,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 14.13
+      "elapsed_s": 10.73
     },
     {
       "object_idx": 1,
@@ -501,7 +501,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 13.35
+      "elapsed_s": 8.8
     },
     {
       "object_idx": 1,
@@ -526,7 +526,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 14.66
+      "elapsed_s": 9.94
     },
     {
       "object_idx": 1,
@@ -551,7 +551,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 13.32
+      "elapsed_s": 9.97
     },
     {
       "object_idx": 1,
@@ -576,7 +576,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 14.75
+      "elapsed_s": 10.0
     },
     {
       "object_idx": 1,
@@ -601,7 +601,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 12.4
+      "elapsed_s": 9.37
     },
     {
       "object_idx": 1,
@@ -626,7 +626,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 18.12
+      "elapsed_s": 10.09
     },
     {
       "object_idx": 1,
@@ -651,7 +651,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 13.98
+      "elapsed_s": 9.66
     },
     {
       "object_idx": 1,
@@ -676,7 +676,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 20.23
+      "elapsed_s": 7.37
     },
     {
       "object_idx": 1,
@@ -701,7 +701,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 16.18
+      "elapsed_s": 9.78
     },
     {
       "object_idx": 2,
@@ -725,7 +725,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.48
+      "elapsed_s": 2.55
     },
     {
       "object_idx": 2,
@@ -749,7 +749,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 11.22
+      "elapsed_s": 3.75
     },
     {
       "object_idx": 2,
@@ -773,7 +773,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.98
+      "elapsed_s": 2.63
     },
     {
       "object_idx": 2,
@@ -797,7 +797,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.61
+      "elapsed_s": 3.05
     },
     {
       "object_idx": 2,
@@ -821,7 +821,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 17.19
+      "elapsed_s": 3.92
     },
     {
       "object_idx": 2,
@@ -845,7 +845,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.56
+      "elapsed_s": 3.95
     },
     {
       "object_idx": 2,
@@ -869,7 +869,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.88
+      "elapsed_s": 3.99
     },
     {
       "object_idx": 2,
@@ -893,7 +893,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 13.74
+      "elapsed_s": 4.02
     },
     {
       "object_idx": 2,
@@ -917,7 +917,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.61
+      "elapsed_s": 2.33
     },
     {
       "object_idx": 2,
@@ -941,7 +941,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.53
+      "elapsed_s": 4.18
     },
     {
       "object_idx": 3,
@@ -966,7 +966,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 11.83
+      "elapsed_s": 4.31
     },
     {
       "object_idx": 3,
@@ -991,7 +991,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 12.74
+      "elapsed_s": 4.43
     },
     {
       "object_idx": 3,
@@ -1016,7 +1016,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 11.71
+      "elapsed_s": 7.91
     },
     {
       "object_idx": 3,
@@ -1041,7 +1041,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 11.01
+      "elapsed_s": 6.88
     },
     {
       "object_idx": 3,
@@ -1066,7 +1066,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 16.13
+      "elapsed_s": 4.74
     },
     {
       "object_idx": 3,
@@ -1091,7 +1091,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 10.07
+      "elapsed_s": 7.38
     },
     {
       "object_idx": 3,
@@ -1116,7 +1116,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 12.38
+      "elapsed_s": 7.44
     },
     {
       "object_idx": 3,
@@ -1141,7 +1141,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 15.11
+      "elapsed_s": 4.52
     },
     {
       "object_idx": 3,
@@ -1166,7 +1166,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 12.23
+      "elapsed_s": 8.03
     },
     {
       "object_idx": 3,
@@ -1191,7 +1191,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 13.87
+      "elapsed_s": 8.61
     },
     {
       "object_idx": 4,
@@ -1215,7 +1215,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.31
+      "elapsed_s": 4.01
     },
     {
       "object_idx": 4,
@@ -1239,7 +1239,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.45
+      "elapsed_s": 3.93
     },
     {
       "object_idx": 4,
@@ -1263,7 +1263,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.24
+      "elapsed_s": 4.11
     },
     {
       "object_idx": 4,
@@ -1287,7 +1287,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.78
+      "elapsed_s": 4.04
     },
     {
       "object_idx": 4,
@@ -1311,7 +1311,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.91
+      "elapsed_s": 3.82
     },
     {
       "object_idx": 4,
@@ -1335,7 +1335,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.44
+      "elapsed_s": 3.95
     },
     {
       "object_idx": 4,
@@ -1359,7 +1359,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.82
+      "elapsed_s": 3.66
     },
     {
       "object_idx": 4,
@@ -1383,7 +1383,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.82
+      "elapsed_s": 3.54
     },
     {
       "object_idx": 4,
@@ -1407,7 +1407,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.65
+      "elapsed_s": 3.84
     },
     {
       "object_idx": 4,
@@ -1431,7 +1431,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.42
+      "elapsed_s": 3.7
     },
     {
       "object_idx": 5,
@@ -1455,7 +1455,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.47
+      "elapsed_s": 2.43
     },
     {
       "object_idx": 5,
@@ -1479,7 +1479,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.54
+      "elapsed_s": 2.43
     },
     {
       "object_idx": 5,
@@ -1503,7 +1503,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.79
+      "elapsed_s": 2.86
     },
     {
       "object_idx": 5,
@@ -1527,7 +1527,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.05
+      "elapsed_s": 4.1
     },
     {
       "object_idx": 5,
@@ -1551,7 +1551,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 9.1
+      "elapsed_s": 4.34
     },
     {
       "object_idx": 5,
@@ -1575,7 +1575,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.68
+      "elapsed_s": 4.2
     },
     {
       "object_idx": 5,
@@ -1599,7 +1599,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.22
+      "elapsed_s": 4.36
     },
     {
       "object_idx": 5,
@@ -1623,7 +1623,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.53
+      "elapsed_s": 4.4
     },
     {
       "object_idx": 5,
@@ -1647,7 +1647,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 9.38
+      "elapsed_s": 4.36
     },
     {
       "object_idx": 5,
@@ -1671,7 +1671,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 6.88
+      "elapsed_s": 3.1
     },
     {
       "object_idx": 6,
@@ -1695,7 +1695,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 7.41
+      "elapsed_s": 4.37
     },
     {
       "object_idx": 6,
@@ -1719,7 +1719,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 9.19
+      "elapsed_s": 3.1
     },
     {
       "object_idx": 6,
@@ -1743,7 +1743,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 7.5
+      "elapsed_s": 4.46
     },
     {
       "object_idx": 6,
@@ -1767,7 +1767,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 8.78
+      "elapsed_s": 4.05
     },
     {
       "object_idx": 6,
@@ -1791,7 +1791,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 7.57
+      "elapsed_s": 2.74
     },
     {
       "object_idx": 6,
@@ -1815,7 +1815,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 11.61
+      "elapsed_s": 4.37
     },
     {
       "object_idx": 6,
@@ -1839,7 +1839,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 9.38
+      "elapsed_s": 4.15
     },
     {
       "object_idx": 6,
@@ -1863,7 +1863,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 8.67
+      "elapsed_s": 4.63
     },
     {
       "object_idx": 6,
@@ -1887,7 +1887,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 8.29
+      "elapsed_s": 4.73
     },
     {
       "object_idx": 6,
@@ -1911,7 +1911,7 @@
       "status": "success",
       "env_steps": 1907,
       "physics_ticks": 4535,
-      "elapsed_s": 15.17
+      "elapsed_s": 2.73
     },
     {
       "object_idx": 7,
@@ -1935,7 +1935,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 19.88
+      "elapsed_s": 6.62
     },
     {
       "object_idx": 7,
@@ -1959,7 +1959,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 15.55
+      "elapsed_s": 4.26
     },
     {
       "object_idx": 7,
@@ -1983,7 +1983,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 15.33
+      "elapsed_s": 5.22
     },
     {
       "object_idx": 7,
@@ -2007,7 +2007,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 15.7
+      "elapsed_s": 5.78
     },
     {
       "object_idx": 7,
@@ -2031,7 +2031,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 21.93
+      "elapsed_s": 7.02
     },
     {
       "object_idx": 7,
@@ -2055,7 +2055,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 15.72
+      "elapsed_s": 6.55
     },
     {
       "object_idx": 7,
@@ -2079,7 +2079,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 16.11
+      "elapsed_s": 6.57
     },
     {
       "object_idx": 7,
@@ -2103,7 +2103,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 16.83
+      "elapsed_s": 6.97
     },
     {
       "object_idx": 7,
@@ -2127,7 +2127,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 15.55
+      "elapsed_s": 6.61
     },
     {
       "object_idx": 7,
@@ -2151,7 +2151,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 20.46
+      "elapsed_s": 6.65
     },
     {
       "object_idx": 8,
@@ -2176,7 +2176,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 16.31
+      "elapsed_s": 7.79
     },
     {
       "object_idx": 8,
@@ -2201,7 +2201,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 15.42
+      "elapsed_s": 7.48
     },
     {
       "object_idx": 8,
@@ -2223,7 +2223,7 @@
       "status": "failed",
       "env_steps": 1110,
       "physics_ticks": 3534,
-      "elapsed_s": 17.39
+      "elapsed_s": 7.54
     },
     {
       "object_idx": 8,
@@ -2248,7 +2248,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 21.95
+      "elapsed_s": 5.4
     },
     {
       "object_idx": 8,
@@ -2273,7 +2273,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 15.27
+      "elapsed_s": 7.36
     },
     {
       "object_idx": 8,
@@ -2298,7 +2298,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 14.91
+      "elapsed_s": 4.07
     },
     {
       "object_idx": 8,
@@ -2323,7 +2323,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 22.22
+      "elapsed_s": 6.79
     },
     {
       "object_idx": 8,
@@ -2348,7 +2348,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 18.64
+      "elapsed_s": 4.96
     },
     {
       "object_idx": 8,
@@ -2373,7 +2373,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 19.12
+      "elapsed_s": 7.42
     },
     {
       "object_idx": 8,
@@ -2398,7 +2398,7 @@
       "status": "success",
       "env_steps": 1906,
       "physics_ticks": 4530,
-      "elapsed_s": 15.63
+      "elapsed_s": 6.45
     },
     {
       "object_idx": 9,
@@ -2422,7 +2422,7 @@
       "status": "success",
       "env_steps": 2293,
       "physics_ticks": 5037,
-      "elapsed_s": 14.39
+      "elapsed_s": 3.58
     },
     {
       "object_idx": 9,
@@ -2446,7 +2446,7 @@
       "status": "success",
       "env_steps": 2292,
       "physics_ticks": 5036,
-      "elapsed_s": 12.3
+      "elapsed_s": 5.17
     },
     {
       "object_idx": 9,
@@ -2470,7 +2470,7 @@
       "status": "success",
       "env_steps": 2286,
       "physics_ticks": 5030,
-      "elapsed_s": 14.24
+      "elapsed_s": 4.94
     },
     {
       "object_idx": 9,
@@ -2494,7 +2494,7 @@
       "status": "failed",
       "env_steps": 2305,
       "physics_ticks": 5049,
-      "elapsed_s": 12.73
+      "elapsed_s": 5.26
     },
     {
       "object_idx": 9,
@@ -2518,7 +2518,7 @@
       "status": "success",
       "env_steps": 2289,
       "physics_ticks": 5033,
-      "elapsed_s": 12.85
+      "elapsed_s": 5.65
     },
     {
       "object_idx": 9,
@@ -2542,7 +2542,7 @@
       "status": "success",
       "env_steps": 2291,
       "physics_ticks": 5035,
-      "elapsed_s": 12.46
+      "elapsed_s": 3.71
     },
     {
       "object_idx": 9,
@@ -2566,7 +2566,7 @@
       "status": "success",
       "env_steps": 2291,
       "physics_ticks": 5035,
-      "elapsed_s": 11.85
+      "elapsed_s": 4.28
     },
     {
       "object_idx": 9,
@@ -2590,7 +2590,7 @@
       "status": "success",
       "env_steps": 2286,
       "physics_ticks": 5030,
-      "elapsed_s": 14.03
+      "elapsed_s": 5.73
     },
     {
       "object_idx": 9,
@@ -2614,7 +2614,7 @@
       "status": "success",
       "env_steps": 2286,
       "physics_ticks": 5030,
-      "elapsed_s": 16.36
+      "elapsed_s": 6.21
     },
     {
       "object_idx": 9,
@@ -2638,7 +2638,7 @@
       "status": "success",
       "env_steps": 2286,
       "physics_ticks": 5030,
-      "elapsed_s": 17.82
+      "elapsed_s": 6.32
     },
     {
       "object_idx": 10,
@@ -2662,7 +2662,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.21
+      "elapsed_s": 3.98
     },
     {
       "object_idx": 10,
@@ -2686,7 +2686,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.95
+      "elapsed_s": 3.98
     },
     {
       "object_idx": 10,
@@ -2710,7 +2710,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.54
+      "elapsed_s": 2.8
     },
     {
       "object_idx": 10,
@@ -2734,7 +2734,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.03
+      "elapsed_s": 3.83
     },
     {
       "object_idx": 10,
@@ -2758,7 +2758,7 @@
       "status": "success",
       "env_steps": 2136,
       "physics_ticks": 4880,
-      "elapsed_s": 18.06
+      "elapsed_s": 4.56
     },
     {
       "object_idx": 10,
@@ -2782,7 +2782,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.32
+      "elapsed_s": 4.36
     },
     {
       "object_idx": 10,
@@ -2806,7 +2806,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.59
+      "elapsed_s": 4.34
     },
     {
       "object_idx": 10,
@@ -2830,7 +2830,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.75
+      "elapsed_s": 3.9
     },
     {
       "object_idx": 10,
@@ -2854,7 +2854,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 15.78
+      "elapsed_s": 2.62
     },
     {
       "object_idx": 10,
@@ -2878,7 +2878,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.42
+      "elapsed_s": 3.52
     },
     {
       "object_idx": 11,
@@ -2915,7 +2915,7 @@
       "status": "failed",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 35.77
+      "elapsed_s": 15.71
     },
     {
       "object_idx": 11,
@@ -2952,7 +2952,7 @@
       "status": "success",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 39.82
+      "elapsed_s": 16.24
     },
     {
       "object_idx": 11,
@@ -2989,7 +2989,7 @@
       "status": "success",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 42.14
+      "elapsed_s": 15.88
     },
     {
       "object_idx": 11,
@@ -3026,7 +3026,7 @@
       "status": "success",
       "env_steps": 6220,
       "physics_ticks": 10800,
-      "elapsed_s": 32.36
+      "elapsed_s": 11.1
     },
     {
       "object_idx": 11,
@@ -3063,7 +3063,7 @@
       "status": "success",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 40.88
+      "elapsed_s": 15.69
     },
     {
       "object_idx": 11,
@@ -3100,7 +3100,7 @@
       "status": "failed",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 37.61
+      "elapsed_s": 15.72
     },
     {
       "object_idx": 11,
@@ -3137,7 +3137,7 @@
       "status": "success",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 36.75
+      "elapsed_s": 15.47
     },
     {
       "object_idx": 11,
@@ -3174,7 +3174,7 @@
       "status": "success",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 37.08
+      "elapsed_s": 14.35
     },
     {
       "object_idx": 11,
@@ -3211,7 +3211,7 @@
       "status": "success",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 35.2
+      "elapsed_s": 11.13
     },
     {
       "object_idx": 11,
@@ -3248,7 +3248,7 @@
       "status": "failed",
       "env_steps": 6185,
       "physics_ticks": 10765,
-      "elapsed_s": 37.8
+      "elapsed_s": 15.24
     },
     {
       "object_idx": 12,
@@ -3272,7 +3272,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 10.54
+      "elapsed_s": 3.6
     },
     {
       "object_idx": 12,
@@ -3296,7 +3296,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 10.9
+      "elapsed_s": 3.56
     },
     {
       "object_idx": 12,
@@ -3320,7 +3320,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 10.39
+      "elapsed_s": 3.34
     },
     {
       "object_idx": 12,
@@ -3344,7 +3344,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 11.49
+      "elapsed_s": 3.46
     },
     {
       "object_idx": 12,
@@ -3368,7 +3368,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 11.34
+      "elapsed_s": 3.37
     },
     {
       "object_idx": 12,
@@ -3392,7 +3392,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 11.09
+      "elapsed_s": 3.21
     },
     {
       "object_idx": 12,
@@ -3416,7 +3416,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 9.39
+      "elapsed_s": 2.34
     },
     {
       "object_idx": 12,
@@ -3440,7 +3440,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 9.32
+      "elapsed_s": 2.24
     },
     {
       "object_idx": 12,
@@ -3464,7 +3464,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 9.52
+      "elapsed_s": 3.07
     },
     {
       "object_idx": 12,
@@ -3488,7 +3488,7 @@
       "status": "success",
       "env_steps": 1945,
       "physics_ticks": 4725,
-      "elapsed_s": 9.12
+      "elapsed_s": 3.18
     },
     {
       "object_idx": 13,
@@ -3513,7 +3513,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 19.32
+      "elapsed_s": 8.27
     },
     {
       "object_idx": 13,
@@ -3538,7 +3538,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 25.41
+      "elapsed_s": 8.49
     },
     {
       "object_idx": 13,
@@ -3563,7 +3563,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 16.52
+      "elapsed_s": 4.06
     },
     {
       "object_idx": 13,
@@ -3587,7 +3587,7 @@
       "status": "success",
       "env_steps": 2153,
       "physics_ticks": 4297,
-      "elapsed_s": 13.04
+      "elapsed_s": 3.74
     },
     {
       "object_idx": 13,
@@ -3612,7 +3612,7 @@
       "status": "failed",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 18.56
+      "elapsed_s": 7.96
     },
     {
       "object_idx": 13,
@@ -3637,7 +3637,7 @@
       "status": "failed",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 17.4
+      "elapsed_s": 8.47
     },
     {
       "object_idx": 13,
@@ -3662,7 +3662,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 14.46
+      "elapsed_s": 6.72
     },
     {
       "object_idx": 13,
@@ -3687,7 +3687,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 14.29
+      "elapsed_s": 7.08
     },
     {
       "object_idx": 13,
@@ -3711,7 +3711,7 @@
       "status": "success",
       "env_steps": 2226,
       "physics_ticks": 4370,
-      "elapsed_s": 14.18
+      "elapsed_s": 6.76
     },
     {
       "object_idx": 13,
@@ -3736,7 +3736,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 17.46
+      "elapsed_s": 7.53
     },
     {
       "object_idx": 14,
@@ -3760,7 +3760,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 11.5
+      "elapsed_s": 2.82
     },
     {
       "object_idx": 14,
@@ -3784,7 +3784,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 10.77
+      "elapsed_s": 2.74
     },
     {
       "object_idx": 14,
@@ -3808,7 +3808,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 9.37
+      "elapsed_s": 4.04
     },
     {
       "object_idx": 14,
@@ -3832,7 +3832,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.88
+      "elapsed_s": 2.83
     },
     {
       "object_idx": 14,
@@ -3856,7 +3856,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.44
+      "elapsed_s": 2.79
     },
     {
       "object_idx": 14,
@@ -3880,7 +3880,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 9.58
+      "elapsed_s": 3.01
     },
     {
       "object_idx": 14,
@@ -3904,7 +3904,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.11
+      "elapsed_s": 3.59
     },
     {
       "object_idx": 14,
@@ -3928,7 +3928,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.22
+      "elapsed_s": 3.2
     },
     {
       "object_idx": 14,
@@ -3952,7 +3952,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.79
+      "elapsed_s": 3.13
     },
     {
       "object_idx": 14,
@@ -3976,7 +3976,7 @@
       "status": "success",
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.43
+      "elapsed_s": 3.42
     }
   ],
   "lift_steps_median": 1613.0

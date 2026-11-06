@@ -291,11 +291,14 @@ class PickupController:
             raise RuntimeError("gripper went below safe tabletop height")
 
     def _solve(self, position, rotation, reference, position_tolerance=0.015,
-               iterations=90, damping=0.02, prefer_reference=False):
+               iterations=90, damping=0.02, prefer_reference=False,
+               elbow_seeds=None):
         env = self.env
         moving = np.array([3, 6, 7, 8, 9, 10, 11, 12])
         desired = np.array(p.getMatrixFromQuaternion(rotation)).reshape(3, 3)
-        elbows = (float(reference[9]), 0.0, -0.8, 0.8) if prefer_reference else (0.0, -0.8, 0.8)
+        elbows = (elbow_seeds if elbow_seeds is not None else
+                  ((float(reference[9]), 0.0, -0.8, 0.8)
+                   if prefer_reference else (0.0, -0.8, 0.8)))
         for elbow in elbows:
             target = reference.copy()
             target[9] = np.clip(elbow, env.joint_lower[9], env.joint_upper[9])
@@ -397,6 +400,22 @@ class PickupController:
         candidates = propose_grasps(obs)
         rim_search = not candidates
         extent = np.ptp(obs["object_pc"], axis=0)
+        center_side = (min(extent[:2]) > 0.09 and
+                       max(extent[:2]) / min(extent[:2]) < 1.25 and
+                       extent[2] > 0.11)
+        if center_side:
+            # Favor opposing contacts around the body's vertical midpoint,
+            # without sacrificing contact quality for a slightly closer pair.
+            center_z = (float(np.min(obs["object_pc"][:, 2])) +
+                        float(np.max(obs["object_pc"][:, 2]))) / 2
+            candidates.sort(key=lambda grasp: grasp.score - 2.0 *
+                            abs(grasp.center[2] - center_z), reverse=True)
+            # A different elbow branch can reach the mid-height sidewalls
+            # without sweeping the forearm through the table.
+            solve = lambda *args: self._solve(
+                *args, elbow_seeds=(1.2, 0.0, -0.8, 0.8))
+        else:
+            solve = self._solve
         flat_wide = min(extent[:2]) > 0.18 and extent[2] < 0.035
         if flat_wide:
             # The plate needs one finger above and one below its edge. Do not
@@ -454,28 +473,28 @@ class PickupController:
                 via[2] += 0.012
                 raised = pre.copy()
                 raised[2] = max(hand[2], float(np.max(obs["object_pc"][:, 2])) + 0.16)
-                q_rotate = self._solve(hand, orientation, reference)
+                q_rotate = solve(hand, orientation, reference)
                 if q_rotate is None or not self._segment_free(reference, q_rotate,
                                                               check_object=True):
                     continue
-                q_raised = self._solve(raised, orientation, q_rotate)
+                q_raised = solve(raised, orientation, q_rotate)
                 if q_raised is None or not self._segment_free(q_rotate, q_raised,
                                                               check_object=True):
                     continue
-                q_pre = self._solve(pre, orientation, q_raised)
+                q_pre = solve(pre, orientation, q_raised)
                 if q_pre is None or not self._segment_free(q_raised, q_pre,
                                                            check_object=True):
                     continue
-                q_via = self._solve(via, orientation, q_pre)
+                q_via = solve(via, orientation, q_pre)
                 if q_via is None or not self._segment_free(q_pre, q_via,
                                                            check_object=True):
                     continue
-                q_contact = self._solve(contact, orientation, q_via)
+                q_contact = solve(contact, orientation, q_via)
                 if q_contact is None or not self._segment_free(q_via, q_contact,
                                                                check_object=True):
                     continue
                 lift = contact + np.array([0, 0, 0.18])
-                q_lift = self._solve(lift, orientation, q_contact)
+                q_lift = solve(lift, orientation, q_contact)
                 if q_lift is not None and self._segment_free(q_contact, q_lift):
                     return grasp, ([q_rotate, q_raised, q_pre, q_via, q_contact], q_lift)
         return None
@@ -527,7 +546,10 @@ class PickupController:
             from experimental_pickup import AutomaticPlateController
             controller = AutomaticPlateController(self.env)
             try:
-                return controller.run(obs)
+                result = controller.run(obs)
+                self.hold_target = (controller.hold_target.copy()
+                                    if controller.hold_target is not None else None)
+                return result
             finally:
                 controller.close()
         selected_approach = "undecided"

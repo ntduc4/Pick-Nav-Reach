@@ -209,7 +209,8 @@ class PickNavReachEnv:
             box_color=(0.95, 0.95, 0.98, 1.0),
         )
 
-        p.loadURDF(maze_path, useFixedBase=1, flags=p.URDF_MERGE_FIXED_LINKS)
+        self.maze_id = p.loadURDF(maze_path, useFixedBase=1,
+                                  flags=p.URDF_MERGE_FIXED_LINKS)
 
     def visualize_pc_and_normals(self, object_pc, object_normals, visualize_normals=False):
         # remove old debug items
