@@ -1,0 +1,6405 @@
+{
+  "seeds": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69
+  ],
+  "total_trials": 150,
+  "pickup_successes": 142,
+  "pickup_rate": 0.9466666666666667,
+  "successes": 114,
+  "success_rate": 0.76,
+  "navigation_rate_given_pickup": 0.8028169014084507,
+  "objects_with_success": 15,
+  "objects_tested": 15,
+  "errors": 0,
+  "failures": {
+    "object dropped during transport": 28,
+    "arm too close to table; stopped before collision": 2,
+    "object not lifted": 6
+  },
+  "pickup_failures": {
+    "arm too close to table; stopped before collision": 2,
+    "object not lifted": 6
+  },
+  "navigation_failures": {
+    "object dropped during transport": 28
+  },
+  "navigation_steps_median": 4032.0,
+  "objects": [
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "trials": 10,
+      "pickup_successes": 9,
+      "pickup_rate": 0.9,
+      "successes": 8,
+      "success_rate": 0.8,
+      "navigation_rate_given_pickup": 0.8888888888888888,
+      "failures": {
+        "object dropped during transport": 1,
+        "arm too close to table; stopped before collision": 1
+      }
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 5,
+      "success_rate": 0.5,
+      "navigation_rate_given_pickup": 0.5,
+      "failures": {
+        "object dropped during transport": 5
+      }
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 10,
+      "success_rate": 1.0,
+      "navigation_rate_given_pickup": 1.0,
+      "failures": {}
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 7,
+      "success_rate": 0.7,
+      "navigation_rate_given_pickup": 0.7,
+      "failures": {
+        "object dropped during transport": 3
+      }
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 10,
+      "success_rate": 1.0,
+      "navigation_rate_given_pickup": 1.0,
+      "failures": {}
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 7,
+      "success_rate": 0.7,
+      "navigation_rate_given_pickup": 0.7,
+      "failures": {
+        "object dropped during transport": 3
+      }
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 9,
+      "success_rate": 0.9,
+      "navigation_rate_given_pickup": 0.9,
+      "failures": {
+        "object dropped during transport": 1
+      }
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 9,
+      "success_rate": 0.9,
+      "navigation_rate_given_pickup": 0.9,
+      "failures": {
+        "object dropped during transport": 1
+      }
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "trials": 10,
+      "pickup_successes": 9,
+      "pickup_rate": 0.9,
+      "successes": 6,
+      "success_rate": 0.6,
+      "navigation_rate_given_pickup": 0.6666666666666666,
+      "failures": {
+        "arm too close to table; stopped before collision": 1,
+        "object dropped during transport": 3
+      }
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "trials": 10,
+      "pickup_successes": 9,
+      "pickup_rate": 0.9,
+      "successes": 9,
+      "success_rate": 0.9,
+      "navigation_rate_given_pickup": 1.0,
+      "failures": {
+        "object not lifted": 1
+      }
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 10,
+      "success_rate": 1.0,
+      "navigation_rate_given_pickup": 1.0,
+      "failures": {}
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "trials": 10,
+      "pickup_successes": 7,
+      "pickup_rate": 0.7,
+      "successes": 3,
+      "success_rate": 0.3,
+      "navigation_rate_given_pickup": 0.42857142857142855,
+      "failures": {
+        "object not lifted": 3,
+        "object dropped during transport": 4
+      }
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 6,
+      "success_rate": 0.6,
+      "navigation_rate_given_pickup": 0.6,
+      "failures": {
+        "object dropped during transport": 4
+      }
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "trials": 10,
+      "pickup_successes": 8,
+      "pickup_rate": 0.8,
+      "successes": 5,
+      "success_rate": 0.5,
+      "navigation_rate_given_pickup": 0.625,
+      "failures": {
+        "object dropped during transport": 3,
+        "object not lifted": 2
+      }
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "trials": 10,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 10,
+      "success_rate": 1.0,
+      "navigation_rate_given_pickup": 1.0,
+      "failures": {}
+    }
+  ],
+  "by_seed": [
+    {
+      "seed": 60,
+      "trials": 15,
+      "pickup_successes": 14,
+      "pickup_rate": 0.9333333333333333,
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.9285714285714286
+    },
+    {
+      "seed": 61,
+      "trials": 15,
+      "pickup_successes": 15,
+      "pickup_rate": 1.0,
+      "successes": 12,
+      "success_rate": 0.8,
+      "navigation_rate_given_pickup": 0.8
+    },
+    {
+      "seed": 62,
+      "trials": 15,
+      "pickup_successes": 14,
+      "pickup_rate": 0.9333333333333333,
+      "successes": 11,
+      "success_rate": 0.7333333333333333,
+      "navigation_rate_given_pickup": 0.7857142857142857
+    },
+    {
+      "seed": 63,
+      "trials": 15,
+      "pickup_successes": 14,
+      "pickup_rate": 0.9333333333333333,
+      "successes": 10,
+      "success_rate": 0.6666666666666666,
+      "navigation_rate_given_pickup": 0.7142857142857143
+    },
+    {
+      "seed": 64,
+      "trials": 15,
+      "pickup_successes": 14,
+      "pickup_rate": 0.9333333333333333,
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.9285714285714286
+    },
+    {
+      "seed": 65,
+      "trials": 15,
+      "pickup_successes": 13,
+      "pickup_rate": 0.8666666666666667,
+      "successes": 10,
+      "success_rate": 0.6666666666666666,
+      "navigation_rate_given_pickup": 0.7692307692307693
+    },
+    {
+      "seed": 66,
+      "trials": 15,
+      "pickup_successes": 15,
+      "pickup_rate": 1.0,
+      "successes": 12,
+      "success_rate": 0.8,
+      "navigation_rate_given_pickup": 0.8
+    },
+    {
+      "seed": 67,
+      "trials": 15,
+      "pickup_successes": 15,
+      "pickup_rate": 1.0,
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.8666666666666667
+    },
+    {
+      "seed": 68,
+      "trials": 15,
+      "pickup_successes": 14,
+      "pickup_rate": 0.9333333333333333,
+      "successes": 10,
+      "success_rate": 0.6666666666666666,
+      "navigation_rate_given_pickup": 0.7142857142857143
+    },
+    {
+      "seed": 69,
+      "trials": 15,
+      "pickup_successes": 14,
+      "pickup_rate": 0.9333333333333333,
+      "successes": 10,
+      "success_rate": 0.6666666666666666,
+      "navigation_rate_given_pickup": 0.7142857142857143
+    }
+  ],
+  "trials": [
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16741667884775147,
+        "grasp_width_m": 0.09999731797929885,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3751,
+        "lift_ticks": 3351,
+        "lift_steps": 1727,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.022341114982020318,
+        "navigation_steps": 4291,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 4291,
+      "dist_to_goal_m": 0.022341114982020318,
+      "env_steps": 6327,
+      "physics_ticks": 25635,
+      "elapsed_s": 16.59
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15614104106147808,
+        "grasp_width_m": 0.0994309878737806,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3769,
+        "lift_ticks": 3369,
+        "lift_steps": 1745,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.691164093201444,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.691164093201444,
+      "env_steps": 2186,
+      "physics_ticks": 4930,
+      "elapsed_s": 6.18
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16483976886260332,
+        "grasp_width_m": 0.0994856745481437,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3754,
+        "lift_ticks": 3354,
+        "lift_steps": 1730,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.07148655868981707,
+        "navigation_steps": 4189,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 4189,
+      "dist_to_goal_m": 0.07148655868981707,
+      "env_steps": 6225,
+      "physics_ticks": 25125,
+      "elapsed_s": 13.26
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16664197995745145,
+        "grasp_width_m": 0.09973958756228855,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3752,
+        "lift_ticks": 3352,
+        "lift_steps": 1728,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.021223812306421296,
+        "navigation_steps": 4166,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 4166,
+      "dist_to_goal_m": 0.021223812306421296,
+      "env_steps": 6202,
+      "physics_ticks": 25010,
+      "elapsed_s": 19.14
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16699260277876538,
+        "grasp_width_m": 0.09953599445486493,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3752,
+        "lift_ticks": 3352,
+        "lift_steps": 1728,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.022096327731448713,
+        "navigation_steps": 3902,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 3902,
+      "dist_to_goal_m": 0.022096327731448713,
+      "env_steps": 5938,
+      "physics_ticks": 23690,
+      "elapsed_s": 17.57
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16483220987505676,
+        "grasp_width_m": 0.09990507509126598,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3755,
+        "lift_ticks": 3355,
+        "lift_steps": 1731,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0789115120908409,
+        "navigation_steps": 3859,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 3859,
+      "dist_to_goal_m": 0.0789115120908409,
+      "env_steps": 5895,
+      "physics_ticks": 23475,
+      "elapsed_s": 20.77
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16517955638108794,
+        "grasp_width_m": 0.09946118331125932,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3749,
+        "lift_ticks": 3349,
+        "lift_steps": 1725,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.07164369776285323,
+        "navigation_steps": 4184,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 4184,
+      "dist_to_goal_m": 0.07164369776285323,
+      "env_steps": 6220,
+      "physics_ticks": 25100,
+      "elapsed_s": 20.72
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16852514663931295,
+        "grasp_width_m": 0.09945924108146356,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3748,
+        "lift_ticks": 3348,
+        "lift_steps": 1724,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.07249490660210105,
+        "navigation_steps": 3867,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 3867,
+      "dist_to_goal_m": 0.07249490660210105,
+      "env_steps": 5903,
+      "physics_ticks": 23515,
+      "elapsed_s": 18.18
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "sim_steps": 1152,
+        "reason": "arm too close to table; stopped before collision",
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "lift_tick": null,
+        "lift_ticks": null,
+        "lift_steps": null
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "arm too close to table; stopped before collision",
+      "pickup_env_steps": 1072,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 17.67694303866773,
+      "env_steps": 1152,
+      "physics_ticks": 3096,
+      "elapsed_s": 4.47
+    },
+    {
+      "object_idx": 0,
+      "object": "002_master_chef_can",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15817212766838584,
+        "grasp_width_m": 0.09958069376747285,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2036,
+        "lift_tick": 3766,
+        "lift_ticks": 3366,
+        "lift_steps": 1742,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.020324368751454956,
+        "navigation_steps": 3430,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1956,
+      "navigation_env_steps": 3430,
+      "dist_to_goal_m": 0.020324368751454956,
+      "env_steps": 5466,
+      "physics_ticks": 21330,
+      "elapsed_s": 16.03
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19557928979098638,
+        "grasp_width_m": 0.09059149368788812,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4061,
+        "lift_ticks": 3661,
+        "lift_steps": 1557,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.683908472527115,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.683908472527115,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 11.18
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19049717393340226,
+        "grasp_width_m": 0.08957920908836145,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4079,
+        "lift_ticks": 3679,
+        "lift_steps": 1575,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.031984782139996136,
+        "navigation_steps": 3374,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3374,
+      "dist_to_goal_m": 0.031984782139996136,
+      "env_steps": 5280,
+      "physics_ticks": 21400,
+      "elapsed_s": 11.84
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2030384920362367,
+        "grasp_width_m": 0.09009992366503021,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4053,
+        "lift_ticks": 3653,
+        "lift_steps": 1549,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.026326450948209703,
+        "navigation_steps": 4162,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4162,
+      "dist_to_goal_m": 0.026326450948209703,
+      "env_steps": 6068,
+      "physics_ticks": 25340,
+      "elapsed_s": 21.58
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19747513320010424,
+        "grasp_width_m": 0.09043024621748524,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4054,
+        "lift_ticks": 3654,
+        "lift_steps": 1550,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.895531120669077,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.895531120669077,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 9.98
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20106072187213875,
+        "grasp_width_m": 0.0900761556910469,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4065,
+        "lift_ticks": 3665,
+        "lift_steps": 1561,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02974384777303573,
+        "navigation_steps": 3879,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3879,
+      "dist_to_goal_m": 0.02974384777303573,
+      "env_steps": 5785,
+      "physics_ticks": 23925,
+      "elapsed_s": 15.16
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2033814914251355,
+        "grasp_width_m": 0.09078926761767704,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4057,
+        "lift_ticks": 3657,
+        "lift_steps": 1553,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.972000488351785,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.972000488351785,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 10.08
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20203525731989758,
+        "grasp_width_m": 0.09014879319802353,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4054,
+        "lift_ticks": 3654,
+        "lift_steps": 1550,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.026222682303861197,
+        "navigation_steps": 4280,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4280,
+      "dist_to_goal_m": 0.026222682303861197,
+      "env_steps": 6186,
+      "physics_ticks": 25930,
+      "elapsed_s": 21.74
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19434021212108255,
+        "grasp_width_m": 0.09011437859717494,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4075,
+        "lift_ticks": 3675,
+        "lift_steps": 1571,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0296966132829284,
+        "navigation_steps": 3842,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3842,
+      "dist_to_goal_m": 0.0296966132829284,
+      "env_steps": 5748,
+      "physics_ticks": 23740,
+      "elapsed_s": 20.91
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20281687119135805,
+        "grasp_width_m": 0.09081991897786877,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4053,
+        "lift_ticks": 3653,
+        "lift_steps": 1549,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.828022581779887,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.828022581779887,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 9.83
+    },
+    {
+      "object_idx": 1,
+      "object": "004_sugar_box",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2017059202577517,
+        "grasp_width_m": 0.09033204485803757,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4058,
+        "lift_ticks": 3658,
+        "lift_steps": 1554,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.227305681615857,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.227305681615857,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 7.05
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16938615240226695,
+        "grasp_width_m": 0.0666461841954479,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4242,
+        "lift_ticks": 3842,
+        "lift_steps": 1618,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.024340096925833075,
+        "navigation_steps": 4292,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4292,
+      "dist_to_goal_m": 0.024340096925833075,
+      "env_steps": 6228,
+      "physics_ticks": 26140,
+      "elapsed_s": 16.68
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1647769951572733,
+        "grasp_width_m": 0.06683680968357686,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4249,
+        "lift_ticks": 3849,
+        "lift_steps": 1625,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.028425091563546053,
+        "navigation_steps": 3401,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3401,
+      "dist_to_goal_m": 0.028425091563546053,
+      "env_steps": 5337,
+      "physics_ticks": 21685,
+      "elapsed_s": 13.17
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16859634782544108,
+        "grasp_width_m": 0.06685340521496004,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4243,
+        "lift_ticks": 3843,
+        "lift_steps": 1619,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03138149347461507,
+        "navigation_steps": 4170,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4170,
+      "dist_to_goal_m": 0.03138149347461507,
+      "env_steps": 6106,
+      "physics_ticks": 25530,
+      "elapsed_s": 9.7
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16605939960174787,
+        "grasp_width_m": 0.06682539501740338,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4247,
+        "lift_ticks": 3847,
+        "lift_steps": 1623,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02835390833920366,
+        "navigation_steps": 4298,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4298,
+      "dist_to_goal_m": 0.02835390833920366,
+      "env_steps": 6234,
+      "physics_ticks": 26170,
+      "elapsed_s": 18.07
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16214087745955275,
+        "grasp_width_m": 0.0658018889133027,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4253,
+        "lift_ticks": 3853,
+        "lift_steps": 1629,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.025269265630491363,
+        "navigation_steps": 4035,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4035,
+      "dist_to_goal_m": 0.025269265630491363,
+      "env_steps": 5971,
+      "physics_ticks": 24855,
+      "elapsed_s": 15.04
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16227146388608837,
+        "grasp_width_m": 0.06553681795625088,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4253,
+        "lift_ticks": 3853,
+        "lift_steps": 1629,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.036879982374879106,
+        "navigation_steps": 3702,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3702,
+      "dist_to_goal_m": 0.036879982374879106,
+      "env_steps": 5638,
+      "physics_ticks": 23190,
+      "elapsed_s": 17.96
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16859858133364714,
+        "grasp_width_m": 0.06565191564974278,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4243,
+        "lift_ticks": 3843,
+        "lift_steps": 1619,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0318918256228323,
+        "navigation_steps": 4162,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4162,
+      "dist_to_goal_m": 0.0318918256228323,
+      "env_steps": 6098,
+      "physics_ticks": 25490,
+      "elapsed_s": 16.16
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16749884681795324,
+        "grasp_width_m": 0.0664607480800398,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4246,
+        "lift_ticks": 3846,
+        "lift_steps": 1622,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.027429848762766006,
+        "navigation_steps": 3857,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3857,
+      "dist_to_goal_m": 0.027429848762766006,
+      "env_steps": 5793,
+      "physics_ticks": 23965,
+      "elapsed_s": 9.98
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1682798759329589,
+        "grasp_width_m": 0.06577445597315786,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4243,
+        "lift_ticks": 3843,
+        "lift_steps": 1619,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.01818741501272842,
+        "navigation_steps": 4032,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4032,
+      "dist_to_goal_m": 0.01818741501272842,
+      "env_steps": 5968,
+      "physics_ticks": 24840,
+      "elapsed_s": 9.84
+    },
+    {
+      "object_idx": 2,
+      "object": "005_tomato_soup_can",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1625034285186444,
+        "grasp_width_m": 0.06552219381157683,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4252,
+        "lift_ticks": 3852,
+        "lift_steps": 1628,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.033842439281443884,
+        "navigation_steps": 3412,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3412,
+      "dist_to_goal_m": 0.033842439281443884,
+      "env_steps": 5348,
+      "physics_ticks": 21740,
+      "elapsed_s": 10.95
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1832118645739863,
+        "grasp_width_m": 0.07927760258158822,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4081,
+        "lift_ticks": 3681,
+        "lift_steps": 1577,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02211509449167382,
+        "navigation_steps": 4288,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4288,
+      "dist_to_goal_m": 0.02211509449167382,
+      "env_steps": 6194,
+      "physics_ticks": 25970,
+      "elapsed_s": 22.05
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20589944536317561,
+        "grasp_width_m": 0.08127412155423078,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4049,
+        "lift_ticks": 3649,
+        "lift_steps": 1545,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.029165182729887284,
+        "navigation_steps": 3386,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3386,
+      "dist_to_goal_m": 0.029165182729887284,
+      "env_steps": 5292,
+      "physics_ticks": 21460,
+      "elapsed_s": 17.25
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1990543592652685,
+        "grasp_width_m": 0.07816831364748454,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4058,
+        "lift_ticks": 3658,
+        "lift_steps": 1554,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.926777077770293,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.926777077770293,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 4.72
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19076786880835594,
+        "grasp_width_m": 0.08234873084887247,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4067,
+        "lift_ticks": 3667,
+        "lift_steps": 1563,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.74826125669571,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.74826125669571,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 6.91
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19737959559080165,
+        "grasp_width_m": 0.07903353832887315,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4062,
+        "lift_ticks": 3662,
+        "lift_steps": 1558,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.010960038318011567,
+        "navigation_steps": 4029,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4029,
+      "dist_to_goal_m": 0.010960038318011567,
+      "env_steps": 5935,
+      "physics_ticks": 24675,
+      "elapsed_s": 21.63
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19271263394017302,
+        "grasp_width_m": 0.07980887790665167,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4067,
+        "lift_ticks": 3667,
+        "lift_steps": 1563,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02913173134924289,
+        "navigation_steps": 3708,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3708,
+      "dist_to_goal_m": 0.02913173134924289,
+      "env_steps": 5614,
+      "physics_ticks": 23070,
+      "elapsed_s": 19.31
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1873508923504259,
+        "grasp_width_m": 0.07969993975705802,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4072,
+        "lift_ticks": 3672,
+        "lift_steps": 1568,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.69411065615445,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.69411065615445,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 7.43
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20534753416718,
+        "grasp_width_m": 0.07869897722371741,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4051,
+        "lift_ticks": 3651,
+        "lift_steps": 1547,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.031265473534575115,
+        "navigation_steps": 3854,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3854,
+      "dist_to_goal_m": 0.031265473534575115,
+      "env_steps": 5760,
+      "physics_ticks": 23800,
+      "elapsed_s": 19.59
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18732432390095988,
+        "grasp_width_m": 0.07950668808692907,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4072,
+        "lift_ticks": 3672,
+        "lift_steps": 1568,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03066435657375707,
+        "navigation_steps": 4026,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4026,
+      "dist_to_goal_m": 0.03066435657375707,
+      "env_steps": 5932,
+      "physics_ticks": 24660,
+      "elapsed_s": 20.75
+    },
+    {
+      "object_idx": 3,
+      "object": "006_mustard_bottle",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19306373403724408,
+        "grasp_width_m": 0.07948824062428528,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4066,
+        "lift_ticks": 3666,
+        "lift_steps": 1562,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03314050036314798,
+        "navigation_steps": 3416,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3416,
+      "dist_to_goal_m": 0.03314050036314798,
+      "env_steps": 5322,
+      "physics_ticks": 21610,
+      "elapsed_s": 21.13
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16675617402848752,
+        "grasp_width_m": 0.050166562826605046,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4247,
+        "lift_ticks": 3847,
+        "lift_steps": 1623,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.026940521158350095,
+        "navigation_steps": 4297,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4297,
+      "dist_to_goal_m": 0.026940521158350095,
+      "env_steps": 6233,
+      "physics_ticks": 26165,
+      "elapsed_s": 14.06
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16711329847455159,
+        "grasp_width_m": 0.05031391342812894,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4259,
+        "lift_ticks": 3859,
+        "lift_steps": 1635,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.039533509623929895,
+        "navigation_steps": 3393,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3393,
+      "dist_to_goal_m": 0.039533509623929895,
+      "env_steps": 5329,
+      "physics_ticks": 21645,
+      "elapsed_s": 8.19
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16504191918594946,
+        "grasp_width_m": 0.05036531293176314,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4251,
+        "lift_ticks": 3851,
+        "lift_steps": 1627,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.031158351762669536,
+        "navigation_steps": 4178,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4178,
+      "dist_to_goal_m": 0.031158351762669536,
+      "env_steps": 6114,
+      "physics_ticks": 25570,
+      "elapsed_s": 13.32
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15946756583332844,
+        "grasp_width_m": 0.05005591606729608,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4265,
+        "lift_ticks": 3865,
+        "lift_steps": 1641,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04859536462820118,
+        "navigation_steps": 4300,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4300,
+      "dist_to_goal_m": 0.04859536462820118,
+      "env_steps": 6236,
+      "physics_ticks": 26180,
+      "elapsed_s": 13.89
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17092465007107138,
+        "grasp_width_m": 0.050509556778551803,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4251,
+        "lift_ticks": 3851,
+        "lift_steps": 1627,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03977182929806256,
+        "navigation_steps": 3897,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3897,
+      "dist_to_goal_m": 0.03977182929806256,
+      "env_steps": 5833,
+      "physics_ticks": 24165,
+      "elapsed_s": 7.95
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16717371018574734,
+        "grasp_width_m": 0.0501050766905836,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4243,
+        "lift_ticks": 3843,
+        "lift_steps": 1619,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.035517243928976074,
+        "navigation_steps": 3707,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3707,
+      "dist_to_goal_m": 0.035517243928976074,
+      "env_steps": 5643,
+      "physics_ticks": 23215,
+      "elapsed_s": 8.76
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16256189482502537,
+        "grasp_width_m": 0.0504817945102249,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4272,
+        "lift_ticks": 3872,
+        "lift_steps": 1648,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03486289694104161,
+        "navigation_steps": 4162,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4162,
+      "dist_to_goal_m": 0.03486289694104161,
+      "env_steps": 6098,
+      "physics_ticks": 25490,
+      "elapsed_s": 13.23
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17027177270754412,
+        "grasp_width_m": 0.04997619359630378,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4251,
+        "lift_ticks": 3851,
+        "lift_steps": 1627,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0430786533604206,
+        "navigation_steps": 3861,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3861,
+      "dist_to_goal_m": 0.0430786533604206,
+      "env_steps": 5797,
+      "physics_ticks": 23985,
+      "elapsed_s": 13.94
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16584601124837595,
+        "grasp_width_m": 0.05041723022758108,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4254,
+        "lift_ticks": 3854,
+        "lift_steps": 1630,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.026337428728799937,
+        "navigation_steps": 4041,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4041,
+      "dist_to_goal_m": 0.026337428728799937,
+      "env_steps": 5977,
+      "physics_ticks": 24885,
+      "elapsed_s": 9.3
+    },
+    {
+      "object_idx": 4,
+      "object": "010_potted_meat_can",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15971825302333698,
+        "grasp_width_m": 0.05046293285164239,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4277,
+        "lift_ticks": 3877,
+        "lift_steps": 1653,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03150489309282043,
+        "navigation_steps": 3426,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3426,
+      "dist_to_goal_m": 0.03150489309282043,
+      "env_steps": 5362,
+      "physics_ticks": 21810,
+      "elapsed_s": 13.11
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20813618908982678,
+        "grasp_width_m": 0.03747805582401752,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4197,
+        "lift_ticks": 3797,
+        "lift_steps": 1573,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.025090054373191974,
+        "navigation_steps": 4290,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4290,
+      "dist_to_goal_m": 0.025090054373191974,
+      "env_steps": 6226,
+      "physics_ticks": 26130,
+      "elapsed_s": 18.1
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.21060685423578052,
+        "grasp_width_m": 0.03691199527066685,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4197,
+        "lift_ticks": 3797,
+        "lift_steps": 1573,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04897499200751111,
+        "navigation_steps": 3398,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3398,
+      "dist_to_goal_m": 0.04897499200751111,
+      "env_steps": 5334,
+      "physics_ticks": 21670,
+      "elapsed_s": 13.51
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1940439894092746,
+        "grasp_width_m": 0.036582137794910236,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4226,
+        "lift_ticks": 3826,
+        "lift_steps": 1602,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.873764798589804,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.873764798589804,
+      "env_steps": 2086,
+      "physics_ticks": 5430,
+      "elapsed_s": 4.36
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2068524876336646,
+        "grasp_width_m": 0.0368706600532427,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4205,
+        "lift_ticks": 3805,
+        "lift_steps": 1581,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04768638033044043,
+        "navigation_steps": 4297,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4297,
+      "dist_to_goal_m": 0.04768638033044043,
+      "env_steps": 6233,
+      "physics_ticks": 26165,
+      "elapsed_s": 10.01
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19582034074010646,
+        "grasp_width_m": 0.03726829994375682,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4226,
+        "lift_ticks": 3826,
+        "lift_steps": 1602,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.035008085979160226,
+        "navigation_steps": 4034,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4034,
+      "dist_to_goal_m": 0.035008085979160226,
+      "env_steps": 5970,
+      "physics_ticks": 24850,
+      "elapsed_s": 10.42
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1998603655975275,
+        "grasp_width_m": 0.03730489713356506,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4217,
+        "lift_ticks": 3817,
+        "lift_steps": 1593,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.052788376069497,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.052788376069497,
+      "env_steps": 2086,
+      "physics_ticks": 5430,
+      "elapsed_s": 2.73
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19460546642760734,
+        "grasp_width_m": 0.03729570993533804,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4227,
+        "lift_ticks": 3827,
+        "lift_steps": 1603,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.873329126057985,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.873329126057985,
+      "env_steps": 2086,
+      "physics_ticks": 5430,
+      "elapsed_s": 3.99
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2077030679449866,
+        "grasp_width_m": 0.03688682143991011,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4202,
+        "lift_ticks": 3802,
+        "lift_steps": 1578,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04416414828695499,
+        "navigation_steps": 3867,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3867,
+      "dist_to_goal_m": 0.04416414828695499,
+      "env_steps": 5803,
+      "physics_ticks": 24015,
+      "elapsed_s": 16.28
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19257071470061038,
+        "grasp_width_m": 0.037190789128279444,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4232,
+        "lift_ticks": 3832,
+        "lift_steps": 1608,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04158856886598238,
+        "navigation_steps": 4039,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4039,
+      "dist_to_goal_m": 0.04158856886598238,
+      "env_steps": 5975,
+      "physics_ticks": 24875,
+      "elapsed_s": 10.16
+    },
+    {
+      "object_idx": 5,
+      "object": "011_banana",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18958763416735913,
+        "grasp_width_m": 0.03716001342192265,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4236,
+        "lift_ticks": 3836,
+        "lift_steps": 1612,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03130751747963122,
+        "navigation_steps": 3412,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3412,
+      "dist_to_goal_m": 0.03130751747963122,
+      "env_steps": 5348,
+      "physics_ticks": 21740,
+      "elapsed_s": 15.34
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.21367527316014756,
+        "grasp_width_m": 0.04351804438631939,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4051,
+        "lift_ticks": 3651,
+        "lift_steps": 1543,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0509712761221868,
+        "navigation_steps": 4278,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 4278,
+      "dist_to_goal_m": 0.0509712761221868,
+      "env_steps": 6185,
+      "physics_ticks": 25925,
+      "elapsed_s": 16.12
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20492341216734966,
+        "grasp_width_m": 0.04515164549028357,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4057,
+        "lift_ticks": 3657,
+        "lift_steps": 1549,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.032817989296372294,
+        "navigation_steps": 3393,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 3393,
+      "dist_to_goal_m": 0.032817989296372294,
+      "env_steps": 5300,
+      "physics_ticks": 21500,
+      "elapsed_s": 9.57
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2025674495179608,
+        "grasp_width_m": 0.04417117115778956,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4058,
+        "lift_ticks": 3658,
+        "lift_steps": 1550,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03617698095078083,
+        "navigation_steps": 4169,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 4169,
+      "dist_to_goal_m": 0.03617698095078083,
+      "env_steps": 6076,
+      "physics_ticks": 25380,
+      "elapsed_s": 19.39
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20424066396165586,
+        "grasp_width_m": 0.04519666808867429,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4057,
+        "lift_ticks": 3657,
+        "lift_steps": 1549,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04261804618143716,
+        "navigation_steps": 4292,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 4292,
+      "dist_to_goal_m": 0.04261804618143716,
+      "env_steps": 6199,
+      "physics_ticks": 25995,
+      "elapsed_s": 16.57
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1996435585817874,
+        "grasp_width_m": 0.043919725593574946,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4068,
+        "lift_ticks": 3668,
+        "lift_steps": 1560,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.641218871096804,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.641218871096804,
+      "env_steps": 2057,
+      "physics_ticks": 5285,
+      "elapsed_s": 4.37
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20502558639227464,
+        "grasp_width_m": 0.04549495531472736,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4056,
+        "lift_ticks": 3656,
+        "lift_steps": 1548,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02609507187555448,
+        "navigation_steps": 3696,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 3696,
+      "dist_to_goal_m": 0.02609507187555448,
+      "env_steps": 5603,
+      "physics_ticks": 23015,
+      "elapsed_s": 18.69
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20258659547181446,
+        "grasp_width_m": 0.044089978001325386,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4058,
+        "lift_ticks": 3658,
+        "lift_steps": 1550,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03525924952339562,
+        "navigation_steps": 4290,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 4290,
+      "dist_to_goal_m": 0.03525924952339562,
+      "env_steps": 6197,
+      "physics_ticks": 25985,
+      "elapsed_s": 19.45
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20621773839532265,
+        "grasp_width_m": 0.043838829903950605,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4053,
+        "lift_ticks": 3653,
+        "lift_steps": 1545,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02401509909820764,
+        "navigation_steps": 3859,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 3859,
+      "dist_to_goal_m": 0.02401509909820764,
+      "env_steps": 5766,
+      "physics_ticks": 23830,
+      "elapsed_s": 17.4
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20251572840707543,
+        "grasp_width_m": 0.04588016913235102,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4059,
+        "lift_ticks": 3659,
+        "lift_steps": 1551,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04220093854755214,
+        "navigation_steps": 4033,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 4033,
+      "dist_to_goal_m": 0.04220093854755214,
+      "env_steps": 5940,
+      "physics_ticks": 24700,
+      "elapsed_s": 16.45
+    },
+    {
+      "object_idx": 6,
+      "object": "012_strawberry",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.21014677493403278,
+        "grasp_width_m": 0.0447483728283725,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1907,
+        "lift_tick": 4051,
+        "lift_ticks": 3651,
+        "lift_steps": 1543,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.045869946068017434,
+        "navigation_steps": 3405,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1827,
+      "navigation_env_steps": 3405,
+      "dist_to_goal_m": 0.045869946068017434,
+      "env_steps": 5312,
+      "physics_ticks": 21560,
+      "elapsed_s": 8.51
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1708125853897552,
+        "grasp_width_m": 0.07456223968670139,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4242,
+        "lift_ticks": 3842,
+        "lift_steps": 1618,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02612012153575072,
+        "navigation_steps": 4288,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4288,
+      "dist_to_goal_m": 0.02612012153575072,
+      "env_steps": 6224,
+      "physics_ticks": 26120,
+      "elapsed_s": 23.99
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17135182304282126,
+        "grasp_width_m": 0.07461009312183553,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4241,
+        "lift_ticks": 3841,
+        "lift_steps": 1617,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.030565204870140222,
+        "navigation_steps": 3399,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3399,
+      "dist_to_goal_m": 0.030565204870140222,
+      "env_steps": 5335,
+      "physics_ticks": 21675,
+      "elapsed_s": 10.79
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18169510602306382,
+        "grasp_width_m": 0.07413691325242101,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4233,
+        "lift_ticks": 3833,
+        "lift_steps": 1609,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.861132834133716,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.861132834133716,
+      "env_steps": 2086,
+      "physics_ticks": 5430,
+      "elapsed_s": 6.97
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17054838183683885,
+        "grasp_width_m": 0.07584905796465492,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4242,
+        "lift_ticks": 3842,
+        "lift_steps": 1618,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0260070533986556,
+        "navigation_steps": 4298,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4298,
+      "dist_to_goal_m": 0.0260070533986556,
+      "env_steps": 6234,
+      "physics_ticks": 26170,
+      "elapsed_s": 20.96
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.180192754822879,
+        "grasp_width_m": 0.0766702576372011,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4227,
+        "lift_ticks": 3827,
+        "lift_steps": 1603,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03289740271067295,
+        "navigation_steps": 4034,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4034,
+      "dist_to_goal_m": 0.03289740271067295,
+      "env_steps": 5970,
+      "physics_ticks": 24850,
+      "elapsed_s": 15.98
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1819003997771751,
+        "grasp_width_m": 0.0766251283238075,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4226,
+        "lift_ticks": 3826,
+        "lift_steps": 1602,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.031776139993572046,
+        "navigation_steps": 3703,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3703,
+      "dist_to_goal_m": 0.031776139993572046,
+      "env_steps": 5639,
+      "physics_ticks": 23195,
+      "elapsed_s": 16.42
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18282652952486778,
+        "grasp_width_m": 0.07564640597664934,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4231,
+        "lift_ticks": 3831,
+        "lift_steps": 1607,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0343649785108966,
+        "navigation_steps": 4162,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4162,
+      "dist_to_goal_m": 0.0343649785108966,
+      "env_steps": 6098,
+      "physics_ticks": 25490,
+      "elapsed_s": 19.6
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1826233376358528,
+        "grasp_width_m": 0.07439637851683112,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4231,
+        "lift_ticks": 3831,
+        "lift_steps": 1607,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.033965559541654824,
+        "navigation_steps": 3859,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3859,
+      "dist_to_goal_m": 0.033965559541654824,
+      "env_steps": 5795,
+      "physics_ticks": 23975,
+      "elapsed_s": 14.73
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18282734888006658,
+        "grasp_width_m": 0.07591249972636598,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4231,
+        "lift_ticks": 3831,
+        "lift_steps": 1607,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03482503275913545,
+        "navigation_steps": 4032,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4032,
+      "dist_to_goal_m": 0.03482503275913545,
+      "env_steps": 5968,
+      "physics_ticks": 24840,
+      "elapsed_s": 15.11
+    },
+    {
+      "object_idx": 7,
+      "object": "013_apple",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17403169662808948,
+        "grasp_width_m": 0.07456452659311316,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4237,
+        "lift_ticks": 3837,
+        "lift_steps": 1613,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.030574501656694127,
+        "navigation_steps": 3411,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3411,
+      "dist_to_goal_m": 0.030574501656694127,
+      "env_steps": 5347,
+      "physics_ticks": 21735,
+      "elapsed_s": 17.28
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17922279310580758,
+        "grasp_width_m": 0.09381779834261973,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4094,
+        "lift_ticks": 3694,
+        "lift_steps": 1590,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.01926524937826842,
+        "navigation_steps": 4285,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4285,
+      "dist_to_goal_m": 0.01926524937826842,
+      "env_steps": 6191,
+      "physics_ticks": 25955,
+      "elapsed_s": 16.04
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1897378117508154,
+        "grasp_width_m": 0.09170987565991646,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4074,
+        "lift_ticks": 3674,
+        "lift_steps": 1570,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.009264152414086287,
+        "navigation_steps": 3389,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3389,
+      "dist_to_goal_m": 0.009264152414086287,
+      "env_steps": 5295,
+      "physics_ticks": 21475,
+      "elapsed_s": 14.98
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "sim_steps": 1110,
+        "reason": "arm too close to table; stopped before collision",
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "lift_tick": null,
+        "lift_ticks": null,
+        "lift_steps": null
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "arm too close to table; stopped before collision",
+      "pickup_env_steps": 1030,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 17.715822713179257,
+      "env_steps": 1110,
+      "physics_ticks": 3534,
+      "elapsed_s": 6.44
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18541991726222518,
+        "grasp_width_m": 0.09298724163568577,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4080,
+        "lift_ticks": 3680,
+        "lift_steps": 1576,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.024423797239204216,
+        "navigation_steps": 4159,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4159,
+      "dist_to_goal_m": 0.024423797239204216,
+      "env_steps": 6065,
+      "physics_ticks": 25325,
+      "elapsed_s": 25.12
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17712787387501516,
+        "grasp_width_m": 0.09379465592453724,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4092,
+        "lift_ticks": 3692,
+        "lift_steps": 1588,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.010927408427967251,
+        "navigation_steps": 3895,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3895,
+      "dist_to_goal_m": 0.010927408427967251,
+      "env_steps": 5801,
+      "physics_ticks": 24005,
+      "elapsed_s": 20.72
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1593434565338666,
+        "grasp_width_m": 0.09251509743747544,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4131,
+        "lift_ticks": 3731,
+        "lift_steps": 1627,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.772338600635763,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.772338600635763,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 6.16
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18728427794590385,
+        "grasp_width_m": 0.09356478904240227,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4078,
+        "lift_ticks": 3678,
+        "lift_steps": 1574,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.580479074580147,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.580479074580147,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 4.85
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1723594043543374,
+        "grasp_width_m": 0.0924676812871664,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4105,
+        "lift_ticks": 3705,
+        "lift_steps": 1601,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.019731182923643217,
+        "navigation_steps": 3859,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 3859,
+      "dist_to_goal_m": 0.019731182923643217,
+      "env_steps": 5765,
+      "physics_ticks": 23825,
+      "elapsed_s": 20.68
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17786429037539386,
+        "grasp_width_m": 0.09306058417967697,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4098,
+        "lift_ticks": 3698,
+        "lift_steps": 1594,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.027606857473987122,
+        "navigation_steps": 4032,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 4032,
+      "dist_to_goal_m": 0.027606857473987122,
+      "env_steps": 5938,
+      "physics_ticks": 24690,
+      "elapsed_s": 22.17
+    },
+    {
+      "object_idx": 8,
+      "object": "021_bleach_cleanser",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1863040679802166,
+        "grasp_width_m": 0.09275474766660165,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1906,
+        "lift_tick": 4077,
+        "lift_ticks": 3677,
+        "lift_steps": 1573,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.95212020676489,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1826,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.95212020676489,
+      "env_steps": 2056,
+      "physics_ticks": 5280,
+      "elapsed_s": 6.42
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16838102024321833,
+        "grasp_width_m": 0.009167304350068317,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2293,
+        "lift_tick": 4511,
+        "lift_ticks": 4111,
+        "lift_steps": 1887,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.030021288081665175,
+        "navigation_steps": 4288,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2213,
+      "navigation_env_steps": 4288,
+      "dist_to_goal_m": 0.030021288081665175,
+      "env_steps": 6581,
+      "physics_ticks": 26477,
+      "elapsed_s": 25.53
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15836384549892324,
+        "grasp_width_m": 0.01127395453274335,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2292,
+        "lift_tick": 4560,
+        "lift_ticks": 4160,
+        "lift_steps": 1936,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02722660843881,
+        "navigation_steps": 3385,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2212,
+      "navigation_env_steps": 3385,
+      "dist_to_goal_m": 0.02722660843881,
+      "env_steps": 5677,
+      "physics_ticks": 21961,
+      "elapsed_s": 17.32
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17720779547862664,
+        "grasp_width_m": 0.008226551797981476,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2286,
+        "lift_tick": 4473,
+        "lift_ticks": 4073,
+        "lift_steps": 1849,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03103621876671892,
+        "navigation_steps": 4182,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2206,
+      "navigation_env_steps": 4182,
+      "dist_to_goal_m": 0.03103621876671892,
+      "env_steps": 6468,
+      "physics_ticks": 25940,
+      "elapsed_s": 14.74
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "lift_m": -0.007489719801792694,
+        "grasp_width_m": 0.014409999611804206,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2305,
+        "lift_tick": 4587,
+        "lift_ticks": 4187,
+        "lift_steps": 1963,
+        "reason": "object not lifted"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "object not lifted",
+      "pickup_env_steps": 2225,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 17.650806005314145,
+      "env_steps": 2305,
+      "physics_ticks": 5049,
+      "elapsed_s": 5.36
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16733891597041295,
+        "grasp_width_m": 0.008340331917808428,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2289,
+        "lift_tick": 4518,
+        "lift_ticks": 4118,
+        "lift_steps": 1894,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02136593848817073,
+        "navigation_steps": 4032,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2209,
+      "navigation_env_steps": 4032,
+      "dist_to_goal_m": 0.02136593848817073,
+      "env_steps": 6321,
+      "physics_ticks": 25193,
+      "elapsed_s": 20.29
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1586993502077294,
+        "grasp_width_m": 0.009718466669550998,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2291,
+        "lift_tick": 4542,
+        "lift_ticks": 4142,
+        "lift_steps": 1918,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.024236388748672306,
+        "navigation_steps": 3696,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2211,
+      "navigation_env_steps": 3696,
+      "dist_to_goal_m": 0.024236388748672306,
+      "env_steps": 5987,
+      "physics_ticks": 23515,
+      "elapsed_s": 11.22
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1703420986785663,
+        "grasp_width_m": 0.008748782584316274,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2291,
+        "lift_tick": 4516,
+        "lift_ticks": 4116,
+        "lift_steps": 1892,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03181384346753903,
+        "navigation_steps": 4293,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2211,
+      "navigation_env_steps": 4293,
+      "dist_to_goal_m": 0.03181384346753903,
+      "env_steps": 6584,
+      "physics_ticks": 26500,
+      "elapsed_s": 26.75
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15388366957222233,
+        "grasp_width_m": 0.010633943391463086,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2286,
+        "lift_tick": 4564,
+        "lift_ticks": 4164,
+        "lift_steps": 1940,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.025053232340239203,
+        "navigation_steps": 3870,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2206,
+      "navigation_env_steps": 3870,
+      "dist_to_goal_m": 0.025053232340239203,
+      "env_steps": 6156,
+      "physics_ticks": 24380,
+      "elapsed_s": 13.33
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15543570256774064,
+        "grasp_width_m": 0.00999777807080243,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2286,
+        "lift_tick": 4552,
+        "lift_ticks": 4152,
+        "lift_steps": 1928,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02121376595104202,
+        "navigation_steps": 4038,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2206,
+      "navigation_env_steps": 4038,
+      "dist_to_goal_m": 0.02121376595104202,
+      "env_steps": 6324,
+      "physics_ticks": 25220,
+      "elapsed_s": 23.06
+    },
+    {
+      "object_idx": 9,
+      "object": "024_bowl",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1789012863410666,
+        "grasp_width_m": 0.008834570269526306,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2286,
+        "lift_tick": 4476,
+        "lift_ticks": 4076,
+        "lift_steps": 1852,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03288567203519991,
+        "navigation_steps": 3416,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2206,
+      "navigation_env_steps": 3416,
+      "dist_to_goal_m": 0.03288567203519991,
+      "env_steps": 5702,
+      "physics_ticks": 22110,
+      "elapsed_s": 19.8
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16706136659463078,
+        "grasp_width_m": 0.08117172019403222,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4247,
+        "lift_ticks": 3847,
+        "lift_steps": 1623,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02862221155285748,
+        "navigation_steps": 4292,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4292,
+      "dist_to_goal_m": 0.02862221155285748,
+      "env_steps": 6228,
+      "physics_ticks": 26140,
+      "elapsed_s": 14.42
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16798358843367223,
+        "grasp_width_m": 0.08114309164175859,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4246,
+        "lift_ticks": 3846,
+        "lift_steps": 1622,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02963169479141704,
+        "navigation_steps": 3400,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3400,
+      "dist_to_goal_m": 0.02963169479141704,
+      "env_steps": 5336,
+      "physics_ticks": 21680,
+      "elapsed_s": 12.01
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1731754259743814,
+        "grasp_width_m": 0.08121063337967717,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4238,
+        "lift_ticks": 3838,
+        "lift_steps": 1614,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02979435190531332,
+        "navigation_steps": 4176,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4176,
+      "dist_to_goal_m": 0.02979435190531332,
+      "env_steps": 6112,
+      "physics_ticks": 25560,
+      "elapsed_s": 14.46
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17518610622727626,
+        "grasp_width_m": 0.08102863242877645,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4240,
+        "lift_ticks": 3840,
+        "lift_steps": 1616,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03596043771075889,
+        "navigation_steps": 4162,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4162,
+      "dist_to_goal_m": 0.03596043771075889,
+      "env_steps": 6098,
+      "physics_ticks": 25490,
+      "elapsed_s": 13.35
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.15267083383911384,
+        "grasp_width_m": 0.08139278435277077,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 2136,
+        "lift_tick": 4446,
+        "lift_ticks": 4046,
+        "lift_steps": 1822,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.028201638646458953,
+        "navigation_steps": 4034,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 2056,
+      "navigation_env_steps": 4034,
+      "dist_to_goal_m": 0.028201638646458953,
+      "env_steps": 6170,
+      "physics_ticks": 25050,
+      "elapsed_s": 18.04
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1666156951810035,
+        "grasp_width_m": 0.0811087367486886,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4248,
+        "lift_ticks": 3848,
+        "lift_steps": 1624,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.028313103694701178,
+        "navigation_steps": 3701,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3701,
+      "dist_to_goal_m": 0.028313103694701178,
+      "env_steps": 5637,
+      "physics_ticks": 23185,
+      "elapsed_s": 9.4
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1689514442270208,
+        "grasp_width_m": 0.08158781629172293,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4244,
+        "lift_ticks": 3844,
+        "lift_steps": 1620,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02871251406568217,
+        "navigation_steps": 4164,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4164,
+      "dist_to_goal_m": 0.02871251406568217,
+      "env_steps": 6100,
+      "physics_ticks": 25500,
+      "elapsed_s": 14.69
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.16722777996116045,
+        "grasp_width_m": 0.08138783919067204,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4247,
+        "lift_ticks": 3847,
+        "lift_steps": 1623,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.025381877122471266,
+        "navigation_steps": 3865,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3865,
+      "dist_to_goal_m": 0.025381877122471266,
+      "env_steps": 5801,
+      "physics_ticks": 24005,
+      "elapsed_s": 8.45
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17369252596412088,
+        "grasp_width_m": 0.08164805839293124,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4236,
+        "lift_ticks": 3836,
+        "lift_steps": 1612,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02764620437972992,
+        "navigation_steps": 4040,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4040,
+      "dist_to_goal_m": 0.02764620437972992,
+      "env_steps": 5976,
+      "physics_ticks": 24880,
+      "elapsed_s": 13.77
+    },
+    {
+      "object_idx": 10,
+      "object": "025_mug",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1743588946988034,
+        "grasp_width_m": 0.0809662271858616,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4242,
+        "lift_ticks": 3842,
+        "lift_steps": 1618,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03502165430038286,
+        "navigation_steps": 3422,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3422,
+      "dist_to_goal_m": 0.03502165430038286,
+      "env_steps": 5358,
+      "physics_ticks": 21790,
+      "elapsed_s": 7.62
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "lift_m": -0.6267526223056927,
+        "grasp_width_m": 0.006152115623450184,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": null,
+        "lift_ticks": null,
+        "lift_steps": null,
+        "reason": "object not lifted",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "object not lifted",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 18.127251929233115,
+      "env_steps": 6185,
+      "physics_ticks": 10765,
+      "elapsed_s": 12.49
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19055371606768567,
+        "grasp_width_m": 0.007380845167614863,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": 10308,
+        "lift_ticks": 9908,
+        "lift_steps": 5848,
+        "reason": "held above table",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.70981920408901,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.70981920408901,
+      "env_steps": 6335,
+      "physics_ticks": 11515,
+      "elapsed_s": 14.06
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17673449283563258,
+        "grasp_width_m": 0.008254489089859244,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": 10322,
+        "lift_ticks": 9922,
+        "lift_steps": 5862,
+        "reason": "held above table",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.029167122121248792,
+        "navigation_steps": 4075,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 4075,
+      "dist_to_goal_m": 0.029167122121248792,
+      "env_steps": 10260,
+      "physics_ticks": 31140,
+      "elapsed_s": 28.64
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1111095723388773,
+        "grasp_width_m": 0.004653666277122024,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6220,
+        "lift_tick": 10523,
+        "lift_ticks": 10123,
+        "lift_steps": 6063,
+        "reason": "held above table",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.134954020096004,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 6140,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.134954020096004,
+      "env_steps": 6370,
+      "physics_ticks": 11550,
+      "elapsed_s": 16.94
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1763596391794292,
+        "grasp_width_m": 0.007676022753643028,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": 10322,
+        "lift_ticks": 9922,
+        "lift_steps": 5862,
+        "reason": "held above table",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.0314019377202406,
+        "navigation_steps": 3784,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 3784,
+      "dist_to_goal_m": 0.0314019377202406,
+      "env_steps": 9969,
+      "physics_ticks": 29685,
+      "elapsed_s": 28.43
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "lift_m": 0.08095927496678734,
+        "grasp_width_m": 0.005476947721045684,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": null,
+        "lift_ticks": null,
+        "lift_steps": null,
+        "reason": "object not lifted",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "object not lifted",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 18.35321875327691,
+      "env_steps": 6185,
+      "physics_ticks": 10765,
+      "elapsed_s": 17.2
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1776365737450133,
+        "grasp_width_m": 0.007868003684989668,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": 10324,
+        "lift_ticks": 9924,
+        "lift_steps": 5864,
+        "reason": "held above table",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.034000971448544096,
+        "navigation_steps": 4053,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 4053,
+      "dist_to_goal_m": 0.034000971448544096,
+      "env_steps": 10238,
+      "physics_ticks": 31030,
+      "elapsed_s": 28.01
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.14076235505379853,
+        "grasp_width_m": 0.00698393587470301,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": 10467,
+        "lift_ticks": 10067,
+        "lift_steps": 6007,
+        "reason": "held above table",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.01282404896031,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.01282404896031,
+      "env_steps": 6335,
+      "physics_ticks": 11515,
+      "elapsed_s": 15.78
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.12358905301479817,
+        "grasp_width_m": 0.004674551331623195,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": 10438,
+        "lift_ticks": 10038,
+        "lift_steps": 5978,
+        "reason": "held above table",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.208852413638823,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.208852413638823,
+      "env_steps": 6335,
+      "physics_ticks": 11515,
+      "elapsed_s": 12.37
+    },
+    {
+      "object_idx": 11,
+      "object": "029_plate",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "lift_m": 0.07965103783674221,
+        "grasp_width_m": 0.004848174526961777,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side",
+          "top-down",
+          "edge-slide"
+        ],
+        "sim_steps": 6185,
+        "lift_tick": 10508,
+        "lift_ticks": 10108,
+        "lift_steps": 6048,
+        "reason": "object not lifted",
+        "edge_slide": true,
+        "stage_start_pos": [
+          -1.1130481362629757e-05,
+          1.2105073415407005e-05,
+          0.6407213519061272
+        ],
+        "stage_end_pos": [
+          -0.4614518973511761,
+          0.03896263159780409,
+          0.6405746682530548
+        ]
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "object not lifted",
+      "pickup_env_steps": 6105,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 18.575095705753427,
+      "env_steps": 6185,
+      "physics_ticks": 10765,
+      "elapsed_s": 10.1
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17331081430815398,
+        "grasp_width_m": 0.018081424904714562,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4309,
+        "lift_ticks": 3909,
+        "lift_steps": 1649,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02984531930000397,
+        "navigation_steps": 4285,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 4285,
+      "dist_to_goal_m": 0.02984531930000397,
+      "env_steps": 6230,
+      "physics_ticks": 26150,
+      "elapsed_s": 19.1
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18824169245021727,
+        "grasp_width_m": 0.018235627635160935,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4277,
+        "lift_ticks": 3877,
+        "lift_steps": 1617,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.75491496755476,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.75491496755476,
+      "env_steps": 2095,
+      "physics_ticks": 5475,
+      "elapsed_s": 3.56
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20399352887837718,
+        "grasp_width_m": 0.01846151188003784,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4247,
+        "lift_ticks": 3847,
+        "lift_steps": 1587,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.020907141222252824,
+        "navigation_steps": 4161,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 4161,
+      "dist_to_goal_m": 0.020907141222252824,
+      "env_steps": 6106,
+      "physics_ticks": 25530,
+      "elapsed_s": 18.38
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1777547087147563,
+        "grasp_width_m": 0.018768176449525192,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4299,
+        "lift_ticks": 3899,
+        "lift_steps": 1639,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.017078240162204963,
+        "navigation_steps": 4291,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 4291,
+      "dist_to_goal_m": 0.017078240162204963,
+      "env_steps": 6236,
+      "physics_ticks": 26180,
+      "elapsed_s": 11.05
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1756613950957011,
+        "grasp_width_m": 0.018092875442687232,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4306,
+        "lift_ticks": 3906,
+        "lift_steps": 1646,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.04279220187487561,
+        "navigation_steps": 4026,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 4026,
+      "dist_to_goal_m": 0.04279220187487561,
+      "env_steps": 5971,
+      "physics_ticks": 24855,
+      "elapsed_s": 16.48
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18998622705733514,
+        "grasp_width_m": 0.018135552965778963,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4276,
+        "lift_ticks": 3876,
+        "lift_steps": 1616,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02727121925528092,
+        "navigation_steps": 3705,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 3705,
+      "dist_to_goal_m": 0.02727121925528092,
+      "env_steps": 5650,
+      "physics_ticks": 23250,
+      "elapsed_s": 8.86
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18808548046540674,
+        "grasp_width_m": 0.01814752488990285,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4276,
+        "lift_ticks": 3876,
+        "lift_steps": 1616,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03484320174784052,
+        "navigation_steps": 4292,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 4292,
+      "dist_to_goal_m": 0.03484320174784052,
+      "env_steps": 6237,
+      "physics_ticks": 26185,
+      "elapsed_s": 17.55
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18641161962711128,
+        "grasp_width_m": 0.01817288390710863,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4286,
+        "lift_ticks": 3886,
+        "lift_steps": 1626,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.574444055157358,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.574444055157358,
+      "env_steps": 2095,
+      "physics_ticks": 5475,
+      "elapsed_s": 3.55
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1788605229457717,
+        "grasp_width_m": 0.01802969419891312,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4301,
+        "lift_ticks": 3901,
+        "lift_steps": 1641,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.70368212666084,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.70368212666084,
+      "env_steps": 2095,
+      "physics_ticks": 5475,
+      "elapsed_s": 3.58
+    },
+    {
+      "object_idx": 12,
+      "object": "040_large_marker",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19317691044587226,
+        "grasp_width_m": 0.018010786158030735,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1945,
+        "lift_tick": 4267,
+        "lift_ticks": 3867,
+        "lift_steps": 1607,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.07224186400457,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1865,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.07224186400457,
+      "env_steps": 2095,
+      "physics_ticks": 5475,
+      "elapsed_s": 3.68
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19742241674763805,
+        "grasp_width_m": 0.03037976905460936,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4212,
+        "lift_ticks": 3812,
+        "lift_steps": 1588,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.021481189188854968,
+        "navigation_steps": 4285,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4285,
+      "dist_to_goal_m": 0.021481189188854968,
+      "env_steps": 6221,
+      "physics_ticks": 26105,
+      "elapsed_s": 17.12
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18732073955625894,
+        "grasp_width_m": 0.028757418455999374,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4219,
+        "lift_ticks": 3819,
+        "lift_steps": 1595,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.032165444444794467,
+        "navigation_steps": 3391,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3391,
+      "dist_to_goal_m": 0.032165444444794467,
+      "env_steps": 5327,
+      "physics_ticks": 21635,
+      "elapsed_s": 17.41
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1845284832870353,
+        "grasp_width_m": 0.028863824559964793,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4240,
+        "lift_ticks": 3840,
+        "lift_steps": 1616,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03481650767536318,
+        "navigation_steps": 4170,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4170,
+      "dist_to_goal_m": 0.03481650767536318,
+      "env_steps": 6106,
+      "physics_ticks": 25530,
+      "elapsed_s": 19.0
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.17231014791742438,
+        "grasp_width_m": 0.07929215865927114,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2153,
+        "lift_tick": 3838,
+        "lift_ticks": 3438,
+        "lift_steps": 1814,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.67768695692406,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 2073,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.67768695692406,
+      "env_steps": 2303,
+      "physics_ticks": 5047,
+      "elapsed_s": 6.27
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "lift_m": -0.00023234548396633414,
+        "grasp_width_m": 0.029299932775557664,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": null,
+        "lift_ticks": null,
+        "lift_steps": null,
+        "reason": "object not lifted"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "object not lifted",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 17.545092596028834,
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 7.91
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": false,
+        "lift_m": -0.0003398574188948622,
+        "grasp_width_m": 0.030049619091343377,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": null,
+        "lift_ticks": null,
+        "lift_steps": null,
+        "reason": "object not lifted"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "pickup failed",
+        "navigation_steps": 0
+      },
+      "picked": false,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "pickup",
+      "reason": "object not lifted",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 0,
+      "dist_to_goal_m": 17.832924652818242,
+      "env_steps": 1936,
+      "physics_ticks": 4680,
+      "elapsed_s": 4.96
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1678189355428179,
+        "grasp_width_m": 0.027986622132215526,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4273,
+        "lift_ticks": 3873,
+        "lift_steps": 1649,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.05509625989420893,
+        "navigation_steps": 4160,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4160,
+      "dist_to_goal_m": 0.05509625989420893,
+      "env_steps": 6096,
+      "physics_ticks": 25480,
+      "elapsed_s": 16.14
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20476192958142103,
+        "grasp_width_m": 0.029072765915133646,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4199,
+        "lift_ticks": 3799,
+        "lift_steps": 1575,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03473190984440028,
+        "navigation_steps": 3862,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3862,
+      "dist_to_goal_m": 0.03473190984440028,
+      "env_steps": 5798,
+      "physics_ticks": 23990,
+      "elapsed_s": 10.9
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.18226997494559394,
+        "grasp_width_m": 0.08053531124104059,
+        "hold_steps": 50,
+        "approach": "side",
+        "approaches_considered": [
+          "side"
+        ],
+        "sim_steps": 2226,
+        "lift_tick": 3902,
+        "lift_ticks": 3502,
+        "lift_steps": 1878,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 17.668228446739437,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 2146,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 17.668228446739437,
+      "env_steps": 2376,
+      "physics_ticks": 5120,
+      "elapsed_s": 4.52
+    },
+    {
+      "object_idx": 13,
+      "object": "048_hammer",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1867574206308491,
+        "grasp_width_m": 0.031302074195060106,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "side",
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4236,
+        "lift_ticks": 3836,
+        "lift_steps": 1612,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.042261823618936,
+        "navigation_steps": 150
+      },
+      "picked": true,
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.042261823618936,
+      "env_steps": 2086,
+      "physics_ticks": 5430,
+      "elapsed_s": 5.08
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 60,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20079980037527112,
+        "grasp_width_m": 0.05011399588978536,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4205,
+        "lift_ticks": 3805,
+        "lift_steps": 1581,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03439891934006049,
+        "navigation_steps": 4295,
+        "waypoints": 10,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4295,
+      "dist_to_goal_m": 0.03439891934006049,
+      "env_steps": 6231,
+      "physics_ticks": 26155,
+      "elapsed_s": 16.48
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 61,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2110400820655287,
+        "grasp_width_m": 0.07488129694951236,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4199,
+        "lift_ticks": 3799,
+        "lift_steps": 1575,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.018136710184927497,
+        "navigation_steps": 3391,
+        "waypoints": 5,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3391,
+      "dist_to_goal_m": 0.018136710184927497,
+      "env_steps": 5327,
+      "physics_ticks": 21635,
+      "elapsed_s": 12.49
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 62,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.20035575320718846,
+        "grasp_width_m": 0.0746931558764964,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4212,
+        "lift_ticks": 3812,
+        "lift_steps": 1588,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03219635216839992,
+        "navigation_steps": 4170,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4170,
+      "dist_to_goal_m": 0.03219635216839992,
+      "env_steps": 6106,
+      "physics_ticks": 25530,
+      "elapsed_s": 14.78
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 63,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1986632127872856,
+        "grasp_width_m": 0.0749888747510436,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4213,
+        "lift_ticks": 3813,
+        "lift_steps": 1589,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03504756178244288,
+        "navigation_steps": 4297,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4297,
+      "dist_to_goal_m": 0.03504756178244288,
+      "env_steps": 6233,
+      "physics_ticks": 26165,
+      "elapsed_s": 16.92
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 64,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19235327811866998,
+        "grasp_width_m": 0.07495336326029764,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4220,
+        "lift_ticks": 3820,
+        "lift_steps": 1596,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03428596829899846,
+        "navigation_steps": 4032,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4032,
+      "dist_to_goal_m": 0.03428596829899846,
+      "env_steps": 5968,
+      "physics_ticks": 24840,
+      "elapsed_s": 16.11
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 65,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1987602422891489,
+        "grasp_width_m": 0.07515703560592445,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4212,
+        "lift_ticks": 3812,
+        "lift_steps": 1588,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02990591126486058,
+        "navigation_steps": 3701,
+        "waypoints": 8,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3701,
+      "dist_to_goal_m": 0.02990591126486058,
+      "env_steps": 5637,
+      "physics_ticks": 23185,
+      "elapsed_s": 15.95
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 66,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1990723578191913,
+        "grasp_width_m": 0.050674958721133055,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4212,
+        "lift_ticks": 3812,
+        "lift_steps": 1588,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03188353985207013,
+        "navigation_steps": 4164,
+        "waypoints": 11,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4164,
+      "dist_to_goal_m": 0.03188353985207013,
+      "env_steps": 6100,
+      "physics_ticks": 25500,
+      "elapsed_s": 12.88
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 67,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.2043225662631677,
+        "grasp_width_m": 0.05015318088997287,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4202,
+        "lift_ticks": 3802,
+        "lift_steps": 1578,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.031117941436761096,
+        "navigation_steps": 3860,
+        "waypoints": 9,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3860,
+      "dist_to_goal_m": 0.031117941436761096,
+      "env_steps": 5796,
+      "physics_ticks": 23980,
+      "elapsed_s": 11.64
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 68,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.19800469083153516,
+        "grasp_width_m": 0.07490730080016372,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4206,
+        "lift_ticks": 3806,
+        "lift_steps": 1582,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.03237601016205523,
+        "navigation_steps": 4039,
+        "waypoints": 12,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4039,
+      "dist_to_goal_m": 0.03237601016205523,
+      "env_steps": 5975,
+      "physics_ticks": 24875,
+      "elapsed_s": 12.66
+    },
+    {
+      "object_idx": 14,
+      "object": "061_foam_brick",
+      "seed": 69,
+      "grasp_mode": "auto",
+      "pickup": {
+        "picked": true,
+        "lift_m": 0.1916271831958768,
+        "grasp_width_m": 0.05083721648741829,
+        "hold_steps": 50,
+        "approach": "top-down",
+        "approaches_considered": [
+          "top-down"
+        ],
+        "sim_steps": 1936,
+        "lift_tick": 4222,
+        "lift_ticks": 3822,
+        "lift_steps": 1598,
+        "reason": "held above table"
+      },
+      "navigation": {
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.031206046271366864,
+        "navigation_steps": 3425,
+        "waypoints": 7,
+        "hold_steps": 50
+      },
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 3425,
+      "dist_to_goal_m": 0.031206046271366864,
+      "env_steps": 5361,
+      "physics_ticks": 21805,
+      "elapsed_s": 11.85
+    }
+  ]
+}
