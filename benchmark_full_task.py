@@ -20,13 +20,14 @@ from pickup_controller import PickupController
 
 
 def run_trial(object_idx, seed, quiet=True, grasp_mode="auto",
-              max_navigation_steps=15000):
+              max_navigation_steps=15000, carry_tilt_degrees=30):
     """Run both controllers in a fresh world, recording each stage separately."""
     env = controller = None
     started = time.monotonic()
     stage = "setup"
     record = {"object_idx": object_idx, "object": OBJECT_PATHS[object_idx].name,
-              "seed": seed, "grasp_mode": grasp_mode, "pickup": None,
+              "seed": seed, "grasp_mode": grasp_mode,
+              "carry_tilt_degrees": carry_tilt_degrees, "pickup": None,
               "navigation": None, "picked": False, "success": False,
               "status": "failed", "failed_stage": None, "reason": None}
     context = quiet_physics() if quiet else None
@@ -58,7 +59,8 @@ def run_trial(object_idx, seed, quiet=True, grasp_mode="auto",
         stage = "navigation"
         navigation_started = env.step_count
         navigation = NavigationController(env, controller,
-                                          max_steps=max_navigation_steps).run(pickup)
+                                          max_steps=max_navigation_steps,
+                                          carry_tilt_degrees=carry_tilt_degrees).run(pickup)
         record["navigation_env_steps"] = env.step_count - navigation_started
         record["navigation"] = navigation
         evaluation = env.evaluate()
@@ -135,18 +137,21 @@ def summarize(trials, seeds):
     return result
 
 
-def run_trials(tasks, workers, quiet, grasp_mode="auto", max_navigation_steps=15000):
+def run_trials(tasks, workers, quiet, grasp_mode="auto", max_navigation_steps=15000,
+               carry_tilt_degrees=30):
     """Yield ordered trials; separate processes are required for concurrent worlds."""
     if workers == 1:
         for idx, seed in tasks:
             yield run_trial(idx, seed, quiet=quiet, grasp_mode=grasp_mode,
-                            max_navigation_steps=max_navigation_steps)
+                            max_navigation_steps=max_navigation_steps,
+                            carry_tilt_degrees=carry_tilt_degrees)
     elif tasks:
         with ProcessPoolExecutor(max_workers=min(workers, len(tasks)),
                                  mp_context=get_context("spawn")) as pool:
             yield from pool.map(run_trial, (idx for idx, _ in tasks),
                                 (seed for _, seed in tasks), repeat(quiet),
-                                repeat(grasp_mode), repeat(max_navigation_steps))
+                                repeat(grasp_mode), repeat(max_navigation_steps),
+                                repeat(carry_tilt_degrees))
 
 
 def main():
@@ -158,6 +163,8 @@ def main():
     parser.add_argument("--json-out", type=Path, help="write full report to this path")
     parser.add_argument("--grasp-mode", choices=("auto", "rim", "side"), default="auto")
     parser.add_argument("--max-navigation-steps", type=int, default=15000)
+    parser.add_argument("--carry-tilt-degrees", type=int, choices=(0, 15, 30), default=30,
+                        help="gravity-supporting jaw tilt before carrying (0: original pose)")
     parser.add_argument("--workers", type=int, default=1,
                         help="parallel processes (default: 1; full trials are memory-heavy)")
     parser.add_argument("--show-engine-logs", action="store_true")
@@ -180,7 +187,8 @@ def main():
           f"{min(args.workers, len(tasks))} worker(s).", flush=True)
     for trial in run_trials(tasks, args.workers, quiet=not args.show_engine_logs,
                             grasp_mode=args.grasp_mode,
-                            max_navigation_steps=args.max_navigation_steps):
+                            max_navigation_steps=args.max_navigation_steps,
+                            carry_tilt_degrees=args.carry_tilt_degrees):
         trials.append(trial)
         stage = f" at {trial['failed_stage']}" if trial["failed_stage"] else ""
         print(f"[{len(trials)}/{len(tasks)}] {trial['object']} seed={trial['seed']}: "

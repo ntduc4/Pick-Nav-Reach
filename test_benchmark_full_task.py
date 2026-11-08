@@ -60,13 +60,15 @@ class FullTaskTrialTests(unittest.TestCase):
               patch.object(benchmark.p, "disconnect") as disconnect):
             result = benchmark.run_trial(5, 42, quiet=False,
                                          max_navigation_steps=1234)
-        nav_type.assert_called_once_with(env, pickup, max_steps=1234)
+        nav_type.assert_called_once_with(env, pickup, max_steps=1234,
+                                         carry_tilt_degrees=30)
         pickup.close.assert_called_once()
         disconnect.assert_called_once_with(987)
         self.assertEqual(result["pickup_env_steps"], 5)
         self.assertEqual(result["navigation_env_steps"], 7 if picked else 0)
         self.assertEqual(result["env_steps"], 92 if picked else 85)
         self.assertEqual(result["physics_ticks"], 368 if picked else 340)
+        self.assertEqual(result["carry_tilt_degrees"], 30)
         self.assertEqual(result["pickup"], pickup_result)
         self.assertEqual(result["navigation"]["success"], reached)
         return result
@@ -118,7 +120,8 @@ class FullTaskTrialTests(unittest.TestCase):
         args = pool.map.call_args.args
         self.assertIs(args[0], benchmark.run_trial)
         self.assertEqual([list(islice(arg, 2)) for arg in args[1:]],
-                         [[5, 5], [42, 43], [True, True], ["auto", "auto"], [99, 99]])
+                         [[5, 5], [42, 43], [True, True], ["auto", "auto"],
+                          [99, 99], [30, 30]])
 
 
 class FullTaskSummaryTests(unittest.TestCase):
@@ -164,12 +167,14 @@ class FullTaskSummaryTests(unittest.TestCase):
             report_path = Path(directory) / "full-task.json"
             with (patch("sys.argv", ["benchmark_full_task.py", "--objects", "5",
                                      "--seeds", "42", "--workers", "1",
+                                     "--carry-tilt-degrees", "0",
                                      "--json-out", str(report_path)]),
                   patch.object(benchmark, "run_trials", return_value=iter([trial])) as runner,
                   patch("builtins.print")):
                 benchmark.main()
             runner.assert_called_once_with([(5, 42)], 1, quiet=True,
-                                           grasp_mode="auto", max_navigation_steps=15000)
+                                           grasp_mode="auto", max_navigation_steps=15000,
+                                           carry_tilt_degrees=0)
             result = json.loads(report_path.read_text(encoding="utf-8"))
             self.assertEqual(result["successes"], 1)
             self.assertEqual(result["trials"], [trial])

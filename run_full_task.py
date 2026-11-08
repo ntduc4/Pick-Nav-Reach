@@ -16,6 +16,7 @@ def main():
     parser.add_argument("--object-idx", type=int, default=5)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--gui", action="store_true")
+    parser.add_argument("--carry-tilt-degrees", type=int, choices=(0, 15, 30), default=30)
     args = parser.parse_args()
     env = PickNavReachEnv(seed=args.seed, object_idx=args.object_idx,
                           gui=args.gui, safe_forces=True)
@@ -26,7 +27,8 @@ def main():
             obs, _ = env.step(obs["qpos"])
         pickup = PickupController(env)
         result = pickup.run(obs)
-        navigation = NavigationController(env, pickup).run(result)
+        navigation = NavigationController(env, pickup,
+                                          carry_tilt_degrees=args.carry_tilt_degrees).run(result)
         print(json.dumps({"pickup": result, "navigation": navigation,
                           "total_env_steps": env.step_count}, indent=2), flush=True)
         if args.gui:

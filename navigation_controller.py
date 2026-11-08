@@ -135,10 +135,11 @@ class MazeGrid:
 class NavigationController:
     """Stow the grasp, follow A* waypoints, and verify the object reaches goal."""
 
-    def __init__(self, env, pickup, max_steps=15000):
+    def __init__(self, env, pickup, max_steps=15000, carry_tilt_degrees=30):
         self.env = env
         self.pickup = pickup
         self.max_steps = max_steps
+        self.carry_tilt_degrees = carry_tilt_degrees
 
     @staticmethod
     def base_xy(obs):
@@ -192,6 +193,65 @@ class NavigationController:
             monitor(obs)
         raise RuntimeError("base failed to track maze waypoint")
 
+    def _support_grasp(self, obs, pickup_result, monitor):
+        """Roll an overhead grasp toward a supporting lower finger before stowing.
+
+        A palm-down grasp can lose contact as soon as the hand moves sideways.
+        A full palm-up flip crosses the tabletop and is often unreachable. Use
+        small, collision-checked 15-degree steps about the tool's local Z axis:
+        this raises one jaw without letting go of the opposing contacts.
+        """
+        if pickup_result.get("approach") != "top-down" or self.carry_tilt_degrees <= 0:
+            return obs, 0
+        extent = np.ptp(obs["object_pc"], axis=0)
+        bowl_like = (min(extent[:2]) > 0.13 and
+                     max(extent[:2]) / min(extent[:2]) < 1.2 and
+                     0.04 < extent[2] < 0.10)
+        if bowl_like:  # A narrow rim pinch already has a dedicated stable lift.
+            return obs, 0
+        if min(extent) > 0.06 and max(extent) / min(extent) < 1.3:
+            # Large, nearly isotropic objects are already supported by both
+            # pads; twisting the wrist can break an otherwise stable hold.
+            return obs, 0
+        env, pickup = self.env, self.pickup
+        hand = p.getLinkState(env.robot_id, pickup.hand,
+                              physicsClientId=env.pb_physics_client)
+        rotation = np.asarray(p.getMatrixFromQuaternion(hand[5])).reshape(3, 3)
+        if rotation[2, 0] > -0.7 or abs(rotation[2, 1]) > 0.25:
+            return obs, 0
+
+        max_tilt = self.carry_tilt_degrees
+        if (min(extent) > 0 and max(extent) > 0.15 and
+                max(extent) / min(extent) > 2 and
+                0.025 < pickup_result.get("grasp_width_m", 0) < 0.05):
+            # Long, thin objects can rotate about a loose pinch and fall out
+            # during the second turn. A single step still adds lower-pad support.
+            max_tilt = min(max_tilt, 15)
+        # Plan without moving the live robot. If 30 degrees is not feasible,
+        # a single 15-degree step may still stabilize the hold.
+        planned = []
+        reference = obs["qpos"].astype(float)
+        for degrees in range(15, min(max_tilt, 90) + 1, 15):
+            local_turn = p.getQuaternionFromEuler([0, 0, np.deg2rad(degrees)])
+            orientation = p.multiplyTransforms([0, 0, 0], hand[5],
+                                                [0, 0, 0], local_turn)[1]
+            target = pickup._solve(hand[4], orientation, reference,
+                                   prefer_reference=True)
+            if target is None or not pickup._segment_free(reference, target):
+                break
+            target[-2:] = pickup.hold_target[-2:]
+            planned.append((degrees, target))
+            reference = target
+
+        achieved = 0
+        for degrees, target in planned:
+            if not pickup._segment_free(obs["qpos"], target):
+                break  # the actual joints can lag a planned waypoint
+            obs = pickup.move(target, 20, on_step=monitor)
+            achieved = degrees
+            self._completed_carry_tilt = degrees
+        return obs, achieved
+
     def run(self, pickup_result):
         if not pickup_result["picked"]:
             return {"success": False, "reason": "pickup failed", "navigation_steps": 0}
@@ -220,7 +280,12 @@ class NavigationController:
                     > 0.12 or current["object_pos"][2] < initial_height - 0.12):
                 raise RuntimeError("object dropped during transport")
 
+        carry_tilt = self._completed_carry_tilt = 0
         try:
+            obs, carry_tilt = self._support_grasp(obs, pickup_result, monitor)
+            hand = p.getLinkState(env.robot_id, pickup.hand,
+                                  physicsClientId=env.pb_physics_client)
+            relative = np.asarray(obs["object_pos"]) - np.asarray(hand[4])
             # Move the held object close to the base before entering 1 m
             # passages. Test the projected carried footprint against the maze
             # before moving: some grasps place the object well ahead of the hand.
@@ -368,8 +433,10 @@ class NavigationController:
             return {"success": distance < 0.10, "reason": ("object at goal" if distance < 0.10
                     else "object outside goal tolerance"), "dist_to_goal_m": distance,
                     "navigation_steps": env.step_count - started,
-                    "waypoints": len(waypoints), "hold_steps": 50}
+                    "waypoints": len(waypoints), "hold_steps": 50,
+                    "carry_tilt_degrees": carry_tilt}
         except RuntimeError as exc:
             return {"success": False, "reason": str(exc),
                     "dist_to_goal_m": float(env.evaluate()["dist_to_goal"]),
-                    "navigation_steps": env.step_count - started}
+                    "navigation_steps": env.step_count - started,
+                    "carry_tilt_degrees": self._completed_carry_tilt}

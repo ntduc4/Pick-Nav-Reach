@@ -28,7 +28,7 @@ class FullTaskCLITests(unittest.TestCase):
         with (patch("sys.argv", ["run_full_task.py", "--gui"]),
               patch.object(run_full_task, "PickNavReachEnv", return_value=env),
               patch.object(run_full_task, "PickupController", return_value=pickup),
-              patch.object(run_full_task, "NavigationController", return_value=navigator),
+              patch.object(run_full_task, "NavigationController", return_value=navigator) as nav_type,
               patch.object(run_full_task.p, "isConnected", return_value=True),
               patch.object(run_full_task.p, "disconnect") as disconnect,
               patch.object(run_full_task.time, "sleep", side_effect=wait) as sleep,
@@ -37,6 +37,7 @@ class FullTaskCLITests(unittest.TestCase):
 
         sleep.assert_called_once_with(0.1)
         disconnect.assert_called_once_with(7)
+        nav_type.assert_called_once_with(env, pickup, carry_tilt_degrees=30)
         pickup.close.assert_called_once()
         self.assertTrue(any("Ctrl+C" in str(call) for call in printed.call_args_list))
 

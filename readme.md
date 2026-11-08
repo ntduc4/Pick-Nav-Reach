@@ -295,3 +295,40 @@ environment. The maze generator currently uses fixed seed 5 for its internal
 layout, although entrance and exit rows depend on the trial seed. The maze
 URDF is generated in a temporary directory so trials do not modify the
 tracked example in `assets/maze.urdf`.
+
+### Full pick-and-traverse benchmark
+
+Run `python run_full_task.py --object-idx 5 --seed 42` for one trial, or use
+`benchmark_full_task.py` for a seeded headless sweep. The benchmark records
+pickup and navigation results separately. `full_traversal_results.json` is the
+original 150-trial baseline (114/150 complete, with 28 drops during the first
+carry-pose move). After a top-down pickup, navigation now tries up to two
+collision-checked 15-degree turns about the gripper's approach axis, putting
+one jaw underneath the held object *before* moving the arm toward the base.
+Long, thin held objects use at most one 15-degree turn to avoid twisting them
+out of a shallow pinch. Large, near-symmetric objects with an already stable
+pinch are left alone, as are side grasps and the narrow bowl-rim grasp. An
+unreachable turn is skipped; there is no object teleportation or grasp reset.
+The hold is checked during the short gravity-alignment motion and after the carry move;
+brief rocking of a plate during stow is not mistaken for a permanent drop.
+
+For a paired comparison on the same objects and seeds, pass
+`--carry-tilt-degrees 0` (original hold) or `--carry-tilt-degrees 30` (default)
+to `benchmark_full_task.py` or `run_full_task.py`, e.g.:
+
+```bash
+python benchmark_full_task.py --objects 1 3 5 8 12 13 \
+  --seeds 60 61 62 63 64 65 66 67 68 69 --workers 2 \
+  --carry-tilt-degrees 30 --json-out /tmp/full-jaw30.json
+```
+
+On all 15 objects and seeds 60--69, the final carry policy reached the goal
+in **128/150** trials, compared with **114/150** for the original hold. Pickup
+was unchanged at **142/150**; navigation drops fell from **28 to 14**, with no
+lost baseline successes. The comparison used a full sweep and fresh paired
+reruns of the long/thin and near-symmetric objects after refining their
+tilt guards. Full per-trial results from those runs were combined at
+`/tmp/opencode/full-jaw-verified.json` during development; rerun the benchmark
+to generate a report in your own environment. A full palm-up flip was also
+tested on held objects: it struck the table-clearance guard or exhausted safe
+IK before reaching palm-up, while the smaller jaw-up tilt retained more grasps.

@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 import numpy as np
 import pybullet as p
@@ -61,6 +61,86 @@ class MazeGridTests(unittest.TestCase):
         self.assertTrue(grid.free(route[-1]))
 
 
+class CarryOrientationTests(unittest.TestCase):
+    def setUp(self):
+        self.env = MagicMock(robot_id=2, pb_physics_client=3)
+        self.pickup = MagicMock(hand=4, hold_target=np.r_[np.zeros(13), 0.007, 0.007])
+        self.pickup._segment_free.return_value = True
+        self.obs = {"qpos": np.zeros(15),
+                    "object_pc": np.array([[-0.05, -0.05, 0.8],
+                                           [0.05, 0.05, 0.96]])}
+        self.pickup.move.return_value = self.obs
+        self.hand = [None] * 6
+        self.hand[4] = [0, 0, 0.9]
+        self.hand[5] = p.getQuaternionFromEuler([0, np.pi / 2, 0])
+
+    def test_raises_jaw_in_collision_checked_increments_without_opening_fingers(self):
+        def solve(_pos, _rotation, reference, **_kwargs):
+            target = reference.copy()
+            target[12] += 0.1
+            return target
+
+        self.pickup._solve.side_effect = solve
+        monitor = MagicMock()
+        with patch.object(p, "getLinkState", return_value=self.hand):
+            obs, degrees = NavigationController(self.env, self.pickup)._support_grasp(
+                self.obs, {"approach": "top-down"}, monitor)
+        self.assertIs(obs, self.obs)
+        self.assertEqual(degrees, 30)
+        self.assertEqual(self.pickup.move.call_count, 2)
+        self.assertEqual(self.pickup._segment_free.call_count, 4)
+        for index, call in enumerate(self.pickup._solve.call_args_list):
+            rotation = np.array(p.getMatrixFromQuaternion(call.args[1])).reshape(3, 3)
+            self.assertAlmostEqual(rotation[2, 1], np.sin(np.deg2rad((index + 1) * 15)),
+                                   places=3)
+        for call in self.pickup.move.call_args_list:
+            np.testing.assert_array_equal(call.args[0][-2:], [0.007, 0.007])
+            self.assertEqual(call.args[1], 20)
+            self.assertIs(call.kwargs["on_step"], monitor)
+
+    def test_uses_only_reachable_tilt_and_leaves_stable_grasps_alone(self):
+        self.pickup._solve.side_effect = [np.zeros(15), None]
+        with patch.object(p, "getLinkState", return_value=self.hand):
+            _, degrees = NavigationController(self.env, self.pickup)._support_grasp(
+                self.obs, {"approach": "top-down"}, lambda _obs: None)
+        self.assertEqual(degrees, 15)
+        self.pickup.move.assert_called_once()
+        self.pickup.reset_mock()
+        bowl = {**self.obs, "object_pc": np.array([[-0.08, -0.08, 0.8],
+                                                 [0.08, 0.08, 0.87]])}
+        round_object = {**self.obs, "object_pc": np.array([[-0.04, -0.04, 0.8],
+                                                         [0.04, 0.04, 0.88]])}
+        controller = NavigationController(self.env, self.pickup)
+        for obs, approach in ((self.obs, "side"), (bowl, "top-down"),
+                              (round_object, "top-down")):
+            held, degrees = controller._support_grasp(obs, {"approach": approach},
+                                                      lambda _obs: None)
+            self.assertIs(held, obs)
+            self.assertEqual(degrees, 0)
+        self.pickup._solve.assert_not_called()
+
+    def test_long_thin_object_turns_only_once(self):
+        banana = {**self.obs, "object_pc": np.array([[-0.04, -0.10, 0.8],
+                                                    [0.04, 0.10, 0.84]])}
+        self.pickup._solve.return_value = np.zeros(15)
+        with patch.object(p, "getLinkState", return_value=self.hand):
+            _, degrees = NavigationController(self.env, self.pickup)._support_grasp(
+                banana, {"approach": "top-down", "grasp_width_m": 0.037},
+                lambda _obs: None)
+        self.assertEqual(degrees, 15)
+        self.pickup._solve.assert_called_once()
+        self.pickup.move.assert_called_once()
+
+    def test_zero_tilt_retains_original_carry_pose(self):
+        controller = NavigationController(self.env, self.pickup, carry_tilt_degrees=0)
+        held, degrees = controller._support_grasp(self.obs, {"approach": "top-down"},
+                                                 lambda _obs: None)
+        self.assertIs(held, self.obs)
+        self.assertEqual(degrees, 0)
+        self.pickup._solve.assert_not_called()
+        self.pickup.move.assert_not_called()
+
+
 class FullTaskTests(unittest.TestCase):
     def run_trial(self, index, seed):
         from pick_nav_reach_env import PickNavReachEnv
@@ -111,6 +191,23 @@ class FullTaskTests(unittest.TestCase):
     def test_top_grasped_banana_reaches_goal_on_second_maze(self):
         picked, _, _ = self.run_trial(5, 43)
         self.assertEqual(picked["approach"], "top-down")
+
+    def test_jaw_support_prevents_sugar_box_drop(self):
+        picked, reached, _ = self.run_trial(1, 63)
+        self.assertEqual(picked["approach"], "top-down")
+        self.assertEqual(reached["carry_tilt_degrees"], 30)
+
+    def test_thin_banana_is_not_over_rotated(self):
+        _, reached, _ = self.run_trial(5, 68)
+        self.assertEqual(reached["carry_tilt_degrees"], 15)
+
+    def test_round_apple_keeps_stable_grasp(self):
+        _, reached, _ = self.run_trial(7, 60)
+        self.assertEqual(reached["carry_tilt_degrees"], 0)
+
+    def test_mug_keeps_stable_grasp(self):
+        _, reached, _ = self.run_trial(10, 64)
+        self.assertEqual(reached["carry_tilt_degrees"], 0)
 
 
 if __name__ == "__main__":
