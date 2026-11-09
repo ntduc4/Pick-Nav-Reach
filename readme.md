@@ -158,7 +158,8 @@ python run_pickup.py --pick --object-idx 9 --seed 42 --grasp-mode rim
 python run_pickup.py --pick --object-idx 11 --seed 42 --grasp-mode side
 ```
 
-Add `--gui --pause-before-pick` to record either trial. Omit `--grasp-mode` for
+Add `--gui --follow-object --pause-before-pick` to record either trial with the
+object at the center of the camera orbit. Omit `--grasp-mode` for
 automatic selection. The plate strategy uses physical joint-controlled pushing, a fresh observation after
 the slide, thin upper/lower lip candidates, and an inward-facing approach.
 It does not teleport or attach the object. All table-clearance guards remain
@@ -197,11 +198,16 @@ advancing physics; press Ctrl+C in the terminal to close it. Run unit tests with
 `python -m unittest -v test_pickup`. Install the dependencies listed above first.
 
 For an OBS pickup demo, run
-`python run_pickup.py --gui --pick --pause-before-pick --object-idx 5 --seed 42`.
+`python run_pickup.py --gui --pick --follow-object --pause-before-pick --object-idx 5 --seed 42`.
 After the 80-step settle phase the scene pauses without advancing physics:
-position the PyBullet camera, start recording in OBS, then press Enter **in the
+set the PyBullet camera angle and zoom, start recording in OBS, then press Enter **in the
 terminal** to start the pickup controller. The final scene stays open until
 Ctrl+C. The pause is opt-in and requires both `--gui` and `--pick`.
+`--follow-object` is GUI-only and opt-in: after each `env.step()`, it retargets
+the camera to the observed object position without changing your current
+mouse-controlled yaw, pitch or zoom. While the simulation is paused or finished,
+there are no camera updates (and no physics steps). Without the flag, the camera
+and all headless behavior remain unchanged.
 
 To inspect the settled object without running a pickup, use
 `python view_pointcloud.py --object-idx 4 --seed 42`. This separate GUI viewer
@@ -297,6 +303,18 @@ URDF is generated in a temporary directory so trials do not modify the
 tracked example in `assets/maze.urdf`.
 
 ### Full pick-and-traverse benchmark
+
+For an OBS full-run recording that follows the carried object, run:
+
+```bash
+python run_full_task.py --gui --follow-object --pause-before-pick --object-idx 5 --seed 42
+```
+
+After 80 settle steps the scene pauses without advancing physics. Adjust orbit
+angle and zoom, start OBS recording, then press Enter in the terminal to begin
+pickup and navigation. `--pause-before-pick` requires `--gui` and works without
+`--follow-object` too. The GUI stays open after the trial until Ctrl+C; camera
+tracking stops when simulation steps stop.
 
 Run `python run_full_task.py --object-idx 5 --seed 42` for one trial, or use
 `benchmark_full_task.py` for a seeded headless sweep. The benchmark records

@@ -20,12 +20,16 @@ class PickNavReachEnv:
                  gui=True,
                  verbose=False,
                  safe_forces=False,
+                 follow_object=False,
                  ):
+        if follow_object and not gui:
+            raise ValueError("follow_object requires gui=True")
         self.set_seed(seed)
 
         self.gui = gui
         self.verbose = verbose
         self.safe_forces = safe_forces
+        self.follow_object = follow_object
         self.pb_physics_client = p.connect(p.GUI if gui else p.DIRECT)
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0,0,-9.8)
@@ -60,6 +64,8 @@ class PickNavReachEnv:
 
         # get initial observation
         self.obs = self._get_obs()
+        if self.follow_object:
+            self._update_follow_camera(self.obs["object_pos"])
 
         self.step_count = 0
         self.physics_ticks = 0
@@ -67,6 +73,15 @@ class PickNavReachEnv:
     def set_seed(self, seed):
         np.random.seed(seed)
         random.seed(seed)
+
+    def _update_follow_camera(self, object_pos):
+        """Retarget the GUI orbit without changing the user's yaw, pitch or zoom."""
+        camera = p.getDebugVisualizerCamera(physicsClientId=self.pb_physics_client)
+        p.resetDebugVisualizerCamera(
+            cameraDistance=camera[10], cameraYaw=camera[8], cameraPitch=camera[9],
+            cameraTargetPosition=np.asarray(object_pos).tolist(),
+            physicsClientId=self.pb_physics_client,
+        )
 
     def _load_scene(self):
         self._load_agent()
@@ -325,6 +340,8 @@ class PickNavReachEnv:
                 time.sleep(1. / 240.)
 
         obs = self._get_obs()
+        if self.follow_object:
+            self._update_follow_camera(obs["object_pos"])
 
         info = self.evaluate()
 
@@ -335,7 +352,10 @@ class PickNavReachEnv:
         self._set_qpos(self.init_qpos)
         p.resetBasePositionAndOrientation(self.object_id, [0, 0, 5.0], [0, 0, 0, 1])
 
-        return self._get_obs()
+        obs = self._get_obs()
+        if self.follow_object:
+            self._update_follow_camera(obs["object_pos"])
+        return obs
 
     def evaluate(self):
         """

@@ -17,6 +17,8 @@ def main():
     parser.add_argument("--object-idx", type=int, default=5)
     parser.add_argument("--pick", action="store_true", help="attempt a grasp and lift")
     parser.add_argument("--gui", action="store_true")
+    parser.add_argument("--follow-object", action="store_true",
+                        help="keep the object at the GUI camera orbit center while stepping")
     parser.add_argument("--grasp-mode", choices=("auto", "rim", "side"), default="auto",
                         help="force rim-only or side-only experiments; side stages flat plates at the table edge")
     parser.add_argument("--pause-before-pick", action="store_true",
@@ -24,8 +26,11 @@ def main():
     args = parser.parse_args()
     if args.pause_before_pick and not (args.gui and args.pick):
         parser.error("--pause-before-pick requires both --gui and --pick")
+    if args.follow_object and not args.gui:
+        parser.error("--follow-object requires --gui")
     env = PickNavReachEnv(seed=args.seed, object_idx=args.object_idx,
-                          gui=args.gui, safe_forces=args.pick)
+                          gui=args.gui, safe_forces=args.pick,
+                          follow_object=args.follow_object)
     try:
         obs = env.obs
         for _ in range(80):  # let the initially airborne object settle on the table

@@ -16,15 +16,28 @@ def main():
     parser.add_argument("--object-idx", type=int, default=5)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--gui", action="store_true")
+    parser.add_argument("--follow-object", action="store_true",
+                        help="keep the object at the GUI camera orbit center while stepping")
+    parser.add_argument("--pause-before-pick", action="store_true",
+                        help="wait for Enter in the terminal before starting a GUI pickup")
     parser.add_argument("--carry-tilt-degrees", type=int, choices=(0, 15, 30), default=30)
     args = parser.parse_args()
+    if args.follow_object and not args.gui:
+        parser.error("--follow-object requires --gui")
+    if args.pause_before_pick and not args.gui:
+        parser.error("--pause-before-pick requires --gui")
     env = PickNavReachEnv(seed=args.seed, object_idx=args.object_idx,
-                          gui=args.gui, safe_forces=True)
+                          gui=args.gui, safe_forces=True, follow_object=args.follow_object)
     pickup = None
     try:
         obs = env.obs
         for _ in range(80):
             obs, _ = env.step(obs["qpos"])
+        if args.pause_before_pick:
+            print("Scene settled; arrange the PyBullet camera and start OBS recording. "
+                  "Press Enter here to begin pickup and navigation (Ctrl+C to cancel).",
+                  flush=True)
+            input()
         pickup = PickupController(env)
         result = pickup.run(obs)
         navigation = NavigationController(env, pickup,
