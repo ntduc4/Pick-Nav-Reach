@@ -347,6 +347,20 @@ lost baseline successes. The comparison used a full sweep and fresh paired
 reruns of the long/thin and near-symmetric objects after refining their
 tilt guards. Full per-trial results from those runs were combined at
 `/tmp/opencode/full-jaw-verified.json` during development; rerun the benchmark
-to generate a report in your own environment. A full palm-up flip was also
-tested on held objects: it struck the table-clearance guard or exhausted safe
-IK before reaching palm-up, while the smaller jaw-up tilt retained more grasps.
+to generate a report in your own environment.
+
+#### Rejected palm-up carry experiment
+
+We also attempted a full palm-up carry, turning the gripper so its palm and
+both fingers faced upward. On the **same 150 object/seed trials** (15 provided
+objects, seeds 60--69), pickup succeeded in **142/150** for both policies, but
+the experimental carry delivered only **87/150**, versus **128/150** for the
+default jaw roll. A full palm-up turn completed in 92 of the 142 successful
+pickups. The experimental run recorded **23** failures to find a collision-free
+full-turn pose, **16** unstable/fast joint-motion stops, and **15** object drops.
+The tightly folded arm in [this trial](imgs/self_collision.png) illustrates a
+self-contact risk; [this sugar-box trial](imgs/drop_sugar_box.png) shows a lost
+grasp. The screenshots illustrate the failure modes, not proof of a measured
+self-collision. Because the turn was not reliably plannable or stable, **we
+rejected palm-up carry and retained the jaw-roll default**. Paired reports:
+`v2_palm_up_full_results.json` and `new_grasps_full_traversal_results.json`.
