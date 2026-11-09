@@ -136,4 +136,5 @@ tests/results/
 !imgs/*.png
 *.tex
 *.pptx
+*.pptx#
 presentation/
