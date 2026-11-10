@@ -14,14 +14,14 @@
   "total_trials": 150,
   "pickup_successes": 145,
   "pickup_rate": 0.9666666666666667,
-  "successes": 133,
-  "success_rate": 0.8866666666666667,
-  "navigation_rate_given_pickup": 0.9172413793103448,
+  "successes": 135,
+  "success_rate": 0.9,
+  "navigation_rate_given_pickup": 0.9310344827586207,
   "objects_with_success": 15,
   "objects_tested": 15,
   "errors": 0,
   "failures": {
-    "object dropped during transport": 12,
+    "object dropped during transport": 10,
     "arm too close to table; stopped before collision": 2,
     "object not lifted": 3
   },
@@ -30,9 +30,9 @@
     "object not lifted": 3
   },
   "navigation_failures": {
-    "object dropped during transport": 12
+    "object dropped during transport": 10
   },
-  "navigation_steps_median": 4040.0,
+  "navigation_steps_median": 4041.0,
   "objects": [
     {
       "object_idx": 0,
@@ -199,12 +199,12 @@
       "trials": 10,
       "pickup_successes": 8,
       "pickup_rate": 0.8,
-      "successes": 5,
-      "success_rate": 0.5,
-      "navigation_rate_given_pickup": 0.625,
+      "successes": 7,
+      "success_rate": 0.7,
+      "navigation_rate_given_pickup": 0.875,
       "failures": {
-        "object dropped during transport": 3,
-        "object not lifted": 2
+        "object not lifted": 2,
+        "object dropped during transport": 1
       }
     },
     {
@@ -252,9 +252,9 @@
       "trials": 15,
       "pickup_successes": 14,
       "pickup_rate": 0.9333333333333333,
-      "successes": 13,
-      "success_rate": 0.8666666666666667,
-      "navigation_rate_given_pickup": 0.9285714285714286
+      "successes": 14,
+      "success_rate": 0.9333333333333333,
+      "navigation_rate_given_pickup": 1.0
     },
     {
       "seed": 64,
@@ -297,9 +297,9 @@
       "trials": 15,
       "pickup_successes": 14,
       "pickup_rate": 0.9333333333333333,
-      "successes": 13,
-      "success_rate": 0.8666666666666667,
-      "navigation_rate_given_pickup": 0.9285714285714286
+      "successes": 14,
+      "success_rate": 0.9333333333333333,
+      "navigation_rate_given_pickup": 1.0
     },
     {
       "seed": 69,
@@ -353,7 +353,7 @@
       "dist_to_goal_m": 0.022341114982020318,
       "env_steps": 6327,
       "physics_ticks": 25635,
-      "elapsed_s": 22.72
+      "elapsed_s": 22.27
     },
     {
       "object_idx": 0,
@@ -393,7 +393,7 @@
       "dist_to_goal_m": 17.691164093201444,
       "env_steps": 2186,
       "physics_ticks": 4930,
-      "elapsed_s": 8.27
+      "elapsed_s": 8.03
     },
     {
       "object_idx": 0,
@@ -436,7 +436,7 @@
       "dist_to_goal_m": 0.07148655868981707,
       "env_steps": 6225,
       "physics_ticks": 25125,
-      "elapsed_s": 24.74
+      "elapsed_s": 24.83
     },
     {
       "object_idx": 0,
@@ -479,7 +479,7 @@
       "dist_to_goal_m": 0.021223812306421296,
       "env_steps": 6202,
       "physics_ticks": 25010,
-      "elapsed_s": 22.45
+      "elapsed_s": 22.34
     },
     {
       "object_idx": 0,
@@ -522,7 +522,7 @@
       "dist_to_goal_m": 0.022096327731448713,
       "env_steps": 5938,
       "physics_ticks": 23690,
-      "elapsed_s": 20.1
+      "elapsed_s": 21.61
     },
     {
       "object_idx": 0,
@@ -565,7 +565,7 @@
       "dist_to_goal_m": 0.0789115120908409,
       "env_steps": 5895,
       "physics_ticks": 23475,
-      "elapsed_s": 23.76
+      "elapsed_s": 24.04
     },
     {
       "object_idx": 0,
@@ -608,7 +608,7 @@
       "dist_to_goal_m": 0.07164369776285323,
       "env_steps": 6220,
       "physics_ticks": 25100,
-      "elapsed_s": 23.83
+      "elapsed_s": 24.08
     },
     {
       "object_idx": 0,
@@ -651,7 +651,7 @@
       "dist_to_goal_m": 0.07249490660210105,
       "env_steps": 5903,
       "physics_ticks": 23515,
-      "elapsed_s": 22.0
+      "elapsed_s": 21.15
     },
     {
       "object_idx": 0,
@@ -686,7 +686,7 @@
       "dist_to_goal_m": 17.67694303866773,
       "env_steps": 1152,
       "physics_ticks": 3096,
-      "elapsed_s": 6.27
+      "elapsed_s": 6.38
     },
     {
       "object_idx": 0,
@@ -729,7 +729,7 @@
       "dist_to_goal_m": 0.020324368751454956,
       "env_steps": 5466,
       "physics_ticks": 21330,
-      "elapsed_s": 18.16
+      "elapsed_s": 18.87
     },
     {
       "object_idx": 1,
@@ -770,7 +770,7 @@
       "dist_to_goal_m": 0.08213905597137354,
       "env_steps": 6183,
       "physics_ticks": 25915,
-      "elapsed_s": 30.3
+      "elapsed_s": 31.26
     },
     {
       "object_idx": 1,
@@ -814,7 +814,7 @@
       "dist_to_goal_m": 0.032431183807276984,
       "env_steps": 5312,
       "physics_ticks": 21560,
-      "elapsed_s": 20.82
+      "elapsed_s": 22.46
     },
     {
       "object_idx": 1,
@@ -858,7 +858,7 @@
       "dist_to_goal_m": 0.014957729939133442,
       "env_steps": 6195,
       "physics_ticks": 25975,
-      "elapsed_s": 26.18
+      "elapsed_s": 28.33
     },
     {
       "object_idx": 1,
@@ -902,7 +902,7 @@
       "dist_to_goal_m": 0.030116988070509092,
       "env_steps": 6234,
       "physics_ticks": 26170,
-      "elapsed_s": 25.39
+      "elapsed_s": 25.22
     },
     {
       "object_idx": 1,
@@ -946,7 +946,7 @@
       "dist_to_goal_m": 0.03212321938332738,
       "env_steps": 5817,
       "physics_ticks": 24085,
-      "elapsed_s": 25.73
+      "elapsed_s": 26.51
     },
     {
       "object_idx": 1,
@@ -987,7 +987,7 @@
       "dist_to_goal_m": 17.97245015076259,
       "env_steps": 2096,
       "physics_ticks": 5480,
-      "elapsed_s": 12.32
+      "elapsed_s": 12.25
     },
     {
       "object_idx": 1,
@@ -1031,7 +1031,7 @@
       "dist_to_goal_m": 0.014979078323092612,
       "env_steps": 6313,
       "physics_ticks": 26565,
-      "elapsed_s": 27.53
+      "elapsed_s": 27.57
     },
     {
       "object_idx": 1,
@@ -1075,7 +1075,7 @@
       "dist_to_goal_m": 0.030571226235217283,
       "env_steps": 5780,
       "physics_ticks": 23900,
-      "elapsed_s": 24.49
+      "elapsed_s": 24.3
     },
     {
       "object_idx": 1,
@@ -1119,7 +1119,7 @@
       "dist_to_goal_m": 0.010564661069105884,
       "env_steps": 6049,
       "physics_ticks": 25245,
-      "elapsed_s": 29.92
+      "elapsed_s": 30.01
     },
     {
       "object_idx": 1,
@@ -1163,7 +1163,7 @@
       "dist_to_goal_m": 0.004926634522799837,
       "env_steps": 5347,
       "physics_ticks": 21735,
-      "elapsed_s": 23.35
+      "elapsed_s": 23.55
     },
     {
       "object_idx": 2,
@@ -1206,7 +1206,7 @@
       "dist_to_goal_m": 0.05992329799823623,
       "env_steps": 6286,
       "physics_ticks": 26430,
-      "elapsed_s": 25.35
+      "elapsed_s": 26.01
     },
     {
       "object_idx": 2,
@@ -1249,7 +1249,7 @@
       "dist_to_goal_m": 0.03353349313048386,
       "env_steps": 5368,
       "physics_ticks": 21840,
-      "elapsed_s": 19.03
+      "elapsed_s": 19.01
     },
     {
       "object_idx": 2,
@@ -1292,7 +1292,7 @@
       "dist_to_goal_m": 0.03849031331908342,
       "env_steps": 6140,
       "physics_ticks": 25700,
-      "elapsed_s": 22.15
+      "elapsed_s": 23.53
     },
     {
       "object_idx": 2,
@@ -1335,7 +1335,7 @@
       "dist_to_goal_m": 0.03815745151200456,
       "env_steps": 6269,
       "physics_ticks": 26345,
-      "elapsed_s": 21.89
+      "elapsed_s": 21.8
     },
     {
       "object_idx": 2,
@@ -1378,7 +1378,7 @@
       "dist_to_goal_m": 0.013040751524263011,
       "env_steps": 6001,
       "physics_ticks": 25005,
-      "elapsed_s": 18.42
+      "elapsed_s": 18.44
     },
     {
       "object_idx": 2,
@@ -1421,7 +1421,7 @@
       "dist_to_goal_m": 0.017653229256988187,
       "env_steps": 5670,
       "physics_ticks": 23350,
-      "elapsed_s": 19.01
+      "elapsed_s": 18.78
     },
     {
       "object_idx": 2,
@@ -1464,7 +1464,7 @@
       "dist_to_goal_m": 0.027305459124656685,
       "env_steps": 6117,
       "physics_ticks": 25585,
-      "elapsed_s": 19.7
+      "elapsed_s": 17.95
     },
     {
       "object_idx": 2,
@@ -1507,7 +1507,7 @@
       "dist_to_goal_m": 0.03570006820022794,
       "env_steps": 5814,
       "physics_ticks": 24070,
-      "elapsed_s": 18.06
+      "elapsed_s": 18.19
     },
     {
       "object_idx": 2,
@@ -1550,7 +1550,7 @@
       "dist_to_goal_m": 0.02262886530355845,
       "env_steps": 5986,
       "physics_ticks": 24930,
-      "elapsed_s": 18.2
+      "elapsed_s": 18.33
     },
     {
       "object_idx": 2,
@@ -1593,7 +1593,7 @@
       "dist_to_goal_m": 0.016994842534055594,
       "env_steps": 5378,
       "physics_ticks": 21890,
-      "elapsed_s": 18.62
+      "elapsed_s": 19.18
     },
     {
       "object_idx": 3,
@@ -1637,7 +1637,7 @@
       "dist_to_goal_m": 0.021099994510345384,
       "env_steps": 6215,
       "physics_ticks": 26075,
-      "elapsed_s": 22.02
+      "elapsed_s": 22.84
     },
     {
       "object_idx": 3,
@@ -1681,7 +1681,7 @@
       "dist_to_goal_m": 0.028986713479625573,
       "env_steps": 5334,
       "physics_ticks": 21670,
-      "elapsed_s": 21.67
+      "elapsed_s": 22.13
     },
     {
       "object_idx": 3,
@@ -1725,7 +1725,7 @@
       "dist_to_goal_m": 0.014969050192109947,
       "env_steps": 6107,
       "physics_ticks": 25535,
-      "elapsed_s": 22.09
+      "elapsed_s": 23.0
     },
     {
       "object_idx": 3,
@@ -1769,7 +1769,7 @@
       "dist_to_goal_m": 0.013447472492178614,
       "env_steps": 6094,
       "physics_ticks": 25470,
-      "elapsed_s": 23.22
+      "elapsed_s": 22.25
     },
     {
       "object_idx": 3,
@@ -1813,7 +1813,7 @@
       "dist_to_goal_m": 0.014940346596522745,
       "env_steps": 5832,
       "physics_ticks": 24160,
-      "elapsed_s": 24.1
+      "elapsed_s": 23.39
     },
     {
       "object_idx": 3,
@@ -1857,7 +1857,7 @@
       "dist_to_goal_m": 0.023813092531280146,
       "env_steps": 5655,
       "physics_ticks": 23275,
-      "elapsed_s": 20.99
+      "elapsed_s": 21.38
     },
     {
       "object_idx": 3,
@@ -1901,7 +1901,7 @@
       "dist_to_goal_m": 0.019544370543443466,
       "env_steps": 6097,
       "physics_ticks": 25485,
-      "elapsed_s": 22.53
+      "elapsed_s": 24.44
     },
     {
       "object_idx": 3,
@@ -1945,7 +1945,7 @@
       "dist_to_goal_m": 0.025749658481427365,
       "env_steps": 5802,
       "physics_ticks": 24010,
-      "elapsed_s": 22.33
+      "elapsed_s": 23.81
     },
     {
       "object_idx": 3,
@@ -1989,7 +1989,7 @@
       "dist_to_goal_m": 0.029952367223537318,
       "env_steps": 5974,
       "physics_ticks": 24870,
-      "elapsed_s": 23.05
+      "elapsed_s": 23.06
     },
     {
       "object_idx": 3,
@@ -2033,7 +2033,7 @@
       "dist_to_goal_m": 0.028687162731312364,
       "env_steps": 5364,
       "physics_ticks": 21820,
-      "elapsed_s": 20.9
+      "elapsed_s": 22.68
     },
     {
       "object_idx": 4,
@@ -2076,7 +2076,7 @@
       "dist_to_goal_m": 0.03365868539514087,
       "env_steps": 6281,
       "physics_ticks": 26405,
-      "elapsed_s": 18.2
+      "elapsed_s": 18.43
     },
     {
       "object_idx": 4,
@@ -2119,7 +2119,7 @@
       "dist_to_goal_m": 0.034270325490283284,
       "env_steps": 5362,
       "physics_ticks": 21810,
-      "elapsed_s": 15.85
+      "elapsed_s": 14.67
     },
     {
       "object_idx": 4,
@@ -2162,7 +2162,7 @@
       "dist_to_goal_m": 0.009907940253699253,
       "env_steps": 6164,
       "physics_ticks": 25820,
-      "elapsed_s": 19.68
+      "elapsed_s": 20.47
     },
     {
       "object_idx": 4,
@@ -2205,7 +2205,7 @@
       "dist_to_goal_m": 0.014841218486071788,
       "env_steps": 6362,
       "physics_ticks": 26810,
-      "elapsed_s": 19.59
+      "elapsed_s": 19.62
     },
     {
       "object_idx": 4,
@@ -2248,7 +2248,7 @@
       "dist_to_goal_m": 0.030928342630867918,
       "env_steps": 5866,
       "physics_ticks": 24330,
-      "elapsed_s": 17.39
+      "elapsed_s": 16.28
     },
     {
       "object_idx": 4,
@@ -2291,7 +2291,7 @@
       "dist_to_goal_m": 0.03426304032128251,
       "env_steps": 5688,
       "physics_ticks": 23440,
-      "elapsed_s": 17.66
+      "elapsed_s": 17.39
     },
     {
       "object_idx": 4,
@@ -2334,7 +2334,7 @@
       "dist_to_goal_m": 0.015027685001151841,
       "env_steps": 6142,
       "physics_ticks": 25710,
-      "elapsed_s": 16.63
+      "elapsed_s": 17.24
     },
     {
       "object_idx": 4,
@@ -2377,7 +2377,7 @@
       "dist_to_goal_m": 0.034594584428256754,
       "env_steps": 5829,
       "physics_ticks": 24145,
-      "elapsed_s": 16.96
+      "elapsed_s": 16.36
     },
     {
       "object_idx": 4,
@@ -2420,7 +2420,7 @@
       "dist_to_goal_m": 0.026968606571447958,
       "env_steps": 6024,
       "physics_ticks": 25120,
-      "elapsed_s": 19.24
+      "elapsed_s": 19.06
     },
     {
       "object_idx": 4,
@@ -2463,7 +2463,7 @@
       "dist_to_goal_m": 0.023882590310295316,
       "env_steps": 5407,
       "physics_ticks": 22035,
-      "elapsed_s": 19.58
+      "elapsed_s": 19.98
     },
     {
       "object_idx": 5,
@@ -2506,7 +2506,7 @@
       "dist_to_goal_m": 0.03118535913023553,
       "env_steps": 6242,
       "physics_ticks": 26210,
-      "elapsed_s": 20.08
+      "elapsed_s": 20.53
     },
     {
       "object_idx": 5,
@@ -2549,7 +2549,7 @@
       "dist_to_goal_m": 0.02283496597716022,
       "env_steps": 5352,
       "physics_ticks": 21760,
-      "elapsed_s": 16.28
+      "elapsed_s": 17.04
     },
     {
       "object_idx": 5,
@@ -2589,7 +2589,7 @@
       "dist_to_goal_m": 17.890972207335594,
       "env_steps": 2106,
       "physics_ticks": 5530,
-      "elapsed_s": 4.62
+      "elapsed_s": 5.27
     },
     {
       "object_idx": 5,
@@ -2632,7 +2632,7 @@
       "dist_to_goal_m": 0.021866334673876497,
       "env_steps": 6254,
       "physics_ticks": 26270,
-      "elapsed_s": 19.1
+      "elapsed_s": 18.15
     },
     {
       "object_idx": 5,
@@ -2675,7 +2675,7 @@
       "dist_to_goal_m": 0.019874135653832826,
       "env_steps": 5987,
       "physics_ticks": 24935,
-      "elapsed_s": 18.57
+      "elapsed_s": 18.1
     },
     {
       "object_idx": 5,
@@ -2718,7 +2718,7 @@
       "dist_to_goal_m": 0.02192163498287461,
       "env_steps": 5656,
       "physics_ticks": 23280,
-      "elapsed_s": 17.3
+      "elapsed_s": 18.85
     },
     {
       "object_idx": 5,
@@ -2758,7 +2758,7 @@
       "dist_to_goal_m": 17.928274518369363,
       "env_steps": 2106,
       "physics_ticks": 5530,
-      "elapsed_s": 4.63
+      "elapsed_s": 4.97
     },
     {
       "object_idx": 5,
@@ -2801,7 +2801,7 @@
       "dist_to_goal_m": 0.0227032197062284,
       "env_steps": 5820,
       "physics_ticks": 24100,
-      "elapsed_s": 16.58
+      "elapsed_s": 18.21
     },
     {
       "object_idx": 5,
@@ -2844,7 +2844,7 @@
       "dist_to_goal_m": 0.018371719411505023,
       "env_steps": 5993,
       "physics_ticks": 24965,
-      "elapsed_s": 18.74
+      "elapsed_s": 18.15
     },
     {
       "object_idx": 5,
@@ -2887,7 +2887,7 @@
       "dist_to_goal_m": 0.021326928811668228,
       "env_steps": 5366,
       "physics_ticks": 21830,
-      "elapsed_s": 16.84
+      "elapsed_s": 18.21
     },
     {
       "object_idx": 6,
@@ -2930,7 +2930,7 @@
       "dist_to_goal_m": 0.03213910365124293,
       "env_steps": 6219,
       "physics_ticks": 26095,
-      "elapsed_s": 18.72
+      "elapsed_s": 18.75
     },
     {
       "object_idx": 6,
@@ -2973,7 +2973,7 @@
       "dist_to_goal_m": 0.0331015686784663,
       "env_steps": 5342,
       "physics_ticks": 21710,
-      "elapsed_s": 17.99
+      "elapsed_s": 17.7
     },
     {
       "object_idx": 6,
@@ -3016,7 +3016,7 @@
       "dist_to_goal_m": 0.016993500023021964,
       "env_steps": 6109,
       "physics_ticks": 25545,
-      "elapsed_s": 20.98
+      "elapsed_s": 21.45
     },
     {
       "object_idx": 6,
@@ -3059,7 +3059,7 @@
       "dist_to_goal_m": 0.02209211389313013,
       "env_steps": 6108,
       "physics_ticks": 25540,
-      "elapsed_s": 19.81
+      "elapsed_s": 18.73
     },
     {
       "object_idx": 6,
@@ -3102,7 +3102,7 @@
       "dist_to_goal_m": 0.024489789304476556,
       "env_steps": 5817,
       "physics_ticks": 24085,
-      "elapsed_s": 18.19
+      "elapsed_s": 19.32
     },
     {
       "object_idx": 6,
@@ -3145,7 +3145,7 @@
       "dist_to_goal_m": 0.033302894110451675,
       "env_steps": 5646,
       "physics_ticks": 23230,
-      "elapsed_s": 20.73
+      "elapsed_s": 20.79
     },
     {
       "object_idx": 6,
@@ -3188,7 +3188,7 @@
       "dist_to_goal_m": 0.016979435433101674,
       "env_steps": 6238,
       "physics_ticks": 26190,
-      "elapsed_s": 22.56
+      "elapsed_s": 22.87
     },
     {
       "object_idx": 6,
@@ -3231,7 +3231,7 @@
       "dist_to_goal_m": 0.046318385202956926,
       "env_steps": 5821,
       "physics_ticks": 24105,
-      "elapsed_s": 19.53
+      "elapsed_s": 18.87
     },
     {
       "object_idx": 6,
@@ -3274,7 +3274,7 @@
       "dist_to_goal_m": 0.03349431189101645,
       "env_steps": 5978,
       "physics_ticks": 24890,
-      "elapsed_s": 22.96
+      "elapsed_s": 22.1
     },
     {
       "object_idx": 6,
@@ -3317,7 +3317,7 @@
       "dist_to_goal_m": 0.014628663624807574,
       "env_steps": 5354,
       "physics_ticks": 21770,
-      "elapsed_s": 15.96
+      "elapsed_s": 15.6
     },
     {
       "object_idx": 7,
@@ -3360,7 +3360,7 @@
       "dist_to_goal_m": 0.02612012153575072,
       "env_steps": 6224,
       "physics_ticks": 26120,
-      "elapsed_s": 27.16
+      "elapsed_s": 26.61
     },
     {
       "object_idx": 7,
@@ -3403,7 +3403,7 @@
       "dist_to_goal_m": 0.030565204870140222,
       "env_steps": 5335,
       "physics_ticks": 21675,
-      "elapsed_s": 18.71
+      "elapsed_s": 18.96
     },
     {
       "object_idx": 7,
@@ -3443,7 +3443,7 @@
       "dist_to_goal_m": 17.861132834133716,
       "env_steps": 2086,
       "physics_ticks": 5430,
-      "elapsed_s": 7.61
+      "elapsed_s": 7.67
     },
     {
       "object_idx": 7,
@@ -3486,7 +3486,7 @@
       "dist_to_goal_m": 0.0260070533986556,
       "env_steps": 6234,
       "physics_ticks": 26170,
-      "elapsed_s": 22.41
+      "elapsed_s": 23.02
     },
     {
       "object_idx": 7,
@@ -3529,7 +3529,7 @@
       "dist_to_goal_m": 0.03289740271067295,
       "env_steps": 5970,
       "physics_ticks": 24850,
-      "elapsed_s": 21.63
+      "elapsed_s": 21.82
     },
     {
       "object_idx": 7,
@@ -3572,7 +3572,7 @@
       "dist_to_goal_m": 0.031776139993572046,
       "env_steps": 5639,
       "physics_ticks": 23195,
-      "elapsed_s": 20.04
+      "elapsed_s": 20.32
     },
     {
       "object_idx": 7,
@@ -3615,7 +3615,7 @@
       "dist_to_goal_m": 0.0343649785108966,
       "env_steps": 6098,
       "physics_ticks": 25490,
-      "elapsed_s": 22.04
+      "elapsed_s": 20.81
     },
     {
       "object_idx": 7,
@@ -3658,7 +3658,7 @@
       "dist_to_goal_m": 0.033965559541654824,
       "env_steps": 5795,
       "physics_ticks": 23975,
-      "elapsed_s": 26.03
+      "elapsed_s": 26.28
     },
     {
       "object_idx": 7,
@@ -3701,7 +3701,7 @@
       "dist_to_goal_m": 0.03482503275913545,
       "env_steps": 5968,
       "physics_ticks": 24840,
-      "elapsed_s": 20.49
+      "elapsed_s": 19.94
     },
     {
       "object_idx": 7,
@@ -3744,7 +3744,7 @@
       "dist_to_goal_m": 0.030574501656694127,
       "env_steps": 5347,
       "physics_ticks": 21735,
-      "elapsed_s": 19.12
+      "elapsed_s": 19.34
     },
     {
       "object_idx": 8,
@@ -3788,7 +3788,7 @@
       "dist_to_goal_m": 0.032686718957915535,
       "env_steps": 6223,
       "physics_ticks": 26115,
-      "elapsed_s": 26.21
+      "elapsed_s": 25.36
     },
     {
       "object_idx": 8,
@@ -3832,7 +3832,7 @@
       "dist_to_goal_m": 0.018737008828430442,
       "env_steps": 5341,
       "physics_ticks": 21705,
-      "elapsed_s": 20.54
+      "elapsed_s": 19.98
     },
     {
       "object_idx": 8,
@@ -3868,7 +3868,7 @@
       "dist_to_goal_m": 17.715822713179257,
       "env_steps": 1110,
       "physics_ticks": 3534,
-      "elapsed_s": 7.67
+      "elapsed_s": 7.76
     },
     {
       "object_idx": 8,
@@ -3912,7 +3912,7 @@
       "dist_to_goal_m": 0.027260915455008833,
       "env_steps": 6098,
       "physics_ticks": 25490,
-      "elapsed_s": 26.79
+      "elapsed_s": 26.62
     },
     {
       "object_idx": 8,
@@ -3956,7 +3956,7 @@
       "dist_to_goal_m": 0.02896336374957703,
       "env_steps": 5834,
       "physics_ticks": 24170,
-      "elapsed_s": 24.78
+      "elapsed_s": 24.27
     },
     {
       "object_idx": 8,
@@ -4000,7 +4000,7 @@
       "dist_to_goal_m": 0.016260453942789264,
       "env_steps": 5669,
       "physics_ticks": 23345,
-      "elapsed_s": 22.59
+      "elapsed_s": 24.54
     },
     {
       "object_idx": 8,
@@ -4044,7 +4044,7 @@
       "dist_to_goal_m": 0.010613798509101702,
       "env_steps": 6099,
       "physics_ticks": 25495,
-      "elapsed_s": 24.77
+      "elapsed_s": 24.26
     },
     {
       "object_idx": 8,
@@ -4088,7 +4088,7 @@
       "dist_to_goal_m": 0.023435329888918752,
       "env_steps": 5796,
       "physics_ticks": 23980,
-      "elapsed_s": 28.73
+      "elapsed_s": 26.36
     },
     {
       "object_idx": 8,
@@ -4132,7 +4132,7 @@
       "dist_to_goal_m": 0.02995870067835383,
       "env_steps": 5969,
       "physics_ticks": 24845,
-      "elapsed_s": 28.84
+      "elapsed_s": 28.53
     },
     {
       "object_idx": 8,
@@ -4173,7 +4173,7 @@
       "dist_to_goal_m": 17.969779605428126,
       "env_steps": 2096,
       "physics_ticks": 5480,
-      "elapsed_s": 8.4
+      "elapsed_s": 7.86
     },
     {
       "object_idx": 9,
@@ -4216,7 +4216,7 @@
       "dist_to_goal_m": 0.022432907189241662,
       "env_steps": 6625,
       "physics_ticks": 26697,
-      "elapsed_s": 26.88
+      "elapsed_s": 27.17
     },
     {
       "object_idx": 9,
@@ -4259,7 +4259,7 @@
       "dist_to_goal_m": 0.024037338095425638,
       "env_steps": 5742,
       "physics_ticks": 22286,
-      "elapsed_s": 19.24
+      "elapsed_s": 20.11
     },
     {
       "object_idx": 9,
@@ -4302,7 +4302,7 @@
       "dist_to_goal_m": 0.02031176602519242,
       "env_steps": 6494,
       "physics_ticks": 26070,
-      "elapsed_s": 25.49
+      "elapsed_s": 26.33
     },
     {
       "object_idx": 9,
@@ -4340,7 +4340,7 @@
       "dist_to_goal_m": 17.650806005314145,
       "env_steps": 2305,
       "physics_ticks": 5049,
-      "elapsed_s": 5.73
+      "elapsed_s": 5.34
     },
     {
       "object_idx": 9,
@@ -4383,7 +4383,7 @@
       "dist_to_goal_m": 0.02136593848817073,
       "env_steps": 6321,
       "physics_ticks": 25193,
-      "elapsed_s": 21.73
+      "elapsed_s": 22.28
     },
     {
       "object_idx": 9,
@@ -4426,7 +4426,7 @@
       "dist_to_goal_m": 0.014920349639722465,
       "env_steps": 6119,
       "physics_ticks": 24175,
-      "elapsed_s": 24.0
+      "elapsed_s": 24.94
     },
     {
       "object_idx": 9,
@@ -4469,7 +4469,7 @@
       "dist_to_goal_m": 0.028412990632404718,
       "env_steps": 6632,
       "physics_ticks": 26740,
-      "elapsed_s": 29.11
+      "elapsed_s": 29.01
     },
     {
       "object_idx": 9,
@@ -4512,7 +4512,7 @@
       "dist_to_goal_m": 0.018272693179307093,
       "env_steps": 6181,
       "physics_ticks": 24505,
-      "elapsed_s": 23.87
+      "elapsed_s": 22.57
     },
     {
       "object_idx": 9,
@@ -4555,7 +4555,7 @@
       "dist_to_goal_m": 0.03629507564523811,
       "env_steps": 6363,
       "physics_ticks": 25415,
-      "elapsed_s": 23.69
+      "elapsed_s": 23.86
     },
     {
       "object_idx": 9,
@@ -4598,7 +4598,7 @@
       "dist_to_goal_m": 0.03288567203519991,
       "env_steps": 5702,
       "physics_ticks": 22110,
-      "elapsed_s": 22.52
+      "elapsed_s": 22.36
     },
     {
       "object_idx": 10,
@@ -4641,7 +4641,7 @@
       "dist_to_goal_m": 0.02862221155285748,
       "env_steps": 6228,
       "physics_ticks": 26140,
-      "elapsed_s": 16.51
+      "elapsed_s": 15.53
     },
     {
       "object_idx": 10,
@@ -4684,7 +4684,7 @@
       "dist_to_goal_m": 0.02963169479141704,
       "env_steps": 5336,
       "physics_ticks": 21680,
-      "elapsed_s": 13.7
+      "elapsed_s": 14.19
     },
     {
       "object_idx": 10,
@@ -4727,7 +4727,7 @@
       "dist_to_goal_m": 0.02979435190531332,
       "env_steps": 6112,
       "physics_ticks": 25560,
-      "elapsed_s": 15.58
+      "elapsed_s": 15.31
     },
     {
       "object_idx": 10,
@@ -4770,7 +4770,7 @@
       "dist_to_goal_m": 0.03596043771075889,
       "env_steps": 6098,
       "physics_ticks": 25490,
-      "elapsed_s": 15.04
+      "elapsed_s": 15.92
     },
     {
       "object_idx": 10,
@@ -4813,7 +4813,7 @@
       "dist_to_goal_m": 0.028201638646458953,
       "env_steps": 6170,
       "physics_ticks": 25050,
-      "elapsed_s": 19.82
+      "elapsed_s": 20.2
     },
     {
       "object_idx": 10,
@@ -4856,7 +4856,7 @@
       "dist_to_goal_m": 0.028313103694701178,
       "env_steps": 5637,
       "physics_ticks": 23185,
-      "elapsed_s": 16.51
+      "elapsed_s": 15.79
     },
     {
       "object_idx": 10,
@@ -4899,7 +4899,7 @@
       "dist_to_goal_m": 0.02871251406568217,
       "env_steps": 6100,
       "physics_ticks": 25500,
-      "elapsed_s": 15.4
+      "elapsed_s": 15.56
     },
     {
       "object_idx": 10,
@@ -4942,7 +4942,7 @@
       "dist_to_goal_m": 0.025381877122471266,
       "env_steps": 5801,
       "physics_ticks": 24005,
-      "elapsed_s": 15.19
+      "elapsed_s": 14.94
     },
     {
       "object_idx": 10,
@@ -4985,7 +4985,7 @@
       "dist_to_goal_m": 0.02764620437972992,
       "env_steps": 5976,
       "physics_ticks": 24880,
-      "elapsed_s": 15.07
+      "elapsed_s": 15.56
     },
     {
       "object_idx": 10,
@@ -5028,7 +5028,7 @@
       "dist_to_goal_m": 0.03502165430038286,
       "env_steps": 5358,
       "physics_ticks": 21790,
-      "elapsed_s": 14.09
+      "elapsed_s": 12.73
     },
     {
       "object_idx": 11,
@@ -5084,7 +5084,7 @@
       "dist_to_goal_m": 0.07559023025677468,
       "env_steps": 10249,
       "physics_ticks": 31985,
-      "elapsed_s": 37.42
+      "elapsed_s": 37.09
     },
     {
       "object_idx": 11,
@@ -5140,7 +5140,7 @@
       "dist_to_goal_m": 0.07876563820822881,
       "env_steps": 9170,
       "physics_ticks": 26590,
-      "elapsed_s": 28.34
+      "elapsed_s": 29.54
     },
     {
       "object_idx": 11,
@@ -5196,7 +5196,7 @@
       "dist_to_goal_m": 0.06872934206305975,
       "env_steps": 10132,
       "physics_ticks": 31400,
-      "elapsed_s": 38.14
+      "elapsed_s": 38.84
     },
     {
       "object_idx": 11,
@@ -5252,7 +5252,7 @@
       "dist_to_goal_m": 0.08113008888871984,
       "env_steps": 10254,
       "physics_ticks": 32010,
-      "elapsed_s": 34.73
+      "elapsed_s": 36.99
     },
     {
       "object_idx": 11,
@@ -5305,7 +5305,7 @@
       "dist_to_goal_m": 18.986442316892905,
       "env_steps": 6050,
       "physics_ticks": 10990,
-      "elapsed_s": 19.81
+      "elapsed_s": 19.64
     },
     {
       "object_idx": 11,
@@ -5361,7 +5361,7 @@
       "dist_to_goal_m": 0.010313909784342152,
       "env_steps": 9350,
       "physics_ticks": 27490,
-      "elapsed_s": 31.44
+      "elapsed_s": 32.51
     },
     {
       "object_idx": 11,
@@ -5414,7 +5414,7 @@
       "dist_to_goal_m": 19.105323200377644,
       "env_steps": 6050,
       "physics_ticks": 10990,
-      "elapsed_s": 20.63
+      "elapsed_s": 19.95
     },
     {
       "object_idx": 11,
@@ -5470,7 +5470,7 @@
       "dist_to_goal_m": 0.039445533832371045,
       "env_steps": 9667,
       "physics_ticks": 29075,
-      "elapsed_s": 30.96
+      "elapsed_s": 30.29
     },
     {
       "object_idx": 11,
@@ -5526,7 +5526,7 @@
       "dist_to_goal_m": 0.016889969382027366,
       "env_steps": 9842,
       "physics_ticks": 29950,
-      "elapsed_s": 30.94
+      "elapsed_s": 30.81
     },
     {
       "object_idx": 11,
@@ -5582,7 +5582,7 @@
       "dist_to_goal_m": 0.005856480958596044,
       "env_steps": 9063,
       "physics_ticks": 26055,
-      "elapsed_s": 30.01
+      "elapsed_s": 28.97
     },
     {
       "object_idx": 12,
@@ -5625,7 +5625,7 @@
       "dist_to_goal_m": 0.022103202915742373,
       "env_steps": 6246,
       "physics_ticks": 26230,
-      "elapsed_s": 18.98
+      "elapsed_s": 19.56
     },
     {
       "object_idx": 12,
@@ -5668,7 +5668,7 @@
       "dist_to_goal_m": 0.04012016646674294,
       "env_steps": 5350,
       "physics_ticks": 21750,
-      "elapsed_s": 14.69
+      "elapsed_s": 15.31
     },
     {
       "object_idx": 12,
@@ -5711,7 +5711,7 @@
       "dist_to_goal_m": 0.02939361780413084,
       "env_steps": 6144,
       "physics_ticks": 25720,
-      "elapsed_s": 15.87
+      "elapsed_s": 16.16
     },
     {
       "object_idx": 12,
@@ -5754,7 +5754,7 @@
       "dist_to_goal_m": 0.015008690648096,
       "env_steps": 6249,
       "physics_ticks": 26245,
-      "elapsed_s": 23.93
+      "elapsed_s": 22.86
     },
     {
       "object_idx": 12,
@@ -5797,7 +5797,7 @@
       "dist_to_goal_m": 0.021690467547894568,
       "env_steps": 5986,
       "physics_ticks": 24930,
-      "elapsed_s": 19.21
+      "elapsed_s": 20.28
     },
     {
       "object_idx": 12,
@@ -5840,7 +5840,7 @@
       "dist_to_goal_m": 0.02460080147164983,
       "env_steps": 5702,
       "physics_ticks": 23510,
-      "elapsed_s": 18.49
+      "elapsed_s": 19.02
     },
     {
       "object_idx": 12,
@@ -5883,7 +5883,7 @@
       "dist_to_goal_m": 0.021967809147085904,
       "env_steps": 6253,
       "physics_ticks": 26265,
-      "elapsed_s": 18.01
+      "elapsed_s": 18.95
     },
     {
       "object_idx": 12,
@@ -5926,7 +5926,7 @@
       "dist_to_goal_m": 0.024989839891220673,
       "env_steps": 5833,
       "physics_ticks": 24165,
-      "elapsed_s": 18.6
+      "elapsed_s": 17.51
     },
     {
       "object_idx": 12,
@@ -5969,7 +5969,7 @@
       "dist_to_goal_m": 0.028739495033418744,
       "env_steps": 6008,
       "physics_ticks": 25040,
-      "elapsed_s": 16.37
+      "elapsed_s": 16.73
     },
     {
       "object_idx": 12,
@@ -6012,7 +6012,7 @@
       "dist_to_goal_m": 0.02205334392461126,
       "env_steps": 5367,
       "physics_ticks": 21835,
-      "elapsed_s": 15.31
+      "elapsed_s": 15.13
     },
     {
       "object_idx": 13,
@@ -6027,7 +6027,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6056,7 +6055,7 @@
       "dist_to_goal_m": 0.013917111177881657,
       "env_steps": 6239,
       "physics_ticks": 26195,
-      "elapsed_s": 20.23
+      "elapsed_s": 15.21
     },
     {
       "object_idx": 13,
@@ -6071,7 +6070,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6100,7 +6098,7 @@
       "dist_to_goal_m": 0.024304140960959463,
       "env_steps": 5343,
       "physics_ticks": 21715,
-      "elapsed_s": 20.57
+      "elapsed_s": 14.42
     },
     {
       "object_idx": 13,
@@ -6115,7 +6113,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6144,7 +6141,7 @@
       "dist_to_goal_m": 0.024792273978578996,
       "env_steps": 6121,
       "physics_ticks": 25605,
-      "elapsed_s": 19.47
+      "elapsed_s": 17.33
     },
     {
       "object_idx": 13,
@@ -6154,37 +6151,40 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.17231014791742438,
-        "grasp_width_m": 0.07929215865927114,
+        "lift_m": 0.18413396499622103,
+        "grasp_width_m": 0.028201485113115047,
         "hold_steps": 50,
-        "approach": "side",
+        "approach": "top-down",
         "approaches_considered": [
-          "side"
+          "top-down"
         ],
-        "sim_steps": 2153,
-        "lift_tick": 3838,
-        "lift_ticks": 3438,
-        "lift_steps": 1814,
+        "sim_steps": 1936,
+        "lift_tick": 4241,
+        "lift_ticks": 3841,
+        "lift_steps": 1617,
         "reason": "held above table"
       },
       "navigation": {
-        "success": false,
-        "reason": "object dropped during transport",
-        "dist_to_goal_m": 17.67768695692406,
-        "navigation_steps": 150,
-        "carry_tilt_degrees": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.025692419000335826,
+        "navigation_steps": 4178,
+        "waypoints": 11,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "navigation",
-      "reason": "object dropped during transport",
-      "pickup_env_steps": 2073,
-      "navigation_env_steps": 150,
-      "dist_to_goal_m": 17.67768695692406,
-      "env_steps": 2303,
-      "physics_ticks": 5047,
-      "elapsed_s": 6.23
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4178,
+      "dist_to_goal_m": 0.025692419000335826,
+      "env_steps": 6114,
+      "physics_ticks": 25570,
+      "elapsed_s": 16.74
     },
     {
       "object_idx": 13,
@@ -6199,7 +6199,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6223,7 +6222,7 @@
       "dist_to_goal_m": 17.545092596028834,
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.2
+      "elapsed_s": 2.97
     },
     {
       "object_idx": 13,
@@ -6238,7 +6237,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6262,7 +6260,7 @@
       "dist_to_goal_m": 17.832924652818242,
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.57
+      "elapsed_s": 3.33
     },
     {
       "object_idx": 13,
@@ -6277,7 +6275,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6306,7 +6303,7 @@
       "dist_to_goal_m": 0.048457889045305076,
       "env_steps": 6112,
       "physics_ticks": 25560,
-      "elapsed_s": 18.22
+      "elapsed_s": 15.8
     },
     {
       "object_idx": 13,
@@ -6321,7 +6318,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6350,7 +6346,7 @@
       "dist_to_goal_m": 0.02495024507441453,
       "env_steps": 5814,
       "physics_ticks": 24070,
-      "elapsed_s": 14.92
+      "elapsed_s": 13.34
     },
     {
       "object_idx": 13,
@@ -6360,37 +6356,40 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.18226997494559394,
-        "grasp_width_m": 0.08053531124104059,
+        "lift_m": 0.20050496016257768,
+        "grasp_width_m": 0.02983761731233515,
         "hold_steps": 50,
-        "approach": "side",
+        "approach": "top-down",
         "approaches_considered": [
-          "side"
+          "top-down"
         ],
-        "sim_steps": 2226,
-        "lift_tick": 3902,
-        "lift_ticks": 3502,
-        "lift_steps": 1878,
+        "sim_steps": 1936,
+        "lift_tick": 4208,
+        "lift_ticks": 3808,
+        "lift_steps": 1584,
         "reason": "held above table"
       },
       "navigation": {
-        "success": false,
-        "reason": "object dropped during transport",
-        "dist_to_goal_m": 17.668228446739437,
-        "navigation_steps": 150,
-        "carry_tilt_degrees": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.02843820038719275,
+        "navigation_steps": 4051,
+        "waypoints": 12,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "navigation",
-      "reason": "object dropped during transport",
-      "pickup_env_steps": 2146,
-      "navigation_env_steps": 150,
-      "dist_to_goal_m": 17.668228446739437,
-      "env_steps": 2376,
-      "physics_ticks": 5120,
-      "elapsed_s": 8.01
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 1856,
+      "navigation_env_steps": 4051,
+      "dist_to_goal_m": 0.02843820038719275,
+      "env_steps": 5987,
+      "physics_ticks": 24935,
+      "elapsed_s": 12.67
     },
     {
       "object_idx": 13,
@@ -6405,7 +6404,6 @@
         "hold_steps": 50,
         "approach": "top-down",
         "approaches_considered": [
-          "side",
           "top-down"
         ],
         "sim_steps": 1936,
@@ -6431,7 +6429,7 @@
       "dist_to_goal_m": 18.050427106855707,
       "env_steps": 2106,
       "physics_ticks": 5530,
-      "elapsed_s": 8.9
+      "elapsed_s": 3.72
     },
     {
       "object_idx": 14,
@@ -6474,7 +6472,7 @@
       "dist_to_goal_m": 0.01814568629924848,
       "env_steps": 6260,
       "physics_ticks": 26300,
-      "elapsed_s": 16.08
+      "elapsed_s": 16.6
     },
     {
       "object_idx": 14,
@@ -6517,7 +6515,7 @@
       "dist_to_goal_m": 0.03057569726954047,
       "env_steps": 5359,
       "physics_ticks": 21795,
-      "elapsed_s": 16.53
+      "elapsed_s": 16.46
     },
     {
       "object_idx": 14,
@@ -6560,7 +6558,7 @@
       "dist_to_goal_m": 0.03467943099222896,
       "env_steps": 6138,
       "physics_ticks": 25690,
-      "elapsed_s": 18.78
+      "elapsed_s": 17.63
     },
     {
       "object_idx": 14,
@@ -6603,7 +6601,7 @@
       "dist_to_goal_m": 0.03353407911083315,
       "env_steps": 6279,
       "physics_ticks": 26395,
-      "elapsed_s": 17.39
+      "elapsed_s": 16.29
     },
     {
       "object_idx": 14,
@@ -6646,7 +6644,7 @@
       "dist_to_goal_m": 0.014593440562239518,
       "env_steps": 6095,
       "physics_ticks": 25475,
-      "elapsed_s": 17.2
+      "elapsed_s": 17.84
     },
     {
       "object_idx": 14,
@@ -6689,7 +6687,7 @@
       "dist_to_goal_m": 0.014891332251810649,
       "env_steps": 5764,
       "physics_ticks": 23820,
-      "elapsed_s": 17.25
+      "elapsed_s": 16.42
     },
     {
       "object_idx": 14,
@@ -6732,7 +6730,7 @@
       "dist_to_goal_m": 0.026634891829195623,
       "env_steps": 6116,
       "physics_ticks": 25580,
-      "elapsed_s": 15.48
+      "elapsed_s": 15.56
     },
     {
       "object_idx": 14,
@@ -6775,7 +6773,7 @@
       "dist_to_goal_m": 0.026483645199483544,
       "env_steps": 5811,
       "physics_ticks": 24055,
-      "elapsed_s": 14.99
+      "elapsed_s": 16.05
     },
     {
       "object_idx": 14,
@@ -6818,7 +6816,7 @@
       "dist_to_goal_m": 0.0075234359354488505,
       "env_steps": 6025,
       "physics_ticks": 25125,
-      "elapsed_s": 13.03
+      "elapsed_s": 14.42
     },
     {
       "object_idx": 14,
@@ -6861,7 +6859,7 @@
       "dist_to_goal_m": 0.026142518773753814,
       "env_steps": 5381,
       "physics_ticks": 21905,
-      "elapsed_s": 11.93
+      "elapsed_s": 12.11
     }
   ]
 }

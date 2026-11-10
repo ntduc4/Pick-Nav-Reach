@@ -596,9 +596,17 @@ class PickupController:
             bowl_like = (min(xy_extent) > 0.13 and
                          max(xy_extent) / min(xy_extent) < 1.2 and
                          0.04 < height < 0.10)
+            # A hammer's wide head makes its XY bounding box look like a
+            # side-grasp object, but the long, flat handle offers a much
+            # narrower top-down pinch. The side pinch can lift it briefly
+            # yet lets it rotate out during the maze carry.
+            long_flat_handle = (max(xy_extent) > 0.24 and
+                                min(xy_extent) > 0.085 and
+                                max(xy_extent) / min(xy_extent) > 2.4 and
+                                height < 0.045)
             prefer_side = ((max(xy_extent) > 0.115 and min(xy_extent) > 0.085) or
                            (min(xy_extent) > 0.09 and
-                            height > 0.11))
+                            height > 0.11)) and not long_flat_handle
             if bowl_like:
                 rim_candidates = propose_radial_rim_grasps(obs)
                 planners = (("top-down", lambda current: self.plan(

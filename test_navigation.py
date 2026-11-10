@@ -201,6 +201,16 @@ class FullTaskTests(unittest.TestCase):
         self.assertTrue(midpoint)
         self.assertLess(midpoint[0], 0.025)
 
+    def test_hammer_uses_handle_grasp_instead_of_dropping_side_grasp(self):
+        for seed in (63, 68):
+            with self.subTest(seed=seed):
+                picked, reached, side_midpoint = self.run_trial(13, seed)
+                self.assertEqual(picked["approach"], "top-down")
+                self.assertEqual(picked["approaches_considered"], ["top-down"])
+                self.assertLess(picked["grasp_width_m"], 0.05)
+                self.assertFalse(side_midpoint)
+                self.assertEqual(reached["carry_tilt_degrees"], 15)
+
     def test_staged_plate_retracts_and_reaches_goal(self):
         picked, _, _ = self.run_trial(11, 42)
         self.assertTrue(picked["edge_slide"])
