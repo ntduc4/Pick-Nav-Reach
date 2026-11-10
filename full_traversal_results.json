@@ -12,27 +12,27 @@
     69
   ],
   "total_trials": 150,
-  "pickup_successes": 142,
-  "pickup_rate": 0.9466666666666667,
-  "successes": 128,
-  "success_rate": 0.8533333333333334,
-  "navigation_rate_given_pickup": 0.9014084507042254,
+  "pickup_successes": 145,
+  "pickup_rate": 0.9666666666666667,
+  "successes": 133,
+  "success_rate": 0.8866666666666667,
+  "navigation_rate_given_pickup": 0.9172413793103448,
   "objects_with_success": 15,
   "objects_tested": 15,
   "errors": 0,
   "failures": {
-    "object dropped during transport": 14,
+    "object dropped during transport": 12,
     "arm too close to table; stopped before collision": 2,
-    "object not lifted": 6
+    "object not lifted": 3
   },
   "pickup_failures": {
     "arm too close to table; stopped before collision": 2,
-    "object not lifted": 6
+    "object not lifted": 3
   },
   "navigation_failures": {
-    "object dropped during transport": 14
+    "object dropped during transport": 12
   },
-  "navigation_steps_median": 4045.5,
+  "navigation_steps_median": 4040.0,
   "objects": [
     {
       "object_idx": 0,
@@ -173,14 +173,13 @@
       "object_idx": 11,
       "object": "029_plate",
       "trials": 10,
-      "pickup_successes": 7,
-      "pickup_rate": 0.7,
-      "successes": 3,
-      "success_rate": 0.3,
-      "navigation_rate_given_pickup": 0.42857142857142855,
+      "pickup_successes": 10,
+      "pickup_rate": 1.0,
+      "successes": 8,
+      "success_rate": 0.8,
+      "navigation_rate_given_pickup": 0.8,
       "failures": {
-        "object not lifted": 3,
-        "object dropped during transport": 4
+        "object dropped during transport": 2
       }
     },
     {
@@ -224,20 +223,20 @@
     {
       "seed": 60,
       "trials": 15,
-      "pickup_successes": 14,
-      "pickup_rate": 0.9333333333333333,
-      "successes": 13,
-      "success_rate": 0.8666666666666667,
-      "navigation_rate_given_pickup": 0.9285714285714286
+      "pickup_successes": 15,
+      "pickup_rate": 1.0,
+      "successes": 14,
+      "success_rate": 0.9333333333333333,
+      "navigation_rate_given_pickup": 0.9333333333333333
     },
     {
       "seed": 61,
       "trials": 15,
       "pickup_successes": 15,
       "pickup_rate": 1.0,
-      "successes": 13,
-      "success_rate": 0.8666666666666667,
-      "navigation_rate_given_pickup": 0.8666666666666667
+      "successes": 14,
+      "success_rate": 0.9333333333333333,
+      "navigation_rate_given_pickup": 0.9333333333333333
     },
     {
       "seed": 62,
@@ -253,63 +252,63 @@
       "trials": 15,
       "pickup_successes": 14,
       "pickup_rate": 0.9333333333333333,
-      "successes": 12,
-      "success_rate": 0.8,
-      "navigation_rate_given_pickup": 0.8571428571428571
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.9285714285714286
     },
     {
       "seed": 64,
       "trials": 15,
       "pickup_successes": 14,
       "pickup_rate": 0.9333333333333333,
-      "successes": 14,
-      "success_rate": 0.9333333333333333,
-      "navigation_rate_given_pickup": 1.0
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.9285714285714286
     },
     {
       "seed": 65,
       "trials": 15,
-      "pickup_successes": 13,
-      "pickup_rate": 0.8666666666666667,
-      "successes": 12,
-      "success_rate": 0.8,
-      "navigation_rate_given_pickup": 0.9230769230769231
+      "pickup_successes": 14,
+      "pickup_rate": 0.9333333333333333,
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.9285714285714286
     },
     {
       "seed": 66,
       "trials": 15,
       "pickup_successes": 15,
       "pickup_rate": 1.0,
-      "successes": 14,
-      "success_rate": 0.9333333333333333,
-      "navigation_rate_given_pickup": 0.9333333333333333
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.8666666666666667
     },
     {
       "seed": 67,
       "trials": 15,
       "pickup_successes": 15,
       "pickup_rate": 1.0,
-      "successes": 14,
-      "success_rate": 0.9333333333333333,
-      "navigation_rate_given_pickup": 0.9333333333333333
+      "successes": 15,
+      "success_rate": 1.0,
+      "navigation_rate_given_pickup": 1.0
     },
     {
       "seed": 68,
       "trials": 15,
       "pickup_successes": 14,
       "pickup_rate": 0.9333333333333333,
-      "successes": 12,
-      "success_rate": 0.8,
-      "navigation_rate_given_pickup": 0.8571428571428571
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.9285714285714286
     },
     {
       "seed": 69,
       "trials": 15,
-      "pickup_successes": 14,
-      "pickup_rate": 0.9333333333333333,
-      "successes": 12,
-      "success_rate": 0.8,
-      "navigation_rate_given_pickup": 0.8571428571428571
+      "pickup_successes": 15,
+      "pickup_rate": 1.0,
+      "successes": 13,
+      "success_rate": 0.8666666666666667,
+      "navigation_rate_given_pickup": 0.8666666666666667
     }
   ],
   "trials": [
@@ -341,7 +340,8 @@
         "navigation_steps": 4291,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -353,7 +353,7 @@
       "dist_to_goal_m": 0.022341114982020318,
       "env_steps": 6327,
       "physics_ticks": 25635,
-      "elapsed_s": 23.11
+      "elapsed_s": 22.72
     },
     {
       "object_idx": 0,
@@ -393,7 +393,7 @@
       "dist_to_goal_m": 17.691164093201444,
       "env_steps": 2186,
       "physics_ticks": 4930,
-      "elapsed_s": 8.41
+      "elapsed_s": 8.27
     },
     {
       "object_idx": 0,
@@ -423,7 +423,8 @@
         "navigation_steps": 4189,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -435,7 +436,7 @@
       "dist_to_goal_m": 0.07148655868981707,
       "env_steps": 6225,
       "physics_ticks": 25125,
-      "elapsed_s": 23.7
+      "elapsed_s": 24.74
     },
     {
       "object_idx": 0,
@@ -465,7 +466,8 @@
         "navigation_steps": 4166,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -477,7 +479,7 @@
       "dist_to_goal_m": 0.021223812306421296,
       "env_steps": 6202,
       "physics_ticks": 25010,
-      "elapsed_s": 20.98
+      "elapsed_s": 22.45
     },
     {
       "object_idx": 0,
@@ -507,7 +509,8 @@
         "navigation_steps": 3902,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -519,7 +522,7 @@
       "dist_to_goal_m": 0.022096327731448713,
       "env_steps": 5938,
       "physics_ticks": 23690,
-      "elapsed_s": 20.14
+      "elapsed_s": 20.1
     },
     {
       "object_idx": 0,
@@ -549,7 +552,8 @@
         "navigation_steps": 3859,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -561,7 +565,7 @@
       "dist_to_goal_m": 0.0789115120908409,
       "env_steps": 5895,
       "physics_ticks": 23475,
-      "elapsed_s": 23.6
+      "elapsed_s": 23.76
     },
     {
       "object_idx": 0,
@@ -591,7 +595,8 @@
         "navigation_steps": 4184,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -603,7 +608,7 @@
       "dist_to_goal_m": 0.07164369776285323,
       "env_steps": 6220,
       "physics_ticks": 25100,
-      "elapsed_s": 23.27
+      "elapsed_s": 23.83
     },
     {
       "object_idx": 0,
@@ -633,7 +638,8 @@
         "navigation_steps": 3867,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -645,7 +651,7 @@
       "dist_to_goal_m": 0.07249490660210105,
       "env_steps": 5903,
       "physics_ticks": 23515,
-      "elapsed_s": 20.37
+      "elapsed_s": 22.0
     },
     {
       "object_idx": 0,
@@ -680,7 +686,7 @@
       "dist_to_goal_m": 17.67694303866773,
       "env_steps": 1152,
       "physics_ticks": 3096,
-      "elapsed_s": 5.75
+      "elapsed_s": 6.27
     },
     {
       "object_idx": 0,
@@ -710,7 +716,8 @@
         "navigation_steps": 3430,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -722,7 +729,7 @@
       "dist_to_goal_m": 0.020324368751454956,
       "env_steps": 5466,
       "physics_ticks": 21330,
-      "elapsed_s": 18.46
+      "elapsed_s": 18.16
     },
     {
       "object_idx": 1,
@@ -763,7 +770,7 @@
       "dist_to_goal_m": 0.08213905597137354,
       "env_steps": 6183,
       "physics_ticks": 25915,
-      "elapsed_s": 30.63
+      "elapsed_s": 30.3
     },
     {
       "object_idx": 1,
@@ -794,7 +801,8 @@
         "navigation_steps": 3406,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -806,7 +814,7 @@
       "dist_to_goal_m": 0.032431183807276984,
       "env_steps": 5312,
       "physics_ticks": 21560,
-      "elapsed_s": 21.04
+      "elapsed_s": 20.82
     },
     {
       "object_idx": 1,
@@ -837,7 +845,8 @@
         "navigation_steps": 4289,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -849,7 +858,7 @@
       "dist_to_goal_m": 0.014957729939133442,
       "env_steps": 6195,
       "physics_ticks": 25975,
-      "elapsed_s": 26.73
+      "elapsed_s": 26.18
     },
     {
       "object_idx": 1,
@@ -880,7 +889,8 @@
         "navigation_steps": 4328,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -892,7 +902,7 @@
       "dist_to_goal_m": 0.030116988070509092,
       "env_steps": 6234,
       "physics_ticks": 26170,
-      "elapsed_s": 24.26
+      "elapsed_s": 25.39
     },
     {
       "object_idx": 1,
@@ -923,7 +933,8 @@
         "navigation_steps": 3911,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -935,7 +946,7 @@
       "dist_to_goal_m": 0.03212321938332738,
       "env_steps": 5817,
       "physics_ticks": 24085,
-      "elapsed_s": 25.72
+      "elapsed_s": 25.73
     },
     {
       "object_idx": 1,
@@ -976,7 +987,7 @@
       "dist_to_goal_m": 17.97245015076259,
       "env_steps": 2096,
       "physics_ticks": 5480,
-      "elapsed_s": 12.44
+      "elapsed_s": 12.32
     },
     {
       "object_idx": 1,
@@ -1007,7 +1018,8 @@
         "navigation_steps": 4407,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1019,7 +1031,7 @@
       "dist_to_goal_m": 0.014979078323092612,
       "env_steps": 6313,
       "physics_ticks": 26565,
-      "elapsed_s": 27.35
+      "elapsed_s": 27.53
     },
     {
       "object_idx": 1,
@@ -1050,7 +1062,8 @@
         "navigation_steps": 3874,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1062,7 +1075,7 @@
       "dist_to_goal_m": 0.030571226235217283,
       "env_steps": 5780,
       "physics_ticks": 23900,
-      "elapsed_s": 23.21
+      "elapsed_s": 24.49
     },
     {
       "object_idx": 1,
@@ -1093,7 +1106,8 @@
         "navigation_steps": 4143,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1105,7 +1119,7 @@
       "dist_to_goal_m": 0.010564661069105884,
       "env_steps": 6049,
       "physics_ticks": 25245,
-      "elapsed_s": 28.51
+      "elapsed_s": 29.92
     },
     {
       "object_idx": 1,
@@ -1136,7 +1150,8 @@
         "navigation_steps": 3441,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1148,7 +1163,7 @@
       "dist_to_goal_m": 0.004926634522799837,
       "env_steps": 5347,
       "physics_ticks": 21735,
-      "elapsed_s": 23.41
+      "elapsed_s": 23.35
     },
     {
       "object_idx": 2,
@@ -1178,7 +1193,8 @@
         "navigation_steps": 4350,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1190,7 +1206,7 @@
       "dist_to_goal_m": 0.05992329799823623,
       "env_steps": 6286,
       "physics_ticks": 26430,
-      "elapsed_s": 24.36
+      "elapsed_s": 25.35
     },
     {
       "object_idx": 2,
@@ -1220,7 +1236,8 @@
         "navigation_steps": 3432,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1232,7 +1249,7 @@
       "dist_to_goal_m": 0.03353349313048386,
       "env_steps": 5368,
       "physics_ticks": 21840,
-      "elapsed_s": 19.11
+      "elapsed_s": 19.03
     },
     {
       "object_idx": 2,
@@ -1262,7 +1279,8 @@
         "navigation_steps": 4204,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1274,7 +1292,7 @@
       "dist_to_goal_m": 0.03849031331908342,
       "env_steps": 6140,
       "physics_ticks": 25700,
-      "elapsed_s": 21.41
+      "elapsed_s": 22.15
     },
     {
       "object_idx": 2,
@@ -1304,7 +1322,8 @@
         "navigation_steps": 4333,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1316,7 +1335,7 @@
       "dist_to_goal_m": 0.03815745151200456,
       "env_steps": 6269,
       "physics_ticks": 26345,
-      "elapsed_s": 21.25
+      "elapsed_s": 21.89
     },
     {
       "object_idx": 2,
@@ -1346,7 +1365,8 @@
         "navigation_steps": 4065,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1358,7 +1378,7 @@
       "dist_to_goal_m": 0.013040751524263011,
       "env_steps": 6001,
       "physics_ticks": 25005,
-      "elapsed_s": 18.15
+      "elapsed_s": 18.42
     },
     {
       "object_idx": 2,
@@ -1388,7 +1408,8 @@
         "navigation_steps": 3734,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1400,7 +1421,7 @@
       "dist_to_goal_m": 0.017653229256988187,
       "env_steps": 5670,
       "physics_ticks": 23350,
-      "elapsed_s": 18.61
+      "elapsed_s": 19.01
     },
     {
       "object_idx": 2,
@@ -1430,7 +1451,8 @@
         "navigation_steps": 4181,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1442,7 +1464,7 @@
       "dist_to_goal_m": 0.027305459124656685,
       "env_steps": 6117,
       "physics_ticks": 25585,
-      "elapsed_s": 18.06
+      "elapsed_s": 19.7
     },
     {
       "object_idx": 2,
@@ -1472,7 +1494,8 @@
         "navigation_steps": 3878,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1484,7 +1507,7 @@
       "dist_to_goal_m": 0.03570006820022794,
       "env_steps": 5814,
       "physics_ticks": 24070,
-      "elapsed_s": 17.67
+      "elapsed_s": 18.06
     },
     {
       "object_idx": 2,
@@ -1514,7 +1537,8 @@
         "navigation_steps": 4050,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1526,7 +1550,7 @@
       "dist_to_goal_m": 0.02262886530355845,
       "env_steps": 5986,
       "physics_ticks": 24930,
-      "elapsed_s": 18.01
+      "elapsed_s": 18.2
     },
     {
       "object_idx": 2,
@@ -1556,7 +1580,8 @@
         "navigation_steps": 3442,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1568,7 +1593,7 @@
       "dist_to_goal_m": 0.016994842534055594,
       "env_steps": 5378,
       "physics_ticks": 21890,
-      "elapsed_s": 18.88
+      "elapsed_s": 18.62
     },
     {
       "object_idx": 3,
@@ -1599,7 +1624,8 @@
         "navigation_steps": 4309,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1611,7 +1637,7 @@
       "dist_to_goal_m": 0.021099994510345384,
       "env_steps": 6215,
       "physics_ticks": 26075,
-      "elapsed_s": 22.54
+      "elapsed_s": 22.02
     },
     {
       "object_idx": 3,
@@ -1642,7 +1668,8 @@
         "navigation_steps": 3428,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1654,7 +1681,7 @@
       "dist_to_goal_m": 0.028986713479625573,
       "env_steps": 5334,
       "physics_ticks": 21670,
-      "elapsed_s": 19.78
+      "elapsed_s": 21.67
     },
     {
       "object_idx": 3,
@@ -1685,7 +1712,8 @@
         "navigation_steps": 4201,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1697,7 +1725,7 @@
       "dist_to_goal_m": 0.014969050192109947,
       "env_steps": 6107,
       "physics_ticks": 25535,
-      "elapsed_s": 21.16
+      "elapsed_s": 22.09
     },
     {
       "object_idx": 3,
@@ -1728,7 +1756,8 @@
         "navigation_steps": 4188,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1740,7 +1769,7 @@
       "dist_to_goal_m": 0.013447472492178614,
       "env_steps": 6094,
       "physics_ticks": 25470,
-      "elapsed_s": 21.36
+      "elapsed_s": 23.22
     },
     {
       "object_idx": 3,
@@ -1771,7 +1800,8 @@
         "navigation_steps": 3926,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1783,7 +1813,7 @@
       "dist_to_goal_m": 0.014940346596522745,
       "env_steps": 5832,
       "physics_ticks": 24160,
-      "elapsed_s": 22.46
+      "elapsed_s": 24.1
     },
     {
       "object_idx": 3,
@@ -1814,7 +1844,8 @@
         "navigation_steps": 3749,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1826,7 +1857,7 @@
       "dist_to_goal_m": 0.023813092531280146,
       "env_steps": 5655,
       "physics_ticks": 23275,
-      "elapsed_s": 20.68
+      "elapsed_s": 20.99
     },
     {
       "object_idx": 3,
@@ -1857,7 +1888,8 @@
         "navigation_steps": 4191,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1869,7 +1901,7 @@
       "dist_to_goal_m": 0.019544370543443466,
       "env_steps": 6097,
       "physics_ticks": 25485,
-      "elapsed_s": 22.22
+      "elapsed_s": 22.53
     },
     {
       "object_idx": 3,
@@ -1900,7 +1932,8 @@
         "navigation_steps": 3896,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1912,7 +1945,7 @@
       "dist_to_goal_m": 0.025749658481427365,
       "env_steps": 5802,
       "physics_ticks": 24010,
-      "elapsed_s": 21.33
+      "elapsed_s": 22.33
     },
     {
       "object_idx": 3,
@@ -1943,7 +1976,8 @@
         "navigation_steps": 4068,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1955,7 +1989,7 @@
       "dist_to_goal_m": 0.029952367223537318,
       "env_steps": 5974,
       "physics_ticks": 24870,
-      "elapsed_s": 22.11
+      "elapsed_s": 23.05
     },
     {
       "object_idx": 3,
@@ -1986,7 +2020,8 @@
         "navigation_steps": 3458,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -1998,7 +2033,7 @@
       "dist_to_goal_m": 0.028687162731312364,
       "env_steps": 5364,
       "physics_ticks": 21820,
-      "elapsed_s": 20.77
+      "elapsed_s": 20.9
     },
     {
       "object_idx": 4,
@@ -2028,7 +2063,8 @@
         "navigation_steps": 4345,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2040,7 +2076,7 @@
       "dist_to_goal_m": 0.03365868539514087,
       "env_steps": 6281,
       "physics_ticks": 26405,
-      "elapsed_s": 17.35
+      "elapsed_s": 18.2
     },
     {
       "object_idx": 4,
@@ -2070,7 +2106,8 @@
         "navigation_steps": 3426,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2082,7 +2119,7 @@
       "dist_to_goal_m": 0.034270325490283284,
       "env_steps": 5362,
       "physics_ticks": 21810,
-      "elapsed_s": 14.9
+      "elapsed_s": 15.85
     },
     {
       "object_idx": 4,
@@ -2112,7 +2149,8 @@
         "navigation_steps": 4228,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2124,7 +2162,7 @@
       "dist_to_goal_m": 0.009907940253699253,
       "env_steps": 6164,
       "physics_ticks": 25820,
-      "elapsed_s": 18.53
+      "elapsed_s": 19.68
     },
     {
       "object_idx": 4,
@@ -2154,7 +2192,8 @@
         "navigation_steps": 4426,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2166,7 +2205,7 @@
       "dist_to_goal_m": 0.014841218486071788,
       "env_steps": 6362,
       "physics_ticks": 26810,
-      "elapsed_s": 18.76
+      "elapsed_s": 19.59
     },
     {
       "object_idx": 4,
@@ -2196,7 +2235,8 @@
         "navigation_steps": 3930,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2208,7 +2248,7 @@
       "dist_to_goal_m": 0.030928342630867918,
       "env_steps": 5866,
       "physics_ticks": 24330,
-      "elapsed_s": 16.32
+      "elapsed_s": 17.39
     },
     {
       "object_idx": 4,
@@ -2238,7 +2278,8 @@
         "navigation_steps": 3752,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2250,7 +2291,7 @@
       "dist_to_goal_m": 0.03426304032128251,
       "env_steps": 5688,
       "physics_ticks": 23440,
-      "elapsed_s": 17.24
+      "elapsed_s": 17.66
     },
     {
       "object_idx": 4,
@@ -2280,7 +2321,8 @@
         "navigation_steps": 4206,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2292,7 +2334,7 @@
       "dist_to_goal_m": 0.015027685001151841,
       "env_steps": 6142,
       "physics_ticks": 25710,
-      "elapsed_s": 16.58
+      "elapsed_s": 16.63
     },
     {
       "object_idx": 4,
@@ -2322,7 +2364,8 @@
         "navigation_steps": 3893,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2334,7 +2377,7 @@
       "dist_to_goal_m": 0.034594584428256754,
       "env_steps": 5829,
       "physics_ticks": 24145,
-      "elapsed_s": 16.38
+      "elapsed_s": 16.96
     },
     {
       "object_idx": 4,
@@ -2364,7 +2407,8 @@
         "navigation_steps": 4088,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2376,7 +2420,7 @@
       "dist_to_goal_m": 0.026968606571447958,
       "env_steps": 6024,
       "physics_ticks": 25120,
-      "elapsed_s": 18.93
+      "elapsed_s": 19.24
     },
     {
       "object_idx": 4,
@@ -2406,7 +2450,8 @@
         "navigation_steps": 3471,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2418,7 +2463,7 @@
       "dist_to_goal_m": 0.023882590310295316,
       "env_steps": 5407,
       "physics_ticks": 22035,
-      "elapsed_s": 17.93
+      "elapsed_s": 19.58
     },
     {
       "object_idx": 5,
@@ -2448,7 +2493,8 @@
         "navigation_steps": 4306,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2460,7 +2506,7 @@
       "dist_to_goal_m": 0.03118535913023553,
       "env_steps": 6242,
       "physics_ticks": 26210,
-      "elapsed_s": 19.42
+      "elapsed_s": 20.08
     },
     {
       "object_idx": 5,
@@ -2490,7 +2536,8 @@
         "navigation_steps": 3416,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2502,7 +2549,7 @@
       "dist_to_goal_m": 0.02283496597716022,
       "env_steps": 5352,
       "physics_ticks": 21760,
-      "elapsed_s": 15.86
+      "elapsed_s": 16.28
     },
     {
       "object_idx": 5,
@@ -2542,7 +2589,7 @@
       "dist_to_goal_m": 17.890972207335594,
       "env_steps": 2106,
       "physics_ticks": 5530,
-      "elapsed_s": 4.74
+      "elapsed_s": 4.62
     },
     {
       "object_idx": 5,
@@ -2572,7 +2619,8 @@
         "navigation_steps": 4318,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2584,7 +2632,7 @@
       "dist_to_goal_m": 0.021866334673876497,
       "env_steps": 6254,
       "physics_ticks": 26270,
-      "elapsed_s": 17.51
+      "elapsed_s": 19.1
     },
     {
       "object_idx": 5,
@@ -2614,7 +2662,8 @@
         "navigation_steps": 4051,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2626,7 +2675,7 @@
       "dist_to_goal_m": 0.019874135653832826,
       "env_steps": 5987,
       "physics_ticks": 24935,
-      "elapsed_s": 17.37
+      "elapsed_s": 18.57
     },
     {
       "object_idx": 5,
@@ -2656,7 +2705,8 @@
         "navigation_steps": 3720,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2668,7 +2718,7 @@
       "dist_to_goal_m": 0.02192163498287461,
       "env_steps": 5656,
       "physics_ticks": 23280,
-      "elapsed_s": 17.35
+      "elapsed_s": 17.3
     },
     {
       "object_idx": 5,
@@ -2708,7 +2758,7 @@
       "dist_to_goal_m": 17.928274518369363,
       "env_steps": 2106,
       "physics_ticks": 5530,
-      "elapsed_s": 4.87
+      "elapsed_s": 4.63
     },
     {
       "object_idx": 5,
@@ -2738,7 +2788,8 @@
         "navigation_steps": 3884,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2750,7 +2801,7 @@
       "dist_to_goal_m": 0.0227032197062284,
       "env_steps": 5820,
       "physics_ticks": 24100,
-      "elapsed_s": 15.7
+      "elapsed_s": 16.58
     },
     {
       "object_idx": 5,
@@ -2780,7 +2831,8 @@
         "navigation_steps": 4057,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2792,7 +2844,7 @@
       "dist_to_goal_m": 0.018371719411505023,
       "env_steps": 5993,
       "physics_ticks": 24965,
-      "elapsed_s": 18.37
+      "elapsed_s": 18.74
     },
     {
       "object_idx": 5,
@@ -2822,7 +2874,8 @@
         "navigation_steps": 3430,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2834,7 +2887,7 @@
       "dist_to_goal_m": 0.021326928811668228,
       "env_steps": 5366,
       "physics_ticks": 21830,
-      "elapsed_s": 16.58
+      "elapsed_s": 16.84
     },
     {
       "object_idx": 6,
@@ -2864,7 +2917,8 @@
         "navigation_steps": 4312,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2876,7 +2930,7 @@
       "dist_to_goal_m": 0.03213910365124293,
       "env_steps": 6219,
       "physics_ticks": 26095,
-      "elapsed_s": 18.64
+      "elapsed_s": 18.72
     },
     {
       "object_idx": 6,
@@ -2906,7 +2960,8 @@
         "navigation_steps": 3435,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2918,7 +2973,7 @@
       "dist_to_goal_m": 0.0331015686784663,
       "env_steps": 5342,
       "physics_ticks": 21710,
-      "elapsed_s": 17.51
+      "elapsed_s": 17.99
     },
     {
       "object_idx": 6,
@@ -2948,7 +3003,8 @@
         "navigation_steps": 4202,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -2960,7 +3016,7 @@
       "dist_to_goal_m": 0.016993500023021964,
       "env_steps": 6109,
       "physics_ticks": 25545,
-      "elapsed_s": 20.86
+      "elapsed_s": 20.98
     },
     {
       "object_idx": 6,
@@ -2990,7 +3046,8 @@
         "navigation_steps": 4201,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3002,7 +3059,7 @@
       "dist_to_goal_m": 0.02209211389313013,
       "env_steps": 6108,
       "physics_ticks": 25540,
-      "elapsed_s": 18.13
+      "elapsed_s": 19.81
     },
     {
       "object_idx": 6,
@@ -3032,7 +3089,8 @@
         "navigation_steps": 3910,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3044,7 +3102,7 @@
       "dist_to_goal_m": 0.024489789304476556,
       "env_steps": 5817,
       "physics_ticks": 24085,
-      "elapsed_s": 17.27
+      "elapsed_s": 18.19
     },
     {
       "object_idx": 6,
@@ -3074,7 +3132,8 @@
         "navigation_steps": 3739,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3086,7 +3145,7 @@
       "dist_to_goal_m": 0.033302894110451675,
       "env_steps": 5646,
       "physics_ticks": 23230,
-      "elapsed_s": 19.92
+      "elapsed_s": 20.73
     },
     {
       "object_idx": 6,
@@ -3116,7 +3175,8 @@
         "navigation_steps": 4331,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3128,7 +3188,7 @@
       "dist_to_goal_m": 0.016979435433101674,
       "env_steps": 6238,
       "physics_ticks": 26190,
-      "elapsed_s": 21.33
+      "elapsed_s": 22.56
     },
     {
       "object_idx": 6,
@@ -3158,7 +3218,8 @@
         "navigation_steps": 3914,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3170,7 +3231,7 @@
       "dist_to_goal_m": 0.046318385202956926,
       "env_steps": 5821,
       "physics_ticks": 24105,
-      "elapsed_s": 18.69
+      "elapsed_s": 19.53
     },
     {
       "object_idx": 6,
@@ -3200,7 +3261,8 @@
         "navigation_steps": 4071,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3212,7 +3274,7 @@
       "dist_to_goal_m": 0.03349431189101645,
       "env_steps": 5978,
       "physics_ticks": 24890,
-      "elapsed_s": 21.33
+      "elapsed_s": 22.96
     },
     {
       "object_idx": 6,
@@ -3242,7 +3304,8 @@
         "navigation_steps": 3447,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3254,7 +3317,7 @@
       "dist_to_goal_m": 0.014628663624807574,
       "env_steps": 5354,
       "physics_ticks": 21770,
-      "elapsed_s": 15.2
+      "elapsed_s": 15.96
     },
     {
       "object_idx": 7,
@@ -3284,7 +3347,8 @@
         "navigation_steps": 4288,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3296,7 +3360,7 @@
       "dist_to_goal_m": 0.02612012153575072,
       "env_steps": 6224,
       "physics_ticks": 26120,
-      "elapsed_s": 25.18
+      "elapsed_s": 27.16
     },
     {
       "object_idx": 7,
@@ -3326,7 +3390,8 @@
         "navigation_steps": 3399,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3338,7 +3403,7 @@
       "dist_to_goal_m": 0.030565204870140222,
       "env_steps": 5335,
       "physics_ticks": 21675,
-      "elapsed_s": 18.65
+      "elapsed_s": 18.71
     },
     {
       "object_idx": 7,
@@ -3378,7 +3443,7 @@
       "dist_to_goal_m": 17.861132834133716,
       "env_steps": 2086,
       "physics_ticks": 5430,
-      "elapsed_s": 7.18
+      "elapsed_s": 7.61
     },
     {
       "object_idx": 7,
@@ -3408,7 +3473,8 @@
         "navigation_steps": 4298,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3420,7 +3486,7 @@
       "dist_to_goal_m": 0.0260070533986556,
       "env_steps": 6234,
       "physics_ticks": 26170,
-      "elapsed_s": 22.04
+      "elapsed_s": 22.41
     },
     {
       "object_idx": 7,
@@ -3450,7 +3516,8 @@
         "navigation_steps": 4034,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3462,7 +3529,7 @@
       "dist_to_goal_m": 0.03289740271067295,
       "env_steps": 5970,
       "physics_ticks": 24850,
-      "elapsed_s": 21.12
+      "elapsed_s": 21.63
     },
     {
       "object_idx": 7,
@@ -3492,7 +3559,8 @@
         "navigation_steps": 3703,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3504,7 +3572,7 @@
       "dist_to_goal_m": 0.031776139993572046,
       "env_steps": 5639,
       "physics_ticks": 23195,
-      "elapsed_s": 18.97
+      "elapsed_s": 20.04
     },
     {
       "object_idx": 7,
@@ -3534,7 +3602,8 @@
         "navigation_steps": 4162,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3546,7 +3615,7 @@
       "dist_to_goal_m": 0.0343649785108966,
       "env_steps": 6098,
       "physics_ticks": 25490,
-      "elapsed_s": 20.25
+      "elapsed_s": 22.04
     },
     {
       "object_idx": 7,
@@ -3576,7 +3645,8 @@
         "navigation_steps": 3859,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3588,7 +3658,7 @@
       "dist_to_goal_m": 0.033965559541654824,
       "env_steps": 5795,
       "physics_ticks": 23975,
-      "elapsed_s": 25.54
+      "elapsed_s": 26.03
     },
     {
       "object_idx": 7,
@@ -3618,7 +3688,8 @@
         "navigation_steps": 4032,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3630,7 +3701,7 @@
       "dist_to_goal_m": 0.03482503275913545,
       "env_steps": 5968,
       "physics_ticks": 24840,
-      "elapsed_s": 21.01
+      "elapsed_s": 20.49
     },
     {
       "object_idx": 7,
@@ -3660,7 +3731,8 @@
         "navigation_steps": 3411,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3672,7 +3744,7 @@
       "dist_to_goal_m": 0.030574501656694127,
       "env_steps": 5347,
       "physics_ticks": 21735,
-      "elapsed_s": 18.1
+      "elapsed_s": 19.12
     },
     {
       "object_idx": 8,
@@ -3703,7 +3775,8 @@
         "navigation_steps": 4317,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3715,7 +3788,7 @@
       "dist_to_goal_m": 0.032686718957915535,
       "env_steps": 6223,
       "physics_ticks": 26115,
-      "elapsed_s": 24.38
+      "elapsed_s": 26.21
     },
     {
       "object_idx": 8,
@@ -3746,7 +3819,8 @@
         "navigation_steps": 3435,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3758,7 +3832,7 @@
       "dist_to_goal_m": 0.018737008828430442,
       "env_steps": 5341,
       "physics_ticks": 21705,
-      "elapsed_s": 19.0
+      "elapsed_s": 20.54
     },
     {
       "object_idx": 8,
@@ -3794,7 +3868,7 @@
       "dist_to_goal_m": 17.715822713179257,
       "env_steps": 1110,
       "physics_ticks": 3534,
-      "elapsed_s": 7.03
+      "elapsed_s": 7.67
     },
     {
       "object_idx": 8,
@@ -3825,7 +3899,8 @@
         "navigation_steps": 4192,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3837,7 +3912,7 @@
       "dist_to_goal_m": 0.027260915455008833,
       "env_steps": 6098,
       "physics_ticks": 25490,
-      "elapsed_s": 25.39
+      "elapsed_s": 26.79
     },
     {
       "object_idx": 8,
@@ -3868,7 +3943,8 @@
         "navigation_steps": 3928,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3880,7 +3956,7 @@
       "dist_to_goal_m": 0.02896336374957703,
       "env_steps": 5834,
       "physics_ticks": 24170,
-      "elapsed_s": 23.98
+      "elapsed_s": 24.78
     },
     {
       "object_idx": 8,
@@ -3911,7 +3987,8 @@
         "navigation_steps": 3763,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3923,7 +4000,7 @@
       "dist_to_goal_m": 0.016260453942789264,
       "env_steps": 5669,
       "physics_ticks": 23345,
-      "elapsed_s": 22.2
+      "elapsed_s": 22.59
     },
     {
       "object_idx": 8,
@@ -3954,7 +4031,8 @@
         "navigation_steps": 4193,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -3966,7 +4044,7 @@
       "dist_to_goal_m": 0.010613798509101702,
       "env_steps": 6099,
       "physics_ticks": 25495,
-      "elapsed_s": 23.54
+      "elapsed_s": 24.77
     },
     {
       "object_idx": 8,
@@ -3997,7 +4075,8 @@
         "navigation_steps": 3890,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4009,7 +4088,7 @@
       "dist_to_goal_m": 0.023435329888918752,
       "env_steps": 5796,
       "physics_ticks": 23980,
-      "elapsed_s": 26.42
+      "elapsed_s": 28.73
     },
     {
       "object_idx": 8,
@@ -4040,7 +4119,8 @@
         "navigation_steps": 4063,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4052,7 +4132,7 @@
       "dist_to_goal_m": 0.02995870067835383,
       "env_steps": 5969,
       "physics_ticks": 24845,
-      "elapsed_s": 27.82
+      "elapsed_s": 28.84
     },
     {
       "object_idx": 8,
@@ -4093,7 +4173,7 @@
       "dist_to_goal_m": 17.969779605428126,
       "env_steps": 2096,
       "physics_ticks": 5480,
-      "elapsed_s": 7.97
+      "elapsed_s": 8.4
     },
     {
       "object_idx": 9,
@@ -4123,7 +4203,8 @@
         "navigation_steps": 4332,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4135,7 +4216,7 @@
       "dist_to_goal_m": 0.022432907189241662,
       "env_steps": 6625,
       "physics_ticks": 26697,
-      "elapsed_s": 25.9
+      "elapsed_s": 26.88
     },
     {
       "object_idx": 9,
@@ -4165,7 +4246,8 @@
         "navigation_steps": 3450,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4177,7 +4259,7 @@
       "dist_to_goal_m": 0.024037338095425638,
       "env_steps": 5742,
       "physics_ticks": 22286,
-      "elapsed_s": 18.85
+      "elapsed_s": 19.24
     },
     {
       "object_idx": 9,
@@ -4207,7 +4289,8 @@
         "navigation_steps": 4208,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4219,7 +4302,7 @@
       "dist_to_goal_m": 0.02031176602519242,
       "env_steps": 6494,
       "physics_ticks": 26070,
-      "elapsed_s": 24.71
+      "elapsed_s": 25.49
     },
     {
       "object_idx": 9,
@@ -4257,7 +4340,7 @@
       "dist_to_goal_m": 17.650806005314145,
       "env_steps": 2305,
       "physics_ticks": 5049,
-      "elapsed_s": 5.53
+      "elapsed_s": 5.73
     },
     {
       "object_idx": 9,
@@ -4287,7 +4370,8 @@
         "navigation_steps": 4032,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4299,7 +4383,7 @@
       "dist_to_goal_m": 0.02136593848817073,
       "env_steps": 6321,
       "physics_ticks": 25193,
-      "elapsed_s": 21.44
+      "elapsed_s": 21.73
     },
     {
       "object_idx": 9,
@@ -4329,7 +4413,8 @@
         "navigation_steps": 3828,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4341,7 +4426,7 @@
       "dist_to_goal_m": 0.014920349639722465,
       "env_steps": 6119,
       "physics_ticks": 24175,
-      "elapsed_s": 23.17
+      "elapsed_s": 24.0
     },
     {
       "object_idx": 9,
@@ -4371,7 +4456,8 @@
         "navigation_steps": 4341,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4383,7 +4469,7 @@
       "dist_to_goal_m": 0.028412990632404718,
       "env_steps": 6632,
       "physics_ticks": 26740,
-      "elapsed_s": 27.49
+      "elapsed_s": 29.11
     },
     {
       "object_idx": 9,
@@ -4413,7 +4499,8 @@
         "navigation_steps": 3895,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4425,7 +4512,7 @@
       "dist_to_goal_m": 0.018272693179307093,
       "env_steps": 6181,
       "physics_ticks": 24505,
-      "elapsed_s": 21.64
+      "elapsed_s": 23.87
     },
     {
       "object_idx": 9,
@@ -4455,7 +4542,8 @@
         "navigation_steps": 4077,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4467,7 +4555,7 @@
       "dist_to_goal_m": 0.03629507564523811,
       "env_steps": 6363,
       "physics_ticks": 25415,
-      "elapsed_s": 22.99
+      "elapsed_s": 23.69
     },
     {
       "object_idx": 9,
@@ -4497,7 +4585,8 @@
         "navigation_steps": 3416,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4509,7 +4598,7 @@
       "dist_to_goal_m": 0.03288567203519991,
       "env_steps": 5702,
       "physics_ticks": 22110,
-      "elapsed_s": 20.97
+      "elapsed_s": 22.52
     },
     {
       "object_idx": 10,
@@ -4539,7 +4628,8 @@
         "navigation_steps": 4292,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4551,7 +4641,7 @@
       "dist_to_goal_m": 0.02862221155285748,
       "env_steps": 6228,
       "physics_ticks": 26140,
-      "elapsed_s": 15.05
+      "elapsed_s": 16.51
     },
     {
       "object_idx": 10,
@@ -4581,7 +4671,8 @@
         "navigation_steps": 3400,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4593,7 +4684,7 @@
       "dist_to_goal_m": 0.02963169479141704,
       "env_steps": 5336,
       "physics_ticks": 21680,
-      "elapsed_s": 13.26
+      "elapsed_s": 13.7
     },
     {
       "object_idx": 10,
@@ -4623,7 +4714,8 @@
         "navigation_steps": 4176,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4635,7 +4727,7 @@
       "dist_to_goal_m": 0.02979435190531332,
       "env_steps": 6112,
       "physics_ticks": 25560,
-      "elapsed_s": 15.12
+      "elapsed_s": 15.58
     },
     {
       "object_idx": 10,
@@ -4665,7 +4757,8 @@
         "navigation_steps": 4162,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4677,7 +4770,7 @@
       "dist_to_goal_m": 0.03596043771075889,
       "env_steps": 6098,
       "physics_ticks": 25490,
-      "elapsed_s": 14.25
+      "elapsed_s": 15.04
     },
     {
       "object_idx": 10,
@@ -4707,7 +4800,8 @@
         "navigation_steps": 4034,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4719,7 +4813,7 @@
       "dist_to_goal_m": 0.028201638646458953,
       "env_steps": 6170,
       "physics_ticks": 25050,
-      "elapsed_s": 19.65
+      "elapsed_s": 19.82
     },
     {
       "object_idx": 10,
@@ -4749,7 +4843,8 @@
         "navigation_steps": 3701,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4761,7 +4856,7 @@
       "dist_to_goal_m": 0.028313103694701178,
       "env_steps": 5637,
       "physics_ticks": 23185,
-      "elapsed_s": 15.36
+      "elapsed_s": 16.51
     },
     {
       "object_idx": 10,
@@ -4791,7 +4886,8 @@
         "navigation_steps": 4164,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4803,7 +4899,7 @@
       "dist_to_goal_m": 0.02871251406568217,
       "env_steps": 6100,
       "physics_ticks": 25500,
-      "elapsed_s": 15.66
+      "elapsed_s": 15.4
     },
     {
       "object_idx": 10,
@@ -4833,7 +4929,8 @@
         "navigation_steps": 3865,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4845,7 +4942,7 @@
       "dist_to_goal_m": 0.025381877122471266,
       "env_steps": 5801,
       "physics_ticks": 24005,
-      "elapsed_s": 14.1
+      "elapsed_s": 15.19
     },
     {
       "object_idx": 10,
@@ -4875,7 +4972,8 @@
         "navigation_steps": 4040,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4887,7 +4985,7 @@
       "dist_to_goal_m": 0.02764620437972992,
       "env_steps": 5976,
       "physics_ticks": 24880,
-      "elapsed_s": 15.19
+      "elapsed_s": 15.07
     },
     {
       "object_idx": 10,
@@ -4917,7 +5015,8 @@
         "navigation_steps": 3422,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -4929,7 +5028,7 @@
       "dist_to_goal_m": 0.03502165430038286,
       "env_steps": 5358,
       "physics_ticks": 21790,
-      "elapsed_s": 12.17
+      "elapsed_s": 14.09
     },
     {
       "object_idx": 11,
@@ -4938,9 +5037,9 @@
       "grasp_mode": "auto",
       "carry_tilt_degrees": 30,
       "pickup": {
-        "picked": false,
-        "lift_m": -0.6267526223056927,
-        "grasp_width_m": 0.006152115623450184,
+        "picked": true,
+        "lift_m": 0.1784433090728761,
+        "grasp_width_m": 0.006152115623450175,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -4948,11 +5047,11 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": null,
-        "lift_ticks": null,
-        "lift_steps": null,
-        "reason": "object not lifted",
+        "sim_steps": 5900,
+        "lift_tick": 9803,
+        "lift_ticks": 9403,
+        "lift_steps": 5583,
+        "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
           -1.1130481362629757e-05,
@@ -4960,27 +5059,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": false,
-        "reason": "pickup failed",
-        "navigation_steps": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.07559023025677468,
+        "navigation_steps": 4349,
+        "waypoints": 10,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": true
       },
-      "picked": false,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "pickup",
-      "reason": "object not lifted",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 0,
-      "dist_to_goal_m": 18.127251929233115,
-      "env_steps": 6185,
-      "physics_ticks": 10765,
-      "elapsed_s": 16.75
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 4349,
+      "dist_to_goal_m": 0.07559023025677468,
+      "env_steps": 10249,
+      "physics_ticks": 31985,
+      "elapsed_s": 37.42
     },
     {
       "object_idx": 11,
@@ -4990,8 +5094,8 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.19055371606768567,
-        "grasp_width_m": 0.007380845167614863,
+        "lift_m": 0.17693954262988976,
+        "grasp_width_m": 0.007380845167614865,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -4999,10 +5103,10 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": 10308,
-        "lift_ticks": 9908,
-        "lift_steps": 5848,
+        "sim_steps": 5900,
+        "lift_tick": 9796,
+        "lift_ticks": 9396,
+        "lift_steps": 5576,
         "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
@@ -5011,29 +5115,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": false,
-        "reason": "object dropped during transport",
-        "dist_to_goal_m": 18.70981920408901,
-        "navigation_steps": 150,
-        "carry_tilt_degrees": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.07876563820822881,
+        "navigation_steps": 3270,
+        "waypoints": 5,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "navigation",
-      "reason": "object dropped during transport",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 150,
-      "dist_to_goal_m": 18.70981920408901,
-      "env_steps": 6335,
-      "physics_ticks": 11515,
-      "elapsed_s": 21.47
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 3270,
+      "dist_to_goal_m": 0.07876563820822881,
+      "env_steps": 9170,
+      "physics_ticks": 26590,
+      "elapsed_s": 28.34
     },
     {
       "object_idx": 11,
@@ -5043,8 +5150,8 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.17673449283563258,
-        "grasp_width_m": 0.008254489089859244,
+        "lift_m": 0.1791966340287725,
+        "grasp_width_m": 0.00788541312004681,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5052,10 +5159,10 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": 10322,
-        "lift_ticks": 9922,
-        "lift_steps": 5862,
+        "sim_steps": 5900,
+        "lift_tick": 9792,
+        "lift_ticks": 9392,
+        "lift_steps": 5572,
         "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
@@ -5064,31 +5171,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
         "success": true,
         "reason": "object at goal",
-        "dist_to_goal_m": 0.029167122121248792,
-        "navigation_steps": 4075,
+        "dist_to_goal_m": 0.06872934206305975,
+        "navigation_steps": 4232,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 0
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": true
       },
       "picked": true,
       "success": true,
       "status": "success",
       "failed_stage": null,
       "reason": "object at goal",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 4075,
-      "dist_to_goal_m": 0.029167122121248792,
-      "env_steps": 10260,
-      "physics_ticks": 31140,
-      "elapsed_s": 30.81
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 4232,
+      "dist_to_goal_m": 0.06872934206305975,
+      "env_steps": 10132,
+      "physics_ticks": 31400,
+      "elapsed_s": 38.14
     },
     {
       "object_idx": 11,
@@ -5098,8 +5206,8 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.1111095723388773,
-        "grasp_width_m": 0.004653666277122024,
+        "lift_m": 0.17442200332602276,
+        "grasp_width_m": 0.004653666277122034,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5107,10 +5215,10 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6220,
-        "lift_tick": 10523,
-        "lift_ticks": 10123,
-        "lift_steps": 6063,
+        "sim_steps": 5900,
+        "lift_tick": 9810,
+        "lift_ticks": 9410,
+        "lift_steps": 5590,
         "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
@@ -5119,29 +5227,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": false,
-        "reason": "object dropped during transport",
-        "dist_to_goal_m": 18.134954020096004,
-        "navigation_steps": 150,
-        "carry_tilt_degrees": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.08113008888871984,
+        "navigation_steps": 4354,
+        "waypoints": 11,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": true
       },
       "picked": true,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "navigation",
-      "reason": "object dropped during transport",
-      "pickup_env_steps": 6140,
-      "navigation_env_steps": 150,
-      "dist_to_goal_m": 18.134954020096004,
-      "env_steps": 6370,
-      "physics_ticks": 11550,
-      "elapsed_s": 17.25
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 4354,
+      "dist_to_goal_m": 0.08113008888871984,
+      "env_steps": 10254,
+      "physics_ticks": 32010,
+      "elapsed_s": 34.73
     },
     {
       "object_idx": 11,
@@ -5151,8 +5262,8 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.1763596391794292,
-        "grasp_width_m": 0.007676022753643028,
+        "lift_m": 0.17473718068820487,
+        "grasp_width_m": 0.007676022753643127,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5160,10 +5271,10 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": 10322,
-        "lift_ticks": 9922,
-        "lift_steps": 5862,
+        "sim_steps": 5900,
+        "lift_tick": 9797,
+        "lift_ticks": 9397,
+        "lift_steps": 5577,
         "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
@@ -5172,31 +5283,29 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": true,
-        "reason": "object at goal",
-        "dist_to_goal_m": 0.0314019377202406,
-        "navigation_steps": 3784,
-        "waypoints": 12,
-        "hold_steps": 50,
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 18.986442316892905,
+        "navigation_steps": 150,
         "carry_tilt_degrees": 0
       },
       "picked": true,
-      "success": true,
-      "status": "success",
-      "failed_stage": null,
-      "reason": "object at goal",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 3784,
-      "dist_to_goal_m": 0.0314019377202406,
-      "env_steps": 9969,
-      "physics_ticks": 29685,
-      "elapsed_s": 29.06
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 18.986442316892905,
+      "env_steps": 6050,
+      "physics_ticks": 10990,
+      "elapsed_s": 19.81
     },
     {
       "object_idx": 11,
@@ -5205,9 +5314,9 @@
       "grasp_mode": "auto",
       "carry_tilt_degrees": 30,
       "pickup": {
-        "picked": false,
-        "lift_m": 0.08095927496678734,
-        "grasp_width_m": 0.005476947721045684,
+        "picked": true,
+        "lift_m": 0.1715073169936534,
+        "grasp_width_m": 0.007318676542923452,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5215,11 +5324,11 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": null,
-        "lift_ticks": null,
-        "lift_steps": null,
-        "reason": "object not lifted",
+        "sim_steps": 5900,
+        "lift_tick": 9795,
+        "lift_ticks": 9395,
+        "lift_steps": 5575,
+        "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
           -1.1130481362629757e-05,
@@ -5227,27 +5336,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": false,
-        "reason": "pickup failed",
-        "navigation_steps": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.010313909784342152,
+        "navigation_steps": 3450,
+        "waypoints": 8,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
-      "picked": false,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "pickup",
-      "reason": "object not lifted",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 0,
-      "dist_to_goal_m": 18.35321875327691,
-      "env_steps": 6185,
-      "physics_ticks": 10765,
-      "elapsed_s": 17.9
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 3450,
+      "dist_to_goal_m": 0.010313909784342152,
+      "env_steps": 9350,
+      "physics_ticks": 27490,
+      "elapsed_s": 31.44
     },
     {
       "object_idx": 11,
@@ -5257,8 +5371,8 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.1776365737450133,
-        "grasp_width_m": 0.007868003684989668,
+        "lift_m": 0.17679401633555303,
+        "grasp_width_m": 0.007868003684989609,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5266,10 +5380,10 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": 10324,
-        "lift_ticks": 9924,
-        "lift_steps": 5864,
+        "sim_steps": 5900,
+        "lift_tick": 9794,
+        "lift_ticks": 9394,
+        "lift_steps": 5574,
         "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
@@ -5278,31 +5392,29 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": true,
-        "reason": "object at goal",
-        "dist_to_goal_m": 0.034000971448544096,
-        "navigation_steps": 4053,
-        "waypoints": 11,
-        "hold_steps": 50,
+        "success": false,
+        "reason": "object dropped during transport",
+        "dist_to_goal_m": 19.105323200377644,
+        "navigation_steps": 150,
         "carry_tilt_degrees": 0
       },
       "picked": true,
-      "success": true,
-      "status": "success",
-      "failed_stage": null,
-      "reason": "object at goal",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 4053,
-      "dist_to_goal_m": 0.034000971448544096,
-      "env_steps": 10238,
-      "physics_ticks": 31030,
-      "elapsed_s": 31.39
+      "success": false,
+      "status": "failed",
+      "failed_stage": "navigation",
+      "reason": "object dropped during transport",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 150,
+      "dist_to_goal_m": 19.105323200377644,
+      "env_steps": 6050,
+      "physics_ticks": 10990,
+      "elapsed_s": 20.63
     },
     {
       "object_idx": 11,
@@ -5312,8 +5424,8 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.14076235505379853,
-        "grasp_width_m": 0.00698393587470301,
+        "lift_m": 0.1682472675248481,
+        "grasp_width_m": 0.0069839358747029925,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5321,10 +5433,10 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": 10467,
-        "lift_ticks": 10067,
-        "lift_steps": 6007,
+        "sim_steps": 5900,
+        "lift_tick": 9793,
+        "lift_ticks": 9393,
+        "lift_steps": 5573,
         "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
@@ -5333,29 +5445,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": false,
-        "reason": "object dropped during transport",
-        "dist_to_goal_m": 18.01282404896031,
-        "navigation_steps": 150,
-        "carry_tilt_degrees": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.039445533832371045,
+        "navigation_steps": 3767,
+        "waypoints": 9,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "navigation",
-      "reason": "object dropped during transport",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 150,
-      "dist_to_goal_m": 18.01282404896031,
-      "env_steps": 6335,
-      "physics_ticks": 11515,
-      "elapsed_s": 18.06
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 3767,
+      "dist_to_goal_m": 0.039445533832371045,
+      "env_steps": 9667,
+      "physics_ticks": 29075,
+      "elapsed_s": 30.96
     },
     {
       "object_idx": 11,
@@ -5365,8 +5480,8 @@
       "carry_tilt_degrees": 30,
       "pickup": {
         "picked": true,
-        "lift_m": 0.12358905301479817,
-        "grasp_width_m": 0.004674551331623195,
+        "lift_m": 0.17666949585491976,
+        "grasp_width_m": 0.008218665330468009,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5374,10 +5489,10 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": 10438,
-        "lift_ticks": 10038,
-        "lift_steps": 5978,
+        "sim_steps": 5900,
+        "lift_tick": 9795,
+        "lift_ticks": 9395,
+        "lift_steps": 5575,
         "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
@@ -5386,29 +5501,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": false,
-        "reason": "object dropped during transport",
-        "dist_to_goal_m": 18.208852413638823,
-        "navigation_steps": 150,
-        "carry_tilt_degrees": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.016889969382027366,
+        "navigation_steps": 3942,
+        "waypoints": 12,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
       "picked": true,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "navigation",
-      "reason": "object dropped during transport",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 150,
-      "dist_to_goal_m": 18.208852413638823,
-      "env_steps": 6335,
-      "physics_ticks": 11515,
-      "elapsed_s": 17.44
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 3942,
+      "dist_to_goal_m": 0.016889969382027366,
+      "env_steps": 9842,
+      "physics_ticks": 29950,
+      "elapsed_s": 30.94
     },
     {
       "object_idx": 11,
@@ -5417,9 +5535,9 @@
       "grasp_mode": "auto",
       "carry_tilt_degrees": 30,
       "pickup": {
-        "picked": false,
-        "lift_m": 0.07965103783674221,
-        "grasp_width_m": 0.004848174526961777,
+        "picked": true,
+        "lift_m": 0.17744549790582387,
+        "grasp_width_m": 0.007592062835701468,
         "hold_steps": 50,
         "approach": "side",
         "approaches_considered": [
@@ -5427,11 +5545,11 @@
           "top-down",
           "edge-slide"
         ],
-        "sim_steps": 6185,
-        "lift_tick": 10508,
-        "lift_ticks": 10108,
-        "lift_steps": 6048,
-        "reason": "object not lifted",
+        "sim_steps": 5900,
+        "lift_tick": 9796,
+        "lift_ticks": 9396,
+        "lift_steps": 5576,
+        "reason": "held above table",
         "edge_slide": true,
         "stage_start_pos": [
           -1.1130481362629757e-05,
@@ -5439,27 +5557,32 @@
           0.6407213519061272
         ],
         "stage_end_pos": [
-          -0.4614518973511761,
-          0.03896263159780409,
-          0.6405746682530548
+          -0.4335255281153763,
+          0.07354812720279373,
+          0.6406459965800606
         ]
       },
       "navigation": {
-        "success": false,
-        "reason": "pickup failed",
-        "navigation_steps": 0
+        "success": true,
+        "reason": "object at goal",
+        "dist_to_goal_m": 0.005856480958596044,
+        "navigation_steps": 3163,
+        "waypoints": 7,
+        "hold_steps": 50,
+        "carry_tilt_degrees": 0,
+        "final_reach_repositioned": false
       },
-      "picked": false,
-      "success": false,
-      "status": "failed",
-      "failed_stage": "pickup",
-      "reason": "object not lifted",
-      "pickup_env_steps": 6105,
-      "navigation_env_steps": 0,
-      "dist_to_goal_m": 18.575095705753427,
-      "env_steps": 6185,
-      "physics_ticks": 10765,
-      "elapsed_s": 16.4
+      "picked": true,
+      "success": true,
+      "status": "success",
+      "failed_stage": null,
+      "reason": "object at goal",
+      "pickup_env_steps": 5820,
+      "navigation_env_steps": 3163,
+      "dist_to_goal_m": 0.005856480958596044,
+      "env_steps": 9063,
+      "physics_ticks": 26055,
+      "elapsed_s": 30.01
     },
     {
       "object_idx": 12,
@@ -5489,7 +5612,8 @@
         "navigation_steps": 4301,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5501,7 +5625,7 @@
       "dist_to_goal_m": 0.022103202915742373,
       "env_steps": 6246,
       "physics_ticks": 26230,
-      "elapsed_s": 18.61
+      "elapsed_s": 18.98
     },
     {
       "object_idx": 12,
@@ -5531,7 +5655,8 @@
         "navigation_steps": 3405,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5543,7 +5668,7 @@
       "dist_to_goal_m": 0.04012016646674294,
       "env_steps": 5350,
       "physics_ticks": 21750,
-      "elapsed_s": 14.34
+      "elapsed_s": 14.69
     },
     {
       "object_idx": 12,
@@ -5573,7 +5698,8 @@
         "navigation_steps": 4199,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5585,7 +5711,7 @@
       "dist_to_goal_m": 0.02939361780413084,
       "env_steps": 6144,
       "physics_ticks": 25720,
-      "elapsed_s": 15.65
+      "elapsed_s": 15.87
     },
     {
       "object_idx": 12,
@@ -5615,7 +5741,8 @@
         "navigation_steps": 4304,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5627,7 +5754,7 @@
       "dist_to_goal_m": 0.015008690648096,
       "env_steps": 6249,
       "physics_ticks": 26245,
-      "elapsed_s": 21.46
+      "elapsed_s": 23.93
     },
     {
       "object_idx": 12,
@@ -5657,7 +5784,8 @@
         "navigation_steps": 4041,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5669,7 +5797,7 @@
       "dist_to_goal_m": 0.021690467547894568,
       "env_steps": 5986,
       "physics_ticks": 24930,
-      "elapsed_s": 18.42
+      "elapsed_s": 19.21
     },
     {
       "object_idx": 12,
@@ -5699,7 +5827,8 @@
         "navigation_steps": 3757,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5711,7 +5840,7 @@
       "dist_to_goal_m": 0.02460080147164983,
       "env_steps": 5702,
       "physics_ticks": 23510,
-      "elapsed_s": 17.06
+      "elapsed_s": 18.49
     },
     {
       "object_idx": 12,
@@ -5741,7 +5870,8 @@
         "navigation_steps": 4308,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5753,7 +5883,7 @@
       "dist_to_goal_m": 0.021967809147085904,
       "env_steps": 6253,
       "physics_ticks": 26265,
-      "elapsed_s": 17.53
+      "elapsed_s": 18.01
     },
     {
       "object_idx": 12,
@@ -5783,7 +5913,8 @@
         "navigation_steps": 3888,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5795,7 +5926,7 @@
       "dist_to_goal_m": 0.024989839891220673,
       "env_steps": 5833,
       "physics_ticks": 24165,
-      "elapsed_s": 16.83
+      "elapsed_s": 18.6
     },
     {
       "object_idx": 12,
@@ -5825,7 +5956,8 @@
         "navigation_steps": 4063,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5837,7 +5969,7 @@
       "dist_to_goal_m": 0.028739495033418744,
       "env_steps": 6008,
       "physics_ticks": 25040,
-      "elapsed_s": 16.18
+      "elapsed_s": 16.37
     },
     {
       "object_idx": 12,
@@ -5867,7 +5999,8 @@
         "navigation_steps": 3422,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5879,7 +6012,7 @@
       "dist_to_goal_m": 0.02205334392461126,
       "env_steps": 5367,
       "physics_ticks": 21835,
-      "elapsed_s": 14.67
+      "elapsed_s": 15.31
     },
     {
       "object_idx": 13,
@@ -5910,7 +6043,8 @@
         "navigation_steps": 4303,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5922,7 +6056,7 @@
       "dist_to_goal_m": 0.013917111177881657,
       "env_steps": 6239,
       "physics_ticks": 26195,
-      "elapsed_s": 18.78
+      "elapsed_s": 20.23
     },
     {
       "object_idx": 13,
@@ -5953,7 +6087,8 @@
         "navigation_steps": 3407,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -5965,7 +6100,7 @@
       "dist_to_goal_m": 0.024304140960959463,
       "env_steps": 5343,
       "physics_ticks": 21715,
-      "elapsed_s": 18.64
+      "elapsed_s": 20.57
     },
     {
       "object_idx": 13,
@@ -5996,7 +6131,8 @@
         "navigation_steps": 4185,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6008,7 +6144,7 @@
       "dist_to_goal_m": 0.024792273978578996,
       "env_steps": 6121,
       "physics_ticks": 25605,
-      "elapsed_s": 18.04
+      "elapsed_s": 19.47
     },
     {
       "object_idx": 13,
@@ -6048,7 +6184,7 @@
       "dist_to_goal_m": 17.67768695692406,
       "env_steps": 2303,
       "physics_ticks": 5047,
-      "elapsed_s": 6.58
+      "elapsed_s": 6.23
     },
     {
       "object_idx": 13,
@@ -6087,7 +6223,7 @@
       "dist_to_goal_m": 17.545092596028834,
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 7.79
+      "elapsed_s": 8.2
     },
     {
       "object_idx": 13,
@@ -6126,7 +6262,7 @@
       "dist_to_goal_m": 17.832924652818242,
       "env_steps": 1936,
       "physics_ticks": 4680,
-      "elapsed_s": 8.48
+      "elapsed_s": 8.57
     },
     {
       "object_idx": 13,
@@ -6157,7 +6293,8 @@
         "navigation_steps": 4176,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6169,7 +6306,7 @@
       "dist_to_goal_m": 0.048457889045305076,
       "env_steps": 6112,
       "physics_ticks": 25560,
-      "elapsed_s": 16.59
+      "elapsed_s": 18.22
     },
     {
       "object_idx": 13,
@@ -6200,7 +6337,8 @@
         "navigation_steps": 3878,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6212,7 +6350,7 @@
       "dist_to_goal_m": 0.02495024507441453,
       "env_steps": 5814,
       "physics_ticks": 24070,
-      "elapsed_s": 13.5
+      "elapsed_s": 14.92
     },
     {
       "object_idx": 13,
@@ -6252,7 +6390,7 @@
       "dist_to_goal_m": 17.668228446739437,
       "env_steps": 2376,
       "physics_ticks": 5120,
-      "elapsed_s": 7.31
+      "elapsed_s": 8.01
     },
     {
       "object_idx": 13,
@@ -6293,7 +6431,7 @@
       "dist_to_goal_m": 18.050427106855707,
       "env_steps": 2106,
       "physics_ticks": 5530,
-      "elapsed_s": 8.21
+      "elapsed_s": 8.9
     },
     {
       "object_idx": 14,
@@ -6323,7 +6461,8 @@
         "navigation_steps": 4324,
         "waypoints": 10,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6335,7 +6474,7 @@
       "dist_to_goal_m": 0.01814568629924848,
       "env_steps": 6260,
       "physics_ticks": 26300,
-      "elapsed_s": 14.59
+      "elapsed_s": 16.08
     },
     {
       "object_idx": 14,
@@ -6365,7 +6504,8 @@
         "navigation_steps": 3423,
         "waypoints": 5,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6377,7 +6517,7 @@
       "dist_to_goal_m": 0.03057569726954047,
       "env_steps": 5359,
       "physics_ticks": 21795,
-      "elapsed_s": 16.87
+      "elapsed_s": 16.53
     },
     {
       "object_idx": 14,
@@ -6407,7 +6547,8 @@
         "navigation_steps": 4202,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6419,7 +6560,7 @@
       "dist_to_goal_m": 0.03467943099222896,
       "env_steps": 6138,
       "physics_ticks": 25690,
-      "elapsed_s": 18.34
+      "elapsed_s": 18.78
     },
     {
       "object_idx": 14,
@@ -6449,7 +6590,8 @@
         "navigation_steps": 4343,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6461,7 +6603,7 @@
       "dist_to_goal_m": 0.03353407911083315,
       "env_steps": 6279,
       "physics_ticks": 26395,
-      "elapsed_s": 15.69
+      "elapsed_s": 17.39
     },
     {
       "object_idx": 14,
@@ -6491,7 +6633,8 @@
         "navigation_steps": 4159,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6503,7 +6646,7 @@
       "dist_to_goal_m": 0.014593440562239518,
       "env_steps": 6095,
       "physics_ticks": 25475,
-      "elapsed_s": 15.84
+      "elapsed_s": 17.2
     },
     {
       "object_idx": 14,
@@ -6533,7 +6676,8 @@
         "navigation_steps": 3828,
         "waypoints": 8,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6545,7 +6689,7 @@
       "dist_to_goal_m": 0.014891332251810649,
       "env_steps": 5764,
       "physics_ticks": 23820,
-      "elapsed_s": 15.48
+      "elapsed_s": 17.25
     },
     {
       "object_idx": 14,
@@ -6575,7 +6719,8 @@
         "navigation_steps": 4180,
         "waypoints": 11,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6587,7 +6732,7 @@
       "dist_to_goal_m": 0.026634891829195623,
       "env_steps": 6116,
       "physics_ticks": 25580,
-      "elapsed_s": 12.9
+      "elapsed_s": 15.48
     },
     {
       "object_idx": 14,
@@ -6617,7 +6762,8 @@
         "navigation_steps": 3875,
         "waypoints": 9,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6629,7 +6775,7 @@
       "dist_to_goal_m": 0.026483645199483544,
       "env_steps": 5811,
       "physics_ticks": 24055,
-      "elapsed_s": 14.5
+      "elapsed_s": 14.99
     },
     {
       "object_idx": 14,
@@ -6659,7 +6805,8 @@
         "navigation_steps": 4089,
         "waypoints": 12,
         "hold_steps": 50,
-        "carry_tilt_degrees": 30
+        "carry_tilt_degrees": 30,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6671,7 +6818,7 @@
       "dist_to_goal_m": 0.0075234359354488505,
       "env_steps": 6025,
       "physics_ticks": 25125,
-      "elapsed_s": 11.56
+      "elapsed_s": 13.03
     },
     {
       "object_idx": 14,
@@ -6701,7 +6848,8 @@
         "navigation_steps": 3445,
         "waypoints": 7,
         "hold_steps": 50,
-        "carry_tilt_degrees": 15
+        "carry_tilt_degrees": 15,
+        "final_reach_repositioned": false
       },
       "picked": true,
       "success": true,
@@ -6713,7 +6861,7 @@
       "dist_to_goal_m": 0.026142518773753814,
       "env_steps": 5381,
       "physics_ticks": 21905,
-      "elapsed_s": 11.94
+      "elapsed_s": 11.93
     }
   ]
 }

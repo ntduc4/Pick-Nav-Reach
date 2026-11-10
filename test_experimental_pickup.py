@@ -2,6 +2,7 @@
 
 import unittest
 
+import numpy as np
 import pybullet as p
 
 from experimental_pickup import RimPickupController, SidePickupController, propose_edge_pinches
@@ -18,8 +19,28 @@ class ExperimentalPickupTests(unittest.TestCase):
                 obs, _ = env.step(obs["qpos"])
             initial_z = float(obs["object_pos"][2])
             controller = controller_type(env)
+            preclose = []
+            if controller_type is SidePickupController:
+                move = controller.move
+
+                def record_preclose(target, steps=100, **kwargs):
+                    if controller.stage_end_pos is not None and steps == 60 and kwargs.get("near_grasp"):
+                        joints = p.getJointStates(env.robot_id, env.joint_indices[-2:],
+                                                 physicsClientId=env.pb_physics_client)
+                        pos, _ = p.getBasePositionAndOrientation(
+                            env.object_id, physicsClientId=env.pb_physics_client)
+                        shift = np.linalg.norm(np.asarray(pos[:2]) -
+                                               controller.stage_end_pos[:2])
+                        preclose.append((min(joint[0] for joint in joints), shift))
+                    return move(target, steps, **kwargs)
+
+                controller.move = record_preclose
             result = controller.run(obs)
             self.assertTrue(result["picked"], result)
+            if controller_type is SidePickupController:
+                self.assertEqual(len(preclose), 1)
+                self.assertGreaterEqual(preclose[0][0], 0.010)  # per finger, before closing
+                self.assertLess(preclose[0][1], 0.008)  # no large push during entry
             self.assertGreaterEqual(result["lift_m"], 0.10)
             self.assertEqual(result["hold_steps"], 50)
             self.assertGreaterEqual(env.obs["object_pos"][2] - initial_z, 0.10)

@@ -252,6 +252,71 @@ class NavigationController:
             self._completed_carry_tilt = degrees
         return obs, achieved
 
+    def _plate_reach_from_open_space(self, obs, table_aabb, finger_target, monitor):
+        """Back into the clear corridor before unfolding a staged plate grasp.
+
+        Near the goal the plate's horizontal jaw orientation can pin the
+        shoulder, elbow and wrist against their limits. Moving the base back
+        leaves room to extend the arm to the goal at a lower height without
+        turning the wrist or releasing either finger.
+        """
+        env, pickup = self.env, self.pickup
+        base = self.base_xy(obs)
+        carried_offset = np.asarray(obs["object_pos"][:2]) - base
+        object_half = np.max(np.abs(np.asarray(obs["object_pc"][:, :2]) -
+                                    obs["object_pos"][:2]), axis=0)
+        grid = MazeGrid(obs["cube_positions"], table_aabb, carried_offset,
+                        object_half, base_bounds=self.robot_bounds(obs))
+        retreat = 0.5
+        if not grid.segment_free(base, base - [retreat, 0]):
+            return None
+
+        hand = p.getLinkState(env.robot_id, pickup.hand,
+                              physicsClientId=env.pb_physics_client)
+
+        def goal_hand_position(current, pose):
+            # Only lower into the goal's tolerance, leaving a vertical margin
+            # for the object to settle during the final 50-step hold.
+            relative_x = current["object_pos"][0] - pose[4][0]
+            dz = min(0.0, float(current["goal_pos"][2] + 0.05 -
+                                current["object_pos"][2]))
+            return np.array([current["goal_pos"][0] - relative_x,
+                             pose[4][1], pose[4][2] + dz])
+
+        def solve(reference, position, max_joint_change=1.5):
+            target = pickup._solve(position, hand[5], reference,
+                                   position_tolerance=0.02, iterations=250,
+                                   damping=0.005, prefer_reference=True,
+                                   elbow_seeds=(float(reference[9]), 1.2, 0.0,
+                                                -0.8, 0.8, -1.5, 1.8))
+            if (target is None or
+                    np.max(np.abs(target[3:13] - reference[3:13])) >= max_joint_change):
+                return None
+            target[-2:] = finger_target
+            if not pickup._segment_free(reference, target):
+                return None
+            return target
+
+        # Reject an unreachable extended pose before moving the real base.
+        projected = obs["qpos"].astype(float).copy()
+        projected[0] -= retreat
+        # The simulated base shift is slightly larger than the measured
+        # servo retreat, so allow a small preflight margin. The real motion
+        # still has to meet the stricter 1.5-radian joint-change limit.
+        if solve(projected, goal_hand_position(obs, hand), max_joint_change=1.55) is None:
+            return None
+
+        withdrawn = obs["qpos"].astype(float).copy()
+        withdrawn[0] -= retreat
+        obs = self._drive(obs, withdrawn, monitor)
+        hand = p.getLinkState(env.robot_id, pickup.hand,
+                              physicsClientId=env.pb_physics_client)
+        target = solve(obs["qpos"].astype(float), goal_hand_position(obs, hand))
+        if target is None:
+            raise RuntimeError("no collision-free final reach pose after safe retreat")
+        obs = pickup.move(target, 220, on_step=monitor)
+        return obs, target
+
     def run(self, pickup_result):
         if not pickup_result["picked"]:
             return {"success": False, "reason": "pickup failed", "navigation_steps": 0}
@@ -370,6 +435,7 @@ class NavigationController:
                 target[:2] = np.asarray(waypoint) + [2.0, 0.0]
                 obs = self._drive(obs, target, monitor)
                 carry = target
+            repositioned_final_reach = False
             if abs(float(obs["object_pos"][2] - obs["goal_pos"][2])) > 0.06:
                 # Side grasps of tall objects may only stow safely above goal
                 # height. Lower the held object once clear of the maze; an
@@ -402,10 +468,17 @@ class NavigationController:
                             carry = shifted
                         break
                 if lowered is None:
-                    raise RuntimeError("no collision-free final reach pose")
-                lowered[-2:] = finger_target
-                obs = pickup.move(lowered, 80, on_step=monitor)
-                carry = lowered
+                    retry = (self._plate_reach_from_open_space(
+                        obs, table_aabb, finger_target, monitor)
+                        if pickup_result.get("edge_slide") else None)
+                    if retry is None:
+                        raise RuntimeError("no collision-free final reach pose")
+                    obs, carry = retry
+                    repositioned_final_reach = True
+                else:
+                    lowered[-2:] = finger_target
+                    obs = pickup.move(lowered, 80, on_step=monitor)
+                    carry = lowered
             # At the exit, tighten the position within the goal tolerance if
             # the safely biased corridor center leaves a small lateral error.
             for _ in range(3):
@@ -431,10 +504,11 @@ class NavigationController:
                 monitor(obs)
             distance = float(np.linalg.norm(obs["object_pos"] - obs["goal_pos"]))
             return {"success": distance < 0.10, "reason": ("object at goal" if distance < 0.10
-                    else "object outside goal tolerance"), "dist_to_goal_m": distance,
-                    "navigation_steps": env.step_count - started,
-                    "waypoints": len(waypoints), "hold_steps": 50,
-                    "carry_tilt_degrees": carry_tilt}
+                     else "object outside goal tolerance"), "dist_to_goal_m": distance,
+                     "navigation_steps": env.step_count - started,
+                     "waypoints": len(waypoints), "hold_steps": 50,
+                     "carry_tilt_degrees": carry_tilt,
+                     "final_reach_repositioned": repositioned_final_reach}
         except RuntimeError as exc:
             return {"success": False, "reason": str(exc),
                     "dist_to_goal_m": float(env.evaluate()["dist_to_goal"]),

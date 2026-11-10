@@ -149,7 +149,10 @@ class SidePickupController(PickupController):
                     raise RuntimeError("edge slide IK failed")
                 if not self._segment_free(reference, q):
                     raise RuntimeError("edge slide blocked by table")
-                steps = max(8, int(np.max(np.abs(q - reference)) / 0.005))
+                # Preserve a measured slide while reducing redundant motor
+                # interpolation steps; faster increments lost plate grasps
+                # during transport even when the initial lift succeeded.
+                steps = max(8, int(np.max(np.abs(q - reference)) / 0.008))
                 obs = self.move(q, steps, near_grasp=point[2] < self.table_top + 0.174,
                                 tracking_tolerance=0.02)
                 reference = obs["qpos"].astype(float)
@@ -185,14 +188,21 @@ class SidePickupController(PickupController):
         for grasp in propose_edge_pinches(obs):
             if grasp.center[0] >= table_left - 0.019:
                 continue
-            self.opening = max(0.004, (grasp.width - 0.00285) / 2 + 0.002)
+            # Keep the upper and lower pads clear of the plate while entering:
+            # a nearly closed pre-grasp pushes the rim instead of straddling it.
+            # The table-clearance checks below reject any opening that puts
+            # the lower finger too close to the tabletop.
+            self.opening = max(0.012, (grasp.width - 0.00285) / 2 + 0.006)
             # Point INTO the object from the rim, not from an assumed base
             # location. The old yaw could drive the palm across the rim.
             inward = obs["object_pos"][:2] - grasp.center[:2]
             yaw = np.arctan2(inward[1], inward[0])
             orientation = p.getQuaternionFromEuler([np.pi / 2, 0, yaw])
             approach = np.array(p.getMatrixFromQuaternion(orientation)).reshape(3, 3)[:, 0]
-            contact = grasp.center - 0.025 * approach
+            # The finger pads extend beyond the tool centre. Stopping 25 mm
+            # short leaves only their tips on the rim; put the centre just
+            # outside the observed edge so the pads reach farther underneath.
+            contact = grasp.center - 0.005 * approach
             pre = contact - 0.05 * approach
             raised = pre.copy()
             raised[2] = hand[2]

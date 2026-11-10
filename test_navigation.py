@@ -141,6 +141,23 @@ class CarryOrientationTests(unittest.TestCase):
         self.pickup.move.assert_not_called()
 
 
+class PlateFinalReachPlanningTests(unittest.TestCase):
+    def test_blocked_retreat_never_moves_or_repositions_arm(self):
+        nav = NavigationController(MagicMock(), MagicMock())
+        obs = {"qpos": np.zeros(15), "object_pos": np.array([0.3, 0.0, 1.0]),
+               "object_pc": np.array([[0.2, -0.1, 1.0], [0.4, 0.1, 1.0]]),
+               "cube_positions": np.array([[1.0, 0.0], [2.0, 0.0]])}
+        with (patch.object(nav, "robot_bounds", return_value=([-0.3, -0.3],
+                                                                [0.3, 0.3])),
+              patch("navigation_controller.MazeGrid") as grid,
+              patch.object(nav, "_drive") as drive):
+            grid.return_value.segment_free.return_value = False
+            self.assertIsNone(nav._plate_reach_from_open_space(
+                obs, TABLE_AWAY, np.array([0.012, 0.012]), lambda _: None))
+            drive.assert_not_called()
+            nav.pickup._solve.assert_not_called()
+
+
 class FullTaskTests(unittest.TestCase):
     def run_trial(self, index, seed):
         from pick_nav_reach_env import PickNavReachEnv
@@ -187,6 +204,13 @@ class FullTaskTests(unittest.TestCase):
     def test_staged_plate_retracts_and_reaches_goal(self):
         picked, _, _ = self.run_trial(11, 42)
         self.assertTrue(picked["edge_slide"])
+
+    def test_staged_plate_repositions_in_open_space_for_final_reach(self):
+        for seed in (60, 62, 63):
+            with self.subTest(seed=seed):
+                picked, reached, _ = self.run_trial(11, seed)
+                self.assertTrue(picked["edge_slide"])
+                self.assertTrue(reached["final_reach_repositioned"])
 
     def test_top_grasped_banana_reaches_goal_on_second_maze(self):
         picked, _, _ = self.run_trial(5, 43)
