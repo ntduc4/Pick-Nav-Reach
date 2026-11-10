@@ -500,7 +500,7 @@ class PickupController:
         return None
 
     def move(self, target, steps=100, near_grasp=False, approaching_object=False,
-             on_step=None, tracking_tolerance=None):
+             on_step=None, tracking_tolerance=None, hold_fingers=False):
         """Interpolate joint targets; abort if the actual robot strikes the table."""
         start = self.env.agent_qpos
         obs = None
@@ -511,6 +511,11 @@ class PickupController:
         try:
             for i in range(1, steps + 1):
                 action = start + (target - start) * i / steps
+                if hold_fingers:
+                    # The actual jaws remain partly open around an object even
+                    # when their commanded target is closed. Interpolating from
+                    # the measured opening would briefly release pad pressure.
+                    action[-2:] = target[-2:]
                 for _ in range(repeats):
                     obs, _ = self.env.step(action)
                     self._check_actual_clearance(near_grasp, approaching_object)

@@ -147,6 +147,7 @@ class CarryOrientationTests(unittest.TestCase):
             np.testing.assert_array_equal(call.args[0][-2:], [0.007, 0.007])
             self.assertEqual(call.args[1], 20)
             self.assertIs(call.kwargs["on_step"], monitor)
+            self.assertTrue(call.kwargs["hold_fingers"])
 
     def test_uses_only_reachable_tilt_and_leaves_stable_grasps_alone(self):
         self.pickup._solve.side_effect = [np.zeros(15), None]

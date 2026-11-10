@@ -1,11 +1,39 @@
 import unittest
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 import numpy as np
 import pybullet as p
 
 from pickup_controller import (PickupController, propose_grasps,
                                propose_radial_rim_grasps)
+
+
+class CarryGripCommandTests(unittest.TestCase):
+    def test_held_grip_does_not_interpolate_from_measured_finger_opening(self):
+        start = np.r_[np.zeros(13), 0.04, 0.045]
+        target = np.zeros(15)
+        target[6] = 0.3
+        target[-2:] = [0.007, 0.01]
+
+        def commands(hold_fingers):
+            env = MagicMock(substeps=5)
+            env.agent_qpos = start.copy()
+            env.step.side_effect = lambda action: (
+                {"qpos": action.copy(), "qvel": np.zeros(15)}, {})
+            controller = PickupController.__new__(PickupController)
+            controller.env = env
+            controller._check_actual_clearance = MagicMock()
+            controller.move(target, steps=3, hold_fingers=hold_fingers)
+            return [call.args[0] for call in env.step.call_args_list]
+
+        normal = commands(False)
+        holding = commands(True)
+        np.testing.assert_allclose(normal[0][-2:], start[-2:] * (2 / 3) +
+                                   target[-2:] / 3)
+        self.assertAlmostEqual(normal[0][6], 0.1)
+        self.assertAlmostEqual(holding[0][6], 0.1)
+        for action in holding:
+            np.testing.assert_array_equal(action[-2:], target[-2:])
 
 
 class GraspTests(unittest.TestCase):

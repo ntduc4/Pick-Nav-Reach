@@ -273,7 +273,7 @@ class NavigationController:
         for degrees, target in planned:
             if not pickup._segment_free(obs["qpos"], target):
                 break  # the actual joints can lag a planned waypoint
-            obs = pickup.move(target, 20, on_step=monitor)
+            obs = pickup.move(target, 20, on_step=monitor, hold_fingers=True)
             achieved = degrees
             self._completed_carry_tilt = degrees
         return obs, achieved
@@ -409,7 +409,8 @@ class NavigationController:
             carry[-2:] = finger_target
             # The object may rock within the fingers during this reorientation;
             # judge the settled hold before redefining its hand-relative pose.
-            obs = pickup.move(carry, 150)
+            obs = pickup.move(carry, 150,
+                              hold_fingers=pickup_result.get("approach") == "top-down")
             monitor(obs)
             hand = p.getLinkState(env.robot_id, pickup.hand,
                                   physicsClientId=env.pb_physics_client)
