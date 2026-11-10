@@ -156,7 +156,7 @@ def run_trials(tasks, workers, quiet, grasp_mode="auto", max_navigation_steps=15
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--seeds", nargs="+", type=int, default=list(range(60, 70)),
+    parser.add_argument("--seeds", nargs="+", type=int, default=list(range(100, 200)),
                         help="trial seeds (default: 60 through 69)")
     parser.add_argument("--objects", nargs="+", type=int,
                         help="object indices (default: all provided objects)")

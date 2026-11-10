@@ -71,12 +71,25 @@ class MazeGrid:
                              (np.asarray(end) - start) * i / max(1, ceil(length / 0.08)))
                    for i in range(max(1, ceil(length / 0.08)) + 1))
 
+    def _axis_route(self, start, end):
+        """Connect two positions using only checked horizontal/vertical legs."""
+        start, end = np.asarray(start, dtype=float), np.asarray(end, dtype=float)
+        if abs(start[0] - end[0]) < 1e-8 or abs(start[1] - end[1]) < 1e-8:
+            return [end] if self.segment_free(start, end) else None
+        for corner in ((end[0], start[1]), (start[0], end[1])):
+            corner = np.asarray(corner)
+            if self.segment_free(start, corner) and self.segment_free(corner, end):
+                return [corner, end]
+        return None
+
     def _nearest(self, xy):
         cells = ((x, y) for x in range(self.shape[0])
                  for y in range(self.shape[1]) if (x, y) not in self.blocked)
         for cell in sorted(cells, key=lambda cell: np.linalg.norm(self.point(cell) - xy)):
-            if self.free(self.point(cell)) and self.segment_free(xy, self.point(cell)):
-                return cell
+            if self.free(self.point(cell)):
+                connector = self._axis_route(xy, self.point(cell))
+                if connector is not None:
+                    return cell, connector
         return None
 
     def plan(self, start, goal):
@@ -84,9 +97,11 @@ class MazeGrid:
         start, goal = np.asarray(start, dtype=float), np.asarray(goal, dtype=float)
         if not self.free(start) or not self.free(goal):
             return None
-        source, target = self._nearest(start), self._nearest(goal)
-        if source is None or target is None:
+        start_connection, goal_connection = self._nearest(start), self._nearest(goal)
+        if start_connection is None or goal_connection is None:
             return None
+        source, entry = start_connection
+        target, _ = goal_connection
         frontier = [(np.linalg.norm(self.point(source) - self.point(target)), 0, source)]
         best = {source: 0}
         parent = {}
@@ -100,20 +115,24 @@ class MazeGrid:
                     cell = parent[cell]
                     route.append(cell)
                 route.reverse()
-                points = [self.point(cell) for cell in route]
-                # Straight-line shortcuts are checked with the full carried
-                # footprint, including the table and corner transitions.
-                waypoints = [start]
-                i = 0
-                while i < len(points):
-                    j = len(points) - 1
-                    while j > i and not self.segment_free(waypoints[-1], points[j]):
-                        j -= 1
-                    waypoints.append(points[j])
-                    i = j + 1
-                if not self.segment_free(waypoints[-1], goal):
+                exit_leg = self._axis_route(self.point(target), goal)
+                if exit_leg is None:
                     return None
-                waypoints.append(goal)
+                # A* visits cardinal neighbors. Keep that property when
+                # shortening the route: no unchecked diagonal shortcut may
+                # be executed by independently controlled base joints.
+                waypoints = [start]
+                for point in entry + [self.point(cell) for cell in route[1:]] + exit_leg:
+                    if np.linalg.norm(point - waypoints[-1]) < 1e-8:
+                        continue
+                    same_axis = (len(waypoints) > 1 and any(
+                        abs(waypoints[-2][axis] - waypoints[-1][axis]) < 1e-8 and
+                        abs(waypoints[-1][axis] - point[axis]) < 1e-8
+                        for axis in (0, 1)))
+                    if same_axis and self.segment_free(waypoints[-2], point):
+                        waypoints[-1] = point
+                    else:
+                        waypoints.append(point)
                 return waypoints[1:]
             for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
                 neighbor = (cell[0] + dx, cell[1] + dy)
@@ -172,26 +191,33 @@ class NavigationController:
         return None
 
     def _drive(self, obs, target, monitor, tolerance=0.025):
-        """Servo virtual base joints with short, velocity-damped targets.
+        """Servo one virtual base joint at a time with velocity damping.
 
-        Long interpolated joint targets can overshoot by tens of centimetres
-        with the pickup motor gains, so each command starts at the measured
-        position instead of replaying a long open-loop joint trajectory.
+        A checked straight line is not safe if separately clipped X/Y motors
+        take a different diagonal. Refuse diagonal waypoints and keep the
+        stationary joint fixed while tracking each axis.
         """
         target = np.asarray(target, dtype=float)
-        distance = np.linalg.norm(target[:2] - obs["qpos"][:2])
-        for _ in range(max(180, ceil(distance / 0.002) * 2)):
-            error = target[:2] - obs["qpos"][:2]
-            if np.linalg.norm(error) < tolerance and np.max(np.abs(obs["qvel"][:2])) < 0.12:
-                return obs
-            command = target.copy()
-            command[:2] = (obs["qpos"][:2] +
-                           np.clip(0.3 * error - 0.04 * obs["qvel"][:2],
-                                   -0.015, 0.015))
-            obs, _ = self.env.step(command)
-            self.pickup._check_actual_clearance()
-            monitor(obs)
-        raise RuntimeError("base failed to track maze waypoint")
+        if np.count_nonzero(np.abs(target[:2] - obs["qpos"][:2]) > tolerance) > 1:
+            raise RuntimeError("diagonal base waypoint was not split into safe axis legs")
+        for axis in (0, 1):
+            fixed = float(obs["qpos"][1 - axis])
+            distance = abs(float(target[axis] - obs["qpos"][axis]))
+            for _ in range(max(180, ceil(distance / 0.002) * 2)):
+                error = target[axis] - obs["qpos"][axis]
+                if abs(error) < tolerance and abs(obs["qvel"][axis]) < 0.12:
+                    break
+                command = target.copy()
+                command[:2] = obs["qpos"][:2]
+                command[axis] += np.clip(0.3 * error - 0.04 * obs["qvel"][axis],
+                                         -0.015, 0.015)
+                command[1 - axis] = fixed
+                obs, _ = self.env.step(command)
+                self.pickup._check_actual_clearance()
+                monitor(obs)
+            else:
+                raise RuntimeError("base failed to track maze waypoint")
+        return obs
 
     def _support_grasp(self, obs, pickup_result, monitor):
         """Roll an overhead grasp toward a supporting lower finger before stowing.
@@ -488,17 +514,22 @@ class NavigationController:
                                      -0.012, 0.012)
                 if np.linalg.norm(correction) < 0.005:
                     break
-                shifted = carry.copy()
-                shifted[:2] += correction
-                near_goal = MazeGrid(obs["cube_positions"], table_aabb,
-                                     np.asarray(obs["object_pos"][:2]) - self.base_xy(obs),
-                                     object_half, base_bounds=self.robot_bounds(obs))
-                near_goal.margin = 0.009  # live contacts remain checked at 8 mm
-                if not near_goal.segment_free(self.base_xy(obs),
-                                              self.base_xy(obs) + correction):
-                    break
-                obs = self._drive(obs, shifted, monitor, tolerance=0.005)
-                carry = shifted
+                for axis in (0, 1):
+                    if abs(correction[axis]) < 0.005:
+                        continue
+                    step = np.zeros(2)
+                    step[axis] = correction[axis]
+                    near_goal = MazeGrid(obs["cube_positions"], table_aabb,
+                                         np.asarray(obs["object_pos"][:2]) - self.base_xy(obs),
+                                         object_half, base_bounds=self.robot_bounds(obs))
+                    near_goal.margin = 0.009  # live contacts remain checked at 8 mm
+                    if not near_goal.segment_free(self.base_xy(obs),
+                                                  self.base_xy(obs) + step):
+                        break
+                    shifted = carry.copy()
+                    shifted[:2] = obs["qpos"][:2] + step
+                    obs = self._drive(obs, shifted, monitor, tolerance=0.005)
+                    carry = shifted
             for _ in range(50):
                 obs, _ = env.step(carry)
                 monitor(obs)

@@ -23,7 +23,23 @@ class MazeGridTests(unittest.TestCase):
         np.testing.assert_allclose(path[-1], goal)
         self.assertTrue(all(grid.segment_free(a, b) for a, b in
                             zip([start] + path[:-1], path)))
+        self.assertTrue(all(np.count_nonzero(np.abs(b - a) > 1e-8) <= 1
+                            for a, b in zip([start] + path[:-1], path)))
         self.assertFalse(grid.segment_free(start, goal))
+
+    def test_off_center_start_and_goal_use_checked_axis_connectors(self):
+        walls = ([(x, y) for x in range(7) for y in (0, 4)] +
+                 [(x, y) for x in (0, 6) for y in range(1, 4)] +
+                 [(3, y) for y in (1, 3)])
+        grid = MazeGrid(walls, TABLE_AWAY, [0.16, 0], [0.08, 0.08],
+                        base_half=(0.22, 0.22))
+        start, goal = np.array([1.18, 1.22]), np.array([5.2, 1.18])
+        path = grid.plan(start, goal)
+        self.assertIsNotNone(path)
+        np.testing.assert_allclose(path[-1], goal)
+        for a, b in zip([start] + path[:-1], path):
+            self.assertLessEqual(np.count_nonzero(np.abs(b - a) > 1e-8), 1)
+            self.assertTrue(grid.segment_free(a, b))
 
     def test_closed_opening_has_no_path(self):
         walls = ([(x, y) for x in range(7) for y in (0, 4)] +
@@ -59,6 +75,40 @@ class MazeGridTests(unittest.TestCase):
         self.assertIsNotNone(route)
         self.assertLess(abs(route[-1][1]), 0.1)
         self.assertTrue(grid.free(route[-1]))
+
+
+class BaseDriveTests(unittest.TestCase):
+    def test_drive_commands_only_one_translation_axis_per_step(self):
+        obs = {"qpos": np.zeros(15), "qvel": np.zeros(15)}
+        commands = []
+
+        def step(command):
+            nonlocal obs
+            delta = command[:2] - obs["qpos"][:2]
+            commands.append(delta)
+            obs = {"qpos": command.copy(), "qvel": np.zeros(15)}
+            return obs, {}
+
+        env = MagicMock()
+        env.step.side_effect = step
+        nav = NavigationController(env, MagicMock())
+        target = np.zeros(15)
+        target[1] = 0.5
+        result = nav._drive(obs, target, lambda current: None)
+        self.assertTrue(commands)
+        self.assertTrue(all(np.count_nonzero(np.abs(delta) > 1e-8) <= 1
+                            for delta in commands))
+        self.assertLess(abs(result["qpos"][1] - target[1]), 0.025)
+
+    def test_drive_refuses_an_unchecked_diagonal(self):
+        env = MagicMock()
+        nav = NavigationController(env, MagicMock())
+        obs = {"qpos": np.zeros(15), "qvel": np.zeros(15)}
+        target = np.zeros(15)
+        target[:2] = [1, 1]
+        with self.assertRaisesRegex(RuntimeError, "diagonal base waypoint"):
+            nav._drive(obs, target, lambda current: None)
+        env.step.assert_not_called()
 
 
 class CarryOrientationTests(unittest.TestCase):
