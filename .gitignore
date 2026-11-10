@@ -138,3 +138,7 @@ tests/results/
 *.pptx
 *.pptx#
 presentation/
+!team32_final_report.tex
+!report/nus_logo.png
+!report/nus_logo.svg
+!report/nus_logo.pdf
