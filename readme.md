@@ -133,7 +133,7 @@ We evaluate your algorithms in the following two aspects with 5 Unprovided seeds
 
 Unless otherwise stated: placement tolerance = **10 cm**
 
-## Pick (64%)
+#### Pick (64%)
 
 ### Grasp Genration 
 
@@ -159,7 +159,7 @@ For each trial, award the following (sum; then average across trials):
 
 ![Scene](imgs/success_grasp.png)
 
-## Navigation and Reach (36%)
+#### Navigation and Reach (36%)
 
 Use the maze configuration to navigate and reach the goal.
 
@@ -188,7 +188,7 @@ For each trial, award the following (sum; then average across trials):
 
 ### Week 8 / Weeks 9-10 prototype
 
-### Bowl rim fix and experimental plate side pickup
+#### Bowl rim fix and experimental plate side pickup
 
 The bowl's narrow rim now uses a segmented, straight Cartesian lift with the
 measured tool orientation held fixed. The former single joint-space lift could
