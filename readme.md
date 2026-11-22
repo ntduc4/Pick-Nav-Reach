@@ -1,4 +1,63 @@
-# Default-Course-Project
+# Team 32: observation-driven grasping and maze traversal
+
+**Project code:** https://github.com/ntduc4/Pick-Nav-Reach
+
+**Final report:** [team32_final_report.pdf](team32_final_report.pdf)
+
+This repository contains our automatic Fetch pick--navigate--reach controller
+for the CS4278/CS5478 course environment. It proposes grasps from observed
+object points and normals, checks arm motion and table clearance, holds finger
+pressure during top-down carry motions, and plans cardinal maze routes for
+both the robot and the carried object. No object is teleported or rigidly
+attached to the gripper.
+
+## Install and run the final controller
+
+From a checkout of **this** repository (not the upstream starter template),
+use Python 3.10 or later on Linux:
+
+```bash
+git clone https://github.com/ntduc4/Pick-Nav-Reach.git
+cd Pick-Nav-Reach
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install pybullet numpy matplotlib trimesh
+```
+
+The repository includes the Fetch robot, maze, and YCB-derived object assets;
+no separate model download is required. Run a single, headless end-to-end
+episode from the repository root:
+
+```bash
+python run_full_task.py --object-idx 5 --seed 100
+```
+
+The command prints separate pickup and navigation results. Add `--gui` to
+view a trial. For a small **new** headless check, without replacing the
+published results:
+
+```bash
+python benchmark_full_task.py --objects 5 --seeds 200 --workers 1 \
+  --json-out /tmp/team32-smoke.json
+python -m unittest discover -q
+```
+
+The saved 100-seed evaluation is `full_traversal_results.json`: seeds
+100--199, 15 provided objects per seed, **1,433/1,500 pickups** and
+**1,390/1,500 deliveries (92.7%)**. Both counts come from the same 1,500
+full-task trials. Do not confuse it with the 60--69-seed pickup-only and
+carry-pose development experiments described below. The 1,500-trial run
+does not need to be repeated to inspect these results. Key entry points are
+`pickup_controller.py` (grasping), `navigation_controller.py` (carry, maze
+planning and reach), `run_full_task.py` (single trial) and
+`benchmark_full_task.py` (selected seeds/objects).
+
+## Course starter task and historical development notes
+
+The following starter-project description and 60--69-seed experiments are
+preserved for context; the installation and result above describe the final
+submission.
+
 Default Course Project of CS4278/CS5478 Intelligent Robots: Algorithms and Systems
 
 In this project, the task is to:
@@ -12,7 +71,7 @@ We provide an environment code for the robot in `pick_nav_reach_env.py`.
 ![Scene](imgs/scene.png)
 
 
-# Installation
+### Starter environment installation
 
 1. Create a conda environment using `Python 3.10`.
 
@@ -27,13 +86,13 @@ conda activate pnr
 pip3 install pybullet numpy matplotlib trimesh
 ```
 
-3. Clone the project repo:
+3. Clone this project repository:
 
 ```
-git clone https://github.com/NUS-LinS-Lab/Pick-Nav-Reach-Default-Project.git
+git clone https://github.com/ntduc4/Pick-Nav-Reach.git
 ```
 
-# Run the Environment 
+### Starter environment interface
 
 `python pick_nav_reach_env.py`
 
@@ -60,11 +119,11 @@ success: <class 'numpy.bool'>, () # success or not
 
 ```
 
-# Requirement
+### Original task requirement
 
 You should implement the grasp generation, motion planning, and navigation algorithms in your customized module by yourselves to accomplish the task.
 
-# Rubrics
+### Original course rubric
 
 We evaluate your algorithms in the following two aspects with 5 Unprovided seeds:
 
@@ -119,15 +178,15 @@ For each trial, award the following (sum; then average across trials):
 ![Scene](imgs/success_navigation.png)
 
 
-# References
+### Starter-project references
 
 - [PyBullet Quickstart Guide](https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA/edit?tab=t.0#heading=h.2ye70wns7io3).
 
-# Acknowledgments
+### Acknowledgments
 
 - YCB object models are chosen and adapted from [here](https://www.ycbbenchmarks.com/).
 
-## Week 8 / Weeks 9-10 prototype
+### Week 8 / Weeks 9-10 prototype
 
 ### Bowl rim fix and experimental plate side pickup
 
@@ -281,8 +340,9 @@ planning does not teleport the robot in the GUI or overwrite its joint velocitie
 The 1024 object surface samples are explicitly seeded alongside the scene to
 make grasp input repeatable for a given seed and object index.
 The pickup report measures object displacement after a 50-step hold rather
-than treating reaching a target joint pose as success. This is a **prototype**:
-there is no general-purpose collision-aware arm planner or A* navigation. In
+than treating reaching a target joint pose as success. At this earlier
+**pickup prototype** stage there was no general-purpose collision-aware arm
+planner or A* navigation. In
 the benchmark **before the latest grasp-priority changes** (seeds 42-46),
 60/75 trials lifted (80%) and 13/15 objects had at least one successful seed;
 the bowl and plate were 0/5. In targeted seed-42 checks after the priority
@@ -318,9 +378,11 @@ tracking stops when simulation steps stop.
 
 Run `python run_full_task.py --object-idx 5 --seed 42` for one trial, or use
 `benchmark_full_task.py` for a seeded headless sweep. The benchmark records
-pickup and navigation results separately. `full_traversal_results.json` is the
-original 150-trial baseline (114/150 complete, with 28 drops during the first
-carry-pose move). After a top-down pickup, navigation now tries up to two
+pickup and navigation results separately. The original 150-trial baseline
+(114/150 complete, with 28 drops during the first carry-pose move) is archived
+at Git revision `acd3b5d:full_traversal_results.json`; the file of that name
+at the repository root now contains the **final 1,500-trial** evaluation
+described above. After a top-down pickup, navigation tries up to two
 collision-checked 15-degree turns about the gripper's approach axis, putting
 one jaw underneath the held object *before* moving the arm toward the base.
 Long, thin held objects use at most one 15-degree turn to avoid twisting them

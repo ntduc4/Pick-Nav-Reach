@@ -157,7 +157,7 @@ def run_trials(tasks, workers, quiet, grasp_mode="auto", max_navigation_steps=15
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seeds", nargs="+", type=int, default=list(range(420, 430)),
-                        help="trial seeds (default: 60 through 69)")
+                        help="trial seeds (default: 420 through 429)")
     parser.add_argument("--objects", nargs="+", type=int,
                         help="object indices (default: all provided objects)")
     parser.add_argument("--json-out", type=Path, help="write full report to this path")
